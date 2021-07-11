@@ -23,7 +23,7 @@
 			$npc_level = get_field('npc_level');
 			$npc_race = get_field('npc_race');
 			$npc_background = get_field('npc_background');
-			// $npc_alignment = get_field('npc_alignment');
+			$npc_alignment = get_field('npc_alignment');
 			// $npc_personality_traits = get_field('npc_personality_traits');
 			// $npc_ideals = get_field('npc_ideals');
 			// $npc_bonds = get_field('npc_bonds');
@@ -51,6 +51,7 @@
 			<?= ($npc_level) ? "<div class='npc__field'><p class='npc__field__label'>LEVEL:</p><p class='npc__level npc__field__value'>$npc_level</p></div>" : "" ?>
 			<?= ($npc_race) ? "<div class='npc__field'><p class='npc__field__label'>RACE:</p><p class='npc__race npc__field__value'>$npc_race</p></div>" : "" ?>
 			<?= ($npc_background) ? "<div class='npc__field'><p class='npc__field__label'>BACKGROUND:</p><p class='npc__background npc__field__value'>$npc_background</p></div>" : "" ?>
+			<?= ($npc_alignment) ? "<div class='npc__field'><p class='npc__field__label'>ALIGNMENT:</p><p class='npc__alignment npc__field__value'>$npc_alignment</p></div>" : "" ?>
 			<?= ($npc_age) ? "<div class='npc__field'><p class='npc__field__label'>AGE:</p><p class='npc__age npc__field__value'>$npc_age</p></div>" : "" ?>
 			<?= ($npc_birthday) ? "<div class='npc__field'><p class='npc__field__label'>OCCUPATION:</p><p class='npc__birthday npc__field__value'>$npc_birthday</p></div>" : "" ?>
 			<?= ($npc_occupation) ? "<div class='npc__field'><p class='npc__field__label'>OCCUPATION:</p><p class='npc__occupation npc__field__value'>$npc_occupation</p></div>" : "" ?>
