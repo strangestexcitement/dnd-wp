@@ -11,7 +11,7 @@
 }
 
 $breakpoints: (
-  'tablet':  767px,
+  'tablet':  768px,
   'desktop': 992px,
   'large':  1200px
 ) !default;
@@ -19,11 +19,17 @@ $breakpoints: (
 /// Mixin to manage responsive breakpoints
 /// @param {String} $breakpoint - Breakpoint name
 /// @require $breakpoints
-@mixin bp($breakpoint) {
+@mixin bp($breakpoint, $custom: "") {
   // If the key exists in the map
   @if map-has-key($breakpoints, $breakpoint) {
     // Prints a media query based on the value
     @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+  @else if $custom != "" {
+    @media ($breakpoint: $custom) {
       @content;
     }
   }

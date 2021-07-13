@@ -18,18 +18,22 @@
 			$npc_birthday = get_field('npc_birthday');
 			$npc_age = get_field('npc_age');
 			$npc_occupation = get_field('npc_occupation');
+			$npc_gender_pronouns = get_field('npc_gender_pronouns');
 
 			$npc_class = get_field('npc_class');
 			$npc_level = get_field('npc_level');
 			$npc_race = get_field('npc_race');
 			$npc_background = get_field('npc_background');
 			$npc_alignment = get_field('npc_alignment');
+			$npc_goals = get_field('npc_goals');
+
 			// $npc_personality_traits = get_field('npc_personality_traits');
 			// $npc_ideals = get_field('npc_ideals');
 			// $npc_bonds = get_field('npc_bonds');
 			// $npc_flaws = get_field('npc_flaws');
 			// $npc_allies = get_field('npc_allies');
 			// $npc_enemies = get_field('npc_enemies');
+			// $npc_backstory = get_field('npc_backstory');
 
 			$npc_image_id = get_field('npc_image');
 			if($npc_image_id) {
@@ -47,20 +51,26 @@
 		<?= ($npc_name) ? "<p class='entry-title npc__name'>$npc_name</p>" : "" ?>
 		<?= ($npc_image_id) ? $npc_image : "" ?>
 		<div class="npc__about__copy">
-			<?= ($npc_class) ? "<div class='npc__field'><p class='npc__field__label'>CLASS:</p><p class='npc__class npc__field__value'>$npc_class</p></div>" : "" ?>
-			<?= ($npc_level) ? "<div class='npc__field'><p class='npc__field__label'>LEVEL:</p><p class='npc__level npc__field__value'>$npc_level</p></div>" : "" ?>
-			<?= ($npc_race) ? "<div class='npc__field'><p class='npc__field__label'>RACE:</p><p class='npc__race npc__field__value'>$npc_race</p></div>" : "" ?>
-			<?= ($npc_background) ? "<div class='npc__field'><p class='npc__field__label'>BACKGROUND:</p><p class='npc__background npc__field__value'>$npc_background</p></div>" : "" ?>
-			<?= ($npc_alignment) ? "<div class='npc__field'><p class='npc__field__label'>ALIGNMENT:</p><p class='npc__alignment npc__field__value'>$npc_alignment</p></div>" : "" ?>
-			<?= ($npc_age) ? "<div class='npc__field'><p class='npc__field__label'>AGE:</p><p class='npc__age npc__field__value'>$npc_age</p></div>" : "" ?>
-			<?= ($npc_birthday) ? "<div class='npc__field'><p class='npc__field__label'>OCCUPATION:</p><p class='npc__birthday npc__field__value'>$npc_birthday</p></div>" : "" ?>
-			<?= ($npc_occupation) ? "<div class='npc__field'><p class='npc__field__label'>OCCUPATION:</p><p class='npc__occupation npc__field__value'>$npc_occupation</p></div>" : "" ?>
-			<?= ($npc_description) ? "<div class='npc__field'><p class='npc__field__label'>DESCRIPTION:</p><p class='npc__description npc__field__value'>$npc_description</p></div>" : "" ?>
+			<?= ($npc_race) ? "<div class='npc__field npc__field__race'><p class='npc__field__label'>RACE:</p><p class='npc__field__value'>$npc_race</p></div>" : "" ?>
+
+			<?= ($npc_class) ? "<div class='npc__field npc__field__class'><p class='npc__field__label'>CLASS:</p><p class='npc__field__value'>$npc_class</p></div>" : "" ?>
+			<?= ($npc_level) ? "<div class='npc__field npc__field__level'><p class='npc__field__label'>LEVEL:</p><p class='npc__field__value'>$npc_level</p></div>" : "" ?>
+			<?= ($npc_gender_pronouns) ? "<div class='npc__field npc__field__gender'><p class='npc__field__label'>GENDER/PRONOUNS:</p><p class='npc__field__value'>$npc_gender_pronouns</p></div>" : "" ?>
+			<?= ($npc_age) ? "<div class='npc__field npc__field__age'><p class='npc__field__label'>AGE:</p><p class='npc__field__value'>$npc_age</p></div>" : "" ?>
+			<?= ($npc_birthday) ? "<div class='npc__field npc__field__birthday'><p class='npc__field__label'>BIRTHDAY:</p><p class='npc__field__value'>$npc_birthday</p></div>" : "" ?>
+
+			<?= ($npc_background) ? "<div class='npc__field npc__field__background'><p class='npc__field__label'>BACKGROUND:</p><p class='npc__field__value'>$npc_background</p></div>" : "" ?>
+			<?= ($npc_alignment) ? "<div class='npc__field npc__field__alignment'><p class='npc__field__label'>ALIGNMENT:</p><p class='npc__field__value'>$npc_alignment</p></div>" : "" ?>
+			<?= ($npc_occupation) ? "<div class='npc__field npc__field__occupation'><p class='npc__field__label'>OCCUPATION:</p><p class='npc__field__value'>$npc_occupation</p></div>" : "" ?>
+			<?= ($npc_goals) ? "<div class='npc__field npc__field__goals'><p class='npc__field__label'>GOALS:</p><p class='npc__field__value'>$npc_goals</p></div>" : "" ?>
+			<?= ($npc_description) ? "<div class='npc__field npc__field__description'><p class='npc__field__label'>DESCRIPTION:</p><p class='npc__field__value'>$npc_description</p></div>" : "" ?>
+
 		</div>
 
 	</div>
 
 	<div class="entry-content npc__content">
+
 
 		
 
