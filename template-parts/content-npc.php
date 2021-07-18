@@ -13,6 +13,7 @@
 	<header class="entry-header">
 		<?php 
 			$npc_name = get_field('npc_name');
+			$npc_aliases = get_field('npc_aliases');		
 			$npc_description = get_field('npc_description');
 			$npc_stats = get_field('stats');
 			$npc_birthday = get_field('npc_birthday');
@@ -34,12 +35,30 @@
 			// $npc_allies = get_field('npc_allies');
 			// $npc_enemies = get_field('npc_enemies');
 			// $npc_backstory = get_field('npc_backstory');
+			// $npc_hp = get_field('npc_hp');
+			// $npc_ac = get_field('npc_ac');
+			// $npc_speed = get_field('npc_speed');
+			// $npc_inventory = get_field('npc_inventory');
+			// $npc_spells = get_field('npc_spells');
+			// $npc_height = get_field('npc_height');
+			// $npc_weight = get_field('npc_weight');
+			// $npc_body_type = get_field('npc_body_type');
+			// $npc_eyes = get_field('npc_eyes');
+			// $npc_skin = get_field('npc_skin');
+			// $npc_hair = get_field('npc_hair');
+			// $npc_additional_notes = get_field('npc_additional_notes');
 
 			$npc_image_id = get_field('npc_image');
 			if($npc_image_id) {
 				$image = wp_get_attachment_image($npc_image_id, 'medium');
 				$npc_image = "<div class='npc__image'>$image</div>";
 			}
+
+			// $npc_symbol_id = get_field('npc_symbol');
+			// if($npc_symbol_id) {
+			// 	$symbol_image = wp_get_attachment_image($npc_symbol_id, 'medium');
+			// 	$npc_symbol_image = "<div class='npc__symbol-image'>$symbol_image</div>";
+			// }
 		?>
 
 	</header><!-- .entry-header -->
@@ -51,6 +70,8 @@
 		<?= ($npc_name) ? "<p class='entry-title npc__name'>$npc_name</p>" : "" ?>
 		<?= ($npc_image_id) ? $npc_image : "" ?>
 		<div class="npc__about__copy">
+			<?= ($npc_aliases) ? "<div class='npc__field npc__field__aliases'><p class='npc__field__label'>Aliases:</p><p class='npc__field__value'>$npc_aliases</p></div>" : "" ?>
+
 			<?= ($npc_race) ? "<div class='npc__field npc__field__race'><p class='npc__field__label'>RACE:</p><p class='npc__field__value'>$npc_race</p></div>" : "" ?>
 
 			<?= ($npc_class) ? "<div class='npc__field npc__field__class'><p class='npc__field__label'>CLASS:</p><p class='npc__field__value'>$npc_class</p></div>" : "" ?>

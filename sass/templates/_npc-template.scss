@@ -36,7 +36,6 @@ $npc_bp: 400px;
 
           @include bp(min-width, $npc_bp) {
             flex-direction: row;
-            margin-left: 1.6rem;
 
           }
 
@@ -104,6 +103,10 @@ $npc_bp: 400px;
           width: fit-content;
           margin-left: auto;
           margin-right: auto;
+        }
+
+        @include bp(tablet) {
+          margin-right: 1.6rem;
         }
 
         img {
