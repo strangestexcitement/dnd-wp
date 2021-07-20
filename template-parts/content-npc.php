@@ -12,7 +12,19 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php 
-			$npc_name = get_field('npc_name');
+
+			function setField($field) {
+				$is_user_admin = current_user_can( 'edit_posts' );
+
+				if(!$field['value']) {
+					return "";
+				}
+				else if($is_user_admin || $field['known_by_players']) {
+					return($field['value']);
+				}
+			}
+
+			$npc_name = setField(get_field('npc_name'));
 			$npc_aliases = get_field('npc_aliases');		
 			$npc_description = get_field('npc_description');
 			$npc_stats = get_field('stats');
@@ -67,7 +79,8 @@
 
 	<div class="npc__about">
 		
-		<?= ($npc_name) ? "<p class='entry-title npc__name'>$npc_name</p>" : "" ?>
+		<?= ($npc_name) ? "<p class='entry-title npc__name'>$npc_name</p>" : "<p class='entry-title npc__name'>???</p>" ?>
+
 		<?= ($npc_image_id) ? $npc_image : "" ?>
 		<div class="npc__about__copy">
 			<?= ($npc_aliases) ? "<div class='npc__field npc__field__aliases'><p class='npc__field__label'>Aliases:</p><p class='npc__field__value'>$npc_aliases</p></div>" : "" ?>

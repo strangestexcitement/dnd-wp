@@ -36,7 +36,7 @@ function dndest_pingback_header() {
 }
 add_action( 'wp_head', 'dndest_pingback_header' );
 
-// Our custom post type function
+// NPC custom post type function
 function create_npc_posttype() {
  
 	register_post_type( 'NPC',
@@ -54,5 +54,5 @@ function create_npc_posttype() {
 			)
 	);
 }
-// Hooking up our function to theme setup
+// Hooking up NPC function to theme setup
 add_action( 'init', 'create_npc_posttype' );
