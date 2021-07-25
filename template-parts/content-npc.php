@@ -13,52 +13,41 @@
 	<header class="entry-header">
 		<?php 
 
-			function setField($field) {
-				$is_user_admin = current_user_can( 'edit_posts' );
-
-				if(!$field['value']) {
-					return "";
-				}
-				else if($is_user_admin || $field['known_by_players']) {
-					return($field['value']);
-				}
-			}
-
 			$npc_name = setField(get_field('npc_name'));
-			$npc_aliases = get_field('npc_aliases');		
-			$npc_description = get_field('npc_description');
+			$npc_aliases = setField(get_field('npc_aliases'));		
+			$npc_description = setField(get_field('npc_description'));
 			$npc_stats = get_field('stats');
-			$npc_birthday = get_field('npc_birthday');
-			$npc_age = get_field('npc_age');
-			$npc_occupation = get_field('npc_occupation');
-			$npc_gender_pronouns = get_field('npc_gender_pronouns');
+			$npc_birthday = setField(get_field('npc_birthday'));
+			$npc_age = setField(get_field('npc_age'));
+			$npc_occupation = setField(get_field('npc_occupation'));
+			$npc_gender_pronouns = setField(get_field('npc_gender_pronouns'));
 
-			$npc_class = get_field('npc_class');
-			$npc_level = get_field('npc_level');
-			$npc_race = get_field('npc_race');
-			$npc_background = get_field('npc_background');
-			$npc_alignment = get_field('npc_alignment');
-			$npc_goals = get_field('npc_goals');
+			$npc_class = setField(get_field('npc_class'));
+			$npc_level = setField(get_field('npc_level'));
+			$npc_race = setField(get_field('npc_race'));
+			$npc_background = setField(get_field('npc_background'));
+			$npc_alignment = setField(get_field('npc_alignment'));
+			$npc_goals = setField(get_field('npc_goals'));
 
-			// $npc_personality_traits = get_field('npc_personality_traits');
-			// $npc_ideals = get_field('npc_ideals');
-			// $npc_bonds = get_field('npc_bonds');
-			// $npc_flaws = get_field('npc_flaws');
-			// $npc_allies = get_field('npc_allies');
-			// $npc_enemies = get_field('npc_enemies');
-			// $npc_backstory = get_field('npc_backstory');
-			// $npc_hp = get_field('npc_hp');
-			// $npc_ac = get_field('npc_ac');
-			// $npc_speed = get_field('npc_speed');
-			// $npc_inventory = get_field('npc_inventory');
-			// $npc_spells = get_field('npc_spells');
-			// $npc_height = get_field('npc_height');
-			// $npc_weight = get_field('npc_weight');
-			// $npc_body_type = get_field('npc_body_type');
-			// $npc_eyes = get_field('npc_eyes');
-			// $npc_skin = get_field('npc_skin');
-			// $npc_hair = get_field('npc_hair');
-			// $npc_additional_notes = get_field('npc_additional_notes');
+			// $npc_personality_traits = setField(get_field('npc_personality_traits'));
+			// $npc_ideals = setField(get_field('npc_ideals'));
+			// $npc_bonds = setField(get_field('npc_bonds'));
+			// $npc_flaws = setField(get_field('npc_flaws'));
+			// $npc_allies = setField(get_field('npc_allies'));
+			// $npc_enemies = setField(get_field('npc_enemies'));
+			// $npc_backstory = setField(get_field('npc_backstory'));
+			$npc_hp = setField(get_field('npc_hp'));
+			$npc_ac = setField(get_field('npc_ac'));
+			$npc_speed = setField(get_field('npc_speed'));
+			$npc_inventory = setField(get_field('npc_inventory'));
+			// $npc_spells = setField(get_field('npc_spells'));
+			// $npc_height = setField(get_field('npc_height'));
+			// $npc_weight = setField(get_field('npc_weight'));
+			// $npc_body_type = setField(get_field('npc_body_type'));
+			// $npc_eyes = setField(get_field('npc_eyes'));
+			// $npc_skin = setField(get_field('npc_skin'));
+			// $npc_hair = setField(get_field('npc_hair'));
+			// $npc_additional_notes = setField(get_field('npc_additional_notes'));
 
 			$npc_image_id = get_field('npc_image');
 			if($npc_image_id) {
@@ -79,11 +68,11 @@
 
 	<div class="npc__about">
 		
-		<?= ($npc_name) ? "<p class='entry-title npc__name'>$npc_name</p>" : "<p class='entry-title npc__name'>???</p>" ?>
+		<?= ($npc_name) ? "<h1 class='entry-title npc__name'>$npc_name</h1>" : "" ?>
 
 		<?= ($npc_image_id) ? $npc_image : "" ?>
 		<div class="npc__about__copy">
-			<?= ($npc_aliases) ? "<div class='npc__field npc__field__aliases'><p class='npc__field__label'>Aliases:</p><p class='npc__field__value'>$npc_aliases</p></div>" : "" ?>
+			<?= ($npc_aliases) ? "<div class='npc__field npc__field__aliases'><p class='npc__field__label'>ALIASES:</p><p class='npc__field__value'>$npc_aliases</p></div>" : "" ?>
 
 			<?= ($npc_race) ? "<div class='npc__field npc__field__race'><p class='npc__field__label'>RACE:</p><p class='npc__field__value'>$npc_race</p></div>" : "" ?>
 
@@ -103,11 +92,14 @@
 
 	</div>
 
-	<div class="entry-content npc__content">
-
-
+	<div class="npc__capabilities">
+		<h2 class="npc__section-heading">Capabilities:</h2>
 		
-
+		<div class="npc__capabilities__content">
+			<?= ($npc_hp) ? "<div class='npc__field npc__field__hp'><p class='npc__field__label'>HP:</p><p class='npc__field__value'>$npc_hp</p></div>" : "" ?>
+			<?= ($npc_ac) ? "<div class='npc__field npc__field__ac'><p class='npc__field__label'>AC:</p><p class='npc__field__value'>$npc_ac</p></div>" : "" ?>
+			<?= ($npc_speed) ? "<div class='npc__field npc__field__speed'><p class='npc__field__label'>SPEED:</p><p class='npc__field__value'>$npc_speed</p></div>" : "" ?>
+		</div>
 		<div class="npc__stats">
 			<?php
 				foreach($npc_stats as $stat => $info) {
@@ -120,6 +112,19 @@
 				}
 			?>
 		</div>
+	</div>
+
+	<div class="npc__inventory">
+		<h2 class="npc__section-heading">Inventory:</h2>
+		<?= ($npc_inventory) ? "<div class='npc__field npc__field__inventory'><p class='npc__field__value'>$npc_inventory</p></div>" : "" ?>
+	</div>
+
+	<div class="entry-content npc__content">
+
+
+		
+
+		
 		<?php
 		// the_content();
 

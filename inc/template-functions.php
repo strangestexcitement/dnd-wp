@@ -56,3 +56,27 @@ function create_npc_posttype() {
 }
 // Hooking up NPC function to theme setup
 add_action( 'init', 'create_npc_posttype' );
+
+
+/**
+ * Sets field based on visibility options
+ * Field is always visible if currently logged in user can edit posts
+ * 
+ * @param array $field - two field array
+ *  $field['visibility'] - visibility of field
+ * 	$field['value'] - value of the field
+ * 
+ */
+function setField($field) {
+	$is_user_admin = current_user_can( 'edit_posts' );
+
+	if($is_user_admin || $field['visibility'] == 'Visible') {
+		return($field['value']);
+	}
+	else if(!$field['value'] || $field['visibility'] == 'Hidden') {
+		return "";
+	}
+	else if($field['visibility'] == 'Partially visible') {
+		return "???";
+	}
+}

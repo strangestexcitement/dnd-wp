@@ -129,6 +129,28 @@ $npc_bp: 400px;
         }
       }
 
+      &__capabilities {
+        @include bp(tablet) {
+          margin-top: 3rem;
+          padding-left: 3rem;
+          padding-right: 3rem;
+        }
+
+        &__content {
+          @include bp(tablet) {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, 50px);
+          }
+        }
+      }
+
+      &__inventory {
+        @include bp(tablet) {
+          margin-top: 3rem;
+          padding-left: 3rem;
+          padding-right: 3rem;
+        }
+      }
       
     }
     

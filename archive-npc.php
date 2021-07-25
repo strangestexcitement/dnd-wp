@@ -34,7 +34,7 @@ get_header();
 				
 				<a href="<?php echo get_permalink(get_the_ID()) ?>">
 				<?php 
-				get_template_part( 'template-parts/content', get_post_type() );
+				get_template_part( 'template-parts/content', get_post_type() . "-archive" );
 				?>
 				</a>
 				<?php
