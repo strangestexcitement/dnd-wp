@@ -3,6 +3,12 @@ html {
   @include benne;
 }
 
+body {
+  background-color: $off-white;
+  // background-image: url("https://www.transparenttextures.com/patterns/paper-2.png");
+
+}
+
 .site-main {
   padding-top: 3rem;
 }

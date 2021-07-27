@@ -115,6 +115,10 @@ html {
 	font-weight: 400;
 }
 
+body {
+	background-color: #FCF5E5;
+}
+
 .site-main {
 	padding-top: 3rem;
 }
@@ -154,10 +158,6 @@ html {
 --------------------------------------------------------------*/
 /* Elements
 --------------------------------------------- */
-body {
-	background: #fff;
-}
-
 ul,
 ol {
 	margin: 0 0 1.5em 3em;
@@ -460,12 +460,10 @@ textarea {
 	outline: 0;
 }
 
+/* Archives
+--------------------------------------------- */
 /* Templates
 --------------------------------------------- */
-.single-npc {
-	background-color: #FCF5E5;
-}
-
 .single-npc .site-main {
 	padding: 3rem;
 }
@@ -482,12 +480,9 @@ textarea {
 	}
 }
 
-.single-npc .npc__about {
-	padding-top: 2rem;
-}
-
 @media (min-width: 768px) {
 	.single-npc .npc__about {
+		padding-top: 2rem;
 		border: 3px solid #000;
 		display: grid;
 		grid-template: auto auto / auto 1fr;
@@ -517,12 +512,12 @@ textarea {
 .single-npc .npc__field {
 	margin-bottom: 1rem;
 	margin-top: 1rem;
-	padding-right: 2rem;
 }
 
 @media (min-width: 400px) {
 	.single-npc .npc__field {
 		margin-right: auto;
+		padding-right: 2rem;
 	}
 }
 
@@ -563,6 +558,8 @@ textarea {
 	padding: 1.6rem;
 	background-color: rgba(155, 118, 83, 0.3);
 	height: fit-content;
+	max-width: 80%;
+	margin: 0 auto;
 }
 
 @media (min-width: 500px) {
@@ -570,6 +567,7 @@ textarea {
 		width: fit-content;
 		margin-left: auto;
 		margin-right: auto;
+		max-width: initial;
 	}
 }
 
@@ -590,26 +588,38 @@ textarea {
 }
 
 @media (min-width: 768px) {
-	.single-npc .npc__capabilities {
-		margin-top: 3rem;
-		padding-left: 3rem;
-		padding-right: 3rem;
-	}
-}
-
-@media (min-width: 768px) {
 	.single-npc .npc__capabilities__content {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, 50px);
 	}
 }
 
+.single-npc .npc__section-heading {
+	text-align: left;
+	margin-bottom: 1.6rem;
+	margin-top: 1.6rem;
+}
+
 @media (min-width: 768px) {
-	.single-npc .npc__inventory {
+	.single-npc .npc section {
 		margin-top: 3rem;
 		padding-left: 3rem;
 		padding-right: 3rem;
 	}
+}
+
+.single-npc .npc__accordion__content {
+	display: none;
+}
+
+@media (min-width: 768px) {
+	.single-npc .npc__accordion__content {
+		display: block;
+	}
+}
+
+.single-npc .npc__accordion.open .npc__accordion__content {
+	display: block;
 }
 
 /*# sourceMappingURL=style.css.map */

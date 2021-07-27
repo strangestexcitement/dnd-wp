@@ -20,6 +20,8 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet"><!-- fonts -->
+	<script src="https://kit.fontawesome.com/37d930f6af.js" crossorigin="anonymous"></script><!-- font awesome -->
+
 
 
 	<?php wp_head(); ?>

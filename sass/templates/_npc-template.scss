@@ -1,8 +1,6 @@
 $npc_bp: 400px;
 
 .single-npc {
-    background-color: $off-white;
-    // background-image: url("https://www.transparenttextures.com/patterns/paper-2.png");
 
     .site-main {
       padding: 3rem;
@@ -18,9 +16,9 @@ $npc_bp: 400px;
       }
 
       &__about {
-        padding-top: 2rem;
         
         @include bp(tablet) {
+          padding-top: 2rem;
           border: 3px solid $black;
           display: grid;
           grid-template: auto auto / auto 1fr;
@@ -49,10 +47,10 @@ $npc_bp: 400px;
       &__field {
         margin-bottom: 1rem;
         margin-top: 1rem;
-        padding-right: 2rem;
 
         @include bp(min-width, $npc_bp) {
           margin-right: auto;
+          padding-right: 2rem;
         }
 
         &__label {
@@ -98,11 +96,14 @@ $npc_bp: 400px;
         padding: 1.6rem;
         background-color: rgba(155,118,83,0.3);
         height: fit-content;
+        max-width: 80%;
+        margin: 0 auto;
 
         @include bp(min-width, 500px) {
           width: fit-content;
           margin-left: auto;
           margin-right: auto;
+          max-width: initial;
         }
 
         @include bp(tablet) {
@@ -130,11 +131,7 @@ $npc_bp: 400px;
       }
 
       &__capabilities {
-        @include bp(tablet) {
-          margin-top: 3rem;
-          padding-left: 3rem;
-          padding-right: 3rem;
-        }
+
 
         &__content {
           @include bp(tablet) {
@@ -145,10 +142,40 @@ $npc_bp: 400px;
       }
 
       &__inventory {
+      }
+
+      &__section-heading {
+        text-align: left;
+        margin-bottom: 1.6rem;
+        margin-top: 1.6rem;
+      }
+
+      section {
         @include bp(tablet) {
           margin-top: 3rem;
           padding-left: 3rem;
           padding-right: 3rem;
+        }
+      }
+
+      &__accordion {
+        &__heading {
+
+        }
+
+        &__content {
+          display: none;
+
+          @include bp(tablet) {
+            display: block;
+          }
+
+        }
+
+        &.open {
+          .npc__accordion__content {
+            display: block;
+          }
         }
       }
       

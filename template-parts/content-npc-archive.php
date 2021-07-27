@@ -13,6 +13,8 @@
 	<header class="entry-header">
 		<?php 
 
+			$npc_link = get_permalink($post->ID);
+
 			$npc_name = setField(get_field('npc_name'));
 			$npc_occupation = setField(get_field('npc_occupation'));
 
@@ -32,14 +34,15 @@
 
 	<?php dndest_post_thumbnail(); ?>
 
-	<div class="npc__card">
-		
-		<?= ($npc_name) ? "<p class='entry-title npc__name'>$npc_name</p>" : "" ?>
+	<a href="<?= $npc_link ?>">
+		<div class="npc__card">
+			
+			<?= ($npc_name) ? "<p class='entry-title npc__name'>$npc_name</p>" : "" ?>
 
-		<?= ($npc_image_id) ? $npc_image : "" ?>
+			<?= ($npc_image_id) ? $npc_image : "" ?>
 
 
-	</div>
+		</div>
+	</a>
 
-	<div class="entry-content npc__content">
 </article><!-- #post-<?php the_ID(); ?> -->

@@ -80,3 +80,8 @@ function setField($field) {
 		return "???";
 	}
 }
+
+/**
+ * 
+ */
+wp_enqueue_script( 'accordions', get_template_directory_uri().'/js/accordions.js', '', '', true );

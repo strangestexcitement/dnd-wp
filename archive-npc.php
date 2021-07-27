@@ -19,7 +19,7 @@ get_header();
 			<header class="page-header">
 				<h1 class="page-title">NPCs</h1>
 			</header><!-- .page-header -->
-
+			<div class="page-content">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -32,11 +32,9 @@ get_header();
 				 */
 				?>
 				
-				<a href="<?php echo get_permalink(get_the_ID()) ?>">
 				<?php 
 				get_template_part( 'template-parts/content', get_post_type() . "-archive" );
 				?>
-				</a>
 				<?php
 			endwhile;
 
@@ -48,6 +46,7 @@ get_header();
 
 		endif;
 		?>
+		</div>
 
 	</main><!-- #main -->
 
