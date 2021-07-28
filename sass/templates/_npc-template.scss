@@ -41,6 +41,31 @@ $npc_bp: 400px;
             content: "";
             flex: auto;
           }
+
+          > .npc__field {
+            animation: scale-in;
+            animation-duration: 0.6s;
+            animation-fill-mode: forwards;
+            opacity: 0;
+
+            @for $var from 0 to 20 {
+              &:nth-child(#{$var}) {
+                animation-delay: #{$var * 0.3}s;
+              }
+            }
+          }
+
+          @keyframes scale-in {
+            0% {
+              transform: scale(.75);
+              opacity: 0;
+            }
+
+            100% {
+              transform: scale(1);
+              opacity: 1;
+            }
+          }
         }
       }
 
@@ -168,9 +193,9 @@ $npc_bp: 400px;
           overflow: hidden;
           // display: none;
 
-          // @include bp(tablet) {
-          //   display: block;
-          // }
+          @include bp(tablet) {
+            height: auto;
+          }
 
         }
 
