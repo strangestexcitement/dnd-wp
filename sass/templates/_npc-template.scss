@@ -164,19 +164,21 @@ $npc_bp: 400px;
         }
 
         &__content {
-          display: none;
+          height: 0;
+          overflow: hidden;
+          // display: none;
 
-          @include bp(tablet) {
-            display: block;
-          }
+          // @include bp(tablet) {
+          //   display: block;
+          // }
 
         }
 
-        &.open {
-          .npc__accordion__content {
-            display: block;
-          }
-        }
+        // &.open {
+        //   .npc__accordion__content {
+        //     display: block;
+        //   }
+        // }
       }
       
     }

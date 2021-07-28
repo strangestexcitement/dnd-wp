@@ -29,6 +29,7 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
 
 </body>
 </html>
