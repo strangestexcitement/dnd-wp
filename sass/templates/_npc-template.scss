@@ -47,10 +47,11 @@ $npc_bp: 400px;
             animation-duration: 0.6s;
             animation-fill-mode: forwards;
             opacity: 0;
+            transform-origin: left;
 
             @for $var from 0 to 20 {
               &:nth-child(#{$var}) {
-                animation-delay: #{$var * 0.3}s;
+                animation-delay: #{$var * 0.12}s;
               }
             }
           }
