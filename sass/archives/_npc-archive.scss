@@ -1,9 +1,16 @@
+$hover-duration: 0.3s;
+
 .post-type-archive-npc {
   .site-main {
     .page-content {
+      display: grid;
+      grid-template-columns: repeat(2, auto);
+      row-gap: 1rem;
+      column-gap: 1rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
       
       @include bp(tablet) {
-        display: grid;
         padding: 0 3rem;
         column-gap: 1.6rem;
         row-gap: 1.6rem;
@@ -15,10 +22,11 @@
       .npc {
         width: 100%;
         overflow: hidden; 
-        transition: 0.6s ease-out;       
+        transition: $hover-duration ease-out;  
 
         @include bp(tablet) {
           max-width: 120px;
+          border-radius: 2px; 
         }
 
         &__card {
@@ -27,7 +35,7 @@
         }
 
         &__name {
-          transition: 0.6s bottom ease-out, 0.6s transform ease-out, 0.6s height ease-out;
+          transition: $hover-duration bottom ease-out, $hover-duration transform ease-out, $hover-duration height ease-out;
           position: absolute;
           bottom: 0;
           width: 100%;
@@ -59,7 +67,7 @@
           display: flex;
           flex-direction: column;
           justify-content: flex-end;
-          transition: 0.6s all ease-out;
+          transition: $hover-duration all ease-out;
           padding: 0 1rem 1.4rem;
         }
 
@@ -80,18 +88,24 @@
         }
 
         &:hover {
-          box-shadow: 1px 8px 20px 2px;
-          .npc {
-            
+          @include bp(tablet) {
+            box-shadow: 1px 14px 20px 2px rgba(0,0,0,0.3), 
+            0px 5px 10px 1px rgba(0,0,0,0.7);
+          }
 
+          .npc {
             &__name {
-              bottom: 100%;
-              transform: translateY(100%);
-              // text-align: left;
+              @include bp(tablet) {
+                bottom: 100%;
+                transform: translateY(100%);
+                // text-align: left;
+              }
             }
 
             &__desc {
-              transform: none;
+              @include bp(desktop) {
+                transform: none;
+              }
             }
           }
         }      

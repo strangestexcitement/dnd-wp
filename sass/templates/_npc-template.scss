@@ -206,6 +206,26 @@ $npc_bp: 400px;
         //   }
         // }
       }
+
+      &__overview {
+
+        @include bp(tablet) {
+          display: flex;
+          flex-wrap: wrap;
+        }
+      }
+
+      &__backstory, &__capabilities {
+        @include bp(tablet) {
+          flex-basis: 100%;
+        }
+      }
+
+      &__personality, &__relationships, &__inventory, &__spells {
+        @include bp(tablet) {
+          flex-basis: 50%;
+        }
+      }
       
     }
     
