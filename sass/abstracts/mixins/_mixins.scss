@@ -40,3 +40,19 @@ $breakpoints: (
         + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
 }
+
+// Full Width
+
+@mixin full-width-mobile() {
+  @media (max-width: map-get($breakpoints, 'tablet')) {
+    width: 100vw;
+    margin-left: calc((100vw - 100%) / -2);
+    margin-right: calc((100vw - 100%) / -2);
+  }
+}
+
+@mixin full-width() {
+  width: 100vw;
+  margin-left: calc((100vw - 100%) / -2);
+  margin-right: calc((100vw - 100%) / -2);
+}

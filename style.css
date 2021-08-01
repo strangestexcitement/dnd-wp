@@ -119,9 +119,22 @@ body {
 	background-color: #FCF5E5;
 }
 
+html, body {
+	min-height: 100%;
+}
+
 .site-main {
 	padding-top: 3rem;
 	padding-bottom: 3rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+	.site-main {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
 }
 
 h1 {
@@ -431,6 +444,8 @@ textarea {
 	outline: 0;
 }
 
+/* Utilities
+--------------------------------------------- */
 /* Archives
 --------------------------------------------- */
 .post-type-archive-npc .site-main .page-content {
@@ -438,8 +453,6 @@ textarea {
 	grid-template-columns: repeat(2, auto);
 	row-gap: 1rem;
 	column-gap: 1rem;
-	padding-left: 1rem;
-	padding-right: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -453,25 +466,26 @@ textarea {
 	}
 }
 
-.post-type-archive-npc .site-main .page-content .npc {
+.npc__box {
+	display: block;
 	width: 100%;
 	overflow: hidden;
 	transition: 0.3s ease-out;
 }
 
 @media (min-width: 768px) {
-	.post-type-archive-npc .site-main .page-content .npc {
+	.npc__box {
 		max-width: 120px;
 		border-radius: 2px;
 	}
 }
 
-.post-type-archive-npc .site-main .page-content .npc__card {
+.npc__box__card {
 	position: relative;
 	height: 100%;
 }
 
-.post-type-archive-npc .site-main .page-content .npc__name {
+.npc__box__name {
 	transition: 0.3s bottom ease-out, 0.3s transform ease-out, 0.3s height ease-out;
 	position: absolute;
 	bottom: 0;
@@ -488,12 +502,12 @@ textarea {
 }
 
 @media (min-width: 768px) {
-	.post-type-archive-npc .site-main .page-content .npc__name {
+	.npc__box__name {
 		font-size: 2.4rem;
 	}
 }
 
-.post-type-archive-npc .site-main .page-content .npc__desc {
+.npc__box__desc {
 	position: absolute;
 	bottom: 0;
 	background-color: rgba(0, 0, 0, 0.7);
@@ -510,11 +524,11 @@ textarea {
 	padding: 0 1rem 1.4rem;
 }
 
-.post-type-archive-npc .site-main .page-content .npc__image {
+.npc__box__image {
 	height: 100%;
 }
 
-.post-type-archive-npc .site-main .page-content .npc__image img {
+.npc__box__image img {
 	min-height: 100%;
 	min-width: 100%;
 	width: auto;
@@ -528,20 +542,20 @@ textarea {
 }
 
 @media (min-width: 768px) {
-	.post-type-archive-npc .site-main .page-content .npc:hover {
+	.npc__box:hover {
 		box-shadow: 1px 14px 20px 2px rgba(0, 0, 0, 0.3), 0px 5px 10px 1px rgba(0, 0, 0, 0.7);
 	}
 }
 
 @media (min-width: 768px) {
-	.post-type-archive-npc .site-main .page-content .npc:hover .npc__name {
+	.npc__box:hover .npc__box__name {
 		bottom: 100%;
 		transform: translateY(100%);
 	}
 }
 
-@media (min-width: 992px) {
-	.post-type-archive-npc .site-main .page-content .npc:hover .npc__desc {
+@media (min-width: 768px) {
+	.npc__box:hover .npc__box__desc {
 		transform: none;
 	}
 }
@@ -564,33 +578,88 @@ textarea {
 	}
 }
 
-@media (min-width: 768px) {
-	.single-npc .npc__about {
-		padding-top: 2rem;
-		border: 3px solid #000;
-		display: grid;
-		grid-template: auto auto / auto 1fr;
-		padding: 3rem;
-	}
-}
-
-.single-npc .npc__about__copy {
+.single-npc .npc__basics {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
-	height: fit-content;
-	flex-direction: column;
 }
 
-@media (min-width: 400px) {
-	.single-npc .npc__about__copy {
-		flex-direction: row;
+.single-npc .npc__basics__copy {
+	justify-self: flex-end;
+}
+
+.single-npc .npc__basics__copy__row {
+	display: flex;
+	justify-content: flex-start;
+	width: fit-content;
+}
+
+.single-npc .npc__basics__copy--details {
+	flex-basis: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+@media (min-width: 992px) {
+	.single-npc .npc__basics__copy--details {
+		display: block;
+		flex-basis: auto;
+		border-left: 2px solid rgba(0, 0, 0, 0.5);
+		padding-left: 1.6rem;
 	}
 }
 
-.single-npc .npc__about__copy::after {
-	content: "";
+.single-npc .npc__basics__copy--extras {
+	flex-basis: 100%;
+}
+
+.single-npc .npc__personality__container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+@media (min-width: 768px) {
+	.single-npc .npc__relationships__container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.single-npc .npc__relationships__list {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(auto, 50%));
+	row-gap: 1rem;
+	column-gap: 1rem;
+}
+
+@media (min-width: 768px) {
+	.single-npc .npc__relationships__list {
+		column-gap: 1.6rem;
+		row-gap: 1.6rem;
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+.single-npc .npc__inventory__container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.single-npc .npc__inventory__items {
 	flex: auto;
+	padding-left: 2rem;
+}
+
+.single-npc .npc__inventory__currency {
+	border-right: 1px solid rgba(0, 0, 0, 0.5);
+	padding-right: 2rem;
+}
+
+@media (min-width: 768px) {
+	.single-npc .npc__inventory-spells {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
 .single-npc .npc__about__copy > .npc__field {
@@ -786,8 +855,6 @@ textarea {
 @media (min-width: 768px) {
 	.single-npc .npc section {
 		margin-top: 3rem;
-		padding-left: 3rem;
-		padding-right: 3rem;
 	}
 }
 
@@ -799,25 +866,6 @@ textarea {
 @media (min-width: 768px) {
 	.single-npc .npc__accordion__content {
 		height: auto;
-	}
-}
-
-@media (min-width: 768px) {
-	.single-npc .npc__overview {
-		display: flex;
-		flex-wrap: wrap;
-	}
-}
-
-@media (min-width: 768px) {
-	.single-npc .npc__backstory, .single-npc .npc__capabilities {
-		flex-basis: 100%;
-	}
-}
-
-@media (min-width: 768px) {
-	.single-npc .npc__personality, .single-npc .npc__relationships, .single-npc .npc__inventory, .single-npc .npc__spells {
-		flex-basis: 50%;
 	}
 }
 

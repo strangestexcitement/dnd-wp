@@ -5,6 +5,8 @@
  * @package dndest
  */
 
+ @require_once(get_theme_file_path('/inc/options_page.php'));
+
 /**
  * Adds custom classes to the array of body classes.
  *
@@ -80,6 +82,60 @@ function setField($field) {
 		return "???";
 	}
 }
+
+
+function listNPCRelationships($relationshipArray) {
+	if($relationshipArray) {
+		$list = '<div class="npc__relationships__list">';
+		foreach($relationshipArray as $npc_id) {
+
+			$card = getNPCCard($npc_id);
+
+			$list .= $card;
+		}
+		$list .= "</div>";
+		return $list;
+	}
+	else {
+		return "";
+	}
+}
+
+function getNPCCard($npc_id) {
+	$npc_link = get_permalink($npc_id);
+
+	$npc_name = setField(get_field('npc_name', $npc_id));
+	$npc_occupation = setField(get_field('npc_occupation', $npc_id));
+
+	$npc_class = setField(get_field('npc_class', $npc_id));
+	$npc_level = setField(get_field('npc_level', $npc_id));
+	$npc_race = setField(get_field('npc_race', $npc_id));
+
+	$has_desc = ($npc_class || $npc_level || $npc_occupation || $npc_race);
+
+
+	$npc_image_id = get_field('npc_image', $npc_id);
+	if($npc_image_id) {
+		$image = wp_get_attachment_image($npc_image_id, 'medium');
+		$npc_image = "<div class='npc__box__image'>$image</div>";
+	}
+
+	$card = "<a href='$npc_link' class='npc__box'>
+						<div class='npc__box__card'>";
+	$card .= ($npc_name) ? "<h2 class='entry-title npc__box__name'>$npc_name</h2>" : "";
+	$card .= ($npc_image_id) ? $npc_image : "";
+	$card .= ($has_desc) ? "<div class='npc__box__desc'><p>" : "";
+	$card .= ($npc_level) ? "Level $npc_level" : "";
+	$card .= ($npc_race) ? " $npc_race<br>" : "";
+	$card .= ($npc_class) ? " $npc_class" : "";
+	$card .= ($has_desc) ? "</p>" : "";
+	$card .= ($npc_occupation) ? "<p>$npc_occupation</p>" : "";
+	$card .= ($has_desc) ? "</div>" : "";
+	$card .= "</div></a>";
+
+	return $card;
+}
+
 
 /**
  * 

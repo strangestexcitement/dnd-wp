@@ -6,12 +6,22 @@ html {
 body {
   background-color: $off-white;
   // background-image: url("https://www.transparenttextures.com/patterns/paper-2.png");
+}
 
+html, body {
+  min-height: 100%;
 }
 
 .site-main {
   padding-top: 3rem;
   padding-bottom: 3rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  @include bp(tablet) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 }
 
 h1 {

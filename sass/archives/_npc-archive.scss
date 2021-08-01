@@ -2,13 +2,12 @@ $hover-duration: 0.3s;
 
 .post-type-archive-npc {
   .site-main {
+    
     .page-content {
       display: grid;
       grid-template-columns: repeat(2, auto);
       row-gap: 1rem;
       column-gap: 1rem;
-      padding-left: 1rem;
-      padding-right: 1rem;
       
       @include bp(tablet) {
         padding: 0 3rem;
@@ -19,97 +18,100 @@ $hover-duration: 0.3s;
         flex-wrap: wrap;
       }
 
-      .npc {
-        width: 100%;
-        overflow: hidden; 
-        transition: $hover-duration ease-out;  
-
-        @include bp(tablet) {
-          max-width: 120px;
-          border-radius: 2px; 
-        }
-
-        &__card {
-          position: relative;
-          height: 100%;
-        }
-
-        &__name {
-          transition: $hover-duration bottom ease-out, $hover-duration transform ease-out, $hover-duration height ease-out;
-          position: absolute;
-          bottom: 0;
-          width: 100%;
-          background-color: rgba(0,0,0,0.8);
-          color: $white;
-          text-decoration: none;
-          padding-top: 0.8rem;
-          padding-bottom: 0.8rem;
-          padding-left: 1.6rem;
-          padding-right: 1.6rem;
-          z-index: 2;
-          text-align: right;
-          
-          @include bp(tablet) {
-            font-size: 2.4rem;
-          }
-        }
-
-        &__desc {
-          position: absolute;
-          bottom: 0;
-          background-color: rgba(0,0,0,0.7);
-          color: $white;
-          min-height: 100%;
-          transform: translateY(100%);
-          text-align: right;
-          width: 100%;
-          overflow: hidden;
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-end;
-          transition: $hover-duration all ease-out;
-          padding: 0 1rem 1.4rem;
-        }
-
-        &__image {
-          height: 100%;
-          img {
-            min-height: 100%;
-            min-width: 100%;
-            width: auto;
-            display: block;
-            max-height: initial;
-            max-width: initial;
-            /* height: 100%; */
-            position: relative;
-            left: 50%;
-            transform: translateX(-50%);
-          }
-        }
-
-        &:hover {
-          @include bp(tablet) {
-            box-shadow: 1px 14px 20px 2px rgba(0,0,0,0.3), 
-            0px 5px 10px 1px rgba(0,0,0,0.7);
-          }
-
-          .npc {
-            &__name {
-              @include bp(tablet) {
-                bottom: 100%;
-                transform: translateY(100%);
-                // text-align: left;
-              }
-            }
-
-            &__desc {
-              @include bp(desktop) {
-                transform: none;
-              }
-            }
-          }
-        }      
-      }
+      
     }
   }
+}
+
+.npc__box {
+  display: block;
+  width: 100%;
+  overflow: hidden; 
+  transition: $hover-duration ease-out;  
+
+  @include bp(tablet) {
+    max-width: 120px;
+    border-radius: 2px; 
+  }
+
+  &__card {
+    position: relative;
+    height: 100%;
+  }
+
+  &__name {
+    transition: $hover-duration bottom ease-out, $hover-duration transform ease-out, $hover-duration height ease-out;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.8);
+    color: $white;
+    text-decoration: none;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    padding-left: 1.6rem;
+    padding-right: 1.6rem;
+    z-index: 2;
+    text-align: right;
+    
+    @include bp(tablet) {
+      font-size: 2.4rem;
+    }
+  }
+
+  &__desc {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.7);
+    color: $white;
+    min-height: 100%;
+    transform: translateY(100%);
+    text-align: right;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: $hover-duration all ease-out;
+    padding: 0 1rem 1.4rem;
+  }
+
+  &__image {
+    height: 100%;
+    img {
+      min-height: 100%;
+      min-width: 100%;
+      width: auto;
+      display: block;
+      max-height: initial;
+      max-width: initial;
+      /* height: 100%; */
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &:hover {
+    @include bp(tablet) {
+      box-shadow: 1px 14px 20px 2px rgba(0,0,0,0.3), 
+      0px 5px 10px 1px rgba(0,0,0,0.7);
+    }
+
+    .npc__box {
+      &__name {
+        @include bp(tablet) {
+          bottom: 100%;
+          transform: translateY(100%);
+          // text-align: left;
+        }
+      }
+
+      &__desc {
+        @include bp(tablet) {
+          transform: none;
+        }
+      }
+    }
+  }      
 }
