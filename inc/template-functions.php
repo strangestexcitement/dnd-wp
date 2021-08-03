@@ -52,7 +52,10 @@ function create_npc_posttype() {
 					'has_archive' => true,
 					'rewrite' => array('slug' => 'npc'),
 					'show_in_rest' => true,
-
+					'description' => "Non Player Character",
+					// 'supports' => array(
+					// 	'title', 'editor', 'comments', 'revisions', 'author', 'page-attributes', 'custom-fields'
+					// ),
 			)
 	);
 }

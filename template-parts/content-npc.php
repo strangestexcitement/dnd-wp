@@ -96,10 +96,17 @@
 			$npc_links = setField(get_field('npc_links'));
 
 			$npc_image_id = get_field('npc_image');
+			$default_image = get_template_directory_uri() . "/images/defaults/default-npc-image.jpg";
+
 			if($npc_image_id) {
 				$image = wp_get_attachment_image($npc_image_id, 'medium');
-				$npc_image = "<div class='npc__image'>$image</div>";
 			}
+			else {
+				$image = "<img src='$default_image' class='npc__image--default'>";
+			}
+			$npc_image = "<div class='npc__image'>$image</div>";
+
+
 
 			// $npc_symbol_id = get_field('npc_symbol');
 			// if($npc_symbol_id) {
@@ -114,7 +121,7 @@
 	<!-- Basic Info -->
 	<div class="npc__basics">
 		<div class="npc__basics__image">
-			<?= ($npc_image_id) ? $npc_image : "" ?>
+			<?= ($npc_image) ? $npc_image : "" ?>
 		</div>
 
 		<div class="npc__basics__copy">

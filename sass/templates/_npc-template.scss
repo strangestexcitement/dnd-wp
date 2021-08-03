@@ -218,6 +218,12 @@ $npc_bp: 400px;
             width: auto;
           }
         }
+
+        &--default {
+          @include bp(tablet) {
+            max-height: 300px;
+          }
+        }
       }
 
      

@@ -25,10 +25,21 @@
 
 
 			$npc_image_id = get_field('npc_image');
+			// if($npc_image_id) {
+			// 	$image = wp_get_attachment_image($npc_image_id, 'medium');
+			// 	$npc_image = "<div class='npc__box__image'>$image</div>";
+			// }
+
+
+			$default_image = get_template_directory_uri() . "/images/defaults/default-npc-image.jpg";
+
 			if($npc_image_id) {
 				$image = wp_get_attachment_image($npc_image_id, 'medium');
-				$npc_image = "<div class='npc__box__image'>$image</div>";
 			}
+			else {
+				$image = "<img src='$default_image' class='npc__box__image--default'>";
+			}
+			$npc_image = "<div class='npc__box__image'>$image</div>";
 		?>
 
 	<a href="<?= $npc_link ?>">
@@ -36,7 +47,7 @@
 			
 			<?= ($npc_name) ? "<h2 class='entry-title npc__box__name'>$npc_name</h2>" : "" ?>
 
-			<?= ($npc_image_id) ? $npc_image : "" ?>
+			<?= ($npc_image) ? $npc_image : "" ?>
 
 			<?= ($has_desc) ? "<div class='npc__box__desc'><p>" : "" ?>
 				<?= ($npc_level) ? "Level $npc_level" : "" ?>
