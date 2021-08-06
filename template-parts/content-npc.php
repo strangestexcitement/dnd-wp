@@ -100,6 +100,8 @@
 
 			if($npc_image_id) {
 				$image = wp_get_attachment_image($npc_image_id, 'medium');
+				$image_attribution = getImageAttribution($npc_image_id);
+				$GLOBALS['attributions'][$npc_image_id] = $image_attribution;
 			}
 			else {
 				$image = "<img src='$default_image' class='npc__image--default'>";

@@ -9,6 +9,8 @@
  * @package dndest
  */
 
+ //reset attributions array on each page load
+	$GLOBALS['attributions'] = [];
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>

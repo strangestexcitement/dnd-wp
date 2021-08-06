@@ -13,12 +13,39 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'dndest' ) ); ?>">
+
+		<p class="attributions__trigger">Attributions</p>
+
+			<div class="attributions">
+				<div class="attributions__overlay"></div>
+				<div class="attributions__container">
+					<h2 class="attributions__heading">Attributions</h2>
+					<div class="attributions__content">
+						<?php
+							foreach($GLOBALS['attributions'] as $id => $attribution) {
+								if($attribution) {
+									?>
+									<div class="attributions__attribution">
+									<?php
+									echo wp_get_attachment_image($id, 'thumbnail', '', array('class' => 'attributions__attribution__thumnbnail'));
+									echo $attribution;
+									?>
+									</div>
+									<?php
+								}
+							}
+						?>
+					</div>
+				</div>
+			</div>
+
+
+			<!-- <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'dndest' ) ); ?>"> -->
 				<?php
 				/* translators: %s: CMS name, i.e. WordPress. */
 				// printf( esc_html__( 'Proudly powered by %s', 'dndest' ), 'WordPress' );
 				?>
-			</a>
+			<!-- </a> -->
 			<!-- <span class="sep"> | </span> -->
 				<?php
 				/* translators: 1: Theme name, 2: Theme author. */
