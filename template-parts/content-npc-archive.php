@@ -34,9 +34,7 @@
 			$default_image = get_template_directory_uri() . "/images/defaults/default-npc-image.jpg";
 
 			if($npc_image_id) {
-				$image = wp_get_attachment_image($npc_image_id, 'medium');
-				$image_attribution = getImageAttribution($npc_image_id);
-				$GLOBALS['attributions'][$npc_image_id] = $image_attribution;
+				$image = getImageAttachment($npc_image_id, "medium");
 			}
 			else {
 				$image = "<img src='$default_image' class='npc__box__image--default'>";

@@ -99,9 +99,7 @@
 			$default_image = get_template_directory_uri() . "/images/defaults/default-npc-image.jpg";
 
 			if($npc_image_id) {
-				$image = wp_get_attachment_image($npc_image_id, 'medium');
-				$image_attribution = getImageAttribution($npc_image_id);
-				$GLOBALS['attributions'][$npc_image_id] = $image_attribution;
+				$image = getImageAttachment($npc_image_id, "medium");
 			}
 			else {
 				$image = "<img src='$default_image' class='npc__image--default'>";
@@ -110,11 +108,11 @@
 
 
 
-			// $npc_symbol_id = get_field('npc_symbol');
-			// if($npc_symbol_id) {
-			// 	$symbol_image = wp_get_attachment_image($npc_symbol_id, 'medium');
-			// 	$npc_symbol_image = "<div class='npc__symbol-image'>$symbol_image</div>";
-			// }
+			$npc_symbol_id = setField(get_field('npc_symbol'));
+			if($npc_symbol_id) {
+				$symbol_image = getImageAttachment($npc_symbol_id, 'medium');
+				$npc_symbol_image = "<div class='npc__symbol-image'>$symbol_image</div>";
+			}
 		?>
 
 	<!-- Name -->
@@ -190,6 +188,14 @@
 			</section>" 
 			: "";
 		?>
+
+	<?= ($npc_symbol_id) ?
+		"<!-- Backstory -->
+		<section class='npc__symbol'>
+			$npc_symbol_image
+		</section>" 
+		: "";
+	?>
 
 
 	<div class="npc__overview">

@@ -2,10 +2,6 @@ $npc_bp: 400px;
 
 .single-npc {
 
-    .site-main {
-      padding: 3rem;
-    }
-
     .npc {
 
       @include benne;
@@ -16,12 +12,13 @@ $npc_bp: 400px;
       }
 
       &__basics {
+        // display: grid;
+        // grid-template-columns: minmax(250px, auto) repeat(3, minmax(350px, 1fr));
         display: flex;
         flex-wrap: wrap;
-        // justify-content: center;
         &__copy {
           // flex: 1 0 33%;
-          justify-self: flex-end;
+          // justify-self: flex-end;
           &__row {
             display: flex;
             justify-content: flex-start;
@@ -46,9 +43,7 @@ $npc_bp: 400px;
           }
         }
 
-        &__image {
 
-        }
       }
 
       &__personality {
@@ -202,13 +197,13 @@ $npc_bp: 400px;
 
         @include bp(min-width, 500px) {
           width: fit-content;
-          margin-left: auto;
-          margin-right: auto;
+          margin-left: 0;
+          // margin-right: auto;
           max-width: initial;
         }
 
         @include bp(tablet) {
-          margin-right: 1.6rem;
+          // margin-right: 1.6rem;
         }
 
         img {

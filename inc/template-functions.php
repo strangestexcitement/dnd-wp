@@ -119,7 +119,7 @@ function getNPCCard($npc_id) {
 
 	$npc_image_id = get_field('npc_image', $npc_id);
 	if($npc_image_id) {
-		$image = wp_get_attachment_image($npc_image_id, 'medium');
+		$image = getImageAttachment($npc_image_id, 'medium');
 		$npc_image = "<div class='npc__box__image'>$image</div>";
 	}
 
@@ -160,6 +160,18 @@ function getNPCCard($npc_id) {
 	}
 
 	return $image_attribution;
+ }
+
+ /**
+	* stores attribution in global variable
+	* 
+	* returns image attachment
+  */
+ function getImageAttachment($image_id, $size) {
+	$image = wp_get_attachment_image($image_id, $size);
+	$image_attribution = getImageAttribution($image_id);
+	$GLOBALS['attributions'][$image_id] = $image_attribution;
+	return $image;
  }
 
 

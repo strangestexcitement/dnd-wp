@@ -117,6 +117,8 @@ html {
 
 body {
 	background-color: #FCF5E5;
+	z-index: 1;
+	position: relative;
 }
 
 html, body {
@@ -132,8 +134,8 @@ html, body {
 
 @media (min-width: 768px) {
 	.site-main {
-		padding-left: 3rem;
-		padding-right: 3rem;
+		padding-left: 4vw;
+		padding-right: 4vw;
 	}
 }
 
@@ -346,8 +348,8 @@ textarea {
 .site-header {
 	background-color: #033E3E;
 	color: #fff;
-	padding-left: 3rem;
-	padding-right: 3rem;
+	padding-left: 4vw;
+	padding-right: 4vw;
 	padding-top: 1rem;
 	padding-bottom: 0.5rem;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -396,9 +398,8 @@ textarea {
 }
 
 .attributions {
-	display: none;
 	position: relative;
-	z-index: 3;
+	z-index: -1;
 }
 
 .attributions__overlay {
@@ -408,17 +409,28 @@ textarea {
 	height: 100vh;
 	width: 100vw;
 	background-color: rgba(0, 0, 0, 0.5);
+	opacity: 0;
+	transition: opacity 0.3s ease-out;
 }
 
 .attributions__container {
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%) scale(0);
 	background-color: #FCF5E5;
 	padding-top: 0;
 	padding-bottom: 3rem;
-	width: 75vw;
+	max-height: 80vh;
+	transition: 0.3s ease-out;
+	overflow: auto;
+	width: calc(100vw - 30px);
+}
+
+@media (min-width: 992px) {
+	.attributions__container {
+		width: 75vw;
+	}
 }
 
 .attributions__heading {
@@ -451,7 +463,16 @@ textarea {
 }
 
 .attributions--show {
-	display: block;
+	z-index: 3;
+}
+
+.attributions--show .attributions__overlay {
+	opacity: 1;
+}
+
+.attributions--show .attributions__container {
+	transform: translate(-50%, -50%) scale(1);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 
 /*--------------------------------------------------------------
@@ -623,10 +644,6 @@ textarea {
 
 /* Templates
 --------------------------------------------- */
-.single-npc .site-main {
-	padding: 3rem;
-}
-
 .single-npc .npc {
 	font-family: 'Benne', serif;
 	font-weight: 400;
@@ -642,10 +659,6 @@ textarea {
 .single-npc .npc__basics {
 	display: flex;
 	flex-wrap: wrap;
-}
-
-.single-npc .npc__basics__copy {
-	justify-self: flex-end;
 }
 
 .single-npc .npc__basics__copy__row {
@@ -878,15 +891,8 @@ textarea {
 @media (min-width: 500px) {
 	.single-npc .npc__image {
 		width: fit-content;
-		margin-left: auto;
-		margin-right: auto;
+		margin-left: 0;
 		max-width: initial;
-	}
-}
-
-@media (min-width: 768px) {
-	.single-npc .npc__image {
-		margin-right: 1.6rem;
 	}
 }
 

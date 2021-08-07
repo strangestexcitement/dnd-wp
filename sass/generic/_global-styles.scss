@@ -5,6 +5,8 @@ html {
 
 body {
   background-color: $off-white;
+  z-index: 1;
+  position: relative;
   // background-image: url("https://www.transparenttextures.com/patterns/paper-2.png");
 }
 
@@ -19,8 +21,8 @@ html, body {
   padding-right: 1.5rem;
 
   @include bp(tablet) {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding-left: 4vw;
+    padding-right: 4vw;
   }
 }
 

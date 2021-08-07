@@ -1,7 +1,8 @@
 .attributions {
-  display: none;
   position: relative;
-  z-index: 3;
+  z-index: -1;
+
+  $root: &;
   
 
   &__overlay {
@@ -11,17 +12,26 @@
     height: 100vh;
     width: 100vw;
     background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
   }
 
   &__container {
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(0);
     background-color: $off-white;
     padding-top: 0;
     padding-bottom: 3rem;
-    width: 75vw;
+    max-height: 80vh;
+    transition: 0.3s ease-out;
+    overflow: auto;
+    width: calc(100vw - 30px);
+
+    @include bp(desktop) {
+      width: 75vw;
+    }
   }
 
   &__heading {
@@ -65,6 +75,17 @@
   }
 
   &--show {
-    display: block;
+    z-index: 3;
+
+    #{$root} {
+      &__overlay {
+        opacity: 1;
+      }
+
+      &__container {
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+      }
+    }
   }
 }
