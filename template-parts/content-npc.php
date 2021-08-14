@@ -68,26 +68,6 @@
 			$allies_links = listNPCRelationships($npc_allies_links);
 			$enemies_links = listNPCRelationships($npc_enemies_links);
 
-	// 		$currpost = $post;
-	 		?>
-	 <!-- <div class="post-type-archive-npc">
-	 	<div class="site-main">
-	 		<div class="page-content"> -->
-	 		<?php
-	// 		foreach($npc_allies_links as $npc_id) {
-	// 			global $post;
-	// 			$post = get_post($npc_id); 
-	// 			setup_postdata($post);
-	// 			get_template_part( 'template-parts/content', get_post_type() . "-archive" );
-	// 		}
-	// 		$post = $currpost;
-	// 		setup_postdata($post);
-	// 		?>
-	 		<!-- </div>
-	 	</div>
-	 </div> -->
-	 		<?php
-
 			// backstory
 			$npc_backstory = setField(get_field('npc_backstory'));
 
@@ -106,8 +86,6 @@
 			}
 			$npc_image = "<div class='npc__image'>$image</div>";
 
-
-
 			$npc_symbol_id = setField(get_field('npc_symbol'));
 			if($npc_symbol_id) {
 				$symbol_image = getImageAttachment($npc_symbol_id, 'medium');
@@ -115,22 +93,40 @@
 			}
 		?>
 
-	<!-- Name -->
-	<?= ($npc_name) ? "<h1 class='entry-title npc__name'>$npc_name</h1>" : "" ?>
+	<!-- Hero -->
+	<div class="npc__hero">
+		<div class="npc__hero__inner">
+			<div class="npc__hero__image">
+				<?= ($npc_image) ? $npc_image : "" ?>
+			</div>
+			<?php if($npc_name || $npc_level || $npc_race || $npc_class || $npc_occupation) { ?>
+				<div class="npc__hero__content">
+					<?= ($npc_name) ? "<h1 class='entry-title npc__hero__name'>$npc_name</h1>" : "" ?>
+					<?php if($npc_level || $npc_race || $npc_class || $npc_occupation) { ?>
+						<div class="npc__hero__details">
+							<?= ($npc_level) ? "<div class='npc__field npc__field__level'><p class='npc__field__label'>LEVEL:</p><p class='npc__field__value'>$npc_level</p></div>" : "" ?>
+							<?= ($npc_race) ? "<div class='npc__field npc__field__race'><p class='npc__field__label'>RACE:</p><p class='npc__field__value'>$npc_race</p></div>" : "" ?>
+							<?= ($npc_class) ? "<div class='npc__field npc__field__class'><p class='npc__field__label'>CLASS:</p><p class='npc__field__value'>$npc_class</p></div>" : "" ?>
+							<?= ($npc_occupation) ? "<div class='npc__field npc__field__occupation'><p class='npc__field__label'>OCCUPATION:</p><p class='npc__field__value'>$npc_occupation</p></div>" : "" ?>
+						</div>
+					<?php } ?>
+				</div>
+			<?php } ?>
+		</div>
+	</div>
+	<!-- End Hero -->
+
+
 
 	<!-- Basic Info -->
 	<div class="npc__basics">
-		<div class="npc__basics__image">
-			<?= ($npc_image) ? $npc_image : "" ?>
-		</div>
+		
 
 		<div class="npc__basics__copy">
 			<div class="npc__basics__copy__row">
-				<?= ($npc_level) ? "<div class='npc__field npc__field__level'><p class='npc__field__label'>LEVEL:</p><p class='npc__field__value'>$npc_level</p></div>" : "" ?>
-				<?= ($npc_race) ? "<div class='npc__field npc__field__race'><p class='npc__field__label'>RACE:</p><p class='npc__field__value'>$npc_race</p></div>" : "" ?>
-				<?= ($npc_class) ? "<div class='npc__field npc__field__class'><p class='npc__field__label'>CLASS:</p><p class='npc__field__value'>$npc_class</p></div>" : "" ?>
+				
 			</div>
-			<?= ($npc_occupation) ? "<div class='npc__field npc__field__occupation'><p class='npc__field__label'>OCCUPATION:</p><p class='npc__field__value'>$npc_occupation</p></div>" : "" ?>
+			
 			<?= ($npc_background) ? "<div class='npc__field npc__field__background'><p class='npc__field__label'>BACKGROUND:</p><p class='npc__field__value'>$npc_background</p></div>" : "" ?>
 			<?= ($npc_aliases) ? "<div class='npc__field npc__field__aliases'><p class='npc__field__label'>ALIASES:</p><p class='npc__field__value'>$npc_aliases</p></div>" : "" ?>
 			<?= ($npc_gender_pronouns) ? "<div class='npc__field npc__field__gender'><p class='npc__field__label'>GENDER/PRONOUNS:</p><p class='npc__field__value'>$npc_gender_pronouns</p></div>" : "" ?>

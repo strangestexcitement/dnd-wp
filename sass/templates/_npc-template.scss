@@ -4,282 +4,379 @@ $npc_bp: 400px;
 
     .npc {
 
-      @include benne;
-      text-align: center;
+      &__hero {
+        background-color: #c7a988;
+        margin-top: 10rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-bottom: 1.6rem;
 
-      @include bp(min-width, $npc_bp) {
-        text-align: left;
-      }
-
-      &__basics {
-        // display: grid;
-        // grid-template-columns: minmax(250px, auto) repeat(3, minmax(350px, 1fr));
-        display: flex;
-        flex-wrap: wrap;
-        &__copy {
-          // flex: 1 0 33%;
-          // justify-self: flex-end;
-          &__row {
-            display: flex;
-            justify-content: flex-start;
-            width: fit-content;
-          }
-
-          &--details {
-            flex-basis: 100%;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-
-            @include bp(desktop) {
-              display: block;
-              flex-basis: auto;
-              border-left: 2px solid rgba(0,0,0,0.5);
-              padding-left: 1.6rem;
-            }
-          }
-
-          &--extras {
-            flex-basis: 100%;
-          }
+        @include bp(tablet) {
+          padding-bottom: 2.4rem;
+          padding-top: 2.4rem;
+          margin-top: 8rem;
+          
         }
 
-
-      }
-
-      &__personality {
-        &__container {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
-
-      &__relationships {
-        &__container {
+        &__inner {
           @include bp(tablet) {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-
+            grid-template-columns: auto 1fr;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
           }
         }
 
-        &__list {
-          display: grid;
-          grid-template-columns: repeat(2, minmax(auto, 50%));
-          row-gap: 1rem;
-          column-gap: 1rem;
+        &__image {
+          margin: 0 auto;
+          width: fit-content;
+          position: relative;
+          top: -10rem;
+          margin-bottom: -10rem;
+          
+
+          @include bp(tablet) {
+            top: -8rem;
+            margin-bottom: -8rem;
+          }
+        }
+
+        &__content {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+
+          @include bp(tablet) {
+            padding-left: 3rem;
+          }
+        }
+
+        &__name {
+          text-align: center; 
+          margin-bottom: 1.2rem;
           
           @include bp(tablet) {
-            column-gap: 1.6rem;
-            row-gap: 1.6rem;
-            display: flex;
-            flex-wrap: wrap;
+            align-self: center;
+            margin-bottom: 0;
           }
         }
-      }
 
-      &__inventory {
-
-        &__container {
+        &__details {
           display: flex;
-          justify-content: space-between;
-        }
+          flex-wrap: wrap;
+          justify-content: center;
+          text-align: center;
+          column-gap: 2.4rem;
+          row-gap: 1.2rem;
 
-        &__items {
-          flex: auto;
-          padding-left: 2rem;
-        }
+          @include bp(tablet) {
+            height: fit-content;
+          }
 
-        &__currency {
-          border-right: 1px solid rgba(0,0,0,0.5);
-          padding-right: 2rem;
-        }
-      }
+          .npc {
+            &__field {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              column-gap: 0.8rem;
+              flex-wrap: wrap;
 
-      &__inventory-spells {
-        @include bp(tablet) {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-        }
-      }
+              &__label {
+                font-size: 1.6rem;
+              }
 
-
-
-
-
-
-      &__about {
-
-        &__copy {
-
-
-          > .npc__field {
-            animation: scale-in;
-            animation-duration: 0.6s;
-            animation-fill-mode: forwards;
-            opacity: 0;
-            transform-origin: left;
-
-            @for $var from 0 to 20 {
-              &:nth-child(#{$var}) {
-                animation-delay: #{$var * 0.12}s;
+              &__occupation {
+                flex-basis: 100%;
               }
             }
           }
-
-          @keyframes scale-in {
-            0% {
-              transform: scale(.75);
-              opacity: 0;
-            }
-
-            100% {
-              transform: scale(1);
-              opacity: 1;
-            }
-          }
-        }
-      }
-
-      &__field {
-        margin-bottom: 1rem;
-        margin-top: 1rem;
-
-        @include bp(min-width, $npc_bp) {
-          margin-right: auto;
-          padding-right: 2rem;
-        }
-
-        &__label {
-          font-size: 1.2rem;
-          width: fit-content;
-          border-bottom: 1px solid black;
-          line-height: 0.7;
-          margin-bottom: 0.3rem;
-          margin-left: auto;
-          margin-right: auto;
-
-          @include bp(min-width, $npc_bp) {
-            margin-left: initial;
-            margin-right: initial;
-          }
-        }
-
-        &__value {
-          
-        }
-        
-
-        &__goals, &__description {
-          flex-basis: 100%;
-          order: 1;
-        }
-      }
-
-      &__content {
-
-      }
-
-      &__name {
-        font-size: 3rem;
-        line-height: 1.2;
-
-        @include bp(tablet) {
-          grid-column: 1/3;
         }
       }
 
       &__image {
-        padding: 1.6rem;
-        background-color: rgba(155,118,83,0.3);
-        height: fit-content;
-        max-width: 80%;
-        margin: 0 auto;
-
-        @include bp(min-width, 500px) {
-          width: fit-content;
-          margin-left: 0;
-          // margin-right: auto;
-          max-width: initial;
-        }
-
-        @include bp(tablet) {
-          // margin-right: 1.6rem;
-        }
-
-        img {
-          width: 100%;
-
-          @include bp(min-width, 500px) {
-            width: auto;
-          }
-        }
-
         &--default {
-          @include bp(tablet) {
-            max-height: 300px;
-          }
+          max-width: 300px;
+          max-height: 300px;  
         }
       }
+
+      // @include benne;
+      // text-align: center;
+
+      // @include bp(min-width, $npc_bp) {
+      //   text-align: left;
+      // }
+
+      // &__basics {
+      //   // display: grid;
+      //   // grid-template-columns: minmax(250px, auto) repeat(3, minmax(350px, 1fr));
+      //   display: flex;
+      //   flex-wrap: wrap;
+      //   &__copy {
+      //     // flex: 1 0 33%;
+      //     // justify-self: flex-end;
+      //     &__row {
+      //       display: flex;
+      //       justify-content: flex-start;
+      //       width: fit-content;
+      //     }
+
+      //     &--details {
+      //       flex-basis: 100%;
+      //       display: grid;
+      //       grid-template-columns: repeat(3, 1fr);
+
+      //       @include bp(desktop) {
+      //         display: block;
+      //         flex-basis: auto;
+      //         border-left: 2px solid rgba(0,0,0,0.5);
+      //         padding-left: 1.6rem;
+      //       }
+      //     }
+
+      //     &--extras {
+      //       flex-basis: 100%;
+      //     }
+      //   }
+
+
+      // }
+
+      // &__personality {
+      //   &__container {
+      //     display: grid;
+      //     grid-template-columns: repeat(2, 1fr);
+      //   }
+      // }
+
+      // &__relationships {
+      //   &__container {
+      //     @include bp(tablet) {
+      //       display: grid;
+      //       grid-template-columns: repeat(2, 1fr);
+
+      //     }
+      //   }
+
+      //   &__list {
+      //     display: grid;
+      //     grid-template-columns: repeat(2, minmax(auto, 50%));
+      //     row-gap: 1rem;
+      //     column-gap: 1rem;
+          
+      //     @include bp(tablet) {
+      //       column-gap: 1.6rem;
+      //       row-gap: 1.6rem;
+      //       display: flex;
+      //       flex-wrap: wrap;
+      //     }
+      //   }
+      // }
+
+      // &__inventory {
+
+      //   &__container {
+      //     display: flex;
+      //     justify-content: space-between;
+      //   }
+
+      //   &__items {
+      //     flex: auto;
+      //     padding-left: 2rem;
+      //   }
+
+      //   &__currency {
+      //     border-right: 1px solid rgba(0,0,0,0.5);
+      //     padding-right: 2rem;
+      //   }
+      // }
+
+      // &__inventory-spells {
+      //   @include bp(tablet) {
+      //     display: grid;
+      //     grid-template-columns: repeat(2, 1fr);
+      //   }
+      // }
+
+
+
+
+
+
+      // &__about {
+
+      //   &__copy {
+
+
+      //     > .npc__field {
+      //       animation: scale-in;
+      //       animation-duration: 0.6s;
+      //       animation-fill-mode: forwards;
+      //       opacity: 0;
+      //       transform-origin: left;
+
+      //       @for $var from 0 to 20 {
+      //         &:nth-child(#{$var}) {
+      //           animation-delay: #{$var * 0.12}s;
+      //         }
+      //       }
+      //     }
+
+      //     @keyframes scale-in {
+      //       0% {
+      //         transform: scale(.75);
+      //         opacity: 0;
+      //       }
+
+      //       100% {
+      //         transform: scale(1);
+      //         opacity: 1;
+      //       }
+      //     }
+      //   }
+      // }
+
+      // &__field {
+      //   margin-bottom: 1rem;
+      //   margin-top: 1rem;
+
+      //   @include bp(min-width, $npc_bp) {
+      //     margin-right: auto;
+      //     padding-right: 2rem;
+      //   }
+
+      //   &__label {
+      //     font-size: 1.2rem;
+      //     width: fit-content;
+      //     border-bottom: 1px solid black;
+      //     line-height: 0.7;
+      //     margin-bottom: 0.3rem;
+      //     margin-left: auto;
+      //     margin-right: auto;
+
+      //     @include bp(min-width, $npc_bp) {
+      //       margin-left: initial;
+      //       margin-right: initial;
+      //     }
+      //   }
+
+      //   &__value {
+          
+      //   }
+        
+
+      //   &__goals, &__description {
+      //     flex-basis: 100%;
+      //     order: 1;
+      //   }
+      // }
+
+      // &__content {
+
+      // }
+
+      // &__name {
+      //   font-size: 3rem;
+      //   line-height: 1.2;
+
+      //   @include bp(tablet) {
+      //     grid-column: 1/3;
+      //   }
+      // }
+
+      // &__image {
+      //   padding: 1.6rem;
+      //   background-color: rgba(155,118,83,0.3);
+      //   height: fit-content;
+      //   max-width: 80%;
+      //   margin: 0 auto;
+
+      //   @include bp(min-width, 500px) {
+      //     width: fit-content;
+      //     margin-left: 0;
+      //     // margin-right: auto;
+      //     max-width: initial;
+      //   }
+
+      //   @include bp(tablet) {
+      //     // margin-right: 1.6rem;
+      //   }
+
+      //   img {
+      //     width: 100%;
+
+      //     @include bp(min-width, 500px) {
+      //       width: auto;
+      //     }
+      //   }
+
+      //   &--default {
+      //     @include bp(tablet) {
+      //       max-height: 300px;
+      //     }
+      //   }
+      // }
 
      
-      &__stats {
-        &__title {
+      // &__stats {
+      //   &__title {
 
-        }
+      //   }
 
-        &__value {
+      //   &__value {
 
-        }
-      }
+      //   }
+      // }
 
-      &__capabilities {
+      // &__capabilities {
 
 
-        &__content {
-          @include bp(tablet) {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, 50px);
-          }
-        }
-      }
+      //   &__content {
+      //     @include bp(tablet) {
+      //       display: grid;
+      //       grid-template-columns: repeat(auto-fill, 50px);
+      //     }
+      //   }
+      // }
 
-      &__inventory {
-      }
+      // &__inventory {
+      // }
 
-      &__section-heading {
-        text-align: left;
-        margin-bottom: 1.6rem;
-        margin-top: 1.6rem;
-      }
+      // &__section-heading {
+      //   text-align: left;
+      //   margin-bottom: 1.6rem;
+      //   margin-top: 1.6rem;
+      // }
 
-      section {
-        @include bp(tablet) {
-          margin-top: 3rem;
-        }
-      }
+      // section {
+      //   @include bp(tablet) {
+      //     margin-top: 3rem;
+      //   }
+      // }
 
-      &__accordion {
-        &__heading {
+      // &__accordion {
+      //   &__heading {
 
-        }
+      //   }
 
-        &__content {
-          height: 0;
-          overflow: hidden;
-          // display: none;
+      //   &__content {
+      //     height: 0;
+      //     overflow: hidden;
+      //     // display: none;
 
-          @include bp(tablet) {
-            height: auto;
-          }
+      //     @include bp(tablet) {
+      //       height: auto;
+      //     }
 
-        }
+      //   }
 
-        // &.open {
-        //   .npc__accordion__content {
-        //     display: block;
-        //   }
-        // }
-      }
+      //   // &.open {
+      //   //   .npc__accordion__content {
+      //   //     display: block;
+      //   //   }
+      //   // }
+      // }
 
 
 

@@ -7,6 +7,8 @@ body {
   background-color: $off-white;
   z-index: 1;
   position: relative;
+  max-width: 100vw;
+  overflow-x: hidden;
   // background-image: url("https://www.transparenttextures.com/patterns/paper-2.png");
 }
 
@@ -27,7 +29,7 @@ html, body {
 }
 
 h1 {
-  font-size: 5rem;
+  font-size: 6rem;
 }
 
 h2 {
