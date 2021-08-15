@@ -180,3 +180,4 @@ function getNPCCard($npc_id) {
  */
 wp_enqueue_script( 'accordions', get_template_directory_uri().'/js/accordions.js', '', '', true );
 wp_enqueue_script( 'modals', get_template_directory_uri().'/js/modals.js', '', '', true );
+wp_enqueue_script( 'header', get_template_directory_uri().'/js/header.js', '', '', true );
