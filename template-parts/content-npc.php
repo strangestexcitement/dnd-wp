@@ -2,8 +2,6 @@
 /**
  * Template part for displaying page content in page.php
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
  * @package dndest
  */
 ?>
@@ -116,54 +114,81 @@
 	</div>
 	<!-- End Hero -->
 
-
-
-	<!-- Basic Info -->
-	<div class="npc__basics">
-		
-
-		<div class="npc__basics__copy">
-			<div class="npc__basics__copy__row">
-				
+	<!-- Basics -->
+	<?php if($npc_background || $npc_aliases || $npc_gender_pronouns || $npc_alignment || $npc_age ||
+						$npc_birthday || $npc_height || $npc_weight || $npc_body_type || $npc_eyes || $npc_skin || $npc_hair) { ?>
+		<div class="npc__basics npc__module">
+			<div class="npc__basics__inner npc__accordion">
+				<h2 class="npc__basics__heading npc__accordion__heading">BASICS</h2>
+				<div class="npc__basics__content npc__accordion__content">
+					<?= ($npc_background) ? "<div class='npc__field npc__field__background'><p class='npc__field__label'>BACKGROUND:</p><p class='npc__field__value'>$npc_background</p></div>" : "" ?>
+					<?= ($npc_aliases) ? "<div class='npc__field npc__field__aliases'><p class='npc__field__label'>ALIASES:</p><p class='npc__field__value'>$npc_aliases</p></div>" : "" ?>
+					<?= ($npc_gender_pronouns) ? "<div class='npc__field npc__field__gender'><p class='npc__field__label'>GENDER/PRONOUNS:</p><p class='npc__field__value'>$npc_gender_pronouns</p></div>" : "" ?>
+					<?= ($npc_alignment) ? "<div class='npc__field npc__field__alignment'><p class='npc__field__label'>ALIGNMENT:</p><p class='npc__field__value'>$npc_alignment</p></div>" : "" ?>
+					<?= ($npc_age) ? "<div class='npc__field npc__field__age'><p class='npc__field__label'>AGE:</p><p class='npc__field__value'>$npc_age</p></div>" : "" ?>
+					<?= ($npc_birthday) ? "<div class='npc__field npc__field__birthday'><p class='npc__field__label'>BIRTHDAY:</p><p class='npc__field__value'>$npc_birthday</p></div>" : "" ?>
+					<?= ($npc_height) ? "<div class='npc__field npc__field__height'><p class='npc__field__label'>HEIGHT:</p><p class='npc__field__value'>$npc_height</p></div>" : "" ?>
+					<?= ($npc_weight) ? "<div class='npc__field npc__field__weight'><p class='npc__field__label'>WEIGHT:</p><p class='npc__field__value'>$npc_weight</p></div>" : "" ?>
+					<?= ($npc_body_type) ? "<div class='npc__field npc__field__body_type'><p class='npc__field__label'>BODY TYPE:</p><p class='npc__field__value'>$npc_body_type</p></div>" : "" ?>
+					<?= ($npc_eyes) ? "<div class='npc__field npc__field__eyes'><p class='npc__field__label'>EYES:</p><p class='npc__field__value'>$npc_eyes</p></div>" : "" ?>
+					<?= ($npc_skin) ? "<div class='npc__field npc__field__skin'><p class='npc__field__label'>SKIN:</p><p class='npc__field__value'>$npc_skin</p></div>" : "" ?>
+					<?= ($npc_hair) ? "<div class='npc__field npc__field__hair'><p class='npc__field__label'>HAIR:</p><p class='npc__field__value'>$npc_hair</p></div>" : "" ?>
+				</div>
 			</div>
-			
-			<?= ($npc_background) ? "<div class='npc__field npc__field__background'><p class='npc__field__label'>BACKGROUND:</p><p class='npc__field__value'>$npc_background</p></div>" : "" ?>
-			<?= ($npc_aliases) ? "<div class='npc__field npc__field__aliases'><p class='npc__field__label'>ALIASES:</p><p class='npc__field__value'>$npc_aliases</p></div>" : "" ?>
-			<?= ($npc_gender_pronouns) ? "<div class='npc__field npc__field__gender'><p class='npc__field__label'>GENDER/PRONOUNS:</p><p class='npc__field__value'>$npc_gender_pronouns</p></div>" : "" ?>
-			<?= ($npc_alignment) ? "<div class='npc__field npc__field__alignment'><p class='npc__field__label'>ALIGNMENT:</p><p class='npc__field__value'>$npc_alignment</p></div>" : "" ?>
-			<div class="npc__basics__copy__row">
-				<?= ($npc_age) ? "<div class='npc__field npc__field__age'><p class='npc__field__label'>AGE:</p><p class='npc__field__value'>$npc_age</p></div>" : "" ?>
-				<?= ($npc_birthday) ? "<div class='npc__field npc__field__birthday'><p class='npc__field__label'>BIRTHDAY:</p><p class='npc__field__value'>$npc_birthday</p></div>" : "" ?>
-			</div>
 		</div>
-
-		<div class="npc__basics__copy npc__basics__copy--details">
-			<?= ($npc_height) ? "<div class='npc__field npc__field__height'><p class='npc__field__label'>HEIGHT:</p><p class='npc__field__value'>$npc_height</p></div>" : "" ?>
-			<?= ($npc_weight) ? "<div class='npc__field npc__field__weight'><p class='npc__field__label'>WEIGHT:</p><p class='npc__field__value'>$npc_weight</p></div>" : "" ?>
-			<?= ($npc_body_type) ? "<div class='npc__field npc__field__body_type'><p class='npc__field__label'>BODY TYPE:</p><p class='npc__field__value'>$npc_body_type</p></div>" : "" ?>
-			<?= ($npc_eyes) ? "<div class='npc__field npc__field__eyes'><p class='npc__field__label'>EYES:</p><p class='npc__field__value'>$npc_eyes</p></div>" : "" ?>
-			<?= ($npc_skin) ? "<div class='npc__field npc__field__skin'><p class='npc__field__label'>SKIN:</p><p class='npc__field__value'>$npc_skin</p></div>" : "" ?>
-			<?= ($npc_hair) ? "<div class='npc__field npc__field__hair'><p class='npc__field__label'>HAIR:</p><p class='npc__field__value'>$npc_hair</p></div>" : "" ?>
-		</div>
-
-		<div class="npc__basics__copy npc__basics__copy--extras">
-			<?= ($npc_goals) ? "<div class='npc__field npc__field__goals'><p class='npc__field__label'>GOALS:</p><div class='npc__field__value'>$npc_goals</div></div>" : "" ?>
-			<?= ($npc_description) ? "<div class='npc__field npc__field__description'><p class='npc__field__label'>DESCRIPTION:</p><div class='npc__field__value'>$npc_description</div></div>" : "" ?>
-		</div>
-	</div>
-
-	<?php if($npc_personality_traits || $npc_ideals || $npc_bonds || $npc_flaws) { ?>
-	<!-- Personality -->
-	<section class="npc__personality npc__accordion">
-		<h2 class="npc__section-heading npc__accordion__heading">Personality</h2>
-		<div class="npc__personality__container npc__accordion__content">
-			<?= ($npc_personality_traits) ? "<div class='npc__field npc__field__personality-traits'><p class='npc__field__label'>PERSONALITY TRAITS:</p><p class='npc__field__value'>$npc_personality_traits</p></div>" : "" ?>
-			<?= ($npc_ideals) ? "<div class='npc__field npc__field__ideals'><p class='npc__field__label'>IDEALS:</p><p class='npc__field__value'>$npc_ideals</p></div>" : "" ?>
-			<?= ($npc_bonds) ? "<div class='npc__field npc__field__bonds'><p class='npc__field__label'>BONDS:</p><p class='npc__field__value'>$npc_bonds</p></div>" : "" ?>
-			<?= ($npc_flaws) ? "<div class='npc__field npc__field__flaws'><p class='npc__field__label'>FLAWS:</p><p class='npc__field__value'>$npc_flaws</p></div>" : "" ?>
-		</div>
-	</section>
 	<?php } ?>
+	<!-- End Basics -->
+
+
+	<!-- Goals -->
+	<?php if($npc_goals) { ?>
+		<div class="npc__goals npc__module">
+			<div class="npc__goals__inner npc__accordion">
+				<h2 class="npc__goals__heading npc__accordion__heading">GOALS</h2>
+				<div class="npc__goals__content npc__accordion__content">
+					<?= ($npc_goals) ? "<div class='npc__field npc__field__goals'><div class='npc__field__value'>$npc_goals</div></div>" : "" ?>
+				</div>
+			</div>
+		</div>
+	<?php } ?>
+	<!-- End Goals -->
+
+	<!-- Description -->
+	<?php if($npc_description) { ?>
+		<div class="npc__desc npc__module">
+			<div class="npc__desc__inner npc__accordion">
+				<h2 class="npc__desc__heading npc__accordion__heading">DESCRIPTION</h2>
+				<div class="npc__desc__content npc__accordion__content">
+					<?= ($npc_description) ? "<div class='npc__field npc__field__desc'><div class='npc__field__value'>$npc_description</div></div>" : "" ?>
+				</div>
+			</div>
+		</div>
+	<?php } ?>
+	<!-- End Description -->
+
+	<!-- Personality -->
+	<?php if($npc_personality_traits || $npc_ideals || $npc_bonds || $npc_flaws) { ?>
+		<div class="npc__personality npc__module">
+			<div class="npc__personality__inner npc__accordion">
+				<h2 class="npc__personality__heading npc__accordion__heading">PERSONALITY</h2>
+				<div class="npc__personality__content npc__accordion__content">
+					<?= ($npc_personality_traits) ? "<div class='npc__personality__card'><div class='npc__field npc__field__personality-traits'><p class='npc__field__label'>PERSONALITY TRAITS:</p><div class='npc__field__value'>$npc_personality_traits</div></div></div>" : "" ?>
+					<?= ($npc_ideals) ? "<div class='npc__personality__card'><div class='npc__field npc__field__ideals'><p class='npc__field__label'>IDEALS:</p><div class='npc__field__value'>$npc_ideals</div></div></div>" : "" ?>
+					<?= ($npc_bonds) ? "<div class='npc__personality__card'><div class='npc__field npc__field__bonds'><p class='npc__field__label'>BONDS:</p><div class='npc__field__value'>$npc_bonds</div></div></div>" : "" ?>
+					<?= ($npc_flaws) ? "<div class='npc__personality__card'><div class='npc__field npc__field__flaws'><p class='npc__field__label'>FLAWS:</p><div class='npc__field__value'>$npc_flaws</div></div></div>" : "" ?>
+				</div>
+			</div>
+		</div>
+	<?php } ?>
+	<!-- End Personality -->
+
+
+
+
+
+
+
+
 
 	<?php if($npc_allies_links || $npc_allies_other || $npc_enemies_links || $npc_enemies_other) { ?>
 		<!-- Relationships -->

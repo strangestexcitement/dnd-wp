@@ -646,8 +646,26 @@ textarea {
 
 /* Templates
 --------------------------------------------- */
+.single-npc .npc__module {
+	padding-top: 2.4rem;
+	padding-bottom: 2.4rem;
+	padding-left: 1.2rem;
+	padding-right: 1.2rem;
+}
+
+@media (min-width: 768px) {
+	.single-npc .npc__module {
+		margin-top: 3rem;
+		padding-left: 3rem;
+		padding-right: 3rem;
+		padding-top: 3.6rem;
+		padding-bottom: 3.6rem;
+	}
+}
+
 .single-npc .npc__hero {
-	background-color: #c7a988;
+	background-color: #b3916d;
+	background: linear-gradient(to top right, #b3896d, #e2c7a9);
 	margin-top: 10rem;
 	padding-left: 3rem;
 	padding-right: 3rem;
@@ -658,7 +676,7 @@ textarea {
 	.single-npc .npc__hero {
 		padding-bottom: 2.4rem;
 		padding-top: 2.4rem;
-		margin-top: 8rem;
+		margin-top: 5rem;
 	}
 }
 
@@ -745,6 +763,142 @@ textarea {
 .single-npc .npc__image--default {
 	max-width: 300px;
 	max-height: 300px;
+}
+
+.single-npc .npc__basics {
+	background-color: #b0b8bf;
+	background: linear-gradient(to top left, #9098aa, #c1c7cc);
+}
+
+@media (min-width: 768px) {
+	.single-npc .npc__basics__heading {
+		padding-bottom: 2.4rem;
+		font-weight: 700;
+	}
+}
+
+.single-npc .npc__basics__content {
+	display: flex;
+	flex-direction: column;
+	row-gap: 2.4rem;
+}
+
+@media (min-width: 768px) {
+	.single-npc .npc__basics__content {
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		column-gap: 1.6rem;
+		row-gap: 3.2rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.single-npc .npc__basics .npc__field {
+		flex-basis: 200px;
+	}
+}
+
+.single-npc .npc__goals {
+	background-color: #000;
+	background: linear-gradient(345deg, #000, #333333);
+	color: #fff;
+}
+
+@media (min-width: 768px) {
+	.single-npc .npc__goals__heading {
+		text-align: center;
+	}
+}
+
+.single-npc .npc__desc {
+	background-color: #b0b8bf;
+	background: linear-gradient(to bottom left, #c3e9d5, #7dada3);
+}
+
+@media (min-width: 768px) {
+	.single-npc .npc__desc__heading {
+		text-align: center;
+	}
+}
+
+.single-npc .npc__personality {
+	background-color: #905d5d;
+	background: linear-gradient(190deg, #4e2d2d, #271616);
+	color: #fff;
+}
+
+@media (min-width: 768px) {
+	.single-npc .npc__personality {
+		color: #000;
+	}
+}
+
+@media (min-width: 768px) {
+	.single-npc .npc__personality__heading {
+		color: #fff;
+	}
+}
+
+.single-npc .npc__personality__content {
+	display: flex;
+	flex-direction: column;
+	row-gap: 2.4rem;
+}
+
+@media (min-width: 768px) {
+	.single-npc .npc__personality__content {
+		flex-direction: row;
+		justify-content: center;
+		flex-wrap: wrap;
+		column-gap: 2.4rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.single-npc .npc__personality__card {
+		flex-basis: calc(50% - 1.2rem);
+		width: 40%;
+		max-width: 400px;
+	}
+}
+
+@media (min-width: 768px) {
+	.single-npc .npc__personality .npc__field {
+		margin: 0 auto;
+		background-color: #bebebe;
+		height: 100%;
+		padding-top: 1.2rem;
+		padding-bottom: 1.2rem;
+		padding-left: 1.6rem;
+		padding-right: 1.6rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.single-npc .npc__personality .npc__field__value {
+		text-align: left;
+		margin-top: 1.2rem;
+	}
+}
+
+.single-npc .npc__field {
+	text-align: center;
+}
+
+.single-npc .npc__field__label {
+	font-size: 1.4rem;
+	font-weight: 700;
+}
+
+.single-npc .npc__accordion__content {
+	overflow: hidden;
+}
+
+@media (min-width: 768px) {
+	.single-npc .npc__accordion__content {
+		height: auto;
+	}
 }
 
 /*# sourceMappingURL=style.css.map */

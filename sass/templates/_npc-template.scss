@@ -4,8 +4,26 @@ $npc_bp: 400px;
 
     .npc {
 
+      // general module styling 
+      &__module {
+        padding-top: 2.4rem;
+        padding-bottom: 2.4rem;
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+        
+        @include bp(tablet) {
+          margin-top: 3rem;
+          padding-left: 3rem;
+          padding-right: 3rem;
+          padding-top: 3.6rem;
+          padding-bottom: 3.6rem;
+        }
+      }
+
+      // hero styling
       &__hero {
-        background-color: #c7a988;
+        background-color: #b3916d;
+        background: linear-gradient(to top right, #b3896d, #e2c7a9);
         margin-top: 10rem;
         padding-left: 3rem;
         padding-right: 3rem;
@@ -14,8 +32,7 @@ $npc_bp: 400px;
         @include bp(tablet) {
           padding-bottom: 2.4rem;
           padding-top: 2.4rem;
-          margin-top: 8rem;
-          
+          margin-top: 5rem;
         }
 
         &__inner {
@@ -98,6 +115,169 @@ $npc_bp: 400px;
         &--default {
           max-width: 300px;
           max-height: 300px;  
+        }
+      }
+
+      // basics section styling
+      &__basics {
+        background-color: #b0b8bf;
+        background: linear-gradient(to top left, #9098aa, #c1c7cc);
+        
+        &__inner {
+
+        }
+
+        &__heading {
+          @include bp(tablet) {
+            padding-bottom: 2.4rem;
+            font-weight: 700;
+          }
+        }
+
+        &__content {
+          display: flex;
+          flex-direction: column;
+          row-gap: 2.4rem;
+
+          @include bp(tablet) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            column-gap: 1.6rem;
+            row-gap: 3.2rem;          
+          }
+        }
+
+        .npc {
+          &__field {
+            @include bp(tablet) {
+              flex-basis: 200px;
+            }
+          }
+        }
+      }
+
+      // goals section styling 
+      &__goals {
+        background-color: $black;
+        background: linear-gradient(345deg, #000, #333333);
+        color: $white;
+
+        &__inner {
+
+        }
+
+        &__heading {
+          @include bp(tablet) {
+            text-align: center;
+          }
+        }
+
+        &__content {
+
+        }
+      }
+
+       // description section styling 
+       &__desc {
+        background-color: #b0b8bf;
+        background: linear-gradient(to bottom left, #c3e9d5, #7dada3);
+
+        &__inner {
+
+        }
+
+        &__heading {
+          @include bp(tablet) {
+            text-align: center;
+          }
+        }
+
+        &__content {
+
+        }
+      }
+
+      // personality section styling 
+      &__personality {
+        background-color: #905d5d;
+        background: linear-gradient(190deg, #4e2d2d, hsl(0, 27%, 12%));
+        color: $white;
+
+        @include bp(tablet) {
+          color: $black;
+        }
+
+        &__inner {
+
+        }
+
+        &__heading {
+          @include bp(tablet) {
+            color: $white;
+          }
+        }
+
+        &__content {
+          display: flex;
+          flex-direction: column;
+          row-gap: 2.4rem;
+
+          @include bp(tablet) {
+            flex-direction: row;
+            justify-content: center;
+            flex-wrap: wrap;
+            column-gap: 2.4rem;
+          }
+        }
+
+        &__card {
+          @include bp(tablet) {
+            flex-basis: calc(50% - 1.2rem);
+            width: 40%;
+            max-width: 400px;
+          }
+        }
+
+        .npc {
+          &__field {
+            @include bp(tablet) {
+              margin: 0 auto;
+              background-color: #bebebe;
+              height: 100%;
+              padding-top: 1.2rem;
+              padding-bottom: 1.2rem;
+              padding-left: 1.6rem;
+              padding-right: 1.6rem;
+            }
+
+            &__value {
+              @include bp(tablet) {
+                text-align: left;
+                margin-top: 1.2rem;
+              }
+            }
+          }
+        }
+      }
+
+
+
+
+
+
+
+      &__field {
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // column-gap: 0.8rem;
+        // flex-wrap: wrap;
+        text-align: center;
+
+        &__label {
+          font-size: 1.4rem;
+          font-weight: 700;
         }
       }
 
@@ -355,28 +535,28 @@ $npc_bp: 400px;
       //   }
       // }
 
-      // &__accordion {
-      //   &__heading {
+      &__accordion {
+        &__heading {
 
-      //   }
+        }
 
-      //   &__content {
-      //     height: 0;
-      //     overflow: hidden;
-      //     // display: none;
+        &__content {
+          // height: 0;
+          overflow: hidden;
+          // display: none;
 
-      //     @include bp(tablet) {
-      //       height: auto;
-      //     }
+          @include bp(tablet) {
+            height: auto;
+          }
 
-      //   }
+        }
 
-      //   // &.open {
-      //   //   .npc__accordion__content {
-      //   //     display: block;
-      //   //   }
-      //   // }
-      // }
+        // &:not(.closed) {
+        //   .npc__accordion__heading {
+        //     margin-bottom: 1.2rem;
+        //   }
+        // }
+      }
 
 
 
