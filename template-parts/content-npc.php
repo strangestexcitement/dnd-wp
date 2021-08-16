@@ -114,6 +114,19 @@
 	</div>
 	<!-- End Hero -->
 
+	<!-- Goals -->
+	<?php if($npc_goals) { ?>
+		<div class="npc__goals npc__module">
+			<div class="npc__goals__inner npc__accordion">
+				<h2 class="npc__goals__heading npc__accordion__heading">GOALS</h2>
+				<div class="npc__goals__content npc__accordion__content">
+					<?= ($npc_goals) ? "<div class='npc__field npc__field__goals'><div class='npc__field__value'>$npc_goals</div></div>" : "" ?>
+				</div>
+			</div>
+		</div>
+	<?php } ?>
+	<!-- End Goals -->
+
 	<!-- Basics -->
 	<?php if($npc_background || $npc_aliases || $npc_gender_pronouns || $npc_alignment || $npc_age ||
 						$npc_birthday || $npc_height || $npc_weight || $npc_body_type || $npc_eyes || $npc_skin || $npc_hair) { ?>
@@ -138,20 +151,6 @@
 		</div>
 	<?php } ?>
 	<!-- End Basics -->
-
-
-	<!-- Goals -->
-	<?php if($npc_goals) { ?>
-		<div class="npc__goals npc__module">
-			<div class="npc__goals__inner npc__accordion">
-				<h2 class="npc__goals__heading npc__accordion__heading">GOALS</h2>
-				<div class="npc__goals__content npc__accordion__content">
-					<?= ($npc_goals) ? "<div class='npc__field npc__field__goals'><div class='npc__field__value'>$npc_goals</div></div>" : "" ?>
-				</div>
-			</div>
-		</div>
-	<?php } ?>
-	<!-- End Goals -->
 
 	<!-- Description -->
 	<?php if($npc_description) { ?>
@@ -182,24 +181,23 @@
 	<?php } ?>
 	<!-- End Personality -->
 
-
-
-
-
-
-
-
-
+	<!-- Relationships -->
 	<?php if($npc_allies_links || $npc_allies_other || $npc_enemies_links || $npc_enemies_other) { ?>
-		<!-- Relationships -->
-		<section class="npc__relationships npc__accordion">
-			<h2 class="npc__section-heading npc__accordion__heading">Relationships</h2>
-			<div class="npc__relationships__container npc__accordion__content">
-				<?= ($npc_allies_other || $npc_allies_links) ? "<div class='npc__field npc__field__allies'><p class='npc__field__label'>ALLIES:</p><div class='npc__field__value'>$allies_links $npc_allies_other</div></div>" : "" ?>
-				<?= ($npc_enemies_other || $npc_enemies_links) ? "<div class='npc__field npc__field__enemies'><p class='npc__field__label'>ENEMIES:</p><div class='npc__field__value'>$enemies_links $npc_enemies_other</div></div>" : "" ?>
+		<div class="npc__relationships npc__module">
+			<div class="npc__relationships__inner npc__accordion">
+				<h2 class="npc__relationships__heading npc__accordion__heading">RELATIONSHIPS</h2>
+				<div class="npc__relationships__content npc__accordion__content">
+					<?= ($npc_allies_other || $npc_allies_links) ? "<div class='npc__field npc__field__allies'><p class='npc__field__label'>ALLIES:</p><div class='npc__field__value'>$allies_links</div><p class='npc__field__label'>OTHER ALLIES:</p><div class='npc__field__value'>$npc_allies_other</div></div>" : "" ?>
+					<?= ($npc_enemies_other || $npc_enemies_links) ? "<div class='npc__field npc__field__enemies'><p class='npc__field__label'>ENEMIES:</p><div class='npc__field__value'>$enemies_links</div><p class='npc__field__label'>OTHER ENEMIES:</p><div class='npc__field__value'>$npc_enemies_other</div></div>" : "" ?>
+				</div>
 			</div>
-		</section>
+		</div>
 	<?php } ?>
+	<!-- End Relationships -->
+
+
+
+
 
 	<?= ($npc_backstory) ? 
 			"<!-- Backstory -->
