@@ -118,7 +118,7 @@
 	<?php if($npc_goals) { ?>
 		<div class="npc__goals npc__module">
 			<div class="npc__goals__inner npc__accordion">
-				<h2 class="npc__goals__heading npc__accordion__heading">GOALS</h2>
+				<h2 class="npc__goals__heading npc__accordion__heading">Goals</h2>
 				<div class="npc__goals__content npc__accordion__content">
 					<?= ($npc_goals) ? "<div class='npc__field npc__field__goals'><div class='npc__field__value'>$npc_goals</div></div>" : "" ?>
 				</div>
@@ -132,7 +132,7 @@
 						$npc_birthday || $npc_height || $npc_weight || $npc_body_type || $npc_eyes || $npc_skin || $npc_hair) { ?>
 		<div class="npc__basics npc__module">
 			<div class="npc__basics__inner npc__accordion">
-				<h2 class="npc__basics__heading npc__accordion__heading">BASICS</h2>
+				<h2 class="npc__basics__heading npc__accordion__heading">Basics</h2>
 				<div class="npc__basics__content npc__accordion__content">
 					<?= ($npc_background) ? "<div class='npc__field npc__field__background'><p class='npc__field__label'>BACKGROUND:</p><p class='npc__field__value'>$npc_background</p></div>" : "" ?>
 					<?= ($npc_aliases) ? "<div class='npc__field npc__field__aliases'><p class='npc__field__label'>ALIASES:</p><p class='npc__field__value'>$npc_aliases</p></div>" : "" ?>
@@ -156,7 +156,7 @@
 	<?php if($npc_description) { ?>
 		<div class="npc__desc npc__module">
 			<div class="npc__desc__inner npc__accordion">
-				<h2 class="npc__desc__heading npc__accordion__heading">DESCRIPTION</h2>
+				<h2 class="npc__desc__heading npc__accordion__heading">Description</h2>
 				<div class="npc__desc__content npc__accordion__content">
 					<?= ($npc_description) ? "<div class='npc__field npc__field__desc'><div class='npc__field__value'>$npc_description</div></div>" : "" ?>
 				</div>
@@ -169,7 +169,7 @@
 	<?php if($npc_personality_traits || $npc_ideals || $npc_bonds || $npc_flaws) { ?>
 		<div class="npc__personality npc__module">
 			<div class="npc__personality__inner npc__accordion">
-				<h2 class="npc__personality__heading npc__accordion__heading">PERSONALITY</h2>
+				<h2 class="npc__personality__heading npc__accordion__heading">Personality</h2>
 				<div class="npc__personality__content npc__accordion__content">
 					<?= ($npc_personality_traits) ? "<div class='npc__personality__card'><div class='npc__field npc__field__personality-traits'><p class='npc__field__label'>PERSONALITY TRAITS:</p><div class='npc__field__value'>$npc_personality_traits</div></div></div>" : "" ?>
 					<?= ($npc_ideals) ? "<div class='npc__personality__card'><div class='npc__field npc__field__ideals'><p class='npc__field__label'>IDEALS:</p><div class='npc__field__value'>$npc_ideals</div></div></div>" : "" ?>
@@ -185,7 +185,7 @@
 	<?php if($npc_allies_links || $npc_allies_other || $npc_enemies_links || $npc_enemies_other) { ?>
 		<div class="npc__relationships npc__module">
 			<div class="npc__relationships__inner npc__accordion">
-				<h2 class="npc__relationships__heading npc__accordion__heading">RELATIONSHIPS</h2>
+				<h2 class="npc__relationships__heading npc__accordion__heading">Relationships</h2>
 				<div class="npc__relationships__content npc__accordion__content">
 					<?= ($npc_allies_other || $npc_allies_links) ? "<div class='npc__field npc__field__allies'><p class='npc__field__label'>ALLIES:</p><div class='npc__field__value'>$allies_links</div><p class='npc__field__label'>OTHER ALLIES:</p><div class='npc__field__value'>$npc_allies_other</div></div>" : "" ?>
 					<?= ($npc_enemies_other || $npc_enemies_links) ? "<div class='npc__field npc__field__enemies'><p class='npc__field__label'>ENEMIES:</p><div class='npc__field__value'>$enemies_links</div><p class='npc__field__label'>OTHER ENEMIES:</p><div class='npc__field__value'>$npc_enemies_other</div></div>" : "" ?>
@@ -195,18 +195,20 @@
 	<?php } ?>
 	<!-- End Relationships -->
 
+	<!-- Backstory -->
+	<?php if($npc_backstory) { ?>
+		<div class="npc__backstory npc__module">
+			<div class="npc__backstory__inner npc__accordion">
+				<h2 class="npc__backstory__heading npc__accordion__heading">Backstory</h2>
+				<div class="npc__backstory__content npc__accordion__content">
+					<?= ($npc_backstory) ? "<div class='npc__field npc__field__backstory'><div class='npc__field__value'>$npc_backstory</div></div>" : "" ?>
+				</div>
+			</div>
+		</div>
+	<?php } ?>
+	<!-- End Backstory -->
 
 
-
-
-	<?= ($npc_backstory) ? 
-			"<!-- Backstory -->
-			<section class='npc__backstory npc__accordion'>
-				<h2 class='npc__section-heading npc__accordion__heading'>Backstory</h2>
-				<div class='npc__field npc__field__backstory npc__accordion__content'><p class='npc__field__value'>$npc_backstory</p></div>
-			</section>" 
-			: "";
-		?>
 
 	<?= ($npc_symbol_id) ?
 		"<!-- Backstory -->

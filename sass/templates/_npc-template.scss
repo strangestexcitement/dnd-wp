@@ -164,7 +164,8 @@ $npc_bp: 400px;
         color: $white;
 
         &__inner {
-
+          max-width: 800px;
+          margin: 0 auto;
         }
 
         &__heading {
@@ -184,7 +185,8 @@ $npc_bp: 400px;
         background: linear-gradient(to bottom left, #c3e9d5, #7dada3);
 
         &__inner {
-
+          max-width: 800px;
+          margin: 0 auto;
         }
 
         &__heading {
@@ -335,7 +337,27 @@ $npc_bp: 400px;
         }
       }
 
+      // backstory section styling 
+      &__backstory {
+        background-color: #352C39;
+        background: linear-gradient(150deg, rgb(80, 67, 125), hsl(282, 40%, 10%));
+        color: white;
 
+        &__inner {
+          max-width: 800px;
+          margin: 0 auto;
+        }
+
+        &__heading {
+          @include bp(tablet) {
+            text-align: center;
+          }
+        }
+
+        &__content {
+
+        }
+      }
 
 
 

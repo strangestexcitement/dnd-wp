@@ -809,6 +809,11 @@ textarea {
 	color: #fff;
 }
 
+.single-npc .npc__goals__inner {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
 @media (min-width: 768px) {
 	.single-npc .npc__goals__heading {
 		text-align: center;
@@ -818,6 +823,11 @@ textarea {
 .single-npc .npc__desc {
 	background-color: #b0b8bf;
 	background: linear-gradient(to bottom left, #c3e9d5, #7dada3);
+}
+
+.single-npc .npc__desc__inner {
+	max-width: 800px;
+	margin: 0 auto;
 }
 
 @media (min-width: 768px) {
@@ -959,6 +969,23 @@ textarea {
 @media (min-width: 768px) {
 	.single-npc .npc__relationships__list .npc__box {
 		max-height: 300px;
+	}
+}
+
+.single-npc .npc__backstory {
+	background-color: #352C39;
+	background: linear-gradient(150deg, #50437d, #1e0f24);
+	color: white;
+}
+
+.single-npc .npc__backstory__inner {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+	.single-npc .npc__backstory__heading {
+		text-align: center;
 	}
 }
 
