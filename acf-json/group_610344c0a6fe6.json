@@ -4025,6 +4025,68 @@
             ]
         },
         {
+            "key": "field_611c641a6d8db",
+            "label": "NPC Symbol Description",
+            "name": "npc_symbol_description",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_611c641a6d8dc",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_611c641a6d8dd",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
             "key": "field_60fdd503d49b7",
             "label": "Personality and Relationships",
             "name": "",
@@ -4788,5 +4850,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1628300587
+    "modified": 1629250612
 }

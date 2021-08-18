@@ -56,3 +56,105 @@ $breakpoints: (
   margin-left: calc((100vw - 100%) / -2);
   margin-right: calc((100vw - 100%) / -2);
 }
+
+//gradients 
+@mixin linear-gradient($direction, $gradient) {
+  @if $gradient == ocean-blue {//
+    background: linear-gradient($direction, #2E3192, #1BFFFF);
+  }
+  @else if $gradient == sanguine {//
+    background: linear-gradient($direction, #D4145A, #FBB03B);
+  }
+  @else if $gradient == purple-lake {//
+    background: linear-gradient($direction, #662D8C, #ED1E79);
+  }
+  @else if $gradient == piglet {
+    background: linear-gradient($direction, #EE9CA7, #FFDDE1);
+  }
+  @else if $gradient == kashmir {
+    background: linear-gradient($direction, #614385, #516395);
+  }
+  @else if $gradient == green-beach {
+    background: linear-gradient($direction, #02AABD, #00CDAC);
+  }
+  @else if $gradient == bloody-mary {
+    background: linear-gradient($direction, #FF512F, #DD2476);
+  }
+  @else if $gradient == sweet-morning {//
+    background: linear-gradient($direction, #FF5F6D, #FFC371);
+  }
+  @else if $gradient == quepal {
+    background: linear-gradient($direction, #11998E, #38EF7D);
+  }
+  @else if $gradient == cactus {//
+    background: linear-gradient($direction, #C6EA8D, #FE90AF);
+  }
+  @else if $gradient == yosemite {
+    background: linear-gradient($direction, #EA8D8D, #A890FE);
+  }
+  @else if $gradient == antarctica {//
+    background: linear-gradient($direction, #c999ff, #43c3df);
+  }
+  @else if $gradient == exotic {
+    background: linear-gradient($direction, #FF61D2, #FE9090);
+  }
+  @else if $gradient == toxic {
+    background: linear-gradient($direction, #BFF098, #6FD6FF);
+  }
+  @else if $gradient == orbit {//
+    background: linear-gradient($direction, #4E65FF, #92EFFD);
+  }
+  @else if $gradient == no-mans {
+    background: linear-gradient($direction, #A9F1DF, #FFBBBB);
+  }
+  @else if $gradient == celestial {//
+    background: linear-gradient($direction, #C33764, #1D2671);
+  }
+  @else if $gradient == clean-mirror {//
+    background: linear-gradient($direction, #93A5CF, #E4EFE9);
+  }
+  @else if $gradient == mountain-rock {//
+    background: linear-gradient($direction, #868F96, #596164);
+  }
+  @else if $gradient == eternal-constance {//
+    background: linear-gradient($direction, #09203F, #537895);
+  }
+  @else if $gradient == juicy-peach {//
+    background: linear-gradient($direction, #FFECD2,#FCB69F);
+  }
+  @else if $gradient == winter-nova {
+    background: linear-gradient($direction, #A1C4FD,#C2E9FB);
+  }
+  @else if $gradient == plum-palace {//
+    background: linear-gradient($direction, #764BA2,#667EEA);
+  }
+  @else if $gradient == everlasting-sky {//
+    background: linear-gradient($direction, #FDFCFB,#E2D1C3);
+  }
+  @else if $gradient == charcoal {//
+    background: linear-gradient($direction, #000, #333333);
+  }
+  @else if $gradient == plum {
+    background: linear-gradient($direction, #50437d, #1e0f24);
+  }
+  @else if $gradient == emerald {
+    background: linear-gradient($direction, #033e3e, #164350);
+  }
+  @else if $gradient == sunset {
+    background: linear-gradient($direction, #4e0e2a, #613c00);
+  }
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+}

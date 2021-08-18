@@ -72,6 +72,7 @@
 			// extra notes
 			$npc_additional_notes = setField(get_field('npc_additional_notes'));
 			$npc_links = setField(get_field('npc_links'));
+			$npc_symbol_desc = setField(get_field('npc_symbol_description'));
 
 			$npc_image_id = get_field('npc_image');
 			$default_image = get_template_directory_uri() . "/images/defaults/default-npc-image.jpg";
@@ -208,92 +209,95 @@
 	<?php } ?>
 	<!-- End Backstory -->
 
+	<!-- Symbol -->
+	<?php if($npc_symbol_id) { ?>
+		<div class="npc__symbol npc__module">
+			<div class="npc__symbol__inner npc__accordion">
+				<h2 class="npc__symbol__heading npc__accordion__heading">Symbol</h2>
+				<div class="npc__symbol__content npc__accordion__content">
+					<?= ($npc_symbol_image) ? $npc_symbol_image : "" ?>
+					<?= ($npc_symbol_desc) ? "<div class='npc__field npc__field__symbol'><div class='npc__field__value'>$npc_symbol_desc</div></div>" : "" ?>
+				</div>
+			</div>
+		</div>
+	<?php } ?>
+	<!-- End Symbol -->
 
-
-	<?= ($npc_symbol_id) ?
-		"<!-- Backstory -->
-		<section class='npc__symbol'>
-			$npc_symbol_image
-		</section>" 
-		: "";
-	?>
-
-
-	<div class="npc__overview">
-
-		<section class="npc__capabilities npc__accordion">
-			<h2 class="npc__section-heading npc__accordion__heading">Capabilities</h2>
-			<div class="npc__accordion__content">
-			
-				<div class="npc__capabilities__content">
+	<!-- Capabilities -->
+	<?php if($npc_hp || $npc_ac || $npc_speed) { ?>
+		<div class="npc__capabilities npc__module">
+			<div class="npc__capabilities__inner npc__accordion">
+				<h2 class="npc__capabilities__heading npc__accordion__heading">Capabilities</h2>
+				<div class="npc__capabilities__content npc__accordion__content">
 					<?= ($npc_hp) ? "<div class='npc__field npc__field__hp'><p class='npc__field__label'>HP:</p><p class='npc__field__value'>$npc_hp</p></div>" : "" ?>
 					<?= ($npc_ac) ? "<div class='npc__field npc__field__ac'><p class='npc__field__label'>AC:</p><p class='npc__field__value'>$npc_ac</p></div>" : "" ?>
 					<?= ($npc_speed) ? "<div class='npc__field npc__field__speed'><p class='npc__field__label'>SPEED:</p><p class='npc__field__value'>$npc_speed</p></div>" : "" ?>
-				</div>
-				<!-- <div class="npc__stats"> -->
-					<?php
-						foreach($npc_stats as $stat => $info) {
-							?>		
-							<!-- <div class="npc__stats npc__stats--<?php echo $stat ?>">
-								<h2 class="npc__stats__title npc__stats__title--<?php echo $stat ?>"><?php echo $stat ?></h2>
-								<p class="npc__stats__value npc__stats__value--<?php echo $stat ?>"><?php echo $info['value'] ?></p>
-							</div> -->
-							<?php
-						}
-					?>
-				<!-- </div> -->
-				<div class="npc__skills">
-
-					<!-- NEED TO ADD SKILL PROFICIENCIES -->
-
+						<!-- NEED TO RESOLVE STATS AND SKILLS -->
+						<!-- <div class="npc__stats"> -->
+						<?php
+							foreach($npc_stats as $stat => $info) {
+								?>		
+								<!-- <div class="npc__stats npc__stats--<?php echo $stat ?>">
+									<h2 class="npc__stats__title npc__stats__title--<?php echo $stat ?>"><?php echo $stat ?></h2>
+									<p class="npc__stats__value npc__stats__value--<?php echo $stat ?>"><?php echo $info['value'] ?></p>
+								</div> -->
+								<?php
+							}
+						?>
+					<!-- </div> -->
 				</div>
 			</div>
-		</section>
-
-	<?= ($npc_inventory || $npc_copper_pieces || $npc_silver_pieces || $npc_electrum_pieces || $npc_gold_pieces || $npc_platinum_pieces || $npc_spells) ?
-		'<div class="npc__inventory-spells">' : 
-		''; ?>
-
-	<?php if($npc_inventory || $npc_copper_pieces || $npc_silver_pieces || $npc_electrum_pieces || $npc_gold_pieces || $npc_platinum_pieces) { ?>
-		<!-- Inventory -->
-		<section class="npc__inventory npc__accordion">
-			<h2 class="npc__section-heading npc__accordion__heading">Inventory</h2>
-			<div class="npc__inventory__container npc__accordion__content">
-				<?= ($$npc_copper_pieces || $npc_silver_pieces || $npc_electrum_pieces || $npc_gold_pieces || $npc_platinum_pieces) ? "<div class='npc__field npc__inventory__currency'>" : "" ?>
-					<?= ($npc_copper_pieces) ? "<div class='npc__field npc__field__copper'><p class='npc__field__label'>Copper:</p><p class='npc__field__value'>$npc_copper_pieces</p></div>" : "" ?>
-					<?= ($npc_silver_pieces) ? "<div class='npc__field npc__field__silver'><p class='npc__field__label'>Silver:</p><p class='npc__field__value'>$npc_silver_pieces</p></div>" : "" ?>
-					<?= ($npc_electrum_pieces) ? "<div class='npc__field npc__field__electrum'><p class='npc__field__label'>Electrum:</p><p class='npc__field__value'>$npc_electrum_pieces</p></div>" : "" ?>
-					<?= ($npc_gold_pieces) ? "<div class='npc__field npc__field__gold'><p class='npc__field__label'>Gold:</p><p class='npc__field__value'>$npc_gold_pieces</p></div>" : "" ?>
-					<?= ($npc_platinum_pieces) ? "<div class='npc__field npc__field__platinum'><p class='npc__field__label'>Platinum:</p><p class='npc__field__value'>$npc_platinum_pieces</p></div>" : "" ?>
-				<?= ($$npc_copper_pieces || $npc_silver_pieces || $npc_electrum_pieces || $npc_gold_pieces || $npc_platinum_pieces) ? "</div>" : "" ?>
-				<?= ($npc_inventory) ? "<div class='npc__field npc__inventory__items'><div class='npc__field__value'>$npc_inventory</div></div>" : "" ?>
-			</div>
-		</section>
+		</div>
 	<?php } ?>
+	<!-- End Capabilities -->
 
-
-
-
-		<?= ($npc_spells) ? 
-			"<section class='npc__spells npc__accordion'>
-				<h2 class='npc__section-heading npc__accordion__heading'>Magical Abilities</h2>
-				<div class='npc__field npc__field__spells npc__accordion__content'><p class='npc__field__value'>$npc_spells</p></div>
-			</section>" 
-			: "";
-		?>
-
-	<?= ($npc_inventory || $npc_copper_pieces || $npc_silver_pieces || $npc_electrum_pieces || $npc_gold_pieces || $npc_platinum_pieces || $npc_spells) ?
-		'</div>' : 
-		''; ?>
-
-		<section class='npc__additional-notes npc__accordion'>
-			<h2 class='npc__section-heading npc__accordion__heading'>Additional Notes</h2>
-			<div class="npc__additional-notes__container npc__accordion__content">
-				<?= ($npc_additional_notes) ? "<div class='npc__field npc__field__additional-notes'><p class='npc__field__value'>$npc_additional_notes</p></div>" : "" ?>
-				<?= ($npc_links) ? "<div class='npc__field npc__field__links'><p class='npc__field__label'>LINKS:</p><p class='npc__field__value'>$npc_links</p></div>" : "" ?>
+	<!-- Inventory -->
+	<?php if($npc_inventory || $npc_copper_pieces || $npc_silver_pieces || $npc_electrum_pieces || $npc_gold_pieces || $npc_platinum_pieces) { ?>
+		<div class="npc__inventory npc__module">
+			<div class="npc__inventory__inner npc__accordion">
+				<h2 class="npc__inventory__heading npc__accordion__heading">Inventory</h2>
+				<div class="npc__inventory__content npc__accordion__content">
+					<?php if($npc_copper_pieces || $npc_silver_pieces || $npc_electrum_pieces || $npc_gold_pieces || $npc_platinum_pieces) { ?>
+						<div class='npc__field npc__inventory__currency'>
+							<?= ($npc_copper_pieces) ? "<div class='npc__field npc__field__copper'><p class='npc__field__label'>Copper:</p><p class='npc__field__value'>$npc_copper_pieces</p></div>" : "" ?>
+							<?= ($npc_silver_pieces) ? "<div class='npc__field npc__field__silver'><p class='npc__field__label'>Silver:</p><p class='npc__field__value'>$npc_silver_pieces</p></div>" : "" ?>
+							<?= ($npc_electrum_pieces) ? "<div class='npc__field npc__field__electrum'><p class='npc__field__label'>Electrum:</p><p class='npc__field__value'>$npc_electrum_pieces</p></div>" : "" ?>
+							<?= ($npc_gold_pieces) ? "<div class='npc__field npc__field__gold'><p class='npc__field__label'>Gold:</p><p class='npc__field__value'>$npc_gold_pieces</p></div>" : "" ?>
+							<?= ($npc_platinum_pieces) ? "<div class='npc__field npc__field__platinum'><p class='npc__field__label'>Platinum:</p><p class='npc__field__value'>$npc_platinum_pieces</p></div>" : "" ?>
+						</div>
+					<?php } ?>
+					<?= ($npc_inventory) ? "<div class='npc__field npc__inventory__items'><div class='npc__field__value'>$npc_inventory</div></div>" : "" ?>
+				</div>
 			</div>
-		</section>
-	</div>
-	<!-- <div class="entry-content npc__content">
-	</div> -->
+		</div>
+	<?php } ?>
+	<!-- End Inventory -->
+
+	<!-- Magic -->
+	<?php if($npc_spells) { ?>
+		<div class="npc__magic npc__module">
+			<div class="npc__magic__inner npc__accordion">
+				<h2 class="npc__magic__heading npc__accordion__heading">Magical Abilities</h2>
+				<div class="npc__magic__content npc__accordion__content">
+					<?= ($npc_spells) ? "<div class='npc__field npc__field__spells'><p class='npc__field__value'>$npc_spells</p></div>" : "" ?>
+				</div>
+			</div>
+		</div>
+	<?php } ?>
+	<!-- End Magic -->
+
+		<!-- Additional Notes -->
+		<?php if($npc_additional_notes || $npc_links) { ?>
+		<div class="npc__additional-notes npc__module">
+			<div class="npc__additional-notes__inner npc__accordion">
+				<h2 class="npc__additional-notes__heading npc__accordion__heading">Additional Notes</h2>
+				<div class="npc__additional-notes__content npc__accordion__content">
+					<?= ($npc_additional_notes) ? "<div class='npc__field npc__field__additional-notes'><p class='npc__field__value'>$npc_additional_notes</p></div>" : "" ?>
+					<?= ($npc_links) ? "<div class='npc__field npc__field__links'><p class='npc__field__label'>LINKS:</p><p class='npc__field__value'>$npc_links</p></div>" : "" ?>
+				</div>
+			</div>
+		</div>
+	<?php } ?>
+	<!-- End Additional Notes -->
+	
 </article><!-- #post-<?php the_ID(); ?> -->

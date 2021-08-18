@@ -669,7 +669,7 @@ textarea {
 
 .single-npc .npc__hero {
 	background-color: #b3916d;
-	background: linear-gradient(to top right, #b3896d, #e2c7a9);
+	background: linear-gradient(to bottom left, #FFECD2, #FCB69F);
 	margin-top: 10rem;
 	padding-left: 3rem;
 	padding-right: 3rem;
@@ -772,12 +772,12 @@ textarea {
 .single-npc .npc__basics {
 	background-color: #b0b8bf;
 	background: linear-gradient(to top left, #9098aa, #c1c7cc);
+	background: linear-gradient(to top left, #93A5CF, #E4EFE9);
 }
 
 @media (min-width: 768px) {
 	.single-npc .npc__basics__heading {
 		padding-bottom: 2.4rem;
-		font-weight: 700;
 	}
 }
 
@@ -823,6 +823,8 @@ textarea {
 .single-npc .npc__desc {
 	background-color: #b0b8bf;
 	background: linear-gradient(to bottom left, #c3e9d5, #7dada3);
+	background: linear-gradient(to top left, #033e3e, #164350);
+	color: #fff;
 }
 
 .single-npc .npc__desc__inner {
@@ -839,6 +841,7 @@ textarea {
 .single-npc .npc__personality {
 	background-color: #905d5d;
 	background: linear-gradient(190deg, #4e2d2d, #271616);
+	background: linear-gradient(190deg, #4e0e2a, #613c00);
 	color: #fff;
 }
 
@@ -899,6 +902,7 @@ textarea {
 .single-npc .npc__relationships {
 	background-color: #338bb1;
 	background: linear-gradient(15deg, #3398b1, #afd8e9);
+	background: linear-gradient(15deg, #02AABD, #00CDAC);
 }
 
 @media (min-width: 768px) {
@@ -987,6 +991,31 @@ textarea {
 	.single-npc .npc__backstory__heading {
 		text-align: center;
 	}
+}
+
+@media (min-width: 768px) {
+	.single-npc .npc__symbol__heading {
+		display: none;
+	}
+}
+
+.single-npc .npc__symbol__content {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@media (min-width: 768px) {
+	.single-npc .npc__symbol__content {
+		flex-direction: row;
+		justify-content: center;
+		column-gap: 2.4rem;
+	}
+}
+
+.single-npc .npc__capabilities__content {
+	display: flex;
+	justify-content: space-around;
 }
 
 .single-npc .npc__field {

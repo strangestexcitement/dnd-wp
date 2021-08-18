@@ -23,7 +23,7 @@ $npc_bp: 400px;
       // hero styling
       &__hero {
         background-color: #b3916d;
-        background: linear-gradient(to top right, #b3896d, #e2c7a9);
+        @include linear-gradient(to bottom left, juicy-peach);
         margin-top: 10rem;
         padding-left: 3rem;
         padding-right: 3rem;
@@ -122,6 +122,8 @@ $npc_bp: 400px;
       &__basics {
         background-color: #b0b8bf;
         background: linear-gradient(to top left, #9098aa, #c1c7cc);
+        @include linear-gradient(to top left, clean-mirror);
+
         
         &__inner {
 
@@ -130,7 +132,6 @@ $npc_bp: 400px;
         &__heading {
           @include bp(tablet) {
             padding-bottom: 2.4rem;
-            font-weight: 700;
           }
         }
 
@@ -160,7 +161,8 @@ $npc_bp: 400px;
       // goals section styling 
       &__goals {
         background-color: $black;
-        background: linear-gradient(345deg, #000, #333333);
+        @include linear-gradient(345deg, charcoal);
+
         color: $white;
 
         &__inner {
@@ -183,6 +185,8 @@ $npc_bp: 400px;
        &__desc {
         background-color: #b0b8bf;
         background: linear-gradient(to bottom left, #c3e9d5, #7dada3);
+        @include linear-gradient(to top left, emerald);
+        color: $white;
 
         &__inner {
           max-width: 800px;
@@ -204,6 +208,7 @@ $npc_bp: 400px;
       &__personality {
         background-color: #905d5d;
         background: linear-gradient(190deg, #4e2d2d, hsl(0, 27%, 12%));
+        @include linear-gradient(190deg, sunset);
         color: $white;
 
         @include bp(tablet) {
@@ -267,6 +272,7 @@ $npc_bp: 400px;
       &__relationships {
         background-color: #338bb1;
         background: linear-gradient(15deg, #3398b1, #afd8e9);
+        @include linear-gradient(15deg, green-beach);
         &__content {
           @include bp(tablet) {
             display: grid;
@@ -340,7 +346,7 @@ $npc_bp: 400px;
       // backstory section styling 
       &__backstory {
         background-color: #352C39;
-        background: linear-gradient(150deg, rgb(80, 67, 125), hsl(282, 40%, 10%));
+        @include linear-gradient(150deg, plum);
         color: white;
 
         &__inner {
@@ -352,6 +358,101 @@ $npc_bp: 400px;
           @include bp(tablet) {
             text-align: center;
           }
+        }
+
+        &__content {
+
+        }
+      }
+
+      // symbol section styling
+      &__symbol {
+
+        &__inner {
+
+        }
+
+        &__heading {
+          @include bp(tablet) {
+            display: none;
+          }
+        }
+
+        &__content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          @include bp(tablet) {
+            flex-direction: row;
+            justify-content: center;
+            column-gap: 2.4rem;
+          }
+        }
+      }
+
+      // capabilities section styling
+      &__capabilities {
+
+        &__inner {
+          
+        }
+
+        &__heading {
+          
+        }
+
+        &__content {
+          display: flex;
+          justify-content: space-around;
+        }
+      }
+
+      // inventory section styling
+      &__inventory {
+
+        &__inner {
+          
+        }
+
+        &__heading {
+          
+        }
+
+        &__content {
+
+        }
+
+        &__currency {
+
+        }
+      }
+
+      // magic section styling
+      &__magic {
+
+        &__inner {
+          
+        }
+
+        &__heading {
+          
+        }
+
+        &__content {
+
+        }
+      }
+
+      // additional notes section styling
+      &__additional-notes {
+
+        &__inner {
+          
+        }
+
+        &__heading {
+          
         }
 
         &__content {
