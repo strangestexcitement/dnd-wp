@@ -116,6 +116,9 @@ $breakpoints: (
   @else if $gradient == mountain-rock {//
     background: linear-gradient($direction, #868F96, #596164);
   }
+  @else if $gradient == mountain {//
+    background: linear-gradient($direction, #b0b7bd, #888c8d);
+  }
   @else if $gradient == eternal-constance {//
     background: linear-gradient($direction, #09203F, #537895);
   }
@@ -143,10 +146,21 @@ $breakpoints: (
   @else if $gradient == sunset {
     background: linear-gradient($direction, #4e0e2a, #613c00);
   }
-
-  
-
-
+  @else if $gradient == forest {
+    background: linear-gradient($direction, #a2f6e1, #1d8f6d);
+  }
+  @else if $gradient == blood {
+    background: linear-gradient($direction, #420D09, #710C04);
+  }
+  @else if $gradient == warm {
+    background:linear-gradient($direction, #e2b86a, #aa5b22);
+  }
+  @else if $gradient == rich {
+    background:linear-gradient($direction, #630134, #161535);
+  }
+  @else if $gradient == npc {
+    background:linear-gradient($direction, #FFECD2, #559b85);
+  }
 
 
 

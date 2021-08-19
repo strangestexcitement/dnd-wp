@@ -3,6 +3,7 @@ $npc_bp: 400px;
 .single-npc {
 
     .npc {
+      @include linear-gradient(to bottom, npc);
 
       // general module styling 
       &__module {
@@ -12,7 +13,7 @@ $npc_bp: 400px;
         padding-right: 1.2rem;
         
         @include bp(tablet) {
-          margin-top: 3rem;
+          border-top: 3rem solid $off-white;
           padding-left: 3rem;
           padding-right: 3rem;
           padding-top: 3.6rem;
@@ -20,10 +21,65 @@ $npc_bp: 400px;
         }
       }
 
+      // general field styling
+      &__field {
+        text-align: center;
+
+        &__label {
+          font-size: 1.4rem;
+          font-weight: 700;
+        }
+      }
+
+      // accordion styling
+      &__accordion {
+        &__heading {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          @include bp(tablet) {
+            display: block;
+            text-align: center;
+            padding-bottom: 1.2rem;
+          }
+
+          &::after {
+            content: url('./images/icons/chevron-down.svg');
+            display: block;
+            position: relative;
+            transform: rotate(540deg);
+            transition: transform 0.4s ease-out;
+
+            @include bp(tablet) {
+              display: none;
+            }
+          }
+        }
+
+        &__content {
+          overflow: hidden;
+
+          @include bp(tablet) {
+            height: auto;
+          }
+        }
+
+        &.closed {
+          .npc {
+            &__accordion {
+              &__heading {
+                &::after {
+                  transform: none;
+                }
+              }
+            }
+          }
+        }
+      }
+
       // hero styling
       &__hero {
-        background-color: #b3916d;
-        @include linear-gradient(to bottom left, juicy-peach);
         margin-top: 10rem;
         padding-left: 3rem;
         padding-right: 3rem;
@@ -119,20 +175,13 @@ $npc_bp: 400px;
       }
 
       // basics section styling
-      &__basics {
-        background-color: #b0b8bf;
-        background: linear-gradient(to top left, #9098aa, #c1c7cc);
-        @include linear-gradient(to top left, clean-mirror);
-
-        
+      &__basics {        
         &__inner {
 
         }
 
         &__heading {
-          @include bp(tablet) {
-            padding-bottom: 2.4rem;
-          }
+
         }
 
         &__content {
@@ -160,20 +209,13 @@ $npc_bp: 400px;
 
       // goals section styling 
       &__goals {
-        background-color: $black;
-        @include linear-gradient(345deg, charcoal);
-
-        color: $white;
-
         &__inner {
           max-width: 800px;
           margin: 0 auto;
         }
 
         &__heading {
-          @include bp(tablet) {
-            text-align: center;
-          }
+
         }
 
         &__content {
@@ -183,20 +225,13 @@ $npc_bp: 400px;
 
        // description section styling 
        &__desc {
-        background-color: #b0b8bf;
-        background: linear-gradient(to bottom left, #c3e9d5, #7dada3);
-        @include linear-gradient(to top left, emerald);
-        color: $white;
-
         &__inner {
           max-width: 800px;
           margin: 0 auto;
         }
 
         &__heading {
-          @include bp(tablet) {
-            text-align: center;
-          }
+
         }
 
         &__content {
@@ -206,23 +241,13 @@ $npc_bp: 400px;
 
       // personality section styling 
       &__personality {
-        background-color: #905d5d;
-        background: linear-gradient(190deg, #4e2d2d, hsl(0, 27%, 12%));
-        @include linear-gradient(190deg, sunset);
-        color: $white;
-
-        @include bp(tablet) {
-          color: $black;
-        }
 
         &__inner {
 
         }
 
         &__heading {
-          @include bp(tablet) {
-            color: $white;
-          }
+
         }
 
         &__content {
@@ -250,7 +275,7 @@ $npc_bp: 400px;
           &__field {
             @include bp(tablet) {
               margin: 0 auto;
-              background-color: #bebebe;
+              background-color: $off-white;
               height: 100%;
               padding-top: 1.2rem;
               padding-bottom: 1.2rem;
@@ -270,9 +295,6 @@ $npc_bp: 400px;
 
       // relationships section styling 
       &__relationships {
-        background-color: #338bb1;
-        background: linear-gradient(15deg, #3398b1, #afd8e9);
-        @include linear-gradient(15deg, green-beach);
         &__content {
           @include bp(tablet) {
             display: grid;
@@ -345,19 +367,13 @@ $npc_bp: 400px;
 
       // backstory section styling 
       &__backstory {
-        background-color: #352C39;
-        @include linear-gradient(150deg, plum);
-        color: white;
-
         &__inner {
           max-width: 800px;
           margin: 0 auto;
         }
 
         &__heading {
-          @include bp(tablet) {
-            text-align: center;
-          }
+
         }
 
         &__content {
@@ -367,9 +383,10 @@ $npc_bp: 400px;
 
       // symbol section styling
       &__symbol {
-
         &__inner {
-
+          max-width: 600px;
+          margin-left: auto;
+          margin-right: auto;
         }
 
         &__heading {
@@ -382,18 +399,22 @@ $npc_bp: 400px;
           display: flex;
           flex-direction: column;
           align-items: center;
+          row-gap: 1.2rem;
 
           @include bp(tablet) {
-            flex-direction: row;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             column-gap: 2.4rem;
           }
+        }
+
+        &__image {
+          background-color: $off-white;
         }
       }
 
       // capabilities section styling
       &__capabilities {
-
         &__inner {
           
         }
@@ -410,33 +431,54 @@ $npc_bp: 400px;
 
       // inventory section styling
       &__inventory {
-
         &__inner {
-          
+          max-width: 800px;
+          margin-left: auto;
+          margin-right: auto;
         }
 
         &__heading {
-          
+
         }
 
         &__content {
-
+          @include bp(tablet) {
+            display: flex;
+            justify-content: space-between;
+            column-gap: 2.4rem;
+          }
         }
 
         &__currency {
+          display: flex;
+          justify-content: space-between;
 
+          @include bp(tablet) {
+            flex-direction: column;
+            order: 1;
+          }
+        }
+
+        &__items {
+          margin-top: 1.2rem;
+          text-align: left;
+
+          @include bp(tablet) {
+            margin-top: 0;
+          }
         }
       }
 
       // magic section styling
       &__magic {
-
         &__inner {
-          
+          max-width: 800px;
+          margin-left: auto;
+          margin-right: auto;
         }
 
         &__heading {
-          
+
         }
 
         &__content {
@@ -446,254 +488,23 @@ $npc_bp: 400px;
 
       // additional notes section styling
       &__additional-notes {
-
         &__inner {
-          
+          max-width: 800px;
+          margin-left: auto;
+          margin-right: auto;
         }
 
-        &__heading {
-          
-        }
-
-        &__content {
-
-        }
-      }
-
-
-
-
-      &__field {
-        // display: flex;
-        // justify-content: center;
-        // align-items: center;
-        // column-gap: 0.8rem;
-        // flex-wrap: wrap;
-        text-align: center;
-
-        &__label {
-          font-size: 1.4rem;
-          font-weight: 700;
-        }
-      }
-
-      // @include benne;
-      // text-align: center;
-
-      // @include bp(min-width, $npc_bp) {
-      //   text-align: left;
-      // }
-
-
-
-
-      // &__inventory {
-
-      //   &__container {
-      //     display: flex;
-      //     justify-content: space-between;
-      //   }
-
-      //   &__items {
-      //     flex: auto;
-      //     padding-left: 2rem;
-      //   }
-
-      //   &__currency {
-      //     border-right: 1px solid rgba(0,0,0,0.5);
-      //     padding-right: 2rem;
-      //   }
-      // }
-
-      // &__inventory-spells {
-      //   @include bp(tablet) {
-      //     display: grid;
-      //     grid-template-columns: repeat(2, 1fr);
-      //   }
-      // }
-
-
-
-
-
-
-      // &__about {
-
-      //   &__copy {
-
-
-      //     > .npc__field {
-      //       animation: scale-in;
-      //       animation-duration: 0.6s;
-      //       animation-fill-mode: forwards;
-      //       opacity: 0;
-      //       transform-origin: left;
-
-      //       @for $var from 0 to 20 {
-      //         &:nth-child(#{$var}) {
-      //           animation-delay: #{$var * 0.12}s;
-      //         }
-      //       }
-      //     }
-
-      //     @keyframes scale-in {
-      //       0% {
-      //         transform: scale(.75);
-      //         opacity: 0;
-      //       }
-
-      //       100% {
-      //         transform: scale(1);
-      //         opacity: 1;
-      //       }
-      //     }
-      //   }
-      // }
-
-      // &__field {
-      //   margin-bottom: 1rem;
-      //   margin-top: 1rem;
-
-      //   @include bp(min-width, $npc_bp) {
-      //     margin-right: auto;
-      //     padding-right: 2rem;
-      //   }
-
-      //   &__label {
-      //     font-size: 1.2rem;
-      //     width: fit-content;
-      //     border-bottom: 1px solid black;
-      //     line-height: 0.7;
-      //     margin-bottom: 0.3rem;
-      //     margin-left: auto;
-      //     margin-right: auto;
-
-      //     @include bp(min-width, $npc_bp) {
-      //       margin-left: initial;
-      //       margin-right: initial;
-      //     }
-      //   }
-
-      //   &__value {
-          
-      //   }
-        
-
-      //   &__goals, &__description {
-      //     flex-basis: 100%;
-      //     order: 1;
-      //   }
-      // }
-
-      // &__content {
-
-      // }
-
-      // &__name {
-      //   font-size: 3rem;
-      //   line-height: 1.2;
-
-      //   @include bp(tablet) {
-      //     grid-column: 1/3;
-      //   }
-      // }
-
-      // &__image {
-      //   padding: 1.6rem;
-      //   background-color: rgba(155,118,83,0.3);
-      //   height: fit-content;
-      //   max-width: 80%;
-      //   margin: 0 auto;
-
-      //   @include bp(min-width, 500px) {
-      //     width: fit-content;
-      //     margin-left: 0;
-      //     // margin-right: auto;
-      //     max-width: initial;
-      //   }
-
-      //   @include bp(tablet) {
-      //     // margin-right: 1.6rem;
-      //   }
-
-      //   img {
-      //     width: 100%;
-
-      //     @include bp(min-width, 500px) {
-      //       width: auto;
-      //     }
-      //   }
-
-      //   &--default {
-      //     @include bp(tablet) {
-      //       max-height: 300px;
-      //     }
-      //   }
-      // }
-
-     
-      // &__stats {
-      //   &__title {
-
-      //   }
-
-      //   &__value {
-
-      //   }
-      // }
-
-      // &__capabilities {
-
-
-      //   &__content {
-      //     @include bp(tablet) {
-      //       display: grid;
-      //       grid-template-columns: repeat(auto-fill, 50px);
-      //     }
-      //   }
-      // }
-
-      // &__inventory {
-      // }
-
-      // &__section-heading {
-      //   text-align: left;
-      //   margin-bottom: 1.6rem;
-      //   margin-top: 1.6rem;
-      // }
-
-      // section {
-      //   @include bp(tablet) {
-      //     margin-top: 3rem;
-      //   }
-      // }
-
-      &__accordion {
         &__heading {
 
         }
 
         &__content {
-          // height: 0;
-          overflow: hidden;
-          // display: none;
-
           @include bp(tablet) {
-            height: auto;
+            display: flex;
+            justify-content: space-between;
+            column-gap: 2.4rem;
           }
-
         }
-
-        // &:not(.closed) {
-        //   .npc__accordion__heading {
-        //     margin-bottom: 1.2rem;
-        //   }
-        // }
       }
-
-
-
-
     }
-    
 }

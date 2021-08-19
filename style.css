@@ -368,7 +368,33 @@ textarea {
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
     padding-left: 1.2rem;
-    padding-right: 1.2rem; }
+    padding-right: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1.2rem; }
+  .attributions__close {
+    cursor: pointer;
+    margin-right: 1.2rem; }
+    .attributions__close::after {
+      content: "";
+      display: block;
+      width: 3px;
+      height: 1em;
+      background-color: #FCF5E5;
+      transition: width 0.3s ease-out;
+      transform: rotate(45deg);
+      position: absolute; }
+    .attributions__close::before {
+      content: "";
+      display: block;
+      width: 3px;
+      height: 1em;
+      background-color: #FCF5E5;
+      transition: width 0.3s ease-out;
+      transform: rotate(135deg);
+      position: absolute; }
+    .attributions__close:hover::after, .attributions__close:hover::before {
+      width: 5px; }
   .attributions__content {
     padding-right: 2rem;
     padding-left: 2rem;
@@ -390,6 +416,10 @@ textarea {
     .attributions--show .attributions__container {
       transform: translate(-50%, -50%) scale(1);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23); }
+
+.site-footer {
+  background-color: #033E3E;
+  color: #fff; }
 
 /*--------------------------------------------------------------
 # Plugins
@@ -525,94 +555,114 @@ textarea {
 
 /* Templates
 --------------------------------------------- */
-.single-npc .npc__module {
-  padding-top: 2.4rem;
-  padding-bottom: 2.4rem;
-  padding-left: 1.2rem;
-  padding-right: 1.2rem; }
-  @media (min-width: 768px) {
-    .single-npc .npc__module {
-      margin-top: 3rem;
-      padding-left: 3rem;
-      padding-right: 3rem;
-      padding-top: 3.6rem;
-      padding-bottom: 3.6rem; } }
-
-.single-npc .npc__hero {
-  background-color: #b3916d;
-  background: linear-gradient(to bottom left, #FFECD2, #FCB69F);
-  margin-top: 10rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding-bottom: 1.6rem; }
-  @media (min-width: 768px) {
-    .single-npc .npc__hero {
-      padding-bottom: 2.4rem;
-      padding-top: 2.4rem;
-      margin-top: 5rem; } }
-  @media (min-width: 768px) {
-    .single-npc .npc__hero__inner {
-      display: grid;
-      grid-template-columns: auto 1fr;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto; } }
-  .single-npc .npc__hero__image {
-    margin: 0 auto;
-    width: fit-content;
-    position: relative;
-    top: -10rem;
-    margin-bottom: -10rem; }
+.single-npc .npc {
+  background: linear-gradient(to bottom, #FFECD2, #559b85); }
+  .single-npc .npc__module {
+    padding-top: 2.4rem;
+    padding-bottom: 2.4rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem; }
     @media (min-width: 768px) {
-      .single-npc .npc__hero__image {
-        top: -8rem;
-        margin-bottom: -8rem; } }
-  .single-npc .npc__hero__content {
+      .single-npc .npc__module {
+        border-top: 3rem solid #FCF5E5;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 3.6rem;
+        padding-bottom: 3.6rem; } }
+  .single-npc .npc__field {
+    text-align: center; }
+    .single-npc .npc__field__label {
+      font-size: 1.4rem;
+      font-weight: 700; }
+  .single-npc .npc__accordion__heading {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around; }
+    justify-content: space-between;
+    align-items: center; }
     @media (min-width: 768px) {
-      .single-npc .npc__hero__content {
-        padding-left: 3rem; } }
-  .single-npc .npc__hero__name {
-    text-align: center;
-    margin-bottom: 1.2rem; }
+      .single-npc .npc__accordion__heading {
+        display: block;
+        text-align: center;
+        padding-bottom: 1.2rem; } }
+    .single-npc .npc__accordion__heading::after {
+      content: url("./images/icons/chevron-down.svg");
+      display: block;
+      position: relative;
+      transform: rotate(540deg);
+      transition: transform 0.4s ease-out; }
+      @media (min-width: 768px) {
+        .single-npc .npc__accordion__heading::after {
+          display: none; } }
+  .single-npc .npc__accordion__content {
+    overflow: hidden; }
     @media (min-width: 768px) {
-      .single-npc .npc__hero__name {
-        align-self: center;
-        margin-bottom: 0; } }
-  .single-npc .npc__hero__details {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    column-gap: 2.4rem;
-    row-gap: 1.2rem; }
+      .single-npc .npc__accordion__content {
+        height: auto; } }
+  .single-npc .npc__accordion.closed .npc__accordion__heading::after {
+    transform: none; }
+  .single-npc .npc__hero {
+    margin-top: 10rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 1.6rem; }
     @media (min-width: 768px) {
-      .single-npc .npc__hero__details {
-        height: fit-content; } }
-    .single-npc .npc__hero__details .npc__field {
+      .single-npc .npc__hero {
+        padding-bottom: 2.4rem;
+        padding-top: 2.4rem;
+        margin-top: 5rem; } }
+    @media (min-width: 768px) {
+      .single-npc .npc__hero__inner {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto; } }
+    .single-npc .npc__hero__image {
+      margin: 0 auto;
+      width: fit-content;
+      position: relative;
+      top: -10rem;
+      margin-bottom: -10rem; }
+      @media (min-width: 768px) {
+        .single-npc .npc__hero__image {
+          top: -8rem;
+          margin-bottom: -8rem; } }
+    .single-npc .npc__hero__content {
       display: flex;
+      flex-direction: column;
+      justify-content: space-around; }
+      @media (min-width: 768px) {
+        .single-npc .npc__hero__content {
+          padding-left: 3rem; } }
+    .single-npc .npc__hero__name {
+      text-align: center;
+      margin-bottom: 1.2rem; }
+      @media (min-width: 768px) {
+        .single-npc .npc__hero__name {
+          align-self: center;
+          margin-bottom: 0; } }
+    .single-npc .npc__hero__details {
+      display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      align-items: center;
-      column-gap: 0.8rem;
-      flex-wrap: wrap; }
-      .single-npc .npc__hero__details .npc__field__label {
-        font-size: 1.6rem; }
-      .single-npc .npc__hero__details .npc__field__occupation {
-        flex-basis: 100%; }
-
-.single-npc .npc__image--default {
-  max-width: 300px;
-  max-height: 300px; }
-
-.single-npc .npc__basics {
-  background-color: #b0b8bf;
-  background: linear-gradient(to top left, #9098aa, #c1c7cc);
-  background: linear-gradient(to top left, #93A5CF, #E4EFE9); }
-  @media (min-width: 768px) {
-    .single-npc .npc__basics__heading {
-      padding-bottom: 2.4rem; } }
+      text-align: center;
+      column-gap: 2.4rem;
+      row-gap: 1.2rem; }
+      @media (min-width: 768px) {
+        .single-npc .npc__hero__details {
+          height: fit-content; } }
+      .single-npc .npc__hero__details .npc__field {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 0.8rem;
+        flex-wrap: wrap; }
+        .single-npc .npc__hero__details .npc__field__label {
+          font-size: 1.6rem; }
+        .single-npc .npc__hero__details .npc__field__occupation {
+          flex-basis: 100%; }
+  .single-npc .npc__image--default {
+    max-width: 300px;
+    max-height: 300px; }
   .single-npc .npc__basics__content {
     display: flex;
     flex-direction: column;
@@ -627,41 +677,12 @@ textarea {
   @media (min-width: 768px) {
     .single-npc .npc__basics .npc__field {
       flex-basis: 200px; } }
-
-.single-npc .npc__goals {
-  background-color: #000;
-  background: linear-gradient(345deg, #000, #333333);
-  color: #fff; }
   .single-npc .npc__goals__inner {
     max-width: 800px;
     margin: 0 auto; }
-  @media (min-width: 768px) {
-    .single-npc .npc__goals__heading {
-      text-align: center; } }
-
-.single-npc .npc__desc {
-  background-color: #b0b8bf;
-  background: linear-gradient(to bottom left, #c3e9d5, #7dada3);
-  background: linear-gradient(to top left, #033e3e, #164350);
-  color: #fff; }
   .single-npc .npc__desc__inner {
     max-width: 800px;
     margin: 0 auto; }
-  @media (min-width: 768px) {
-    .single-npc .npc__desc__heading {
-      text-align: center; } }
-
-.single-npc .npc__personality {
-  background-color: #905d5d;
-  background: linear-gradient(190deg, #4e2d2d, #271616);
-  background: linear-gradient(190deg, #4e0e2a, #613c00);
-  color: #fff; }
-  @media (min-width: 768px) {
-    .single-npc .npc__personality {
-      color: #000; } }
-  @media (min-width: 768px) {
-    .single-npc .npc__personality__heading {
-      color: #fff; } }
   .single-npc .npc__personality__content {
     display: flex;
     flex-direction: column;
@@ -680,7 +701,7 @@ textarea {
   @media (min-width: 768px) {
     .single-npc .npc__personality .npc__field {
       margin: 0 auto;
-      background-color: #bebebe;
+      background-color: #FCF5E5;
       height: 100%;
       padding-top: 1.2rem;
       padding-bottom: 1.2rem;
@@ -690,11 +711,6 @@ textarea {
     .single-npc .npc__personality .npc__field__value {
       text-align: left;
       margin-top: 1.2rem; } }
-
-.single-npc .npc__relationships {
-  background-color: #338bb1;
-  background: linear-gradient(15deg, #3398b1, #afd8e9);
-  background: linear-gradient(15deg, #02AABD, #00CDAC); }
   @media (min-width: 768px) {
     .single-npc .npc__relationships__content {
       display: grid;
@@ -743,44 +759,63 @@ textarea {
       @media (min-width: 768px) {
         .single-npc .npc__relationships__list .npc__box {
           max-height: 300px; } }
-
-.single-npc .npc__backstory {
-  background-color: #352C39;
-  background: linear-gradient(150deg, #50437d, #1e0f24);
-  color: white; }
   .single-npc .npc__backstory__inner {
     max-width: 800px;
     margin: 0 auto; }
+  .single-npc .npc__symbol__inner {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto; }
   @media (min-width: 768px) {
-    .single-npc .npc__backstory__heading {
-      text-align: center; } }
-
-@media (min-width: 768px) {
-  .single-npc .npc__symbol__heading {
-    display: none; } }
-
-.single-npc .npc__symbol__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center; }
+    .single-npc .npc__symbol__heading {
+      display: none; } }
+  .single-npc .npc__symbol__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1.2rem; }
+    @media (min-width: 768px) {
+      .single-npc .npc__symbol__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2.4rem; } }
+  .single-npc .npc__symbol__image {
+    background-color: #FCF5E5; }
+  .single-npc .npc__capabilities__content {
+    display: flex;
+    justify-content: space-around; }
+  .single-npc .npc__inventory__inner {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto; }
   @media (min-width: 768px) {
-    .single-npc .npc__symbol__content {
-      flex-direction: row;
-      justify-content: center;
+    .single-npc .npc__inventory__content {
+      display: flex;
+      justify-content: space-between;
       column-gap: 2.4rem; } }
-
-.single-npc .npc__capabilities__content {
-  display: flex;
-  justify-content: space-around; }
-
-.single-npc .npc__field {
-  text-align: center; }
-  .single-npc .npc__field__label {
-    font-size: 1.4rem;
-    font-weight: 700; }
-
-.single-npc .npc__accordion__content {
-  overflow: hidden; }
+  .single-npc .npc__inventory__currency {
+    display: flex;
+    justify-content: space-between; }
+    @media (min-width: 768px) {
+      .single-npc .npc__inventory__currency {
+        flex-direction: column;
+        order: 1; } }
+  .single-npc .npc__inventory__items {
+    margin-top: 1.2rem;
+    text-align: left; }
+    @media (min-width: 768px) {
+      .single-npc .npc__inventory__items {
+        margin-top: 0; } }
+  .single-npc .npc__magic__inner {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto; }
+  .single-npc .npc__additional-notes__inner {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto; }
   @media (min-width: 768px) {
-    .single-npc .npc__accordion__content {
-      height: auto; } }
+    .single-npc .npc__additional-notes__content {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 2.4rem; } }

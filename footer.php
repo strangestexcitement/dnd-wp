@@ -19,7 +19,7 @@
 			<div class="attributions">
 				<div class="attributions__overlay"></div>
 				<div class="attributions__container">
-					<h2 class="attributions__heading">Attributions</h2>
+					<h2 class="attributions__heading">Attributions<span class="attributions__close"></span></h2>
 					<div class="attributions__content">
 						<?php
 							foreach($GLOBALS['attributions'] as $id => $attribution) {

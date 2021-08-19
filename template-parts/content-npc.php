@@ -88,7 +88,7 @@
 			$npc_symbol_id = setField(get_field('npc_symbol'));
 			if($npc_symbol_id) {
 				$symbol_image = getImageAttachment($npc_symbol_id, 'medium');
-				$npc_symbol_image = "<div class='npc__symbol-image'>$symbol_image</div>";
+				$npc_symbol_image = "<div class='npc__symbol__image'>$symbol_image</div>";
 			}
 		?>
 
@@ -216,7 +216,7 @@
 				<h2 class="npc__symbol__heading npc__accordion__heading">Symbol</h2>
 				<div class="npc__symbol__content npc__accordion__content">
 					<?= ($npc_symbol_image) ? $npc_symbol_image : "" ?>
-					<?= ($npc_symbol_desc) ? "<div class='npc__field npc__field__symbol'><div class='npc__field__value'>$npc_symbol_desc</div></div>" : "" ?>
+					<?= ($npc_symbol_desc) ? "<div class='npc__field npc__field__symbol__desc'><div class='npc__field__value'>$npc_symbol_desc</div></div>" : "" ?>
 				</div>
 			</div>
 		</div>
@@ -299,5 +299,5 @@
 		</div>
 	<?php } ?>
 	<!-- End Additional Notes -->
-	
+
 </article><!-- #post-<?php the_ID(); ?> -->
