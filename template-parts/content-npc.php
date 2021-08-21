@@ -46,7 +46,34 @@
 			}
 			$npc_proficiency_bonus = intval(get_field('npc_proficiency_bonus'));
 			$npc_skills = get_field('npc_skills');
-			
+			$npc_languages = setField(get_field('npc_languages'));
+			$npc_tool_proficiencies = setField(get_field('npc_tool_proficiencies'));
+			$npc_game_proficiencies = setField(get_field('npc_game_proficiencies'));
+			$npc_musical_instrument_proficiencies = setField(get_field('npc_musical_instrument_proficiencies'));
+			$npc_vehicle_proficiencies = setField(get_field('npc_vehicle_proficiencies'));
+			$saving_throws = setField(get_field('npc_saving_throws'));
+
+			if($saving_throws) {
+				if($saving_throws != '???') {
+					foreach($saving_throws as $throw) {
+						$throw_key = strtolower($throw);
+						$throw_score = $npc_stats[$throw_key];
+						if($throw_score == '') {
+							continue;
+						}
+						else if($throw_score == '???') {
+							$npc_saving_throws[$throw] = '???';
+						}
+						else {
+							$npc_saving_throws[$throw] = floor((($throw_score - 10) / 2) + $npc_proficiency_bonus);
+						}
+					}
+				}
+				else {
+					$npc_saving_throws = '???';
+				}
+			}
+
 			$base_skills = [
 				'charisma' => [
 					'deception',
@@ -83,7 +110,7 @@
 				$ability_mod = (intval($ability_score) - 10) / 2;
 				foreach($skills as $skill) {
 					if($ability_score == '') {
-						$npc_proficiencies[$skill] = '';
+						continue;
 					}
 					else if (	$ability_score == '???') {
 						$npc_proficiencies[$skill] = '???';
@@ -93,7 +120,13 @@
 						$manual_value = $npc_skills[$skill]['manual_value'];
 						$visibility = $npc_skills[$skill]['visibility'];
 
-						if($manual_value) {
+						if($visibility == 'Partially visible') {
+							$npc_proficiencies[$skill] = '???';
+						}
+						else if($visibility == 'Hidden') {
+							continue;
+						}
+						else if($manual_value) {
 							$skill_mod = (intval($manual_value) >= 0) ? "+$manual_value" : $manual_value;
 							$npc_proficiencies[$skill] = $skill_mod;
 						}
@@ -111,7 +144,6 @@
 					}
 				}
 			}
-			// need to handle visibility modifiers of proficiencies / proficiency bonus !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 			ksort($npc_proficiencies);
 
 			// details
@@ -322,6 +354,53 @@
 								}
 							}
 							?>
+						</div>
+					<?php } ?>
+
+
+					<?php if($npc_saving_throws) { ?>
+						<div class="npc__capabilities__saving-throws">
+							<h3 class="npc__capabilities__subheading">Saving Throws</h3>
+							<?php 
+								if($npc_saving_throws == '???') {
+									echo "<div class='npc__field npc__field__savings-throw'>";
+									echo "<p class='npc__field__value'>???</p>";
+									echo "</div>";
+								}
+								else {
+									foreach($npc_saving_throws as $throw => $save) {
+										$throw_lower = strtolower($throw);
+										echo "<div class='npc__field npc__field__$throw_lower'>";
+										echo "<p class='npc__field__label'>$throw:</p>";
+										echo "<p class='npc__field__value'>$save</p>";
+										echo "</div>";
+									}
+								}
+							?>
+						</div>
+					<?php } ?>
+					<?php if($npc_proficiencies) { ?>
+						<div class="npc__capabilities__skills">
+							<h3 class="npc__capabilities__subheading">Skill Proficiencies</h3>
+							<? foreach($npc_proficiencies as $skill => $mod) {
+								$skill_name = str_replace('_', ' ', $skill);
+								$skill_name = ucwords($skill_name);
+								echo "<div class='npc__field npc__field__$skill'>";
+								echo "<p class='npc__field__label'>$skill_name:</p>";
+								echo "<p class='npc__field__value'>$mod</p>";
+								echo "</div>";
+							}
+							?>
+						</div>
+					<?php } ?>
+					<?php if($npc_languages || $npc_tool_proficiencies || $npc_game_proficiencies || $npc_musical_instrument_proficiencies || $npc_vehicle_proficiencies) { ?>
+						<div class="npc__capabilities__misc">
+							<h3 class="npc__capabilities__subheading">Other Proficiencies</h3>
+							<?= ($npc_languages) ? "<div class='npc__field npc__field__languages'><p class='npc__field__label'>Languages:</p><div class='npc__field__value'>$npc_languages</div></div>" : "" ?>
+							<?= ($npc_tool_proficiencies) ? "<div class='npc__field npc__field__tools'><p class='npc__field__label'>Tools:</p><div class='npc__field__value'>$npc_tool_proficiencies</div></div>" : "" ?>
+							<?= ($npc_game_proficiencies) ? "<div class='npc__field npc__field__games'><p class='npc__field__label'>Games:</p><div class='npc__field__value'>$npc_game_proficiencies</div></div>" : "" ?>
+							<?= ($npc_musical_instrument_proficiencies) ? "<div class='npc__field npc__field__instruments'><p class='npc__field__label'>Instruments:</p><div class='npc__field__value'>$npc_musical_instrument_proficiencies</div></div>" : "" ?>
+							<?= ($npc_vehicle_proficiencies) ? "<div class='npc__field npc__field__vehicles'><p class='npc__field__label'>Vehicles:</p><div class='npc__field__value'>$npc_vehicle_proficiencies</div></div>" : "" ?>
 						</div>
 					<?php } ?>
 				</div>

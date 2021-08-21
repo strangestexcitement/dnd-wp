@@ -1479,6 +1479,95 @@
             ]
         },
         {
+            "key": "field_61213a94ba31b",
+            "label": "NPC Saving Throws",
+            "name": "npc_saving_throws",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_61213a94ba31c",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "select",
+                    "instructions": "Select multiple by holding ctrl\/cmd or shift",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Charisma": "Charisma",
+                        "Wisdom": "Wisdom",
+                        "Intelligence": "Intelligence",
+                        "Strength": "Strength",
+                        "Dexterity": "Dexterity",
+                        "Constitution": "Constitution"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 1,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_61213a94ba31d",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_612123479400a",
+            "label": "Skills",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 1,
+            "endpoint": 0
+        },
+        {
             "key": "field_60fdc9d3887c3",
             "label": "NPC Skills",
             "name": "npc_skills",
@@ -3132,6 +3221,333 @@
                 }
             ],
             "layout": "block"
+        },
+        {
+            "key": "field_612123e09400b",
+            "label": "Skills End",
+            "name": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 1
+        },
+        {
+            "key": "field_612122b84ea6d",
+            "label": "NPC Languages",
+            "name": "npc_languages",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_612122b84ea6e",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_612122b84ea6f",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_6121229d4ea6a",
+            "label": "NPC Tool Proficiencies",
+            "name": "npc_tool_proficiencies",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6121229d4ea6b",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_6121229d4ea6c",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_6121230494001",
+            "label": "NPC Game Proficiencies",
+            "name": "npc_game_proficiencies",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6121230494002",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_6121230494003",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_6121231194004",
+            "label": "NPC Musical Instrument Proficiencies",
+            "name": "npc_musical_instrument_proficiencies",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6121231194005",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_6121231194006",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_6121232494007",
+            "label": "NPC Vehicle Proficiencies",
+            "name": "npc_vehicle_proficiencies",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6121232494008",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_6121232494009",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
         },
         {
             "key": "field_60fdb3e830bd4",
@@ -4890,5 +5306,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1629504125
+    "modified": 1629567704
 }

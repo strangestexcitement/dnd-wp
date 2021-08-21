@@ -715,7 +715,6 @@ textarea {
 }
 
 .single-npc .npc__field__label {
-	font-size: 1.4rem;
 	font-weight: 700;
 }
 
@@ -978,8 +977,9 @@ textarea {
 }
 
 .single-npc .npc__relationships__list {
-	display: grid;
-	grid-template-columns: repeat(2, minmax(auto, 50%));
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	row-gap: 1rem;
 	column-gap: 1rem;
 	margin-bottom: 1.2rem;
@@ -989,15 +989,13 @@ textarea {
 	.single-npc .npc__relationships__list {
 		column-gap: 1.6rem;
 		row-gap: 1.6rem;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
 		margin-bottom: 2.4rem;
 	}
 }
 
 .single-npc .npc__relationships__list .npc__box {
 	max-height: 250px;
+	flex-basis: calc(50% - 1rem / 2);
 }
 
 @media (min-width: 768px) {
@@ -1011,10 +1009,12 @@ textarea {
 	margin: 0 auto;
 }
 
-.single-npc .npc__symbol__inner {
-	max-width: 600px;
-	margin-left: auto;
-	margin-right: auto;
+@media (min-width: 768px) {
+	.single-npc .npc__symbol__inner {
+		max-width: 600px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 @media (min-width: 768px) {
@@ -1046,6 +1046,17 @@ textarea {
 	max-width: 800px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.single-npc .npc__capabilities__subheading {
+	flex-basis: 100%;
+	margin-top: 2.4rem;
+}
+
+@media (min-width: 768px) {
+	.single-npc .npc__capabilities__subheading {
+		text-align: center;
+	}
 }
 
 .single-npc .npc__capabilities__content {
@@ -1081,30 +1092,90 @@ textarea {
 	line-height: 1;
 }
 
+.single-npc .npc__capabilities__saving-throws {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	flex-basis: 100%;
+}
+
+.single-npc .npc__capabilities__saving-throws .npc__field {
+	flex-basis: 33%;
+}
+
+@media (min-width: 768px) {
+	.single-npc .npc__capabilities__saving-throws .npc__field {
+		flex: 1;
+	}
+}
+
+.single-npc .npc__capabilities__skills {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	column-gap: 2.4rem;
+	row-gap: 0.8rem;
+}
+
+@media (min-width: 768px) {
+	.single-npc .npc__capabilities__skills {
+		row-gap: 1.2rem;
+	}
+}
+
+.single-npc .npc__capabilities__skills .npc__field {
+	text-align: left;
+	flex-basis: calc(50% - 2.4rem / 2);
+	max-width: 130px;
+	display: flex;
+	align-items: center;
+	column-gap: 1.2rem;
+	justify-content: space-between;
+}
+
+.single-npc .npc__capabilities__misc {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1.2rem;
+	flex-basis: 100%;
+}
+
+@media (min-width: 768px) {
+	.single-npc .npc__capabilities__misc {
+		flex-direction: row;
+		flex-wrap: wrap;
+		column-gap: 2.4rem;
+		row-gap: 1.8rem;
+		justify-content: space-around;
+	}
+}
+
+.single-npc .npc__capabilities__misc .npc__field {
+	text-align: left;
+}
+
+@media (min-width: 768px) {
+	.single-npc .npc__capabilities__misc .npc__field {
+		flex-basis: calc(50% - 2.4rem / 2);
+		max-width: 250px;
+	}
+}
+
+@media (min-width: 768px) {
+	.single-npc .npc__capabilities__misc .npc__field__label {
+		margin-bottom: 0.8rem;
+	}
+}
+
 .single-npc .npc__inventory__inner {
 	max-width: 800px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
-@media (min-width: 768px) {
-	.single-npc .npc__inventory__content {
-		display: flex;
-		justify-content: space-between;
-		column-gap: 2.4rem;
-	}
-}
-
 .single-npc .npc__inventory__currency {
 	display: flex;
 	justify-content: space-between;
-}
-
-@media (min-width: 768px) {
-	.single-npc .npc__inventory__currency {
-		flex-direction: column;
-		order: 1;
-	}
 }
 
 .single-npc .npc__inventory__items {
@@ -1114,7 +1185,7 @@ textarea {
 
 @media (min-width: 768px) {
 	.single-npc .npc__inventory__items {
-		margin-top: 0;
+		margin-top: 2.4rem;
 	}
 }
 

@@ -1,540 +1,546 @@
 $npc_bp: 400px;
 
 .single-npc {
+  .npc {
+    @include linear-gradient(to bottom, npc);
 
-    .npc {
-      @include linear-gradient(to bottom, npc);
-
-      // general module styling 
-      &__module {
-        padding-top: 2.4rem;
-        padding-bottom: 2.4rem;
-        padding-left: 1.2rem;
-        padding-right: 1.2rem;
-        
-        @include bp(tablet) {
-          border-top: 3rem solid $off-white;
-          padding-left: 3rem;
-          padding-right: 3rem;
-          padding-top: 3.6rem;
-          padding-bottom: 3.6rem;
-        }
-      }
-
-      // general field styling
-      &__field {
-        text-align: center;
-
-        &__label {
-          font-size: 1.4rem;
-          font-weight: 700;
-        }
-      }
-
-      // accordion styling
-      &__accordion {
-        &__heading {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-
-          @include bp(tablet) {
-            display: block;
-            text-align: center;
-            padding-bottom: 1.2rem;
-          }
-
-          &::after {
-            content: url('./images/icons/chevron-down.svg');
-            display: block;
-            position: relative;
-            transform: rotate(540deg);
-            transition: transform 0.4s ease-out;
-
-            @include bp(tablet) {
-              display: none;
-            }
-          }
-        }
-
-        &__content {
-          overflow: hidden;
-
-          @include bp(tablet) {
-            height: auto;
-          }
-        }
-
-        &.closed {
-          .npc {
-            &__accordion {
-              &__heading {
-                &::after {
-                  transform: none;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      // hero styling
-      &__hero {
-        margin-top: 10rem;
+    // general module styling 
+    &__module {
+      padding-top: 2.4rem;
+      padding-bottom: 2.4rem;
+      padding-left: 1.2rem;
+      padding-right: 1.2rem;
+      
+      @include bp(tablet) {
+        border-top: 3rem solid $off-white;
         padding-left: 3rem;
         padding-right: 3rem;
-        padding-bottom: 1.6rem;
+        padding-top: 3.6rem;
+        padding-bottom: 3.6rem;
+      }
+    }
+
+    // general field styling
+    &__field {
+      text-align: center;
+
+      &__label {
+        font-weight: 700;
+      }
+    }
+
+    // accordion styling
+    &__accordion {
+      &__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
         @include bp(tablet) {
-          padding-bottom: 2.4rem;
-          padding-top: 2.4rem;
-          margin-top: 5rem;
-        }
-
-        &__inner {
-          @include bp(tablet) {
-            display: grid;
-            grid-template-columns: auto 1fr;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-          }
-        }
-
-        &__image {
-          margin: 0 auto;
-          width: fit-content;
-          position: relative;
-          top: -10rem;
-          margin-bottom: -10rem;
-          
-
-          @include bp(tablet) {
-            top: -8rem;
-            margin-bottom: -8rem;
-          }
-        }
-
-        &__content {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-around;
-
-          @include bp(tablet) {
-            padding-left: 3rem;
-          }
-        }
-
-        &__name {
-          text-align: center; 
-          margin-bottom: 1.2rem;
-          
-          @include bp(tablet) {
-            align-self: center;
-            margin-bottom: 0;
-          }
-        }
-
-        &__details {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: center;
+          display: block;
           text-align: center;
-          column-gap: 2.4rem;
-          row-gap: 1.2rem;
-
-          @include bp(tablet) {
-            height: fit-content;
-          }
-
-          .npc {
-            &__field {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              column-gap: 0.8rem;
-              flex-wrap: wrap;
-
-              &__label {
-                font-size: 1.6rem;
-              }
-
-              &__occupation {
-                flex-basis: 100%;
-              }
-            }
-          }
-        }
-      }
-
-      &__image {
-        &--default {
-          max-width: 300px;
-          max-height: 300px;  
-        }
-      }
-
-      // basics section styling
-      &__basics {        
-        &__inner {
-
+          padding-bottom: 1.2rem;
         }
 
-        &__heading {
+        &::after {
+          content: url('./images/icons/chevron-down.svg');
+          display: block;
+          position: relative;
+          transform: rotate(540deg);
+          transition: transform 0.4s ease-out;
 
-        }
-
-        &__content {
-          display: flex;
-          flex-direction: column;
-          row-gap: 2.4rem;
-
-          @include bp(tablet) {
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: center;
-            column-gap: 1.6rem;
-            row-gap: 3.2rem;          
-          }
-        }
-
-        .npc {
-          &__field {
-            @include bp(tablet) {
-              flex-basis: 200px;
-            }
-          }
-        }
-      }
-
-      // goals section styling 
-      &__goals {
-        &__inner {
-          max-width: 800px;
-          margin: 0 auto;
-        }
-
-        &__heading {
-
-        }
-
-        &__content {
-
-        }
-      }
-
-       // description section styling 
-       &__desc {
-        &__inner {
-          max-width: 800px;
-          margin: 0 auto;
-        }
-
-        &__heading {
-
-        }
-
-        &__content {
-
-        }
-      }
-
-      // personality section styling 
-      &__personality {
-
-        &__inner {
-
-        }
-
-        &__heading {
-
-        }
-
-        &__content {
-          display: flex;
-          flex-direction: column;
-          row-gap: 2.4rem;
-
-          @include bp(tablet) {
-            flex-direction: row;
-            justify-content: center;
-            flex-wrap: wrap;
-            column-gap: 2.4rem;
-          }
-        }
-
-        &__card {
-          @include bp(tablet) {
-            flex-basis: calc(50% - 1.2rem);
-            width: 40%;
-            max-width: 400px;
-          }
-        }
-
-        .npc {
-          &__field {
-            @include bp(tablet) {
-              margin: 0 auto;
-              background-color: $off-white;
-              height: 100%;
-              padding-top: 1.2rem;
-              padding-bottom: 1.2rem;
-              padding-left: 1.6rem;
-              padding-right: 1.6rem;
-            }
-
-            &__value {
-              @include bp(tablet) {
-                text-align: left;
-                margin-top: 1.2rem;
-              }
-            }
-          }
-        }
-      }
-
-      // relationships section styling 
-      &__relationships {
-        &__content {
-          @include bp(tablet) {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(calc(50% - 1.2rem), 1fr));
-            column-gap: 2.4rem;
-          }
-
-          .npc {
-            &__field {
-              margin-top: 2rem;
-              position: relative;
-
-              @include bp(tablet) {
-                margin-top: 0;
-              }
-
-              &:first-of-type {
-                &::after {
-                  content: "";
-                  display: block;
-                  width: 80%;
-                  height: 1px;
-                  background-color: $black;
-                  position: absolute;
-                  bottom: -0.8rem;
-                  left: 50%;
-                  transform: translateX(-50%);
-
-                  @include bp(desktop) {
-                    width: 1px;
-                    height: 80%;
-                    top: 50%;
-                    right: -1.2rem;
-                    left: initial;
-                    transform: translate(50%, -50%);
-                  }
-                }
-              }
-            }
-          }
-        }
-
-        &__list {
-          display: grid;
-          grid-template-columns: repeat(2, minmax(auto, 50%));
-          row-gap: 1rem;
-          column-gap: 1rem;
-          margin-bottom: 1.2rem;
-          
-          @include bp(tablet) {
-            column-gap: 1.6rem;
-            row-gap: 1.6rem;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin-bottom: 2.4rem;
-          }
-
-          .npc {
-            &__box {
-              max-height: 250px;
-
-              @include bp(tablet) {
-                max-height: 300px;
-              }
-            }
-          }
-        }
-      }
-
-      // backstory section styling 
-      &__backstory {
-        &__inner {
-          max-width: 800px;
-          margin: 0 auto;
-        }
-
-        &__heading {
-
-        }
-
-        &__content {
-
-        }
-      }
-
-      // symbol section styling
-      &__symbol {
-        &__inner {
-          max-width: 600px;
-          margin-left: auto;
-          margin-right: auto;
-        }
-
-        &__heading {
           @include bp(tablet) {
             display: none;
           }
         }
+      }
 
-        &__content {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          row-gap: 1.2rem;
+      &__content {
+        overflow: hidden;
 
-          @include bp(tablet) {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            column-gap: 2.4rem;
-          }
-        }
-
-        &__image {
-          background-color: $off-white;
+        @include bp(tablet) {
+          height: auto;
         }
       }
 
-      // capabilities section styling
-      &__capabilities {
-        &__inner {
-          max-width: 800px;
+      &.closed {
+        .npc {
+          &__accordion {
+            &__heading {
+              &::after {
+                transform: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // hero styling
+    &__hero {
+      margin-top: 10rem;
+      padding-left: 3rem;
+      padding-right: 3rem;
+      padding-bottom: 1.6rem;
+
+      @include bp(tablet) {
+        padding-bottom: 2.4rem;
+        padding-top: 2.4rem;
+        margin-top: 5rem;
+      }
+
+      &__inner {
+        @include bp(tablet) {
+          display: grid;
+          grid-template-columns: auto 1fr;
+          max-width: 700px;
           margin-left: auto;
           margin-right: auto;
         }
+      }
 
-        &__heading {
-          
+      &__image {
+        margin: 0 auto;
+        width: fit-content;
+        position: relative;
+        top: -10rem;
+        margin-bottom: -10rem;
+        
+
+        @include bp(tablet) {
+          top: -8rem;
+          margin-bottom: -8rem;
+        }
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        @include bp(tablet) {
+          padding-left: 3rem;
+        }
+      }
+
+      &__name {
+        text-align: center; 
+        margin-bottom: 1.2rem;
+        
+        @include bp(tablet) {
+          align-self: center;
+          margin-bottom: 0;
+        }
+      }
+
+      &__details {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        column-gap: 2.4rem;
+        row-gap: 1.2rem;
+
+        @include bp(tablet) {
+          height: fit-content;
         }
 
-        &__content {
-          display: flex;
-          justify-content: space-evenly;
-          flex-wrap: wrap;
-        }
+        .npc {
+          &__field {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 0.8rem;
+            flex-wrap: wrap;
 
-        &__stats {
-          margin-top: 1.8rem;
-          flex-basis: 100%;
-          display: flex;
+            &__label {
+              font-size: 1.6rem;
+            }
+
+            &__occupation {
+              flex-basis: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    &__image {
+      &--default {
+        max-width: 300px;
+        max-height: 300px;  
+      }
+    }
+
+    // basics section styling
+    &__basics {        
+      &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2.4rem;
+
+        @include bp(tablet) {
+          flex-direction: row;
           flex-wrap: wrap;
           justify-content: center;
-          background-color: $off-white;
-          padding-top: 1.6rem;
-          padding-bottom: 1.6rem;
-          row-gap: 1.6rem;
+          column-gap: 1.6rem;
+          row-gap: 3.2rem;          
+        }
+      }
 
-          .npc {
-            &__field {
-              flex-basis: 33%;
-              
-              @include bp(tablet) {
-                flex: 1;
-              }
+      .npc {
+        &__field {
+          @include bp(tablet) {
+            flex-basis: 200px;
+          }
+        }
+      }
+    }
 
-              &__value {
-                font-size: 4rem;
-                line-height: 1;
+    // goals section styling 
+    &__goals {
+      &__inner {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+    }
+
+      // description section styling 
+      &__desc {
+      &__inner {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+    }
+
+    // personality section styling 
+    &__personality {
+      &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2.4rem;
+
+        @include bp(tablet) {
+          flex-direction: row;
+          justify-content: center;
+          flex-wrap: wrap;
+          column-gap: 2.4rem;
+        }
+      }
+
+      &__card {
+        @include bp(tablet) {
+          flex-basis: calc(50% - 1.2rem);
+          width: 40%;
+          max-width: 400px;
+        }
+      }
+
+      .npc {
+        &__field {
+          @include bp(tablet) {
+            margin: 0 auto;
+            background-color: $off-white;
+            height: 100%;
+            padding-top: 1.2rem;
+            padding-bottom: 1.2rem;
+            padding-left: 1.6rem;
+            padding-right: 1.6rem;
+          }
+
+          &__value {
+            @include bp(tablet) {
+              text-align: left;
+              margin-top: 1.2rem;
+            }
+          }
+        }
+      }
+    }
+
+    // relationships section styling 
+    &__relationships {
+      &__content {
+        @include bp(tablet) {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(calc(50% - 1.2rem), 1fr));
+          column-gap: 2.4rem;
+        }
+
+        .npc {
+          &__field {
+            margin-top: 2rem;
+            position: relative;
+
+            @include bp(tablet) {
+              margin-top: 0;
+            }
+
+            &:first-of-type {
+              &::after {
+                content: "";
+                display: block;
+                width: 80%;
+                height: 1px;
+                background-color: $black;
+                position: absolute;
+                bottom: -0.8rem;
+                left: 50%;
+                transform: translateX(-50%);
+
+                @include bp(desktop) {
+                  width: 1px;
+                  height: 80%;
+                  top: 50%;
+                  right: -1.2rem;
+                  left: initial;
+                  transform: translate(50%, -50%);
+                }
               }
             }
           }
         }
       }
 
-      // inventory section styling
-      &__inventory {
-        &__inner {
-          max-width: 800px;
-          margin-left: auto;
-          margin-right: auto;
+      &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 1rem;
+        column-gap: 1rem;
+        margin-bottom: 1.2rem;
+        
+        @include bp(tablet) {
+          column-gap: 1.6rem;
+          row-gap: 1.6rem;
+          margin-bottom: 2.4rem;
         }
 
-        &__heading {
+        .npc {
+          &__box {
+            max-height: 250px;
+            flex-basis: calc(50% - 1rem / 2);
 
-        }
-
-        &__content {
-          @include bp(tablet) {
-            display: flex;
-            justify-content: space-between;
-            column-gap: 2.4rem;
-          }
-        }
-
-        &__currency {
-          display: flex;
-          justify-content: space-between;
-
-          @include bp(tablet) {
-            flex-direction: column;
-            order: 1;
-          }
-        }
-
-        &__items {
-          margin-top: 1.2rem;
-          text-align: left;
-
-          @include bp(tablet) {
-            margin-top: 0;
-          }
-        }
-      }
-
-      // magic section styling
-      &__magic {
-        &__inner {
-          max-width: 800px;
-          margin-left: auto;
-          margin-right: auto;
-        }
-
-        &__heading {
-
-        }
-
-        &__content {
-
-        }
-      }
-
-      // additional notes section styling
-      &__additional-notes {
-        &__inner {
-          max-width: 800px;
-          margin-left: auto;
-          margin-right: auto;
-        }
-
-        &__heading {
-
-        }
-
-        &__content {
-          @include bp(tablet) {
-            display: flex;
-            justify-content: space-between;
-            column-gap: 2.4rem;
+            @include bp(tablet) {
+              max-height: 300px;
+            }
           }
         }
       }
     }
+
+    // backstory section styling 
+    &__backstory {
+      &__inner {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+    }
+
+    // symbol section styling
+    &__symbol {
+      &__inner {
+        @include bp(tablet) {
+          max-width: 600px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      &__heading {
+        @include bp(tablet) {
+          display: none;
+        }
+      }
+
+      &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1.2rem;
+
+        @include bp(tablet) {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          column-gap: 2.4rem;
+        }
+      }
+
+      &__image {
+        background-color: $off-white;
+      }
+    }
+
+    // capabilities section styling
+    &__capabilities {
+      &__inner {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      &__subheading {
+        flex-basis: 100%;
+        margin-top: 2.4rem;
+        @include bp(tablet) {
+          text-align: center;
+        }
+      }
+
+      &__content {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+      }
+
+      &__stats {
+        margin-top: 1.8rem;
+        flex-basis: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        background-color: $off-white;
+        padding-top: 1.6rem;
+        padding-bottom: 1.6rem;
+        row-gap: 1.6rem;
+
+        .npc {
+          &__field {
+            flex-basis: 33%;
+            
+            @include bp(tablet) {
+              flex: 1;
+            }
+
+            &__value {
+              font-size: 4rem;
+              line-height: 1;
+            }
+          }
+        }
+      }
+
+      &__saving-throws {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        flex-basis: 100%;
+
+        .npc {
+          &__field {
+            flex-basis: 33%;
+            
+            @include bp(tablet) {
+              flex: 1;
+            }
+          }
+        }
+      }
+
+      &__skills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        column-gap: 2.4rem;
+        row-gap: 0.8rem;
+
+        @include bp(tablet) {
+          row-gap: 1.2rem;
+        }
+
+        .npc {
+          &__field {
+            text-align: left;
+            flex-basis: calc(50% - 2.4rem / 2);
+            max-width: 130px;
+            display: flex;
+            align-items: center;
+            column-gap: 1.2rem;
+            justify-content: space-between;
+          }
+        }
+      }
+
+      &__misc {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.2rem;
+        flex-basis: 100%;
+
+        @include bp(tablet) {
+          flex-direction: row;
+          flex-wrap: wrap;
+          column-gap: 2.4rem;
+          row-gap: 1.8rem;
+          justify-content: space-around;
+        }
+        
+        .npc {
+          &__field {
+            text-align: left;
+
+            @include bp(tablet) {
+              flex-basis: calc(50% - 2.4rem / 2);
+              max-width: 250px;
+            }
+
+            &__label {
+              @include bp(tablet) {
+                margin-bottom: 0.8rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    // inventory section styling
+    &__inventory {
+      &__inner {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      &__currency {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &__items {
+        margin-top: 1.2rem;
+        text-align: left;
+
+        @include bp(tablet) {
+          margin-top: 2.4rem;
+        }
+      }
+    }
+
+    // magic section styling
+    &__magic {
+      &__inner {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    // additional notes section styling
+    &__additional-notes {
+      &__inner {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      &__content {
+        @include bp(tablet) {
+          display: flex;
+          justify-content: space-between;
+          column-gap: 2.4rem;
+        }
+      }
+    }
+  }
 }
