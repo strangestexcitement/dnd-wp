@@ -40,9 +40,79 @@
 			$npc_hp = setField(get_field('npc_hp'));
 			$npc_ac = setField(get_field('npc_ac'));
 			$npc_speed = setField(get_field('npc_speed'));
-			$npc_stats = get_field('stats');
+			$stats = get_field('stats');
+			foreach($stats as $stat => $info) {
+				$npc_stats[$stat] = setField($info);
+			}
 			$npc_proficiency_bonus = intval(get_field('npc_proficiency_bonus'));
 			$npc_skills = get_field('npc_skills');
+			
+			$base_skills = [
+				'charisma' => [
+					'deception',
+					'intimidation',
+					'performance',
+					'persuasion'
+				],
+				'wisdom' => [
+					'animal_handling',
+					'insight',
+					'medicine',
+					'perception',
+					'survival'
+				],
+				'intelligence' => [
+					'arcana',
+					'history',
+					'investigation',
+					'nature',
+					'religion'
+				],
+				'strength' => [
+					'athletics'
+				],
+				'dexterity' => [
+					'acrobatics',
+					'sleight_of_hand',
+					'stealth'
+				]
+			];
+
+			foreach($base_skills as $ability => $skills) {
+				$ability_score = $npc_stats[$ability];
+				$ability_mod = (intval($ability_score) - 10) / 2;
+				foreach($skills as $skill) {
+					if($ability_score == '') {
+						$npc_proficiencies[$skill] = '';
+					}
+					else if (	$ability_score == '???') {
+						$npc_proficiencies[$skill] = '???';
+					}
+					else {
+						$prof_level = $npc_skills[$skill]['proficiency_level'];
+						$manual_value = $npc_skills[$skill]['manual_value'];
+						$visibility = $npc_skills[$skill]['visibility'];
+
+						if($manual_value) {
+							$skill_mod = (intval($manual_value) >= 0) ? "+$manual_value" : $manual_value;
+							$npc_proficiencies[$skill] = $skill_mod;
+						}
+						else {
+							$prof_mod = [
+								'Not proficient' => 0,
+								'Half proficiency' => 0.5,
+								'Proficiency' => 1,
+								'Expertise' => 2,
+							];
+							$skill_mod = floor(($prof_mod[$prof_level] * $npc_proficiency_bonus) + $ability_mod);
+							$skill_mod = ($skill_mod >= 0) ? "+$skill_mod" : $skill_mod;
+							$npc_proficiencies[$skill] = $skill_mod;
+						}
+					}
+				}
+			}
+			// need to handle visibility modifiers of proficiencies / proficiency bonus !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+			ksort($npc_proficiencies);
 
 			// details
 			$npc_height = setField(get_field('npc_height'));
@@ -224,27 +294,36 @@
 	<!-- End Symbol -->
 
 	<!-- Capabilities -->
-	<?php if($npc_hp || $npc_ac || $npc_speed) { ?>
+	<?php if($npc_hp || $npc_ac || $npc_speed || $npc_stats) { ?>
 		<div class="npc__capabilities npc__module">
 			<div class="npc__capabilities__inner npc__accordion">
 				<h2 class="npc__capabilities__heading npc__accordion__heading">Capabilities</h2>
 				<div class="npc__capabilities__content npc__accordion__content">
 					<?= ($npc_hp) ? "<div class='npc__field npc__field__hp'><p class='npc__field__label'>HP:</p><p class='npc__field__value'>$npc_hp</p></div>" : "" ?>
 					<?= ($npc_ac) ? "<div class='npc__field npc__field__ac'><p class='npc__field__label'>AC:</p><p class='npc__field__value'>$npc_ac</p></div>" : "" ?>
-					<?= ($npc_speed) ? "<div class='npc__field npc__field__speed'><p class='npc__field__label'>SPEED:</p><p class='npc__field__value'>$npc_speed</p></div>" : "" ?>
-						<!-- NEED TO RESOLVE STATS AND SKILLS -->
-						<!-- <div class="npc__stats"> -->
-						<?php
-							foreach($npc_stats as $stat => $info) {
-								?>		
-								<!-- <div class="npc__stats npc__stats--<?php echo $stat ?>">
-									<h2 class="npc__stats__title npc__stats__title--<?php echo $stat ?>"><?php echo $stat ?></h2>
-									<p class="npc__stats__value npc__stats__value--<?php echo $stat ?>"><?php echo $info['value'] ?></p>
-								</div> -->
-								<?php
+					<?= ($npc_speed) ? "<div class='npc__field npc__field__speed'><p class='npc__field__label'>Speed:</p><p class='npc__field__value'>$npc_speed</p></div>" : "" ?>
+					<?php if($npc_stats) { ?>
+						<div class="npc__capabilities__stats">
+							<? foreach($npc_stats as $stat => $value) {
+								if($value) {
+									$statname = ucwords($stat);
+									if($value == '???') {
+										$modifier = '';
+									}
+									else {
+										$modifier = floor((intval($value) - 10) / 2);
+										$modifier = ($modifier >= 0) ? "+$modifier" : $modifier;
+									}
+									echo "<div class='npc__field npc__field__$stat'>";
+									echo "<p class='npc__field__label'>$statname:</p>";
+									echo "<p class='npc__field__value'>$value</p>";
+									echo ($value != '???') ? "<p class='npc__field__subvalue'>$modifier</p>" : "";
+									echo "</div>";
+								}
 							}
-						?>
-					<!-- </div> -->
+							?>
+						</div>
+					<?php } ?>
 				</div>
 			</div>
 		</div>

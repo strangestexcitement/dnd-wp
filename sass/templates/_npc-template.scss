@@ -416,7 +416,9 @@ $npc_bp: 400px;
       // capabilities section styling
       &__capabilities {
         &__inner {
-          
+          max-width: 800px;
+          margin-left: auto;
+          margin-right: auto;
         }
 
         &__heading {
@@ -425,7 +427,35 @@ $npc_bp: 400px;
 
         &__content {
           display: flex;
-          justify-content: space-around;
+          justify-content: space-evenly;
+          flex-wrap: wrap;
+        }
+
+        &__stats {
+          margin-top: 1.8rem;
+          flex-basis: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          background-color: $off-white;
+          padding-top: 1.6rem;
+          padding-bottom: 1.6rem;
+          row-gap: 1.6rem;
+
+          .npc {
+            &__field {
+              flex-basis: 33%;
+              
+              @include bp(tablet) {
+                flex: 1;
+              }
+
+              &__value {
+                font-size: 4rem;
+                line-height: 1;
+              }
+            }
+          }
         }
       }
 

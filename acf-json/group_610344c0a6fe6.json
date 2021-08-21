@@ -1013,7 +1013,7 @@
                     "key": "field_60fdaedf938a5",
                     "label": "Value",
                     "name": "value",
-                    "type": "number",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -1026,9 +1026,7 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "min": "",
-                    "max": "",
-                    "step": ""
+                    "maxlength": ""
                 },
                 {
                     "key": "field_60fdaedf938a6",
@@ -1084,7 +1082,7 @@
             "label": "Stats",
             "name": "stats",
             "type": "group",
-            "instructions": "",
+            "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -1132,9 +1130,9 @@
                         },
                         {
                             "key": "field_60d665cf0d878",
-                            "label": "Is Known By Players",
-                            "name": "is_known",
-                            "type": "true_false",
+                            "label": "Visibility",
+                            "name": "visibility",
+                            "type": "select",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -1143,16 +1141,23 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "message": "",
-                            "default_value": 0,
+                            "choices": {
+                                "Visible": "Visible",
+                                "Partially visible": "Partially visible",
+                                "Hidden": "Hidden"
+                            },
+                            "default_value": "Visible",
+                            "allow_null": 0,
+                            "multiple": 0,
                             "ui": 0,
-                            "ui_on_text": "",
-                            "ui_off_text": ""
+                            "return_format": "value",
+                            "ajax": 0,
+                            "placeholder": ""
                         }
                     ]
                 },
                 {
-                    "key": "field_60d665e10d879",
+                    "key": "field_612030e7bf362",
                     "label": "Wisdom",
                     "name": "wisdom",
                     "type": "group",
@@ -1167,7 +1172,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_60d665e10d87a",
+                            "key": "field_612030e7bf363",
                             "label": "Value",
                             "name": "value",
                             "type": "number",
@@ -1188,10 +1193,10 @@
                             "step": ""
                         },
                         {
-                            "key": "field_60d665e10d87b",
-                            "label": "Is Known By Players",
-                            "name": "is_known",
-                            "type": "true_false",
+                            "key": "field_612030e7bf364",
+                            "label": "Visibility",
+                            "name": "visibility",
+                            "type": "select",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -1200,16 +1205,23 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "message": "",
-                            "default_value": 0,
+                            "choices": {
+                                "Visible": "Visible",
+                                "Partially visible": "Partially visible",
+                                "Hidden": "Hidden"
+                            },
+                            "default_value": "Visible",
+                            "allow_null": 0,
+                            "multiple": 0,
                             "ui": 0,
-                            "ui_on_text": "",
-                            "ui_off_text": ""
+                            "ajax": 0,
+                            "return_format": "value",
+                            "placeholder": ""
                         }
                     ]
                 },
                 {
-                    "key": "field_60d665e90d87c",
+                    "key": "field_612030f1bf365",
                     "label": "Intelligence",
                     "name": "intelligence",
                     "type": "group",
@@ -1224,7 +1236,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_60d665e90d87d",
+                            "key": "field_612030f2bf366",
                             "label": "Value",
                             "name": "value",
                             "type": "number",
@@ -1245,10 +1257,10 @@
                             "step": ""
                         },
                         {
-                            "key": "field_60d665e90d87e",
-                            "label": "Is Known By Players",
-                            "name": "is_known",
-                            "type": "true_false",
+                            "key": "field_612030f2bf367",
+                            "label": "Visibility",
+                            "name": "visibility",
+                            "type": "select",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -1257,16 +1269,23 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "message": "",
-                            "default_value": 0,
+                            "choices": {
+                                "Visible": "Visible",
+                                "Partially visible": "Partially visible",
+                                "Hidden": "Hidden"
+                            },
+                            "default_value": "Visible",
+                            "allow_null": 0,
+                            "multiple": 0,
                             "ui": 0,
-                            "ui_on_text": "",
-                            "ui_off_text": ""
+                            "ajax": 0,
+                            "return_format": "value",
+                            "placeholder": ""
                         }
                     ]
                 },
                 {
-                    "key": "field_60d665f40d87f",
+                    "key": "field_612030fabf368",
                     "label": "Strength",
                     "name": "strength",
                     "type": "group",
@@ -1281,7 +1300,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_60d665f40d880",
+                            "key": "field_612030fabf369",
                             "label": "Value",
                             "name": "value",
                             "type": "number",
@@ -1302,10 +1321,10 @@
                             "step": ""
                         },
                         {
-                            "key": "field_60d665f40d881",
-                            "label": "Is Known By Players",
-                            "name": "is_known",
-                            "type": "true_false",
+                            "key": "field_612030fabf36a",
+                            "label": "Visibility",
+                            "name": "visibility",
+                            "type": "select",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -1314,16 +1333,23 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "message": "",
-                            "default_value": 0,
+                            "choices": {
+                                "Visible": "Visible",
+                                "Partially visible": "Partially visible",
+                                "Hidden": "Hidden"
+                            },
+                            "default_value": "Visible",
+                            "allow_null": 0,
+                            "multiple": 0,
                             "ui": 0,
-                            "ui_on_text": "",
-                            "ui_off_text": ""
+                            "ajax": 0,
+                            "return_format": "value",
+                            "placeholder": ""
                         }
                     ]
                 },
                 {
-                    "key": "field_60d665fd0d882",
+                    "key": "field_61203108bf36b",
                     "label": "Dexterity",
                     "name": "dexterity",
                     "type": "group",
@@ -1338,7 +1364,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_60d665fd0d883",
+                            "key": "field_61203108bf36c",
                             "label": "Value",
                             "name": "value",
                             "type": "number",
@@ -1359,10 +1385,10 @@
                             "step": ""
                         },
                         {
-                            "key": "field_60d665fd0d884",
-                            "label": "Is Known By Players",
-                            "name": "is_known",
-                            "type": "true_false",
+                            "key": "field_61203108bf36d",
+                            "label": "Visibility",
+                            "name": "visibility",
+                            "type": "select",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -1371,16 +1397,23 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "message": "",
-                            "default_value": 0,
+                            "choices": {
+                                "Visible": "Visible",
+                                "Partially visible": "Partially visible",
+                                "Hidden": "Hidden"
+                            },
+                            "default_value": "Visible",
+                            "allow_null": 0,
+                            "multiple": 0,
                             "ui": 0,
-                            "ui_on_text": "",
-                            "ui_off_text": ""
+                            "ajax": 0,
+                            "return_format": "value",
+                            "placeholder": ""
                         }
                     ]
                 },
                 {
-                    "key": "field_60d666050d885",
+                    "key": "field_61203110bf36e",
                     "label": "Constitution",
                     "name": "constitution",
                     "type": "group",
@@ -1395,7 +1428,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_60d666050d886",
+                            "key": "field_61203110bf36f",
                             "label": "Value",
                             "name": "value",
                             "type": "number",
@@ -1416,10 +1449,10 @@
                             "step": ""
                         },
                         {
-                            "key": "field_60d666050d887",
-                            "label": "Is Known By Players",
-                            "name": "is_known",
-                            "type": "true_false",
+                            "key": "field_61203110bf370",
+                            "label": "Visibility",
+                            "name": "visibility",
+                            "type": "select",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -1428,11 +1461,18 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "message": "",
-                            "default_value": 0,
+                            "choices": {
+                                "Visible": "Visible",
+                                "Partially visible": "Partially visible",
+                                "Hidden": "Hidden"
+                            },
+                            "default_value": "Visible",
+                            "allow_null": 0,
+                            "multiple": 0,
                             "ui": 0,
-                            "ui_on_text": "",
-                            "ui_off_text": ""
+                            "ajax": 0,
+                            "return_format": "value",
+                            "placeholder": ""
                         }
                     ]
                 }
@@ -4850,5 +4890,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1629250612
+    "modified": 1629504125
 }
