@@ -18,14 +18,10 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet"><!-- fonts -->
 	<script src="https://kit.fontawesome.com/37d930f6af.js" crossorigin="anonymous"></script><!-- font awesome -->
-
-
-
 	<?php wp_head(); ?>
 </head>
 
@@ -38,15 +34,9 @@
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
+			?>
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
+			<?php
 			$dndest_description = get_bloginfo( 'description', 'display' );
 			if ( $dndest_description || is_customize_preview() ) :
 				?>

@@ -44,6 +44,13 @@
 			foreach($stats as $stat => $info) {
 				$npc_stats[$stat] = setField($info);
 			}
+			$npc_stats_exist = false;
+			foreach($npc_stats as $stat) {
+				if($stat) {
+					$npc_stats_exist = true;
+					break;
+				}
+			}
 			$npc_proficiency_bonus = intval(get_field('npc_proficiency_bonus'));
 			$npc_skills = get_field('npc_skills');
 			$npc_languages = setField(get_field('npc_languages'));
@@ -144,7 +151,9 @@
 					}
 				}
 			}
-			ksort($npc_proficiencies);
+			if($npc_proficiencies) {
+				ksort($npc_proficiencies);
+			}
 
 			// details
 			$npc_height = setField(get_field('npc_height'));
@@ -290,8 +299,8 @@
 			<div class="npc__relationships__inner npc__accordion">
 				<h2 class="npc__relationships__heading npc__accordion__heading">Relationships</h2>
 				<div class="npc__relationships__content npc__accordion__content">
-					<?= ($npc_allies_other || $npc_allies_links) ? "<div class='npc__field npc__field__allies'><p class='npc__field__label'>ALLIES:</p><div class='npc__field__value'>$allies_links</div><p class='npc__field__label'>OTHER ALLIES:</p><div class='npc__field__value'>$npc_allies_other</div></div>" : "" ?>
-					<?= ($npc_enemies_other || $npc_enemies_links) ? "<div class='npc__field npc__field__enemies'><p class='npc__field__label'>ENEMIES:</p><div class='npc__field__value'>$enemies_links</div><p class='npc__field__label'>OTHER ENEMIES:</p><div class='npc__field__value'>$npc_enemies_other</div></div>" : "" ?>
+					<?= ($npc_allies_other || $npc_allies_links) ? "<div class='npc__field npc__field__allies'><h3 class='npc__field__label npc__relationships__subheading'>ALLIES:</h3><div class='npc__field__value'>$allies_links</div><p class='npc__field__label'>OTHER ALLIES:</p><div class='npc__field__value'>$npc_allies_other</div></div>" : "" ?>
+					<?= ($npc_enemies_other || $npc_enemies_links) ? "<div class='npc__field npc__field__enemies'><h3 class='npc__field__label npc__relationships__subheading'>ENEMIES:</h3><div class='npc__field__value'>$enemies_links</div><p class='npc__field__label'>OTHER ENEMIES:</p><div class='npc__field__value'>$npc_enemies_other</div></div>" : "" ?>
 				</div>
 			</div>
 		</div>
@@ -326,7 +335,7 @@
 	<!-- End Symbol -->
 
 	<!-- Capabilities -->
-	<?php if($npc_hp || $npc_ac || $npc_speed || $npc_stats) { ?>
+	<?php if($npc_hp || $npc_ac || $npc_speed || $npc_stats_exist) { ?>
 		<div class="npc__capabilities npc__module">
 			<div class="npc__capabilities__inner npc__accordion">
 				<h2 class="npc__capabilities__heading npc__accordion__heading">Capabilities</h2>
@@ -334,7 +343,7 @@
 					<?= ($npc_hp) ? "<div class='npc__field npc__field__hp'><p class='npc__field__label'>HP:</p><p class='npc__field__value'>$npc_hp</p></div>" : "" ?>
 					<?= ($npc_ac) ? "<div class='npc__field npc__field__ac'><p class='npc__field__label'>AC:</p><p class='npc__field__value'>$npc_ac</p></div>" : "" ?>
 					<?= ($npc_speed) ? "<div class='npc__field npc__field__speed'><p class='npc__field__label'>Speed:</p><p class='npc__field__value'>$npc_speed</p></div>" : "" ?>
-					<?php if($npc_stats) { ?>
+					<?php if($npc_stats_exist) { ?>
 						<div class="npc__capabilities__stats">
 							<? foreach($npc_stats as $stat => $value) {
 								if($value) {
@@ -356,8 +365,6 @@
 							?>
 						</div>
 					<?php } ?>
-
-
 					<?php if($npc_saving_throws) { ?>
 						<div class="npc__capabilities__saving-throws">
 							<h3 class="npc__capabilities__subheading">Saving Throws</h3>

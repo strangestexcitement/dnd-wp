@@ -6,8 +6,8 @@ $npc_bp: 400px;
 
     // general module styling 
     &__module {
-      padding-top: 2.4rem;
-      padding-bottom: 2.4rem;
+      padding-top: 1.2rem;
+      padding-bottom: 1.2rem;
       padding-left: 1.2rem;
       padding-right: 1.2rem;
       
@@ -35,11 +35,11 @@ $npc_bp: 400px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-bottom: 1.2rem;
 
         @include bp(tablet) {
           display: block;
           text-align: center;
-          padding-bottom: 1.2rem;
         }
 
         &::after {
@@ -105,7 +105,7 @@ $npc_bp: 400px;
         position: relative;
         top: -10rem;
         margin-bottom: -10rem;
-        
+        max-width: 100%;
 
         @include bp(tablet) {
           top: -8rem;
@@ -166,7 +166,10 @@ $npc_bp: 400px;
     }
 
     &__image {
+      width: 100%;
+
       &--default {
+        width: 100%;
         max-width: 300px;
         max-height: 300px;  
       }
@@ -277,6 +280,8 @@ $npc_bp: 400px;
             }
 
             &:first-of-type {
+              margin-top: 0;
+
               &::after {
                 content: "";
                 display: block;
@@ -300,6 +305,10 @@ $npc_bp: 400px;
             }
           }
         }
+      }
+
+      &__subheading {
+        font-weight: 400;
       }
 
       &__list {
@@ -505,6 +514,14 @@ $npc_bp: 400px;
       &__currency {
         display: flex;
         justify-content: space-between;
+        
+        .npc {
+          &__field {
+            &__label {
+              font-size: 1.6rem;
+            }
+          }
+        }
       }
 
       &__items {
@@ -539,6 +556,14 @@ $npc_bp: 400px;
           display: flex;
           justify-content: space-between;
           column-gap: 2.4rem;
+        }
+      }
+
+      .npc {
+        &__field {
+          &__links {
+            margin-top: 1.2rem;
+          }
         }
       }
     }

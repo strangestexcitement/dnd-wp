@@ -1,4 +1,21 @@
 .site-footer {
   background-color: $primary-dark;
-  color: $white;
+  color: $off-white;
+  padding: 2.4rem 4vw;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  .site-info {
+    display: flex;
+    justify-content: space-between;
+
+    .site-title {
+      a {
+        color: inherit; 
+        text-decoration: none;
+      }
+    }
+  }
 }

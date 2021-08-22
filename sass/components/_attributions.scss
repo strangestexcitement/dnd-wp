@@ -1,10 +1,11 @@
 .attributions {
   position: relative;
   z-index: -1;
+  transition: z-index 0.3s step-end;
+  color: $black;
 
   $root: &;
   
-
   &__overlay {
     position: fixed;
     top: 0;
@@ -77,8 +78,6 @@
         width: 5px;
       }
     }
-
-    
   }
 
   &__content {
@@ -99,6 +98,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+
     &__text {
 
     }
@@ -113,7 +114,9 @@
   }
 
   &--show {
-    z-index: 3;
+    transition: z-index 0.3s step-start;
+    z-index: 11;
+
 
     #{$root} {
       &__overlay {
