@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying NPC archive pages
+ * The template for displaying Player archive pages
  *
  * @package dndest
  */
@@ -13,7 +13,7 @@ get_header();
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title">NPCs</h1>
+				<h1 class="page-title">Players</h1>
 			</header><!-- .page-header -->
 			<div class="page-content">
 			<?php

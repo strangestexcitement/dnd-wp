@@ -62,6 +62,30 @@ function create_npc_posttype() {
 // Hooking up NPC function to theme setup
 add_action( 'init', 'create_npc_posttype' );
 
+// Player custom post type function
+function create_player_posttype() {
+ 
+	register_post_type( 'Player',
+	// CPT Options
+			array(
+					'labels' => array(
+							'name' => __( 'Players' ),
+							'singular_name' => __( 'Player' )
+					),
+					'public' => true,
+					'has_archive' => true,
+					'rewrite' => array('slug' => 'player'),
+					'show_in_rest' => true,
+					'description' => "Players of the game",
+					// 'supports' => array(
+					// 	'title', 'editor', 'comments', 'revisions', 'author', 'page-attributes', 'custom-fields'
+					// ),
+			)
+	);
+}
+// Hooking up NPC function to theme setup
+add_action( 'init', 'create_player_posttype' );
+
 
 /**
  * Sets field based on visibility options

@@ -1,0 +1,5 @@
+.single-player {
+  .player {
+    @include linear-gradient(to bottom, npc);
+  }
+}

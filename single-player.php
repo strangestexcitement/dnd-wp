@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all single NPC posts
+ * The template for displaying all single Player posts
  *
  * @package dndest
  */

@@ -1,0 +1,53 @@
+.post-type-archive-player {
+  .page-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 2.4rem;
+    column-gap: 2.4rem;
+  }
+
+  .player {
+    width: fit-content;
+    a {
+      color: $off-white;
+      text-decoration: none;
+    }
+
+    &__card {
+      &__inner {
+        position: relative;
+      }
+
+      &__image {
+        line-height: 0;
+      }
+
+      &__name {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.85);
+        padding-top: 0.8rem;
+        text-align: center;
+      }
+
+      &__roles {
+        max-width: 300px;
+        background-color: $black;
+        padding-bottom: 0.6rem;
+        padding-top: 0.6rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        column-gap: 1.6rem;
+        row-gap: 1.2rem;
+      }
+
+      &__role {
+
+      }
+    }
+  }
+}

@@ -526,6 +526,112 @@ textarea {
 	text-decoration: none;
 }
 
+.npc__hero, .player__hero {
+	margin-top: 10rem;
+	padding-left: 3rem;
+	padding-right: 3rem;
+	padding-bottom: 1.6rem;
+}
+
+@media (min-width: 768px) {
+	.npc__hero, .player__hero {
+		padding-bottom: 2.4rem;
+		padding-top: 2.4rem;
+		margin-top: 5rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.npc__hero__inner, .player__hero__inner {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		max-width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.npc__hero__image, .player__hero__image {
+	margin: 0 auto;
+	width: fit-content;
+	position: relative;
+	top: -10rem;
+	margin-bottom: -10rem;
+	max-width: 100%;
+}
+
+@media (min-width: 768px) {
+	.npc__hero__image, .player__hero__image {
+		top: -8rem;
+		margin-bottom: -8rem;
+	}
+}
+
+.npc__hero__content, .player__hero__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+@media (min-width: 768px) {
+	.npc__hero__content, .player__hero__content {
+		padding-left: 3rem;
+	}
+}
+
+.npc__hero__name, .player__hero__name {
+	text-align: center;
+	margin-bottom: 1.2rem;
+}
+
+@media (min-width: 768px) {
+	.npc__hero__name, .player__hero__name {
+		align-self: center;
+		margin-bottom: 0;
+	}
+}
+
+.npc__hero__details, .player__hero__details {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+	column-gap: 2.4rem;
+	row-gap: 1.2rem;
+}
+
+@media (min-width: 768px) {
+	.npc__hero__details, .player__hero__details {
+		height: fit-content;
+	}
+}
+
+.npc__hero__details .npc__field, .player__hero__details .npc__field {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 0.8rem;
+	flex-wrap: wrap;
+}
+
+.npc__hero__details .npc__field__label, .player__hero__details .npc__field__label {
+	font-size: 1.6rem;
+}
+
+.npc__hero__details .npc__field__occupation, .player__hero__details .npc__field__occupation {
+	flex-basis: 100%;
+}
+
+.npc__image, .player__image {
+	width: 100%;
+}
+
+.npc__image--default, .player__image--default {
+	width: 100%;
+	max-width: 300px;
+	max-height: 300px;
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
@@ -691,6 +797,53 @@ textarea {
 	}
 }
 
+.post-type-archive-player .page-content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	row-gap: 2.4rem;
+	column-gap: 2.4rem;
+}
+
+.post-type-archive-player .player {
+	width: fit-content;
+}
+
+.post-type-archive-player .player a {
+	color: #FCF5E5;
+	text-decoration: none;
+}
+
+.post-type-archive-player .player__card__inner {
+	position: relative;
+}
+
+.post-type-archive-player .player__card__image {
+	line-height: 0;
+}
+
+.post-type-archive-player .player__card__name {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.85);
+	padding-top: 0.8rem;
+	text-align: center;
+}
+
+.post-type-archive-player .player__card__roles {
+	max-width: 300px;
+	background-color: #000;
+	padding-bottom: 0.6rem;
+	padding-top: 0.6rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	column-gap: 1.6rem;
+	row-gap: 1.2rem;
+}
+
 /* Templates
 --------------------------------------------- */
 .single-npc .npc {
@@ -762,102 +915,6 @@ textarea {
 
 .single-npc .npc__accordion.closed .npc__accordion__heading::after {
 	transform: none;
-}
-
-.single-npc .npc__hero {
-	margin-top: 10rem;
-	padding-left: 3rem;
-	padding-right: 3rem;
-	padding-bottom: 1.6rem;
-}
-
-@media (min-width: 768px) {
-	.single-npc .npc__hero {
-		padding-bottom: 2.4rem;
-		padding-top: 2.4rem;
-		margin-top: 5rem;
-	}
-}
-
-@media (min-width: 768px) {
-	.single-npc .npc__hero__inner {
-		display: grid;
-		grid-template-columns: auto 1fr;
-		max-width: 700px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-}
-
-.single-npc .npc__hero__image {
-	margin: 0 auto;
-	width: fit-content;
-	position: relative;
-	top: -10rem;
-	margin-bottom: -10rem;
-	max-width: 100%;
-}
-
-@media (min-width: 768px) {
-	.single-npc .npc__hero__image {
-		top: -8rem;
-		margin-bottom: -8rem;
-	}
-}
-
-.single-npc .npc__hero__content {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-}
-
-@media (min-width: 768px) {
-	.single-npc .npc__hero__content {
-		padding-left: 3rem;
-	}
-}
-
-.single-npc .npc__hero__name {
-	text-align: center;
-	margin-bottom: 1.2rem;
-}
-
-@media (min-width: 768px) {
-	.single-npc .npc__hero__name {
-		align-self: center;
-		margin-bottom: 0;
-	}
-}
-
-.single-npc .npc__hero__details {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	text-align: center;
-	column-gap: 2.4rem;
-	row-gap: 1.2rem;
-}
-
-@media (min-width: 768px) {
-	.single-npc .npc__hero__details {
-		height: fit-content;
-	}
-}
-
-.single-npc .npc__hero__details .npc__field {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	column-gap: 0.8rem;
-	flex-wrap: wrap;
-}
-
-.single-npc .npc__hero__details .npc__field__label {
-	font-size: 1.6rem;
-}
-
-.single-npc .npc__hero__details .npc__field__occupation {
-	flex-basis: 100%;
 }
 
 .single-npc .npc__image {
@@ -1233,6 +1290,10 @@ textarea {
 
 .single-npc .npc__additional-notes .npc__field__links {
 	margin-top: 1.2rem;
+}
+
+.single-player .player {
+	background: linear-gradient(to bottom, #FFECD2, #5BA48D);
 }
 
 /*# sourceMappingURL=style.css.map */
