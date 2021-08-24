@@ -803,23 +803,61 @@ textarea {
 	justify-content: center;
 	row-gap: 2.4rem;
 	column-gap: 2.4rem;
+	flex-direction: column;
+	align-items: center;
+}
+
+@media (min-width: 768px) {
+	.post-type-archive-player .page-content {
+		flex-direction: row;
+	}
 }
 
 .post-type-archive-player .player {
 	width: fit-content;
+	height: 300px;
+	width: 300px;
 }
 
 .post-type-archive-player .player a {
 	color: #FCF5E5;
 	text-decoration: none;
+	height: 100%;
+}
+
+.post-type-archive-player .player__card {
+	height: inherit;
 }
 
 .post-type-archive-player .player__card__inner {
+	height: inherit;
 	position: relative;
+	transition: transform 0.8s, box-shadow 0.8s;
+	transform-style: preserve-3d;
 }
 
 .post-type-archive-player .player__card__image {
 	line-height: 0;
+	height: calc(100% - 36px);
+	width: 100%;
+	overflow: hidden;
+}
+
+.post-type-archive-player .player__card__image .player__image {
+	height: 100%;
+	width: 100%;
+}
+
+.post-type-archive-player .player__card__image .player__image img {
+	max-width: initial;
+	min-height: 100%;
+	min-width: 100%;
+	width: auto;
+	height: auto;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .post-type-archive-player .player__card__name {
@@ -832,6 +870,10 @@ textarea {
 	text-align: center;
 }
 
+.post-type-archive-player .player__card__name--back {
+	margin-bottom: 1.2rem;
+}
+
 .post-type-archive-player .player__card__roles {
 	max-width: 300px;
 	background-color: #000;
@@ -842,6 +884,33 @@ textarea {
 	justify-content: space-around;
 	column-gap: 1.6rem;
 	row-gap: 1.2rem;
+}
+
+.post-type-archive-player .player__card__flip--front {
+	height: inherit;
+}
+
+.post-type-archive-player .player__card__flip--back {
+	color: #FCF5E5;
+	background-color: #000;
+	transform: rotateY(180deg);
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 2.4rem;
+}
+
+@media (min-width: 768px) {
+	.post-type-archive-player .player__card:hover .player__card__inner {
+		transform: rotateY(180deg);
+		box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+	}
 }
 
 /* Templates

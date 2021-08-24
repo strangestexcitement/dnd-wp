@@ -18,6 +18,7 @@
 			$player_name = get_field('player_name');
 			$player_image_id = get_field('player_image');
 			$player_roles = get_field('player_roles');
+			$player_excerpt = get_field('player_excerpt');
 			$default_image = get_template_directory_uri() . "/images/defaults/default-npc-image.jpg";
 			$link = get_permalink();
 
@@ -36,19 +37,25 @@
 	<a href="<?= $link ?>">
 		<div class="player__card">
 			<div class="player__card__inner">
-				<div class="player__card__image">
-					<?=  ($player_image) ? $player_image : "" ?>
-				</div>
-				<?= ($player_name) ? "<h2 class='player__card__name'>$player_name</h2>" : "" ?>
-				<?php if($player_roles) { ?>
-					<div class="player__card__roles">
-						<? 
-							foreach($player_roles as $role) {
-								echo "<p class='player__card__role'>$role</p>";
-							}
-						?>
+				<div class="player__card__flip--front">
+					<div class="player__card__image">
+						<?=  ($player_image) ? $player_image : "" ?>
 					</div>
-				<?php } ?>
+					<?= ($player_name) ? "<h2 class='player__card__name'>$player_name</h2>" : "" ?>
+					<?php if($player_roles) { ?>
+						<div class="player__card__roles">
+							<? 
+								foreach($player_roles as $role) {
+									echo "<p class='player__card__role'>$role</p>";
+								}
+							?>
+						</div>
+					<?php } ?>
+				</div>
+				<div class="player__card__flip--back">
+					<?= ($player_name) ? "<h2 class='player__card__name--back'>$player_name</h2>" : "" ?>
+					<?= ($player_excerpt) ? $player_excerpt : ""; ?>
+				</div>
 			</div>
 		</div>
 	</a>
