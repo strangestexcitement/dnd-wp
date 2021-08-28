@@ -36,7 +36,7 @@
 
       &__image {
         line-height: 0;
-        height: calc(100% - 36px);
+        height: 100%;
         width: 100%;
         overflow: hidden;
 
@@ -70,13 +70,18 @@
         text-align: center;
 
         &--back {
-          margin-bottom: 1.2rem;
+          margin-bottom: auto;
+          justify-self: flex-start;
+          background-color: $black;
+          text-align: center;
+          padding-left: 2.4rem;
+          padding-right: 2.4rem;
         }
       }
 
       &__roles {
         max-width: 300px;
-        background-color: $black;
+        background-color: rgba(0,0,0,0.85);
         padding-bottom: 0.6rem;
         padding-top: 0.6rem;
         display: flex;
@@ -84,10 +89,14 @@
         justify-content: space-around;
         column-gap: 1.6rem;
         row-gap: 1.2rem;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
       }
 
-      &__role {
-
+      &__excerpt {
+        overflow-y: hidden;
+        margin-bottom: auto;
       }
 
       &__flip {
@@ -109,6 +118,7 @@
           align-items: center;
           justify-content: center;
           padding: 2.4rem;
+          padding-top: 0.8rem;
         }
       }
 

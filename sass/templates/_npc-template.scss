@@ -4,22 +4,6 @@ $npc_bp: 400px;
   .npc {
     @include linear-gradient(to bottom, npc);
 
-    // general module styling 
-    &__module {
-      padding-top: 1.2rem;
-      padding-bottom: 1.2rem;
-      padding-left: 1.2rem;
-      padding-right: 1.2rem;
-      
-      @include bp(tablet) {
-        border-top: 3rem solid $off-white;
-        padding-left: 3rem;
-        padding-right: 3rem;
-        padding-top: 3.6rem;
-        padding-bottom: 3.6rem;
-      }
-    }
-
     // general field styling
     &__field {
       text-align: center;

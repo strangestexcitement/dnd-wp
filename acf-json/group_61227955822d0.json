@@ -93,7 +93,7 @@
             "label": "Player Excerpt",
             "name": "player_excerpt",
             "type": "wysiwyg",
-            "instructions": "Appears on hover state on players archive page",
+            "instructions": "Appears on hover state on players archive page. Max height of 9 lines and 144 characters.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -141,6 +141,119 @@
             "min": "",
             "max": "",
             "return_format": "id"
+        },
+        {
+            "key": "field_612a4df9fc1a7",
+            "label": "Player Social Links",
+            "name": "player_social_links",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_612a5de4eaf37",
+                    "label": "D&D Beyond",
+                    "name": "d&d_beyond",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_612a5df5eaf38",
+                    "label": "Roll20",
+                    "name": "roll20",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_612a5dfceaf39",
+                    "label": "Facebook",
+                    "name": "facebook",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_612a5e066a06c",
+                    "label": "Twitter",
+                    "name": "twitter",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_612a5e0b6a06d",
+                    "label": "Instagram",
+                    "name": "instagram",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_612a5e166a06e",
+                    "label": "TikTok",
+                    "name": "tiktok",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                }
+            ]
         }
     ],
     "location": [
@@ -160,5 +273,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1629766414
+    "modified": 1630192447
 }

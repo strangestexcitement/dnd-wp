@@ -146,11 +146,15 @@ function getNPCCard($npc_id) {
 		$image = getImageAttachment($npc_image_id, 'medium');
 		$npc_image = "<div class='npc__box__image'>$image</div>";
 	}
+	else {
+		$imagepath = get_template_directory_uri() . "/images/defaults/default-npc-image.jpg";
+		$npc_image = "<div class='npc__box__image'><img src='$imagepath'></div>";
+	}
 
 	$card = "<a href='$npc_link' class='npc__box'>
 						<div class='npc__box__card'>";
 	$card .= ($npc_name) ? "<h2 class='entry-title npc__box__name'>$npc_name</h2>" : "";
-	$card .= ($npc_image_id) ? $npc_image : "";
+	$card .= ($npc_image) ? $npc_image : "";
 	$card .= ($has_desc) ? "<div class='npc__box__desc'><p>" : "";
 	$card .= ($npc_level) ? "Level $npc_level" : "";
 	$card .= ($npc_race) ? " $npc_race<br>" : "";

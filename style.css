@@ -168,6 +168,39 @@ a {
 	color: #420D09;
 }
 
+.fas, .fab {
+	transition: 0.3s ease-out;
+}
+
+.fab.fa-d-and-d:hover {
+	color: #BC0F0F;
+}
+
+.fas.fa-dice-d20:hover {
+	background: linear-gradient(to top, #702c91, #ec008c);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.fab.fa-facebook-f:hover {
+	color: #4267B2;
+}
+
+.fab.fa-twitter:hover {
+	color: #1DA1F2;
+}
+
+.fab.fa-instagram:hover {
+	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.fab.fa-tiktok:hover {
+	text-shadow: -2px -2px 0 #25F4EE, 2px 2px 0 #FE2C55;
+	color: #000;
+}
+
 /* Box sizing
 --------------------------------------------- */
 /* Inherit box-sizing to more easily change it's value on a component level.
@@ -632,6 +665,23 @@ textarea {
 	max-height: 300px;
 }
 
+.npc__module, .player__module {
+	padding-top: 1.2rem;
+	padding-bottom: 1.2rem;
+	padding-left: 1.2rem;
+	padding-right: 1.2rem;
+}
+
+@media (min-width: 768px) {
+	.npc__module, .player__module {
+		border-top: 3rem solid #FCF5E5;
+		padding-left: 3rem;
+		padding-right: 3rem;
+		padding-top: 3.6rem;
+		padding-bottom: 3.6rem;
+	}
+}
+
 /*--------------------------------------------------------------
 # Plugins
 --------------------------------------------------------------*/
@@ -838,7 +888,7 @@ textarea {
 
 .post-type-archive-player .player__card__image {
 	line-height: 0;
-	height: calc(100% - 36px);
+	height: 100%;
 	width: 100%;
 	overflow: hidden;
 }
@@ -871,12 +921,17 @@ textarea {
 }
 
 .post-type-archive-player .player__card__name--back {
-	margin-bottom: 1.2rem;
+	margin-bottom: auto;
+	justify-self: flex-start;
+	background-color: #000;
+	text-align: center;
+	padding-left: 2.4rem;
+	padding-right: 2.4rem;
 }
 
 .post-type-archive-player .player__card__roles {
 	max-width: 300px;
-	background-color: #000;
+	background-color: rgba(0, 0, 0, 0.85);
 	padding-bottom: 0.6rem;
 	padding-top: 0.6rem;
 	display: flex;
@@ -884,6 +939,14 @@ textarea {
 	justify-content: space-around;
 	column-gap: 1.6rem;
 	row-gap: 1.2rem;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.post-type-archive-player .player__card__excerpt {
+	overflow-y: hidden;
+	margin-bottom: auto;
 }
 
 .post-type-archive-player .player__card__flip--front {
@@ -904,6 +967,7 @@ textarea {
 	align-items: center;
 	justify-content: center;
 	padding: 2.4rem;
+	padding-top: 0.8rem;
 }
 
 @media (min-width: 768px) {
@@ -917,23 +981,6 @@ textarea {
 --------------------------------------------- */
 .single-npc .npc {
 	background: linear-gradient(to bottom, #FFECD2, #5BA48D);
-}
-
-.single-npc .npc__module {
-	padding-top: 1.2rem;
-	padding-bottom: 1.2rem;
-	padding-left: 1.2rem;
-	padding-right: 1.2rem;
-}
-
-@media (min-width: 768px) {
-	.single-npc .npc__module {
-		border-top: 3rem solid #FCF5E5;
-		padding-left: 3rem;
-		padding-right: 3rem;
-		padding-top: 3.6rem;
-		padding-bottom: 3.6rem;
-	}
 }
 
 .single-npc .npc__field {
@@ -1363,6 +1410,45 @@ textarea {
 
 .single-player .player {
 	background: linear-gradient(to bottom, #FFECD2, #5BA48D);
+}
+
+.single-player .player__field__characters .npc__relationships__list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	column-gap: 2.4rem;
+	row-gap: 2.4rem;
+}
+
+@media (min-width: 768px) {
+	.single-player .player__field__characters .npc__box {
+		max-width: 250px;
+	}
+}
+
+@media (min-width: 992px) {
+	.single-player .player__field__characters .npc__box__image {
+		max-height: initial;
+	}
+}
+
+.single-player .player__accordion__heading {
+	text-align: center;
+}
+
+.single-player .player__social__content {
+	display: flex;
+	justify-content: center;
+	column-gap: 1.2rem;
+	font-size: 4rem;
+}
+
+@media (min-width: 768px) {
+	.single-player .player__description__inner {
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 /*# sourceMappingURL=style.css.map */

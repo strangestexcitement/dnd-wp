@@ -54,7 +54,7 @@
 				</div>
 				<div class="player__card__flip--back">
 					<?= ($player_name) ? "<h2 class='player__card__name--back'>$player_name</h2>" : "" ?>
-					<?= ($player_excerpt) ? $player_excerpt : ""; ?>
+					<?= ($player_excerpt) ? "<div class='player__card__excerpt'>$player_excerpt</div>" : ""; ?>
 				</div>
 			</div>
 		</div>

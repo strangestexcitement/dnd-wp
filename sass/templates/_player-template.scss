@@ -1,5 +1,57 @@
 .single-player {
   .player {
     @include linear-gradient(to bottom, npc);
+
+    &__field {
+      &__characters {
+        .npc {
+          &__relationships {
+            &__list {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center;
+              column-gap: 2.4rem;
+              row-gap: 2.4rem;
+            }
+          }
+          &__box {
+            @include bp(tablet) {
+              max-width: 250px;
+            }
+
+            &__image {
+              @include bp(desktop) {
+                max-height: initial;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__accordion {
+      &__heading {
+        text-align: center;
+      }
+    }
+
+    &__social {
+      &__content {
+        display: flex;
+        justify-content: center;
+        column-gap: 1.2rem;
+        font-size: 4rem;
+      }
+    }
+
+    &__description {
+      &__inner {
+        @include bp(tablet) {
+          max-width: 800px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
   }
 }
