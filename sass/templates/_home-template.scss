@@ -1,0 +1,57 @@
+.page-template-home-template {
+  .home {
+    @include linear-gradient(to bottom, npc);
+
+    &__accordion {
+      &__heading {
+        text-align: center;
+      }
+    }
+
+    &__heading {
+      background: $off-white;
+    }
+
+    &__description {
+      &__inner {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      &__content {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    &__players {
+      &__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 2.4rem;
+        column-gap: 2.4rem;
+      }
+    }
+
+    &__featured-npcs {
+      &__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 2.4rem;
+        column-gap: 2.4rem;
+      }
+    }
+
+    &__links {
+      &__content {
+        display: flex;
+        justify-content: center;
+        column-gap: 1.2rem;
+      }
+    }
+  }
+}

@@ -14,20 +14,20 @@ function game_settings_init() {
     // Register a new section in the "game" page.
     add_settings_section(
         'game_section_people',
-        __( 'People', 'game' ), 'game_section_people_callback',
+        __( 'Game Details', 'game' ), 'game_section_details_callback',
         'game'
     );
  
     // Register a new field in the "game_section_people" section, inside the "game" page.
     add_settings_field(
-        'game_field_dm', // As of WP 4.6 this value is used only internally.
+        'game_field_name', // As of WP 4.6 this value is used only internally.
                                 // Use $args' label_for to populate the id inside the callback.
-            __( 'DM', 'game' ),
-        'game_field_dm_cb',
+            __( 'Name', 'game' ),
+        'game_field_name_cb',
         'game',
         'game_section_people',
         array(
-            'label_for'         => 'game_field_dm',
+            'label_for'         => 'game_field_name',
             'class'             => 'game_row',
             'game_custom_data' => 'custom',
         )
@@ -66,9 +66,9 @@ add_action( 'admin_init', 'game_settings_init' );
  *
  * @param array $args  The settings array, defining title, id, callback.
  */
-function game_section_people_callback( $args ) {
+function game_section_details_callback( $args ) {
     ?>
-    <p id="<?php echo esc_attr( $args['id'] ); ?>"><?php esc_html_e( 'Enter the people playing the game.', 'game' ); ?></p>
+    <p id="<?php echo esc_attr( $args['id'] ); ?>"><?php esc_html_e( 'Enter the details about the game.', 'game' ); ?></p>
     <?php
 }
  
@@ -82,17 +82,18 @@ function game_section_people_callback( $args ) {
  *
  * @param array $args
  */
-function game_field_dm_cb( $args ) {
+function game_field_name_cb( $args ) {
     // Get the value of the setting we've registered with register_setting()
     $options = get_option( 'game_options' );
+    $label = (esc_attr( $options[$args['label_for']] )) ? esc_attr( $options[$args['label_for']] ) : get_bloginfo('name');
     ?>
     <input type="text" 
             id="<?php echo esc_attr( $args['label_for'] ); ?>"
             data-custom="<?php echo esc_attr( $args['game_custom_data'] ); ?>"
             name="game_options[<?php echo esc_attr( $args['label_for'] ); ?>]"
-            value="<?php echo esc_attr( $options[$args['label_for']] ); ?>">
+            value="<?php echo esc_attr( $label ); ?>">
     <p class="description">
-        <?php esc_html_e( 'Enter the name of the Game/Dungeon Master.', 'game' ); ?>
+        <?php esc_html_e( 'Enter the name of the game.', 'game' ); ?>
     </p>
     <?php
 }

@@ -170,6 +170,7 @@ a {
 
 .fas, .fab {
 	transition: 0.3s ease-out;
+	font-size: 4rem;
 }
 
 .fab.fa-d-and-d:hover {
@@ -665,7 +666,7 @@ textarea {
 	max-height: 300px;
 }
 
-.npc__module, .player__module {
+.npc__module, .player__module, .home__module {
 	padding-top: 1.2rem;
 	padding-bottom: 1.2rem;
 	padding-left: 1.2rem;
@@ -673,7 +674,7 @@ textarea {
 }
 
 @media (min-width: 768px) {
-	.npc__module, .player__module {
+	.npc__module, .player__module, .home__module {
 		border-top: 3rem solid #FCF5E5;
 		padding-left: 3rem;
 		padding-right: 3rem;
@@ -735,7 +736,7 @@ textarea {
 --------------------------------------------- */
 /* Archives
 --------------------------------------------- */
-.post-type-archive-npc .site-main .page-content {
+.post-type-archive-npc .site-main .page-content, .home__featured-npcs__content .site-main .page-content {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -744,7 +745,7 @@ textarea {
 }
 
 @media (min-width: 768px) {
-	.post-type-archive-npc .site-main .page-content {
+	.post-type-archive-npc .site-main .page-content, .home__featured-npcs__content .site-main .page-content {
 		padding: 0 3rem;
 		column-gap: 1.6rem;
 		row-gap: 1.6rem;
@@ -847,7 +848,7 @@ textarea {
 	}
 }
 
-.post-type-archive-player .page-content {
+.post-type-archive-player .page-content, .home__players .page-content {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -858,47 +859,47 @@ textarea {
 }
 
 @media (min-width: 768px) {
-	.post-type-archive-player .page-content {
+	.post-type-archive-player .page-content, .home__players .page-content {
 		flex-direction: row;
 	}
 }
 
-.post-type-archive-player .player {
+.post-type-archive-player .player, .home__players .player {
 	width: fit-content;
 	height: 300px;
 	width: 300px;
 }
 
-.post-type-archive-player .player a {
+.post-type-archive-player .player a, .home__players .player a {
 	color: #FCF5E5;
 	text-decoration: none;
 	height: 100%;
 }
 
-.post-type-archive-player .player__card {
+.post-type-archive-player .player__card, .home__players .player__card {
 	height: inherit;
 }
 
-.post-type-archive-player .player__card__inner {
+.post-type-archive-player .player__card__inner, .home__players .player__card__inner {
 	height: inherit;
 	position: relative;
 	transition: transform 0.8s, box-shadow 0.8s;
 	transform-style: preserve-3d;
 }
 
-.post-type-archive-player .player__card__image {
+.post-type-archive-player .player__card__image, .home__players .player__card__image {
 	line-height: 0;
 	height: 100%;
 	width: 100%;
 	overflow: hidden;
 }
 
-.post-type-archive-player .player__card__image .player__image {
+.post-type-archive-player .player__card__image .player__image, .home__players .player__card__image .player__image {
 	height: 100%;
 	width: 100%;
 }
 
-.post-type-archive-player .player__card__image .player__image img {
+.post-type-archive-player .player__card__image .player__image img, .home__players .player__card__image .player__image img {
 	max-width: initial;
 	min-height: 100%;
 	min-width: 100%;
@@ -910,7 +911,7 @@ textarea {
 	transform: translate(-50%, -50%);
 }
 
-.post-type-archive-player .player__card__name {
+.post-type-archive-player .player__card__name, .home__players .player__card__name {
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -920,7 +921,7 @@ textarea {
 	text-align: center;
 }
 
-.post-type-archive-player .player__card__name--back {
+.post-type-archive-player .player__card__name--back, .home__players .player__card__name--back {
 	margin-bottom: auto;
 	justify-self: flex-start;
 	background-color: #000;
@@ -929,7 +930,7 @@ textarea {
 	padding-right: 2.4rem;
 }
 
-.post-type-archive-player .player__card__roles {
+.post-type-archive-player .player__card__roles, .home__players .player__card__roles {
 	max-width: 300px;
 	background-color: rgba(0, 0, 0, 0.85);
 	padding-bottom: 0.6rem;
@@ -944,16 +945,16 @@ textarea {
 	width: 100%;
 }
 
-.post-type-archive-player .player__card__excerpt {
+.post-type-archive-player .player__card__excerpt, .home__players .player__card__excerpt {
 	overflow-y: hidden;
 	margin-bottom: auto;
 }
 
-.post-type-archive-player .player__card__flip--front {
+.post-type-archive-player .player__card__flip--front, .home__players .player__card__flip--front {
 	height: inherit;
 }
 
-.post-type-archive-player .player__card__flip--back {
+.post-type-archive-player .player__card__flip--back, .home__players .player__card__flip--back {
 	color: #FCF5E5;
 	background-color: #000;
 	transform: rotateY(180deg);
@@ -971,7 +972,7 @@ textarea {
 }
 
 @media (min-width: 768px) {
-	.post-type-archive-player .player__card:hover .player__card__inner {
+	.post-type-archive-player .player__card:hover .player__card__inner, .home__players .player__card:hover .player__card__inner {
 		transform: rotateY(180deg);
 		box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 	}
@@ -1440,7 +1441,6 @@ textarea {
 	display: flex;
 	justify-content: center;
 	column-gap: 1.2rem;
-	font-size: 4rem;
 }
 
 @media (min-width: 768px) {
@@ -1449,6 +1449,52 @@ textarea {
 		margin-left: auto;
 		margin-right: auto;
 	}
+}
+
+.page-template-home-template .home {
+	background: linear-gradient(to bottom, #FFECD2, #5BA48D);
+}
+
+.page-template-home-template .home__accordion__heading {
+	text-align: center;
+}
+
+.page-template-home-template .home__heading {
+	background: #FCF5E5;
+}
+
+.page-template-home-template .home__description__inner {
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.page-template-home-template .home__description__content {
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.page-template-home-template .home__players__content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	row-gap: 2.4rem;
+	column-gap: 2.4rem;
+}
+
+.page-template-home-template .home__featured-npcs__content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	row-gap: 2.4rem;
+	column-gap: 2.4rem;
+}
+
+.page-template-home-template .home__links__content {
+	display: flex;
+	justify-content: center;
+	column-gap: 1.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -5,7 +5,8 @@
  * @package dndest
  */
 
- @require_once(get_theme_file_path('/inc/options_page.php'));
+//  @require_once(get_theme_file_path('/inc/options_page.php'));
+ @require_once(get_theme_file_path('/inc/wp-queries.php'));
 
 /**
  * Adds custom classes to the array of body classes.
