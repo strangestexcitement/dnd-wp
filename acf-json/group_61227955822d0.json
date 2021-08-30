@@ -129,7 +129,7 @@
                 "id": ""
             },
             "post_type": [
-                "npc"
+                "pc"
             ],
             "taxonomy": "",
             "filters": [
@@ -273,5 +273,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1630192447
+    "modified": 1630282200
 }

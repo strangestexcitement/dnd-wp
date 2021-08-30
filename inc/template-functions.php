@@ -63,6 +63,29 @@ function create_npc_posttype() {
 // Hooking up NPC function to theme setup
 add_action( 'init', 'create_npc_posttype' );
 
+// PC custom post type function
+function create_pc_posttype() {
+	register_post_type( 'PC',
+	// CPT Options
+			array(
+					'labels' => array(
+							'name' => __( 'PCs' ),
+							'singular_name' => __( 'PC' )
+					),
+					'public' => true,
+					'has_archive' => true,
+					'rewrite' => array('slug' => 'pc'),
+					'show_in_rest' => true,
+					'description' => "Player Character",
+					// 'supports' => array(
+					// 	'title', 'editor', 'comments', 'revisions', 'author', 'page-attributes', 'custom-fields'
+					// ),
+			)
+	);
+}
+// Hooking up PC function to theme setup
+add_action( 'init', 'create_pc_posttype' );
+
 // Player custom post type function
 function create_player_posttype() {
  
@@ -111,13 +134,12 @@ function setField($field) {
 	}
 }
 
-
-function listNPCRelationships($relationshipArray) {
+function listCharRelationships($relationshipArray) {
 	if($relationshipArray) {
-		$list = '<div class="npc__relationships__list">';
+		$list = '<div class="relationships__list">';
 		foreach($relationshipArray as $npc_id) {
 
-			$card = getNPCCard($npc_id);
+			$card = getCharCard($npc_id);
 
 			$list .= $card;
 		}
@@ -129,39 +151,41 @@ function listNPCRelationships($relationshipArray) {
 	}
 }
 
-function getNPCCard($npc_id) {
-	$npc_link = get_permalink($npc_id);
+function getCharCard($char_id) {
+	$post_type = get_post_type($char_id);
 
-	$npc_name = setField(get_field('npc_name', $npc_id));
-	$npc_occupation = setField(get_field('npc_occupation', $npc_id));
+	$char_link = get_permalink($char_id);
 
-	$npc_class = setField(get_field('npc_class', $npc_id));
-	$npc_level = setField(get_field('npc_level', $npc_id));
-	$npc_race = setField(get_field('npc_race', $npc_id));
+	$char_name = setField(get_field($post_type . '_name', $char_id));
+	$char_occupation = setField(get_field($post_type . '_occupation', $char_id));
 
-	$has_desc = ($npc_class || $npc_level || $npc_occupation || $npc_race);
+	$char_class = setField(get_field($post_type . '_class', $char_id));
+	$char_level = setField(get_field($post_type . '_level', $char_id));
+	$char_race = setField(get_field($post_type . '_race', $char_id));
+
+	$has_desc = ($char_class || $char_level || $char_occupation || $char_race);
 
 
-	$npc_image_id = get_field('npc_image', $npc_id);
-	if($npc_image_id) {
-		$image = getImageAttachment($npc_image_id, 'medium');
-		$npc_image = "<div class='npc__box__image'>$image</div>";
+	$char_image_id = get_field($post_type . '_image', $char_id);
+	if($char_image_id) {
+		$image = getImageAttachment($char_image_id, 'medium');
+		$char_image = "<div class='" . $post_type . "__box__image'>$image</div>";
 	}
 	else {
 		$imagepath = get_template_directory_uri() . "/images/defaults/default-npc-image.jpg";
-		$npc_image = "<div class='npc__box__image'><img src='$imagepath'></div>";
+		$char_image = "<div class='" . $post_type . "__box__image'><img src='$imagepath'></div>";
 	}
 
-	$card = "<a href='$npc_link' class='npc__box'>
-						<div class='npc__box__card'>";
-	$card .= ($npc_name) ? "<h2 class='entry-title npc__box__name'>$npc_name</h2>" : "";
-	$card .= ($npc_image) ? $npc_image : "";
-	$card .= ($has_desc) ? "<div class='npc__box__desc'><p>" : "";
-	$card .= ($npc_level) ? "Level $npc_level" : "";
-	$card .= ($npc_race) ? " $npc_race<br>" : "";
-	$card .= ($npc_class) ? " $npc_class" : "";
+	$card = "<a href='$char_link' class='" . $post_type . "__box'>
+						<div class='" . $post_type . "__box__card'>";
+	$card .= ($char_name) ? "<h2 class='entry-title " . $post_type . "__box__name'>$char_name</h2>" : "";
+	$card .= ($char_image) ? $char_image : "";
+	$card .= ($has_desc) ? "<div class='" . $post_type . "__box__desc'><p>" : "";
+	$card .= ($char_level) ? "Level $char_level" : "";
+	$card .= ($char_race) ? " $char_race<br>" : "";
+	$card .= ($char_class) ? " $char_class" : "";
 	$card .= ($has_desc) ? "</p>" : "";
-	$card .= ($npc_occupation) ? "<p>$npc_occupation</p>" : "";
+	$card .= ($char_occupation) ? "<p>$char_occupation</p>" : "";
 	$card .= ($has_desc) ? "</div>" : "";
 	$card .= "</div></a>";
 

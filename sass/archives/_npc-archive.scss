@@ -1,6 +1,6 @@
 $hover-duration: 0.3s;
 
-.post-type-archive-npc, .home__featured-npcs__content {
+.post-type-archive-npc, .post-type-archive-pc, .home__featured-npcs__content {
   .site-main {
     .page-content {
       display: flex;
@@ -18,7 +18,7 @@ $hover-duration: 0.3s;
   }
 }
 
-.npc__box {
+.npc__box, .pc__box {
   display: block;
   width: 100%;
   overflow: hidden; 
@@ -41,7 +41,7 @@ $hover-duration: 0.3s;
     bottom: 0;
     width: 100%;
     background-color: rgba(0,0,0,0.8);
-    color: $white;
+    color: $off-white;
     text-decoration: none;
     padding-top: 0.8rem;
     padding-bottom: 0.8rem;
@@ -59,7 +59,7 @@ $hover-duration: 0.3s;
     position: absolute;
     bottom: 0;
     background-color: rgba(0,0,0,0.7);
-    color: $white;
+    color: $off-white;
     min-height: 100%;
     transform: translateY(100%);
     text-align: right;
@@ -95,7 +95,7 @@ $hover-duration: 0.3s;
       0px 5px 10px 1px rgba(0,0,0,0.7);
     }
 
-    .npc__box {
+    .npc__box, .pc__box {
       &__name {
         @include bp(tablet) {
           bottom: 100%;

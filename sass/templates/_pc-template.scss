@@ -1,7 +1,7 @@
-$npc_bp: 400px;
+$pc_bp: 400px;
 
-.single-npc {
-  .npc {
+.single-pc {
+  .pc {
     @include linear-gradient(to bottom, npc);
 
     // general field styling
@@ -48,7 +48,7 @@ $npc_bp: 400px;
       }
 
       &.closed {
-        .npc {
+        .pc {
           &__accordion {
             &__heading {
               &::after {
@@ -86,7 +86,7 @@ $npc_bp: 400px;
         }
       }
 
-      .npc {
+      .pc {
         &__field {
           @include bp(tablet) {
             flex-basis: 200px;
@@ -134,7 +134,7 @@ $npc_bp: 400px;
         }
       }
 
-      .npc {
+      .pc {
         &__field {
           @include bp(tablet) {
             margin: 0 auto;
@@ -165,7 +165,7 @@ $npc_bp: 400px;
           column-gap: 2.4rem;
         }
 
-        .npc {
+        .pc {
           &__field {
             margin-top: 2rem;
             position: relative;
@@ -282,7 +282,7 @@ $npc_bp: 400px;
         padding-bottom: 1.6rem;
         row-gap: 1.6rem;
 
-        .npc {
+        .pc {
           &__field {
             flex-basis: 33%;
             
@@ -304,7 +304,7 @@ $npc_bp: 400px;
         justify-content: space-around;
         flex-basis: 100%;
 
-        .npc {
+        .pc {
           &__field {
             flex-basis: 33%;
             
@@ -326,7 +326,7 @@ $npc_bp: 400px;
           row-gap: 1.2rem;
         }
 
-        .npc {
+        .pc {
           &__field {
             text-align: left;
             flex-basis: calc(50% - 2.4rem / 2);
@@ -353,7 +353,7 @@ $npc_bp: 400px;
           justify-content: space-around;
         }
         
-        .npc {
+        .pc {
           &__field {
             text-align: left;
 
@@ -384,7 +384,7 @@ $npc_bp: 400px;
         display: flex;
         justify-content: space-between;
         
-        .npc {
+        .pc {
           &__field {
             &__label {
               font-size: 1.6rem;
@@ -428,7 +428,7 @@ $npc_bp: 400px;
         }
       }
 
-      .npc {
+      .pc {
         &__field {
           &__links {
             margin-top: 1.2rem;

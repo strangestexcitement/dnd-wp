@@ -20,8 +20,10 @@
 
 			$player_characters = get_field('player_characters');
 			$default_image = get_template_directory_uri() . "/images/defaults/default-npc-image.jpg";
-			$character_label = (count($player_characters) > 1) ? 'Characters' : 'Character';
-			$characters = listNPCRelationships($player_characters);
+			if($player_characters) {
+				$character_label = (count($player_characters) > 1) ? 'Characters' : 'Character';
+				$characters = listCharRelationships($player_characters);
+			}
 
 			$player_social_links = get_field('player_social_links');
 			$social_icons = [

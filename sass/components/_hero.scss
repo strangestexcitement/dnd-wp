@@ -1,5 +1,5 @@
 // hero styling
-.npc, .player {
+.npc, .pc, .player {
   &__hero {
     margin-top: 10rem;
     padding-left: 3rem;
@@ -68,7 +68,7 @@
         height: fit-content;
       }
 
-      .npc {
+      .npc, .pc {
         &__field {
           display: flex;
           justify-content: center;
@@ -81,6 +81,10 @@
           }
 
           &__occupation {
+            flex-basis: 100%;
+          }
+
+          &__players {
             flex-basis: 100%;
           }
         }

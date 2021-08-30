@@ -4,16 +4,7 @@
 
     &__field {
       &__characters {
-        .npc {
-          &__relationships {
-            &__list {
-              display: flex;
-              flex-wrap: wrap;
-              justify-content: center;
-              column-gap: 2.4rem;
-              row-gap: 2.4rem;
-            }
-          }
+        .npc, .pc {
           &__box {
             @include bp(tablet) {
               max-width: 250px;

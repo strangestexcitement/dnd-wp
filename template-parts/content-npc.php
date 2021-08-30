@@ -174,8 +174,8 @@
 			$npc_enemies_links = setField(get_field('npc_enemies_links'));
 			$npc_allies_links = setField(get_field('npc_allies_links'));
 			$npc_allies_other = setField(get_field('npc_allies_other'));
-			$allies_links = listNPCRelationships($npc_allies_links);
-			$enemies_links = listNPCRelationships($npc_enemies_links);
+			$allies_links = listCharRelationships($npc_allies_links);
+			$enemies_links = listCharRelationships($npc_enemies_links);
 
 			// backstory
 			$npc_backstory = setField(get_field('npc_backstory'));
