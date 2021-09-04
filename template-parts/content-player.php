@@ -71,7 +71,7 @@
 	<!-- End Hero -->
 
 	<!-- Description -->
-	<?php if($player_characters) { ?>
+	<?php if($player_description) { ?>
 		<div class="player__description player__module">
 			<div class="player__description__inner accordion">
 				<h2 class="player__description__heading accordion__heading">About</h2>
