@@ -1,0 +1,44 @@
+// accordion styling
+.accordion {
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+
+    @include bp(tablet) {
+      display: block;
+      text-align: center;
+    }
+
+    &::after {
+      content: url('./images/icons/chevron-down.svg');
+      display: block;
+      position: relative;
+      transform: rotate(540deg);
+      transition: transform 0.4s ease-out;
+
+      @include bp(tablet) {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    overflow: hidden;
+
+    @include bp(tablet) {
+      height: auto;
+    }
+  }
+
+  &.closed {
+    .accordion {
+      &__heading {
+        &::after {
+          transform: none;
+        }
+      }
+    }
+  }
+}

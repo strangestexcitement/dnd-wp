@@ -33,9 +33,9 @@
 		<!-- Description -->
 		<?php if($game_description) { ?>
 			<div class="home__description home__module">
-				<div class="home__description__inner home__accordion">
-					<h2 class="home__description__heading home__accordion__heading">About the Game</h2>
-					<div class="home__description__content home__accordion__content">
+				<div class="home__description__inner accordion">
+					<h2 class="home__description__heading accordion__heading">About the Game</h2>
+					<div class="home__description__content accordion__content">
 						<?= $game_description ?>
 					</div>
 				</div>
@@ -47,9 +47,9 @@
 		<!-- Players -->
 		<?php if($player_ids) { ?>
 			<div class="home__players home__module">
-				<div class="home__players__inner home__accordion">
-					<h2 class="home__players__heading home__accordion__heading">Players</h2>
-					<div class="home__players__content home__accordion__content">
+				<div class="home__players__inner accordion">
+					<h2 class="home__players__heading accordion__heading">Players</h2>
+					<div class="home__players__content accordion__content">
 					<?php
 						foreach($player_ids as $player) {
 							global $post;
@@ -69,15 +69,15 @@
 		<!-- NPCs -->
 		<?php if($featured_npcs) { ?>
 			<div class="home__featured-npcs home__module">
-				<div class="home__featured-npcs__inner home__accordion">
-					<h2 class="home__featured-npcs__heading home__accordion__heading">Featured NPCs</h2>
-					<div class="home__featured-npcs__content home__accordion__content">
+				<div class="home__featured-npcs__inner accordion">
+					<h2 class="home__featured-npcs__heading accordion__heading">Featured NPCs</h2>
+					<div class="home__featured-npcs__content accordion__content">
 					<?php
 						foreach($featured_npcs as $npc) {
 							global $post;
 							$post = get_post($npc);
 							setup_postdata($npc);
-							get_template_part( 'template-parts/content', get_post_type() . "-archive" );
+							get_template_part( 'template-parts/content', "character-archive" );
 							wp_reset_postdata();
 						}
 						?>
@@ -91,9 +91,9 @@
 		<!-- Social Links -->
 		<?php if($game_links) { ?>
 		<div class="home__links home__module">
-			<div class="home__links__inner home__accordion">
-				<h2 class="home__links__heading home__accordion__heading">Links</h2>
-				<div class="home__links__content home__accordion__content">
+			<div class="home__links__inner accordion">
+				<h2 class="home__links__heading accordion__heading">Links</h2>
+				<div class="home__links__content accordion__content">
 						<?php
 							foreach($game_links as $site => $link) {
 								if($link) {	

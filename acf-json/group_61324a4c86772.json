@@ -1,9 +1,9 @@
 {
-    "key": "group_612c10ada3e9b",
-    "title": "PC",
+    "key": "group_61324a4c86772",
+    "title": "Character",
     "fields": [
         {
-            "key": "field_612c10adaf6e9",
+            "key": "field_61324a4c8f6d8",
             "label": "Basics",
             "name": "",
             "type": "tab",
@@ -19,9 +19,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_612c10adb3129",
-            "label": "PC Name",
-            "name": "pc_name",
+            "key": "field_61324a4c93417",
+            "label": "Character Name",
+            "name": "character_name",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -34,7 +34,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10aea5c2c",
+                    "key": "field_61324a4d8493e",
                     "label": "Value",
                     "name": "value",
                     "type": "text",
@@ -53,7 +53,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_612c10aea96ad",
+                    "key": "field_61324a4d88531",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -81,9 +81,9 @@
             ]
         },
         {
-            "key": "field_612c10adb6bd4",
-            "label": "PC Image",
-            "name": "pc_image",
+            "key": "field_61324a4c97019",
+            "label": "Character Image",
+            "name": "character_image",
             "type": "image",
             "instructions": "",
             "required": 0,
@@ -105,9 +105,9 @@
             "mime_types": ""
         },
         {
-            "key": "field_612c10adba62a",
-            "label": "PC Aliases",
-            "name": "pc_aliases",
+            "key": "field_61324a4c9aa1b",
+            "label": "Character Aliases",
+            "name": "character_aliases",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -120,7 +120,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10aebc6ac",
+                    "key": "field_61324a4d9b9c4",
                     "label": "Value",
                     "name": "value",
                     "type": "wysiwyg",
@@ -139,7 +139,7 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_612c10aec010f",
+                    "key": "field_61324a4d9f416",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -167,9 +167,9 @@
             ]
         },
         {
-            "key": "field_612c10adbe0ad",
-            "label": "PC Race",
-            "name": "pc_race",
+            "key": "field_61324a4c9e472",
+            "label": "Character Race",
+            "name": "character_race",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -182,7 +182,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10aecf6a9",
+                    "key": "field_61324a4dae62b",
                     "label": "Value",
                     "name": "value",
                     "type": "text",
@@ -201,7 +201,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_612c10aed30f4",
+                    "key": "field_61324a4db2030",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -229,9 +229,9 @@
             ]
         },
         {
-            "key": "field_612c10adc1afb",
-            "label": "PC Class",
-            "name": "pc_class",
+            "key": "field_61324a4ca2080",
+            "label": "Character Class",
+            "name": "character_class",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -244,7 +244,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10aee5cf8",
+                    "key": "field_61324a4dc162d",
                     "label": "Value",
                     "name": "value",
                     "type": "text",
@@ -263,7 +263,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_612c10aee9742",
+                    "key": "field_61324a4dc51d9",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -291,9 +291,9 @@
             ]
         },
         {
-            "key": "field_612c10adc5570",
-            "label": "PC Level",
-            "name": "pc_level",
+            "key": "field_61324a4ca5a8c",
+            "label": "Character Level",
+            "name": "character_level",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -306,7 +306,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10af0890d",
+                    "key": "field_61324a4dd457c",
                     "label": "Value",
                     "name": "value",
                     "type": "number",
@@ -327,7 +327,7 @@
                     "step": ""
                 },
                 {
-                    "key": "field_612c10af0c351",
+                    "key": "field_61324a4dd82c8",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -355,9 +355,9 @@
             ]
         },
         {
-            "key": "field_612c10adc8fc5",
-            "label": "PC Gender\/Pronouns",
-            "name": "pc_gender_pronouns",
+            "key": "field_61324a4ca967f",
+            "label": "Character Gender\/Pronouns",
+            "name": "character_gender_pronouns",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -370,7 +370,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10af1f337",
+                    "key": "field_61324a4de7588",
                     "label": "Value",
                     "name": "value",
                     "type": "text",
@@ -389,7 +389,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_612c10af22d80",
+                    "key": "field_61324a4deb247",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -417,9 +417,9 @@
             ]
         },
         {
-            "key": "field_612c10adccb27",
-            "label": "PC Age",
-            "name": "pc_age",
+            "key": "field_61324a4cad147",
+            "label": "Character Age",
+            "name": "character_age",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -432,7 +432,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10af35d7c",
+                    "key": "field_61324a4e09a36",
                     "label": "Value",
                     "name": "value",
                     "type": "text",
@@ -451,7 +451,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_612c10af397d2",
+                    "key": "field_61324a4e0d6fb",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -479,9 +479,9 @@
             ]
         },
         {
-            "key": "field_612c10add04af",
-            "label": "PC Birthday",
-            "name": "pc_birthday",
+            "key": "field_61324a4cb0c33",
+            "label": "Character Birthday",
+            "name": "character_birthday",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -494,7 +494,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10af4c7fa",
+                    "key": "field_61324a4e20257",
                     "label": "Value",
                     "name": "value",
                     "type": "text",
@@ -513,7 +513,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_612c10af50258",
+                    "key": "field_61324a4e23d90",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -541,9 +541,9 @@
             ]
         },
         {
-            "key": "field_612c10add3f49",
-            "label": "PC Background",
-            "name": "pc_background",
+            "key": "field_61324a4cb472a",
+            "label": "Character Background",
+            "name": "character_background",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -556,7 +556,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10af631f1",
+                    "key": "field_61324a4e32982",
                     "label": "Value",
                     "name": "value",
                     "type": "text",
@@ -575,7 +575,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_612c10af66c8b",
+                    "key": "field_61324a4e36593",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -603,9 +603,9 @@
             ]
         },
         {
-            "key": "field_612c10add79b2",
-            "label": "PC Alignment",
-            "name": "pc_alignment",
+            "key": "field_61324a4cb8150",
+            "label": "Character Alignment",
+            "name": "character_alignment",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -618,7 +618,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10af79c62",
+                    "key": "field_61324a4e45a52",
                     "label": "Value",
                     "name": "value",
                     "type": "text",
@@ -637,7 +637,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_612c10af7d6c3",
+                    "key": "field_61324a4e496d9",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -665,9 +665,9 @@
             ]
         },
         {
-            "key": "field_612c10addb419",
-            "label": "PC Occupation",
-            "name": "pc_occupation",
+            "key": "field_61324a4cbbe14",
+            "label": "Character Occupation",
+            "name": "character_occupation",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -680,7 +680,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10af8fb21",
+                    "key": "field_61324a4e589bb",
                     "label": "Value",
                     "name": "value",
                     "type": "text",
@@ -699,7 +699,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_612c10af93542",
+                    "key": "field_61324a4e5c5cb",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -727,9 +727,9 @@
             ]
         },
         {
-            "key": "field_612c10addee9c",
-            "label": "PC Goals",
-            "name": "pc_goals",
+            "key": "field_61324a4cbf664",
+            "label": "Character Goals",
+            "name": "character_goals",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -742,7 +742,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10afa2af8",
+                    "key": "field_61324a4e6f53e",
                     "label": "Value",
                     "name": "value",
                     "type": "wysiwyg",
@@ -761,7 +761,7 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_612c10afa67fc",
+                    "key": "field_61324a4e72f07",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -789,9 +789,9 @@
             ]
         },
         {
-            "key": "field_612c10ade28d2",
-            "label": "PC Description",
-            "name": "pc_description",
+            "key": "field_61324a4cc3290",
+            "label": "Character Description",
+            "name": "character_description",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -804,7 +804,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10afb5eb9",
+                    "key": "field_61324a4e81e46",
                     "label": "Value",
                     "name": "value",
                     "type": "wysiwyg",
@@ -823,7 +823,7 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_612c10afb9900",
+                    "key": "field_61324a4e858bf",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -851,7 +851,7 @@
             ]
         },
         {
-            "key": "field_612c10ade6376",
+            "key": "field_61324a4cc6d17",
             "label": "Capabilities (Stats)",
             "name": "",
             "type": "tab",
@@ -867,9 +867,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_612c10ade9dcb",
-            "label": "PC HP",
-            "name": "pc_hp",
+            "key": "field_61324a4cca80e",
+            "label": "Character HP",
+            "name": "character_hp",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -882,7 +882,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10afcccd5",
+                    "key": "field_61324a4e9c64f",
                     "label": "Value",
                     "name": "value",
                     "type": "number",
@@ -903,7 +903,7 @@
                     "step": ""
                 },
                 {
-                    "key": "field_612c10afd074c",
+                    "key": "field_61324a4ea0050",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -931,9 +931,9 @@
             ]
         },
         {
-            "key": "field_612c10aded846",
-            "label": "PC AC",
-            "name": "pc_ac",
+            "key": "field_61324a4cce4a4",
+            "label": "Character AC",
+            "name": "character_ac",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -946,7 +946,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10afdfcaa",
+                    "key": "field_61324a4eb246c",
                     "label": "Value",
                     "name": "value",
                     "type": "number",
@@ -967,7 +967,7 @@
                     "step": ""
                 },
                 {
-                    "key": "field_612c10afe372f",
+                    "key": "field_61324a4eb5ef1",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -995,9 +995,9 @@
             ]
         },
         {
-            "key": "field_612c10adf12b8",
-            "label": "PC Speed",
-            "name": "pc_speed",
+            "key": "field_61324a4cd210c",
+            "label": "Character Speed",
+            "name": "character_speed",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -1010,7 +1010,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10aff28ab",
+                    "key": "field_61324a4ec48a9",
                     "label": "Value",
                     "name": "value",
                     "type": "text",
@@ -1029,7 +1029,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_612c10b0020e8",
+                    "key": "field_61324a4ec8316",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -1057,9 +1057,9 @@
             ]
         },
         {
-            "key": "field_612c10ae00b0d",
-            "label": "PC Proficiency Bonus",
-            "name": "pc_proficiency_bonus",
+            "key": "field_61324a4cd5a77",
+            "label": "Character Proficiency Bonus",
+            "name": "character_proficiency_bonus",
             "type": "number",
             "instructions": "",
             "required": 0,
@@ -1078,7 +1078,7 @@
             "step": ""
         },
         {
-            "key": "field_612c10ae04554",
+            "key": "field_61324a4cd95f7",
             "label": "Stats",
             "name": "stats",
             "type": "group",
@@ -1093,7 +1093,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b0154c1",
+                    "key": "field_61324a4edb6e9",
                     "label": "Charisma",
                     "name": "charisma",
                     "type": "group",
@@ -1108,7 +1108,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_612c10b02f57f",
+                            "key": "field_61324a4f0161e",
                             "label": "Value",
                             "name": "value",
                             "type": "number",
@@ -1129,7 +1129,7 @@
                             "step": ""
                         },
                         {
-                            "key": "field_612c10b032fdf",
+                            "key": "field_61324a4f0505a",
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
@@ -1157,7 +1157,7 @@
                     ]
                 },
                 {
-                    "key": "field_612c10b018f2f",
+                    "key": "field_61324a4edf16c",
                     "label": "Wisdom",
                     "name": "wisdom",
                     "type": "group",
@@ -1172,7 +1172,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_612c10b04217b",
+                            "key": "field_61324a4f149c2",
                             "label": "Value",
                             "name": "value",
                             "type": "number",
@@ -1193,7 +1193,7 @@
                             "step": ""
                         },
                         {
-                            "key": "field_612c10b045be3",
+                            "key": "field_61324a4f1852e",
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
@@ -1221,7 +1221,7 @@
                     ]
                 },
                 {
-                    "key": "field_612c10b01c993",
+                    "key": "field_61324a4ee2dab",
                     "label": "Intelligence",
                     "name": "intelligence",
                     "type": "group",
@@ -1236,7 +1236,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_612c10b055576",
+                            "key": "field_61324a4f277fc",
                             "label": "Value",
                             "name": "value",
                             "type": "number",
@@ -1257,7 +1257,7 @@
                             "step": ""
                         },
                         {
-                            "key": "field_612c10b058f8b",
+                            "key": "field_61324a4f2b427",
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
@@ -1285,7 +1285,7 @@
                     ]
                 },
                 {
-                    "key": "field_612c10b0203f5",
+                    "key": "field_61324a4ee6849",
                     "label": "Strength",
                     "name": "strength",
                     "type": "group",
@@ -1300,7 +1300,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_612c10b06bfa4",
+                            "key": "field_61324a4f3a52a",
                             "label": "Value",
                             "name": "value",
                             "type": "number",
@@ -1321,7 +1321,7 @@
                             "step": ""
                         },
                         {
-                            "key": "field_612c10b06fa1d",
+                            "key": "field_61324a4f3e0b0",
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
@@ -1349,7 +1349,7 @@
                     ]
                 },
                 {
-                    "key": "field_612c10b023e82",
+                    "key": "field_61324a4eea505",
                     "label": "Dexterity",
                     "name": "dexterity",
                     "type": "group",
@@ -1364,7 +1364,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_612c10b07f343",
+                            "key": "field_61324a4f4db66",
                             "label": "Value",
                             "name": "value",
                             "type": "number",
@@ -1385,7 +1385,7 @@
                             "step": ""
                         },
                         {
-                            "key": "field_612c10b082de0",
+                            "key": "field_61324a4f5133f",
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
@@ -1413,7 +1413,7 @@
                     ]
                 },
                 {
-                    "key": "field_612c10b0278e3",
+                    "key": "field_61324a4eedf5c",
                     "label": "Constitution",
                     "name": "constitution",
                     "type": "group",
@@ -1428,7 +1428,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_612c10b0959ea",
+                            "key": "field_61324a4f6085b",
                             "label": "Value",
                             "name": "value",
                             "type": "number",
@@ -1449,7 +1449,7 @@
                             "step": ""
                         },
                         {
-                            "key": "field_612c10b09943a",
+                            "key": "field_61324a4f642c0",
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
@@ -1479,9 +1479,9 @@
             ]
         },
         {
-            "key": "field_612c10ae07fbb",
-            "label": "PC Saving Throws",
-            "name": "pc_saving_throws",
+            "key": "field_61324a4cdcfd8",
+            "label": "Character Saving Throws",
+            "name": "character_saving_throws",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -1494,7 +1494,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b0ac40b",
+                    "key": "field_61324a4f76ba4",
                     "label": "Value",
                     "name": "value",
                     "type": "select",
@@ -1523,7 +1523,7 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_612c10b0afe96",
+                    "key": "field_61324a4f7a769",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -1551,7 +1551,7 @@
             ]
         },
         {
-            "key": "field_612c10ae0ba3c",
+            "key": "field_61324a4ce0b20",
             "label": "Skills",
             "name": "",
             "type": "accordion",
@@ -1568,9 +1568,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_612c10ae0f4c7",
-            "label": "PC Skills",
-            "name": "pc_skills",
+            "key": "field_61324a4ce4648",
+            "label": "Character Skills",
+            "name": "character_skills",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -1583,7 +1583,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b0c2ea6",
+                    "key": "field_61324a4f8d5b5",
                     "label": "Acrobatics",
                     "name": "acrobatics",
                     "type": "group",
@@ -1598,7 +1598,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_612c10b11467e",
+                            "key": "field_61324a4fd31d0",
                             "label": "Proficiency Level",
                             "name": "proficiency_level",
                             "type": "select",
@@ -1625,7 +1625,7 @@
                             "placeholder": ""
                         },
                         {
-                            "key": "field_612c10b1180d8",
+                            "key": "field_61324a4fd6df1",
                             "label": "Manual Value",
                             "name": "manual_value",
                             "type": "number",
@@ -1646,7 +1646,7 @@
                             "step": ""
                         },
                         {
-                            "key": "field_612c10b11bb25",
+                            "key": "field_61324a4fda8f8",
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
@@ -1674,7 +1674,7 @@
                     ]
                 },
                 {
-                    "key": "field_612c10b0c68ec",
+                    "key": "field_61324a4f90f78",
                     "label": "Animal Handling",
                     "name": "animal_handling",
                     "type": "group",
@@ -1689,7 +1689,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_612c10b132d93",
+                            "key": "field_61324a4fed6d0",
                             "label": "Proficiency Level",
                             "name": "proficiency_level",
                             "type": "select",
@@ -1716,7 +1716,7 @@
                             "placeholder": ""
                         },
                         {
-                            "key": "field_612c10b1367a6",
+                            "key": "field_61324a4ff1271",
                             "label": "Manual Value",
                             "name": "manual_value",
                             "type": "number",
@@ -1737,7 +1737,7 @@
                             "step": ""
                         },
                         {
-                            "key": "field_612c10b13a253",
+                            "key": "field_61324a5000a69",
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
@@ -1765,7 +1765,7 @@
                     ]
                 },
                 {
-                    "key": "field_612c10b0ca35a",
+                    "key": "field_61324a4f94ace",
                     "label": "Arcana",
                     "name": "arcana",
                     "type": "group",
@@ -1780,7 +1780,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_612c10b150c90",
+                            "key": "field_61324a5013ac3",
                             "label": "Proficiency Level",
                             "name": "proficiency_level",
                             "type": "select",
@@ -1807,7 +1807,7 @@
                             "placeholder": ""
                         },
                         {
-                            "key": "field_612c10b15471c",
+                            "key": "field_61324a5017528",
                             "label": "Manual Value",
                             "name": "manual_value",
                             "type": "number",
@@ -1828,7 +1828,7 @@
                             "step": ""
                         },
                         {
-                            "key": "field_612c10b158174",
+                            "key": "field_61324a501b0fd",
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
@@ -1856,7 +1856,7 @@
                     ]
                 },
                 {
-                    "key": "field_612c10b0cddda",
+                    "key": "field_61324a4f984e4",
                     "label": "Athletics",
                     "name": "athletics",
                     "type": "group",
@@ -1871,7 +1871,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_612c10b16e7e7",
+                            "key": "field_61324a502e5c9",
                             "label": "Proficiency Level",
                             "name": "proficiency_level",
                             "type": "select",
@@ -1898,7 +1898,7 @@
                             "placeholder": ""
                         },
                         {
-                            "key": "field_612c10b172251",
+                            "key": "field_61324a5032a13",
                             "label": "Manual Value",
                             "name": "manual_value",
                             "type": "number",
@@ -1919,7 +1919,7 @@
                             "step": ""
                         },
                         {
-                            "key": "field_612c10b175ccf",
+                            "key": "field_61324a5035e3c",
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
@@ -1947,7 +1947,7 @@
                     ]
                 },
                 {
-                    "key": "field_612c10b0d1844",
+                    "key": "field_61324a4f9c05b",
                     "label": "Deception",
                     "name": "deception",
                     "type": "group",
@@ -1962,7 +1962,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_612c10b18ceb2",
+                            "key": "field_61324a5048d01",
                             "label": "Proficiency Level",
                             "name": "proficiency_level",
                             "type": "select",
@@ -1989,7 +1989,7 @@
                             "placeholder": ""
                         },
                         {
-                            "key": "field_612c10b19093e",
+                            "key": "field_61324a504c6e5",
                             "label": "Manual Value",
                             "name": "manual_value",
                             "type": "number",
@@ -2010,7 +2010,7 @@
                             "step": ""
                         },
                         {
-                            "key": "field_612c10b1943a5",
+                            "key": "field_61324a505023d",
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
@@ -2038,7 +2038,7 @@
                     ]
                 },
                 {
-                    "key": "field_612c10b0d5296",
+                    "key": "field_61324a4f9f96b",
                     "label": "History",
                     "name": "history",
                     "type": "group",
@@ -2053,7 +2053,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_612c10b1ab5d9",
+                            "key": "field_61324a5062cf4",
                             "label": "Proficiency Level",
                             "name": "proficiency_level",
                             "type": "select",
@@ -2080,7 +2080,7 @@
                             "placeholder": ""
                         },
                         {
-                            "key": "field_612c10b1af03f",
+                            "key": "field_61324a5066939",
                             "label": "Manual Value",
                             "name": "manual_value",
                             "type": "number",
@@ -2101,7 +2101,7 @@
                             "step": ""
                         },
                         {
-                            "key": "field_612c10b1b2ab9",
+                            "key": "field_61324a506a3b2",
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
@@ -2129,7 +2129,7 @@
                     ]
                 },
                 {
-                    "key": "field_612c10b0d8fda",
+                    "key": "field_61324a4fa34a4",
                     "label": "Insight",
                     "name": "insight",
                     "type": "group",
@@ -2144,7 +2144,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_612c10b1c950f",
+                            "key": "field_61324a507cff2",
                             "label": "Proficiency Level",
                             "name": "proficiency_level",
                             "type": "select",
@@ -2171,7 +2171,7 @@
                             "placeholder": ""
                         },
                         {
-                            "key": "field_612c10b1ccf89",
+                            "key": "field_61324a5080b5c",
                             "label": "Manual Value",
                             "name": "manual_value",
                             "type": "number",
@@ -2192,7 +2192,7 @@
                             "step": ""
                         },
                         {
-                            "key": "field_612c10b1d09fe",
+                            "key": "field_61324a50848d9",
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
@@ -2220,7 +2220,7 @@
                     ]
                 },
                 {
-                    "key": "field_612c10b0dc77d",
+                    "key": "field_61324a4fa6ecf",
                     "label": "Intimidation",
                     "name": "intimidation",
                     "type": "group",
@@ -2235,7 +2235,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_612c10b1e3d57",
+                            "key": "field_61324a5097750",
                             "label": "Proficiency Level",
                             "name": "proficiency_level",
                             "type": "select",
@@ -2262,7 +2262,7 @@
                             "placeholder": ""
                         },
                         {
-                            "key": "field_612c10b1e7832",
+                            "key": "field_61324a509b410",
                             "label": "Manual Value",
                             "name": "manual_value",
                             "type": "number",
@@ -2283,7 +2283,7 @@
                             "step": ""
                         },
                         {
-                            "key": "field_612c10b1eb258",
+                            "key": "field_61324a509efae",
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
@@ -2311,7 +2311,7 @@
                     ]
                 },
                 {
-                    "key": "field_612c10b0e0209",
+                    "key": "field_61324a4faab93",
                     "label": "Investigation",
                     "name": "investigation",
                     "type": "group",
@@ -2326,7 +2326,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_612c10b20de94",
+                            "key": "field_61324a50b1c2b",
                             "label": "Proficiency Level",
                             "name": "proficiency_level",
                             "type": "select",
@@ -2353,7 +2353,7 @@
                             "placeholder": ""
                         },
                         {
-                            "key": "field_612c10b211904",
+                            "key": "field_61324a50b5701",
                             "label": "Manual Value",
                             "name": "manual_value",
                             "type": "number",
@@ -2374,7 +2374,7 @@
                             "step": ""
                         },
                         {
-                            "key": "field_612c10b215365",
+                            "key": "field_61324a50b9330",
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
@@ -2402,7 +2402,7 @@
                     ]
                 },
                 {
-                    "key": "field_612c10b0e3c72",
+                    "key": "field_61324a4fae4dc",
                     "label": "Medicine",
                     "name": "medicine",
                     "type": "group",
@@ -2417,7 +2417,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_612c10b22c582",
+                            "key": "field_61324a50cbedf",
                             "label": "Proficiency Level",
                             "name": "proficiency_level",
                             "type": "select",
@@ -2444,7 +2444,7 @@
                             "placeholder": ""
                         },
                         {
-                            "key": "field_612c10b22fff2",
+                            "key": "field_61324a50cf8ac",
                             "label": "Manual Value",
                             "name": "manual_value",
                             "type": "number",
@@ -2465,7 +2465,7 @@
                             "step": ""
                         },
                         {
-                            "key": "field_612c10b233a71",
+                            "key": "field_61324a50d33ce",
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
@@ -2493,7 +2493,7 @@
                     ]
                 },
                 {
-                    "key": "field_612c10b0e76ca",
+                    "key": "field_61324a4fb2022",
                     "label": "Nature",
                     "name": "nature",
                     "type": "group",
@@ -2508,7 +2508,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_612c10b246a17",
+                            "key": "field_61324a50e601a",
                             "label": "Proficiency Level",
                             "name": "proficiency_level",
                             "type": "select",
@@ -2535,7 +2535,7 @@
                             "placeholder": ""
                         },
                         {
-                            "key": "field_612c10b24a4aa",
+                            "key": "field_61324a50e9b88",
                             "label": "Manual Value",
                             "name": "manual_value",
                             "type": "number",
@@ -2556,7 +2556,7 @@
                             "step": ""
                         },
                         {
-                            "key": "field_612c10b24df20",
+                            "key": "field_61324a50ed44b",
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
@@ -2584,7 +2584,7 @@
                     ]
                 },
                 {
-                    "key": "field_612c10b0eb122",
+                    "key": "field_61324a4fb59e9",
                     "label": "Perception",
                     "name": "perception",
                     "type": "group",
@@ -2599,7 +2599,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_612c10b2616dd",
+                            "key": "field_61324a510834f",
                             "label": "Proficiency Level",
                             "name": "proficiency_level",
                             "type": "select",
@@ -2626,7 +2626,7 @@
                             "placeholder": ""
                         },
                         {
-                            "key": "field_612c10b26515c",
+                            "key": "field_61324a510bd7a",
                             "label": "Manual Value",
                             "name": "manual_value",
                             "type": "number",
@@ -2647,7 +2647,7 @@
                             "step": ""
                         },
                         {
-                            "key": "field_612c10b268ba1",
+                            "key": "field_61324a510f777",
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
@@ -2675,7 +2675,7 @@
                     ]
                 },
                 {
-                    "key": "field_612c10b0eebaa",
+                    "key": "field_61324a4fb953c",
                     "label": "Performance",
                     "name": "performance",
                     "type": "group",
@@ -2690,7 +2690,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_612c10b27f5fa",
+                            "key": "field_61324a512254d",
                             "label": "Proficiency Level",
                             "name": "proficiency_level",
                             "type": "select",
@@ -2717,7 +2717,7 @@
                             "placeholder": ""
                         },
                         {
-                            "key": "field_612c10b283069",
+                            "key": "field_61324a51261a7",
                             "label": "Manual Value",
                             "name": "manual_value",
                             "type": "number",
@@ -2738,7 +2738,7 @@
                             "step": ""
                         },
                         {
-                            "key": "field_612c10b286aa4",
+                            "key": "field_61324a5129d2b",
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
@@ -2766,7 +2766,7 @@
                     ]
                 },
                 {
-                    "key": "field_612c10b0f2603",
+                    "key": "field_61324a4fbcfa8",
                     "label": "Persuasion",
                     "name": "persuasion",
                     "type": "group",
@@ -2781,7 +2781,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_612c10b299e96",
+                            "key": "field_61324a513c6d5",
                             "label": "Proficiency Level",
                             "name": "proficiency_level",
                             "type": "select",
@@ -2808,7 +2808,7 @@
                             "placeholder": ""
                         },
                         {
-                            "key": "field_612c10b29d917",
+                            "key": "field_61324a51401b3",
                             "label": "Manual Value",
                             "name": "manual_value",
                             "type": "number",
@@ -2829,7 +2829,7 @@
                             "step": ""
                         },
                         {
-                            "key": "field_612c10b2a1386",
+                            "key": "field_61324a5143c88",
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
@@ -2857,7 +2857,7 @@
                     ]
                 },
                 {
-                    "key": "field_612c10b101e59",
+                    "key": "field_61324a4fc0a55",
                     "label": "Religion",
                     "name": "religion",
                     "type": "group",
@@ -2872,7 +2872,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_612c10b2b7dc9",
+                            "key": "field_61324a51564aa",
                             "label": "Proficiency Level",
                             "name": "proficiency_level",
                             "type": "select",
@@ -2899,7 +2899,7 @@
                             "placeholder": ""
                         },
                         {
-                            "key": "field_612c10b2bb81d",
+                            "key": "field_61324a515a18d",
                             "label": "Manual Value",
                             "name": "manual_value",
                             "type": "number",
@@ -2920,7 +2920,7 @@
                             "step": ""
                         },
                         {
-                            "key": "field_612c10b2bf2b4",
+                            "key": "field_61324a515dc3c",
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
@@ -2948,7 +2948,7 @@
                     ]
                 },
                 {
-                    "key": "field_612c10b105890",
+                    "key": "field_61324a4fc45c4",
                     "label": "Sleight of Hand",
                     "name": "sleight_of_hand",
                     "type": "group",
@@ -2963,7 +2963,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_612c10b2d5cd0",
+                            "key": "field_61324a5170d6e",
                             "label": "Proficiency Level",
                             "name": "proficiency_level",
                             "type": "select",
@@ -2990,7 +2990,7 @@
                             "placeholder": ""
                         },
                         {
-                            "key": "field_612c10b2d9798",
+                            "key": "field_61324a51749a9",
                             "label": "Manual Value",
                             "name": "manual_value",
                             "type": "number",
@@ -3011,7 +3011,7 @@
                             "step": ""
                         },
                         {
-                            "key": "field_612c10b2dd1bc",
+                            "key": "field_61324a517845a",
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
@@ -3039,7 +3039,7 @@
                     ]
                 },
                 {
-                    "key": "field_612c10b109329",
+                    "key": "field_61324a4fc7ff0",
                     "label": "Stealth",
                     "name": "stealth",
                     "type": "group",
@@ -3054,7 +3054,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_612c10b2f3844",
+                            "key": "field_61324a518a9b6",
                             "label": "Proficiency Level",
                             "name": "proficiency_level",
                             "type": "select",
@@ -3081,7 +3081,7 @@
                             "placeholder": ""
                         },
                         {
-                            "key": "field_612c10b303097",
+                            "key": "field_61324a518e42c",
                             "label": "Manual Value",
                             "name": "manual_value",
                             "type": "number",
@@ -3102,7 +3102,7 @@
                             "step": ""
                         },
                         {
-                            "key": "field_612c10b306ad4",
+                            "key": "field_61324a51920f7",
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
@@ -3130,7 +3130,7 @@
                     ]
                 },
                 {
-                    "key": "field_612c10b10cda8",
+                    "key": "field_61324a4fcbc04",
                     "label": "Survival",
                     "name": "survival",
                     "type": "group",
@@ -3145,7 +3145,7 @@
                     "layout": "block",
                     "sub_fields": [
                         {
-                            "key": "field_612c10b31d8e8",
+                            "key": "field_61324a51a4a5d",
                             "label": "Proficiency Level",
                             "name": "proficiency_level",
                             "type": "select",
@@ -3172,7 +3172,7 @@
                             "placeholder": ""
                         },
                         {
-                            "key": "field_612c10b3213a0",
+                            "key": "field_61324a51a86cf",
                             "label": "Manual Value",
                             "name": "manual_value",
                             "type": "number",
@@ -3193,7 +3193,7 @@
                             "step": ""
                         },
                         {
-                            "key": "field_612c10b324dc7",
+                            "key": "field_61324a51ac1a1",
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
@@ -3223,7 +3223,7 @@
             ]
         },
         {
-            "key": "field_612c10ae12f33",
+            "key": "field_61324a4ce806b",
             "label": "Skills End",
             "name": "",
             "type": "accordion",
@@ -3240,9 +3240,9 @@
             "endpoint": 1
         },
         {
-            "key": "field_612c10ae16993",
-            "label": "PC Languages",
-            "name": "pc_languages",
+            "key": "field_61324a4cebd63",
+            "label": "Character Languages",
+            "name": "character_languages",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -3255,7 +3255,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b33fa75",
+                    "key": "field_61324a51c6469",
                     "label": "Value",
                     "name": "value",
                     "type": "wysiwyg",
@@ -3274,7 +3274,7 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_612c10b3434f3",
+                    "key": "field_61324a51c9f89",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -3302,9 +3302,9 @@
             ]
         },
         {
-            "key": "field_612c10ae1a3fe",
-            "label": "PC Tool Proficiencies",
-            "name": "pc_tool_proficiencies",
+            "key": "field_61324a4cef97e",
+            "label": "Character Tool Proficiencies",
+            "name": "character_tool_proficiencies",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -3317,7 +3317,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b352e54",
+                    "key": "field_61324a51d94f4",
                     "label": "Value",
                     "name": "value",
                     "type": "wysiwyg",
@@ -3336,7 +3336,7 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_612c10b3568af",
+                    "key": "field_61324a51dd0f0",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -3364,9 +3364,9 @@
             ]
         },
         {
-            "key": "field_612c10ae1de63",
-            "label": "PC Game Proficiencies",
-            "name": "pc_game_proficiencies",
+            "key": "field_61324a4cf3339",
+            "label": "Character Game Proficiencies",
+            "name": "character_game_proficiencies",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -3379,7 +3379,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b369897",
+                    "key": "field_61324a51ebf0d",
                     "label": "Value",
                     "name": "value",
                     "type": "wysiwyg",
@@ -3398,7 +3398,7 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_612c10b36d305",
+                    "key": "field_61324a51ef981",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -3426,9 +3426,9 @@
             ]
         },
         {
-            "key": "field_612c10ae218ec",
-            "label": "PC Musical Instrument Proficiencies",
-            "name": "pc_musical_instrument_proficiencies",
+            "key": "field_61324a4d02d1a",
+            "label": "Character Musical Instrument Proficiencies",
+            "name": "character_musical_instrument_proficiencies",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -3441,7 +3441,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b37c860",
+                    "key": "field_61324a520ab4f",
                     "label": "Value",
                     "name": "value",
                     "type": "wysiwyg",
@@ -3460,7 +3460,7 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_612c10b3802e3",
+                    "key": "field_61324a520e520",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -3488,9 +3488,9 @@
             ]
         },
         {
-            "key": "field_612c10ae2531b",
-            "label": "PC Vehicle Proficiencies",
-            "name": "pc_vehicle_proficiencies",
+            "key": "field_61324a4d06800",
+            "label": "Character Vehicle Proficiencies",
+            "name": "character_vehicle_proficiencies",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -3503,7 +3503,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b392ede",
+                    "key": "field_61324a521ce11",
                     "label": "Value",
                     "name": "value",
                     "type": "wysiwyg",
@@ -3522,7 +3522,7 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_612c10b396945",
+                    "key": "field_61324a5220a0c",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -3550,7 +3550,7 @@
             ]
         },
         {
-            "key": "field_612c10ae28dac",
+            "key": "field_61324a4d0a271",
             "label": "Inventory",
             "name": "",
             "type": "tab",
@@ -3566,9 +3566,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_612c10ae2c83c",
-            "label": "PC Inventory",
-            "name": "pc_inventory",
+            "key": "field_61324a4d0df0d",
+            "label": "Character Inventory",
+            "name": "character_inventory",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -3581,7 +3581,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b3adb73",
+                    "key": "field_61324a52376ef",
                     "label": "Value",
                     "name": "value",
                     "type": "wysiwyg",
@@ -3600,7 +3600,7 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_612c10b3b15ef",
+                    "key": "field_61324a523b249",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -3628,9 +3628,9 @@
             ]
         },
         {
-            "key": "field_612c10ae302a2",
-            "label": "PC Copper Pieces",
-            "name": "pc_copper_pieces",
+            "key": "field_61324a4d11b99",
+            "label": "Character Copper Pieces",
+            "name": "character_copper_pieces",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -3643,7 +3643,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b3c0f21",
+                    "key": "field_61324a524a38a",
                     "label": "Value",
                     "name": "value",
                     "type": "number",
@@ -3664,7 +3664,7 @@
                     "step": ""
                 },
                 {
-                    "key": "field_612c10b3c49a9",
+                    "key": "field_61324a524de49",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -3692,9 +3692,9 @@
             ]
         },
         {
-            "key": "field_612c10ae33ce9",
-            "label": "PC Silver Pieces",
-            "name": "pc_silver_pieces",
+            "key": "field_61324a4d156fb",
+            "label": "Character Silver Pieces",
+            "name": "character_silver_pieces",
             "type": "group",
             "instructions": "1 silver piece = 10 copper pieces",
             "required": 0,
@@ -3707,7 +3707,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b3d3b6b",
+                    "key": "field_61324a525d2e2",
                     "label": "Value",
                     "name": "value",
                     "type": "number",
@@ -3728,7 +3728,7 @@
                     "step": ""
                 },
                 {
-                    "key": "field_612c10b3d759c",
+                    "key": "field_61324a5260d36",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -3756,9 +3756,9 @@
             ]
         },
         {
-            "key": "field_612c10ae377a0",
-            "label": "PC Electrum Pieces",
-            "name": "pc_electrum_pieces",
+            "key": "field_61324a4d19124",
+            "label": "Character Electrum Pieces",
+            "name": "character_electrum_pieces",
             "type": "group",
             "instructions": "1 electrum piece = 5 silver pieces = 50 copper pieces",
             "required": 0,
@@ -3771,7 +3771,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b3e6b14",
+                    "key": "field_61324a52704ce",
                     "label": "Value",
                     "name": "value",
                     "type": "number",
@@ -3792,7 +3792,7 @@
                     "step": ""
                 },
                 {
-                    "key": "field_612c10b3ea584",
+                    "key": "field_61324a52742d8",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -3820,9 +3820,9 @@
             ]
         },
         {
-            "key": "field_612c10ae3b1c7",
-            "label": "PC Gold Pieces",
-            "name": "pc_gold_pieces",
+            "key": "field_61324a4d1ca9e",
+            "label": "Character Gold Pieces",
+            "name": "character_gold_pieces",
             "type": "group",
             "instructions": "1 gold piece = 2 electrum pieces = 10 silver pieces = 100 coper pieces",
             "required": 0,
@@ -3835,7 +3835,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b405c85",
+                    "key": "field_61324a5282f0e",
                     "label": "Value",
                     "name": "value",
                     "type": "number",
@@ -3856,7 +3856,7 @@
                     "step": ""
                 },
                 {
-                    "key": "field_612c10b4096fd",
+                    "key": "field_61324a52868b1",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -3884,9 +3884,9 @@
             ]
         },
         {
-            "key": "field_612c10ae3ec36",
-            "label": "PC Platinum Pieces",
-            "name": "pc_platinum_pieces",
+            "key": "field_61324a4d20553",
+            "label": "Character Platinum Pieces",
+            "name": "character_platinum_pieces",
             "type": "group",
             "instructions": "1 platinum piece = 10 gold pieces = 20 electrum pieces = 100 silver pieces = 1000 copper pieces",
             "required": 0,
@@ -3899,7 +3899,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b41c320",
+                    "key": "field_61324a5295b68",
                     "label": "Value",
                     "name": "value",
                     "type": "number",
@@ -3920,7 +3920,7 @@
                     "step": ""
                 },
                 {
-                    "key": "field_612c10b41fd70",
+                    "key": "field_61324a529964c",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -3948,7 +3948,7 @@
             ]
         },
         {
-            "key": "field_612c10ae426b3",
+            "key": "field_61324a4d23fa2",
             "label": "Spells",
             "name": "",
             "type": "tab",
@@ -3964,9 +3964,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_612c10ae46137",
-            "label": "PC Spells",
-            "name": "pc_spells",
+            "key": "field_61324a4d27acd",
+            "label": "Character Spells",
+            "name": "character_spells",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -3979,7 +3979,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b4363e0",
+                    "key": "field_61324a52ac5d4",
                     "label": "Value",
                     "name": "value",
                     "type": "wysiwyg",
@@ -3998,7 +3998,7 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_612c10b439e3a",
+                    "key": "field_61324a52affc9",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -4026,7 +4026,7 @@
             ]
         },
         {
-            "key": "field_612c10ae49bae",
+            "key": "field_61324a4d2b562",
             "label": "Details",
             "name": "",
             "type": "tab",
@@ -4042,9 +4042,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_612c10ae4d625",
-            "label": "PC Height",
-            "name": "pc_height",
+            "key": "field_61324a4d2efc0",
+            "label": "Character Height",
+            "name": "character_height",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -4057,7 +4057,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b44ca49",
+                    "key": "field_61324a52c2ee0",
                     "label": "Value",
                     "name": "value",
                     "type": "text",
@@ -4076,7 +4076,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_612c10b4504bf",
+                    "key": "field_61324a52c6a9c",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -4104,9 +4104,9 @@
             ]
         },
         {
-            "key": "field_612c10ae51095",
-            "label": "PC Weight",
-            "name": "pc_weight",
+            "key": "field_61324a4d32b28",
+            "label": "Character Weight",
+            "name": "character_weight",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -4119,7 +4119,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b45fa21",
+                    "key": "field_61324a52d5d3b",
                     "label": "Value",
                     "name": "value",
                     "type": "text",
@@ -4138,7 +4138,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_612c10b4634a5",
+                    "key": "field_61324a52d97c9",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -4166,9 +4166,9 @@
             ]
         },
         {
-            "key": "field_612c10ae54b06",
-            "label": "PC Body Type",
-            "name": "pc_body_type",
+            "key": "field_61324a4d3651b",
+            "label": "Character Body Type",
+            "name": "character_body_type",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -4181,7 +4181,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b472239",
+                    "key": "field_61324a52e8cfc",
                     "label": "Value",
                     "name": "value",
                     "type": "text",
@@ -4200,7 +4200,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_612c10b475c7e",
+                    "key": "field_61324a52eca50",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -4228,9 +4228,9 @@
             ]
         },
         {
-            "key": "field_612c10ae5856f",
-            "label": "PC Eyes",
-            "name": "pc_eyes",
+            "key": "field_61324a4d3a0ea",
+            "label": "Character Eyes",
+            "name": "character_eyes",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -4243,7 +4243,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b48523d",
+                    "key": "field_61324a5307525",
                     "label": "Value",
                     "name": "value",
                     "type": "text",
@@ -4262,7 +4262,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_612c10b488ca2",
+                    "key": "field_61324a530b161",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -4290,9 +4290,9 @@
             ]
         },
         {
-            "key": "field_612c10ae5bff0",
-            "label": "PC Skin",
-            "name": "pc_skin",
+            "key": "field_61324a4d3dcca",
+            "label": "Character Skin",
+            "name": "character_skin",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -4305,7 +4305,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b49bc77",
+                    "key": "field_61324a531a105",
                     "label": "Value",
                     "name": "value",
                     "type": "text",
@@ -4324,7 +4324,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_612c10b49f6f1",
+                    "key": "field_61324a531dd35",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -4352,9 +4352,9 @@
             ]
         },
         {
-            "key": "field_612c10ae5fa3c",
-            "label": "PC Hair",
-            "name": "pc_hair",
+            "key": "field_61324a4d4166f",
+            "label": "Character Hair",
+            "name": "character_hair",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -4367,7 +4367,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b4aefd9",
+                    "key": "field_61324a532cd4c",
                     "label": "Value",
                     "name": "value",
                     "type": "text",
@@ -4386,7 +4386,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_612c10b4b2a72",
+                    "key": "field_61324a5330920",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -4414,9 +4414,9 @@
             ]
         },
         {
-            "key": "field_612c10ae6349b",
-            "label": "PC Symbol",
-            "name": "pc_symbol",
+            "key": "field_61324a4d45223",
+            "label": "Character Symbol",
+            "name": "character_symbol",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -4429,7 +4429,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b4c1c24",
+                    "key": "field_61324a533f957",
                     "label": "Value",
                     "name": "value",
                     "type": "image",
@@ -4453,7 +4453,7 @@
                     "mime_types": ""
                 },
                 {
-                    "key": "field_612c10b4c5688",
+                    "key": "field_61324a53433b2",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -4481,9 +4481,9 @@
             ]
         },
         {
-            "key": "field_612c10ae66f18",
-            "label": "PC Symbol Description",
-            "name": "pc_symbol_description",
+            "key": "field_61324a4d48e66",
+            "label": "Character Symbol Description",
+            "name": "character_symbol_description",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -4496,7 +4496,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b4d4ffb",
+                    "key": "field_61324a5352814",
                     "label": "Value",
                     "name": "value",
                     "type": "wysiwyg",
@@ -4515,7 +4515,7 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_612c10b4d8a73",
+                    "key": "field_61324a53561f8",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -4543,7 +4543,7 @@
             ]
         },
         {
-            "key": "field_612c10ae6a9a5",
+            "key": "field_61324a4d4c8a6",
             "label": "Personality and Relationships",
             "name": "",
             "type": "tab",
@@ -4559,9 +4559,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_612c10ae6e3fa",
-            "label": "PC Personality Traits",
-            "name": "pc_personality_traits",
+            "key": "field_61324a4d5039f",
+            "label": "Character Personality Traits",
+            "name": "character_personality_traits",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -4574,7 +4574,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b4ef0ca",
+                    "key": "field_61324a5368ec6",
                     "label": "Value",
                     "name": "value",
                     "type": "wysiwyg",
@@ -4593,7 +4593,7 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_612c10b4f2b0c",
+                    "key": "field_61324a536cb19",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -4621,9 +4621,9 @@
             ]
         },
         {
-            "key": "field_612c10ae72116",
-            "label": "PC Ideals",
-            "name": "pc_ideals",
+            "key": "field_61324a4d53fff",
+            "label": "Character Ideals",
+            "name": "character_ideals",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -4636,7 +4636,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b50e230",
+                    "key": "field_61324a537bee7",
                     "label": "Value",
                     "name": "value",
                     "type": "wysiwyg",
@@ -4655,7 +4655,7 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_612c10b511ce2",
+                    "key": "field_61324a537fb27",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -4683,9 +4683,9 @@
             ]
         },
         {
-            "key": "field_612c10ae758aa",
-            "label": "PC Bonds",
-            "name": "pc_bonds",
+            "key": "field_61324a4d57d07",
+            "label": "Character Bonds",
+            "name": "character_bonds",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -4698,7 +4698,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b52123c",
+                    "key": "field_61324a538ebec",
                     "label": "Value",
                     "name": "value",
                     "type": "wysiwyg",
@@ -4717,7 +4717,7 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_612c10b524c90",
+                    "key": "field_61324a5392761",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -4745,9 +4745,9 @@
             ]
         },
         {
-            "key": "field_612c10ae79355",
-            "label": "PC Flaws",
-            "name": "pc_flaws",
+            "key": "field_61324a4d5b9a0",
+            "label": "Character Flaws",
+            "name": "character_flaws",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -4760,7 +4760,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b537c7a",
+                    "key": "field_61324a53a1bfb",
                     "label": "Value",
                     "name": "value",
                     "type": "wysiwyg",
@@ -4779,7 +4779,7 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_612c10b53b6ea",
+                    "key": "field_61324a53a55b6",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -4807,9 +4807,9 @@
             ]
         },
         {
-            "key": "field_612c10ae7cdab",
-            "label": "PC Allies",
-            "name": "pc_allies_links",
+            "key": "field_61324a4d5f3c5",
+            "label": "Character Allies",
+            "name": "character_allies_links",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -4822,7 +4822,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b54e2e0",
+                    "key": "field_61324a53b4a54",
                     "label": "Value",
                     "name": "value",
                     "type": "relationship",
@@ -4850,7 +4850,7 @@
                     "return_format": "id"
                 },
                 {
-                    "key": "field_612c10b551d59",
+                    "key": "field_61324a53b8704",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -4878,9 +4878,9 @@
             ]
         },
         {
-            "key": "field_612c10ae80852",
-            "label": "PC Allies (Not linked)",
-            "name": "pc_allies_other",
+            "key": "field_61324a4d62ee8",
+            "label": "Character Allies (Not linked)",
+            "name": "character_allies_other",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -4893,7 +4893,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b564d7a",
+                    "key": "field_61324a53c7691",
                     "label": "Value",
                     "name": "value",
                     "type": "wysiwyg",
@@ -4912,7 +4912,7 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_612c10b568788",
+                    "key": "field_61324a53cb0a7",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -4940,9 +4940,9 @@
             ]
         },
         {
-            "key": "field_612c10ae84268",
-            "label": "PC Enemies",
-            "name": "pc_enemies_links",
+            "key": "field_61324a4d66c1f",
+            "label": "Character Enemies",
+            "name": "character_enemies_links",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -4955,7 +4955,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b577ce3",
+                    "key": "field_61324a53da349",
                     "label": "Value",
                     "name": "value",
                     "type": "relationship",
@@ -4983,7 +4983,7 @@
                     "return_format": "id"
                 },
                 {
-                    "key": "field_612c10b57b76c",
+                    "key": "field_61324a53ddf2b",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -5011,9 +5011,9 @@
             ]
         },
         {
-            "key": "field_612c10ae87d11",
-            "label": "PC Enemies (Not linked)",
-            "name": "pc_enemies_other",
+            "key": "field_61324a4d6a7aa",
+            "label": "Character Enemies (Not linked)",
+            "name": "character_enemies_other",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -5026,7 +5026,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b58e78d",
+                    "key": "field_61324a53ecfb2",
                     "label": "Value",
                     "name": "value",
                     "type": "wysiwyg",
@@ -5045,7 +5045,7 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_612c10b5921e0",
+                    "key": "field_61324a53f0c75",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -5073,7 +5073,7 @@
             ]
         },
         {
-            "key": "field_612c10ae8b775",
+            "key": "field_61324a4d6e3f9",
             "label": "Backstory",
             "name": "",
             "type": "tab",
@@ -5089,9 +5089,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_612c10ae8f1ec",
-            "label": "PC Backstory",
-            "name": "pc_backstory",
+            "key": "field_61324a4d71db3",
+            "label": "Character Backstory",
+            "name": "character_backstory",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -5104,7 +5104,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b5a51b0",
+                    "key": "field_61324a540f937",
                     "label": "Value",
                     "name": "value",
                     "type": "wysiwyg",
@@ -5123,7 +5123,7 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_612c10b5a8c2a",
+                    "key": "field_61324a541355e",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -5151,7 +5151,7 @@
             ]
         },
         {
-            "key": "field_612c10ae92c38",
+            "key": "field_61324a4d75a02",
             "label": "Additional Notes",
             "name": "",
             "type": "tab",
@@ -5167,9 +5167,9 @@
             "endpoint": 0
         },
         {
-            "key": "field_612c10ae966c4",
-            "label": "PC Additional Notes",
-            "name": "pc_additional_notes",
+            "key": "field_61324a4d79746",
+            "label": "Character Additional Notes",
+            "name": "character_additional_notes",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -5182,7 +5182,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b5bfa58",
+                    "key": "field_61324a54264af",
                     "label": "Value",
                     "name": "value",
                     "type": "wysiwyg",
@@ -5201,7 +5201,7 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_612c10b5c34c1",
+                    "key": "field_61324a542a2cf",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -5229,9 +5229,9 @@
             ]
         },
         {
-            "key": "field_612c10ae9a148",
-            "label": "PC Links",
-            "name": "pc_links",
+            "key": "field_61324a4d7d0ab",
+            "label": "Character Links",
+            "name": "character_links",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -5244,7 +5244,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_612c10b5d264a",
+                    "key": "field_61324a5438ff5",
                     "label": "Value",
                     "name": "value",
                     "type": "wysiwyg",
@@ -5263,7 +5263,7 @@
                     "delay": 0
                 },
                 {
-                    "key": "field_612c10b5d60c0",
+                    "key": "field_61324a543ccc6",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -5298,6 +5298,13 @@
                 "operator": "==",
                 "value": "pc"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "npc"
+            }
         ]
     ],
     "menu_order": 0,
@@ -5308,5 +5315,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1630278272
+    "modified": 1630699213
 }

@@ -73,9 +73,9 @@
 	<!-- Description -->
 	<?php if($player_characters) { ?>
 		<div class="player__description player__module">
-			<div class="player__description__inner player__accordion">
-				<h2 class="player__description__heading player__accordion__heading">About</h2>
-				<div class="player__description__content player__accordion__content">
+			<div class="player__description__inner accordion">
+				<h2 class="player__description__heading accordion__heading">About</h2>
+				<div class="player__description__content accordion__content">
 					<?= ($player_description) ? "<div class='player__field player__field__description'><div class='player__field__value'>$player_description</div></div>" : "" ?>
 				</div>
 			</div>
@@ -86,9 +86,9 @@
 	<!-- Characters -->
 	<?php if($player_characters) { ?>
 		<div class="player__characters player__module">
-			<div class="player__characters__inner player__accordion">
-				<h2 class="player__characters__heading player__accordion__heading"><?= $character_label ?></h2>
-				<div class="player__characters__content player__accordion__content">
+			<div class="player__characters__inner accordion">
+				<h2 class="player__characters__heading accordion__heading"><?= $character_label ?></h2>
+				<div class="player__characters__content accordion__content">
 					<?= ($player_characters) ? "<div class='player__field player__field__characters'><div class='player__field__value'>$characters</div></div>" : "" ?>
 				</div>
 			</div>
@@ -99,9 +99,9 @@
 		<!-- Social Links -->
 		<?php if($player_social_links) { ?>
 		<div class="player__social player__module">
-			<div class="player__social__inner player__accordion">
-				<h2 class="player__social__heading player__accordion__heading">Social Links</h2>
-				<div class="player__social__content player__accordion__content">
+			<div class="player__social__inner accordion">
+				<h2 class="player__social__heading accordion__heading">Social Links</h2>
+				<div class="player__social__content accordion__content">
 						<?php
 							foreach($player_social_links as $site => $link) {
 								if($link) {	

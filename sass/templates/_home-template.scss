@@ -2,14 +2,14 @@
   .home {
     @include linear-gradient(to bottom, npc);
 
-    &__accordion {
-      &__heading {
-        text-align: center;
-      }
-    }
-
     &__heading {
       background: $off-white;
+      line-height: 1;
+      padding-bottom: 1.2rem;
+
+      @include bp(tablet) {
+        padding-bottom: 0;
+      }
     }
 
     &__description {
@@ -43,6 +43,14 @@
         justify-content: center;
         row-gap: 2.4rem;
         column-gap: 2.4rem;
+        row-gap: 1rem;
+        column-gap: 1rem;
+      
+        @include bp(tablet) {
+          padding: 0 3rem;
+          column-gap: 1.6rem;
+          row-gap: 1.6rem;
+        }
       }
     }
 

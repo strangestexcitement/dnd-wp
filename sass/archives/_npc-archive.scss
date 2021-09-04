@@ -18,7 +18,7 @@ $hover-duration: 0.3s;
   }
 }
 
-.npc__box, .pc__box {
+.character__box {
   display: block;
   width: 100%;
   overflow: hidden; 
@@ -95,7 +95,7 @@ $hover-duration: 0.3s;
       0px 5px 10px 1px rgba(0,0,0,0.7);
     }
 
-    .npc__box, .pc__box {
+    .character__box {
       &__name {
         @include bp(tablet) {
           bottom: 100%;

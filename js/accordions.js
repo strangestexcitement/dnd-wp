@@ -7,13 +7,13 @@
  */
 
 ( function( $ ) {
-  const npc_accordions = document.querySelectorAll('.npc__accordion__heading');
+  const character_accordions = document.querySelectorAll('.accordion__heading');
 
-  npc_accordions.forEach(element => {
+  character_accordions.forEach(element => {
     element.addEventListener('click', (event) => {
       if(window.innerWidth < 768) {
         const accordion = event.target.parentNode;
-        const accordion_content = accordion.querySelector('.npc__accordion__content');
+        const accordion_content = accordion.querySelector('.accordion__content');
 
         if(!accordion.classList.contains('closed')) {
           gsap.to(accordion_content, {height: 0});
@@ -30,9 +30,9 @@
   // expand all accordions when window is resized to 768px or above
   window.addEventListener('resize', event => {
     if(window.innerWidth >= 768) {
-      npc_accordions.forEach(element => {
+      character_accordions.forEach(element => {
         const accordion = element.parentNode;
-        const accordion_content = accordion.querySelector('.npc__accordion__content');
+        const accordion_content = accordion.querySelector('.accordion__content');
         accordion.classList.remove('closed');
         accordion_content.style.height = "auto";
       });
