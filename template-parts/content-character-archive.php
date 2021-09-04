@@ -15,6 +15,7 @@
 			$character_link = get_permalink($post->ID);
 
 			$character_name = setField(get_field('character_name'));
+			$character_name = $character_name ? $character_name : get_the_title();
 			$character_occupation = setField(get_field('character_occupation'));
 
 			$character_class = setField(get_field('character_class'));
@@ -25,7 +26,7 @@
 
 			$character_image_id = get_field('character_image');
 
-			$default_image = get_template_directory_uri() . "/images/defaults/default-npc-image.jpg";
+			$default_image = get_template_directory_uri() . "/images/defaults/default-character.jpg";
 
 			if($character_image_id) {
 				$image = getImageAttachment($character_image_id, "medium");
@@ -43,12 +44,12 @@
 
 			<?= ($character_image) ? $character_image : "" ?>
 
-			<?= ($has_desc) ? "<div class='character__box__desc'><p>" : "" ?>
+			<?= ($has_desc) ? "<div class='character__box__desc'><p class='character__box__desc__lrc'>" : "" ?>
 				<?= ($character_level) ? "Level $character_level" : "" ?>
 				<?= ($character_race) ? " $character_race<br>" : "" ?>
 				<?= ($character_class) ? " $character_class" : "" ?>
 			<?= ($has_desc) ? "</p>" : "" ?>
-				<?= ($character_occupation) ? "<p>$character_occupation</p>" : "" ?>
+				<?= ($character_occupation) ? "<p class='character__box__desc__occupation'>$character_occupation</p>" : "" ?>
 			<?= ($has_desc) ? "</div>" : "" ?>
 
 		</div>

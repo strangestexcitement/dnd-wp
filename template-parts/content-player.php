@@ -97,7 +97,8 @@
 	<!-- End Characters -->
 
 		<!-- Social Links -->
-		<?php if($player_social_links) { ?>
+		<?php if($player_social_links['dndbeyond'] || $player_social_links['roll20'] || $player_social_links['facebook'] || 
+							$player_social_links['twitter'] || $player_social_links['instagram'] || $player_social_links['tiktok']) { ?>
 		<div class="player__social player__module">
 			<div class="player__social__inner accordion">
 				<h2 class="player__social__heading accordion__heading">Social Links</h2>

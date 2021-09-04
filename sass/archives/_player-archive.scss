@@ -16,7 +16,8 @@
   .player {
     width: fit-content;
     height: 300px;
-    width: 300px;
+    max-width: 300px;
+    width: 100%;
 
     a {
       color: $off-white;

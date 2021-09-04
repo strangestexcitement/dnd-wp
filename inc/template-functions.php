@@ -178,7 +178,7 @@ function getCharCard($character_id) {
 		$character_image = "<div class='character__box__image'>$image</div>";
 	}
 	else {
-		$imagepath = get_template_directory_uri() . "/images/defaults/default-npc-image.jpg";
+		$imagepath = get_template_directory_uri() . "/images/defaults/default-character.jpg";
 		$character_image = "<div class='character__box__image'><img src='$imagepath'></div>";
 	}
 
@@ -186,12 +186,12 @@ function getCharCard($character_id) {
 						<div class='character__box__card'>";
 	$card .= ($character_name) ? "<h2 class='entry-title character__box__name'>$character_name</h2>" : "";
 	$card .= ($character_image) ? $character_image : "";
-	$card .= ($has_desc) ? "<div class='character__box__desc'><p>" : "";
+	$card .= ($has_desc) ? "<div class='character__box__desc'><p class='character__box__desc__lrc'>" : "";
 	$card .= ($character_level) ? "Level $character_level" : "";
 	$card .= ($character_race) ? " $character_race<br>" : "";
 	$card .= ($character_class) ? " $character_class" : "";
 	$card .= ($has_desc) ? "</p>" : "";
-	$card .= ($character_occupation) ? "<p>$character_occupation</p>" : "";
+	$card .= ($character_occupation) ? "<p class='character__box__desc__occupation'>$character_occupation</p>" : "";
 	$card .= ($has_desc) ? "</div>" : "";
 	$card .= "</div></a>";
 

@@ -11,6 +11,7 @@
 
 			// general basics
 			$character_name = setField(get_field('character_name'));
+			$character_name = $character_name ? $character_name : get_the_title();
 			$character_aliases = setField(get_field('character_aliases'));		
 			$character_description = setField(get_field('character_description'));
 			$character_birthday = setField(get_field('character_birthday'));
@@ -43,8 +44,12 @@
 					$id = $player->ID;
 					$character_players[] = get_field('player_name', $id);
 				}
-				$players_label = count($character_players) > 1 ? "PLAYERS" : "PLAYER";
-				$character_players = implode(', ', $character_players);
+				if($players_label) {
+					$players_label = count($character_players) > 1 ? "PLAYERS" : "PLAYER";
+				}
+				if($character_players) {
+					$character_players = implode(', ', $character_players);
+				}
 			}
 
 			// inventory
@@ -212,7 +217,7 @@
 			$character_symbol_desc = setField(get_field('character_symbol_description'));
 
 			$character_image_id = get_field('character_image');
-			$default_image = get_template_directory_uri() . "/images/defaults/default-npc-image.jpg";
+			$default_image = get_template_directory_uri() . "/images/defaults/default-character.jpg";
 
 			if($character_image_id) {
 				$image = getImageAttachment($character_image_id, "medium");

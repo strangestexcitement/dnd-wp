@@ -750,6 +750,7 @@ textarea {
 @media (min-width: 768px) {
 	.accordion__content {
 		height: auto;
+		overflow: visible;
 	}
 }
 
@@ -810,7 +811,7 @@ textarea {
 --------------------------------------------- */
 /* Archives
 --------------------------------------------- */
-.post-type-archive-npc .site-main .page-content, .post-type-archive-pc .site-main .page-content, .home__featured-npcs__content .site-main .page-content {
+.post-type-archive-npc .site-main .page-content, .post-type-archive-pc .site-main .page-content {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -819,7 +820,7 @@ textarea {
 }
 
 @media (min-width: 768px) {
-	.post-type-archive-npc .site-main .page-content, .post-type-archive-pc .site-main .page-content, .home__featured-npcs__content .site-main .page-content {
+	.post-type-archive-npc .site-main .page-content, .post-type-archive-pc .site-main .page-content {
 		padding: 0 3rem;
 		column-gap: 1.6rem;
 		row-gap: 1.6rem;
@@ -885,6 +886,10 @@ textarea {
 	padding: 0 1rem 1.4rem;
 }
 
+.character__box__desc__occupation {
+	margin-top: 0.8rem;
+}
+
 .character__box__image {
 	height: 100%;
 	max-height: 300px;
@@ -941,7 +946,8 @@ textarea {
 .post-type-archive-player .player, .home__players .player {
 	width: fit-content;
 	height: 300px;
-	width: 300px;
+	max-width: 300px;
+	width: 100%;
 }
 
 .post-type-archive-player .player a, .home__players .player a {
@@ -1480,7 +1486,7 @@ textarea {
 	column-gap: 2.4rem;
 }
 
-.page-template-home-template .home__featured-npcs__content {
+.page-template-home-template .home__featured-npcs__content, .page-template-home-template .home__pcs__content {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -1491,7 +1497,7 @@ textarea {
 }
 
 @media (min-width: 768px) {
-	.page-template-home-template .home__featured-npcs__content {
+	.page-template-home-template .home__featured-npcs__content, .page-template-home-template .home__pcs__content {
 		padding: 0 3rem;
 		column-gap: 1.6rem;
 		row-gap: 1.6rem;

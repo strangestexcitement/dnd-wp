@@ -14,6 +14,7 @@
 		$game_description = get_field('game_description');
 		$game_links = get_field('game_links');
 		$player_ids = getPlayerIds();
+		$pc_ids = getPcIds();
 		$featured_npcs = get_field('featured_npcs');
 
 		$social_icons = [
@@ -65,7 +66,27 @@
 		<?php } ?>
 		<!-- End Players -->
 
-
+		<!-- PCs -->
+		<?php if($pc_ids) { ?>
+			<div class="home__pcs home__module">
+				<div class="home__pcs__inner accordion">
+					<h2 class="home__pcs__heading accordion__heading">PCs</h2>
+					<div class="home__pcs__content accordion__content">
+					<?php
+						foreach($pc_ids as $pc) {
+							global $post;
+							$post = get_post($pc);
+							setup_postdata($pc);
+							get_template_part( 'template-parts/content', "character-archive" );
+							wp_reset_postdata();
+						}
+						?>
+					</div>
+				</div>
+			</div>
+		<?php } ?>
+		<!-- End PCs -->
+		
 		<!-- NPCs -->
 		<?php if($featured_npcs) { ?>
 			<div class="home__featured-npcs home__module">
@@ -89,7 +110,7 @@
 
 		
 		<!-- Social Links -->
-		<?php if($game_links) { ?>
+		<?php if($game_links['d&dbeyond'] || $game_links['roll20'] || $game_links['others']) { ?>
 		<div class="home__links home__module">
 			<div class="home__links__inner accordion">
 				<h2 class="home__links__heading accordion__heading">Links</h2>

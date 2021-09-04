@@ -29,6 +29,7 @@
 
     @include bp(tablet) {
       height: auto;
+      overflow: visible;
     }
   }
 

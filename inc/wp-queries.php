@@ -26,6 +26,26 @@ function getPlayerIds() {
 }
 
 /**
+ * Gets array of all PC CPT IDs
+ */
+function getPcIds() {
+	$query = new WP_Query(array(
+		'post_type' => 'pc',
+		'post_status' => 'publish',
+		'posts_per_page' => -1
+	));
+
+	while ($query->have_posts()) {
+		$query->the_post();
+		$post_id = get_the_ID();
+		$player_ids[] = $post_id;
+	}
+
+	wp_reset_query();
+	return($player_ids);
+}
+
+/**
  * Gets array of all NPC CPT IDs
  */
 function getNpcIds() {

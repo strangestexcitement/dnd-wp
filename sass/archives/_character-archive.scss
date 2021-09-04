@@ -1,6 +1,6 @@
 $hover-duration: 0.3s;
 
-.post-type-archive-npc, .post-type-archive-pc, .home__featured-npcs__content {
+.post-type-archive-npc, .post-type-archive-pc {
   .site-main {
     .page-content {
       display: flex;
@@ -70,6 +70,10 @@ $hover-duration: 0.3s;
     justify-content: flex-end;
     transition: $hover-duration all ease-out;
     padding: 0 1rem 1.4rem;
+
+    &__occupation {
+      margin-top: 0.8rem;
+    }
   }
 
   &__image {
