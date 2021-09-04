@@ -51,6 +51,7 @@ if ( ! function_exists( 'dndest_setup' ) ) :
 		register_nav_menus(
 			array(
 				'menu-1' => esc_html__( 'Primary', 'dndest' ),
+				'menu-2' => esc_html__( 'Secondary', 'dndest' )
 			)
 		);
 

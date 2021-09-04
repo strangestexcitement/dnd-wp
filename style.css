@@ -373,7 +373,6 @@ textarea {
 	padding-left: 4vw;
 	padding-right: 4vw;
 	padding-top: 1rem;
-	padding-bottom: 0.5rem;
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 	position: fixed;
 	top: 0;
@@ -401,27 +400,6 @@ textarea {
 
 .site-header .site-branding .site-description {
 	display: none;
-}
-
-.site-header .main-navigation .menu-toggle {
-	display: none;
-}
-
-.site-header .main-navigation > div ul.nav-menu {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	display: flex;
-}
-
-.site-header .main-navigation > div ul.nav-menu li a {
-	color: inherit;
-	text-decoration: none;
-	margin-right: 2rem;
-}
-
-.site-header .main-navigation > div ul.nav-menu li:last-child a {
-	margin-right: 0;
 }
 
 .attributions {
@@ -756,6 +734,73 @@ textarea {
 
 .accordion.closed .accordion__heading::after {
 	transform: none;
+}
+
+.main-navigation .menu-toggle, .footer-navigation .menu-toggle {
+	display: none;
+}
+
+.main-navigation > div ul.nav-menu, .main-navigation > div ul.menu, .footer-navigation > div ul.nav-menu, .footer-navigation > div ul.menu {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	background-color: #033E3E;
+}
+
+.main-navigation > div ul.nav-menu .menu-item, .main-navigation > div ul.menu .menu-item, .footer-navigation > div ul.nav-menu .menu-item, .footer-navigation > div ul.menu .menu-item {
+	position: relative;
+}
+
+.main-navigation > div ul.nav-menu .menu-item a, .main-navigation > div ul.menu .menu-item a, .footer-navigation > div ul.nav-menu .menu-item a, .footer-navigation > div ul.menu .menu-item a {
+	color: inherit;
+	text-decoration: none;
+	margin-right: 2rem;
+}
+
+.main-navigation > div ul.nav-menu .menu-item:last-child a, .main-navigation > div ul.menu .menu-item:last-child a, .footer-navigation > div ul.nav-menu .menu-item:last-child a, .footer-navigation > div ul.menu .menu-item:last-child a {
+	margin-right: 0;
+}
+
+.main-navigation > div ul.nav-menu .sub-menu, .main-navigation > div ul.menu .sub-menu, .footer-navigation > div ul.nav-menu .sub-menu, .footer-navigation > div ul.menu .sub-menu {
+	list-style-type: none;
+	margin-left: 0;
+	height: 0;
+	position: absolute;
+	background-color: #033E3E;
+	overflow: hidden;
+	left: -1.5rem;
+}
+
+.main-navigation > div ul.nav-menu .sub-menu .menu-item a, .main-navigation > div ul.menu .sub-menu .menu-item a, .footer-navigation > div ul.nav-menu .sub-menu .menu-item a, .footer-navigation > div ul.menu .sub-menu .menu-item a {
+	transition: 0.3s ease-out;
+	border: 2px solid #033E3E;
+	padding-left: 1.3rem;
+	padding-right: 1.3rem;
+	padding-top: 0.5rem;
+	padding-bottom: 0.2rem;
+	display: block;
+	width: 100%;
+}
+
+.main-navigation > div ul.nav-menu .sub-menu .menu-item a:hover, .main-navigation > div ul.menu .sub-menu .menu-item a:hover, .footer-navigation > div ul.nav-menu .sub-menu .menu-item a:hover, .footer-navigation > div ul.menu .sub-menu .menu-item a:hover {
+	background-color: #FCF5E5;
+	color: #033E3E;
+	border: 2px solid #033E3E;
+}
+
+.main-navigation > div ul.nav-menu .sub-menu .sub-menu, .main-navigation > div ul.menu .sub-menu .sub-menu, .footer-navigation > div ul.nav-menu .sub-menu .sub-menu, .footer-navigation > div ul.menu .sub-menu .sub-menu {
+	height: auto;
+	left: 0;
+	top: 0;
+	width: 0;
+	transform: translateX(-100%);
+	left: 0;
+	background-color: #033E3E;
+}
+
+.main-navigation > div ul.nav-menu .sub-menu:hover, .main-navigation > div ul.menu .sub-menu:hover, .footer-navigation > div ul.nav-menu .sub-menu:hover, .footer-navigation > div ul.menu .sub-menu:hover {
+	overflow: visible;
 }
 
 /*--------------------------------------------------------------

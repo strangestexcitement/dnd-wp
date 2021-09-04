@@ -17,7 +17,17 @@
 				the_custom_logo();
 			?>
 			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-
+			<nav id="site-navigation" class="footer-navigation">
+				<?php
+				wp_nav_menu(
+					array(
+						'theme_location' => 'menu-2',
+						'menu_id'        => 'footer-menu',
+						'fallback_cb'		 => false,
+					)
+				);
+				?>
+			</nav><!-- #site-navigation -->
 			<p class="attributions__trigger">Attributions</p>
 		</div><!-- .site-info -->
 		<div class="attributions">
