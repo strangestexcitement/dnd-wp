@@ -54,6 +54,7 @@ function create_npc_posttype() {
 					'rewrite' => array('slug' => 'npc'),
 					'show_in_rest' => true,
 					'description' => "Non Player Character",
+					'public' => true,
 					'supports' => array(
 						'title', 'revisions', 'custom-fields'
 						// 'title', 'comments', 'revisions', 'author', 'page-attributes', 'custom-fields'
@@ -77,6 +78,7 @@ function create_pc_posttype() {
 					'has_archive' => true,
 					'rewrite' => array('slug' => 'pc'),
 					'show_in_rest' => true,
+					'public' => true,
 					'description' => "Player Character",
 					'supports' => array(
 						'title', 'revisions', 'custom-fields'
@@ -102,6 +104,7 @@ function create_player_posttype() {
 					'has_archive' => true,
 					'rewrite' => array('slug' => 'player'),
 					'show_in_rest' => true,
+					'public' => true,
 					'description' => "Players of the game",
 					'supports' => array(
 						'title', 'revisions', 'custom-fields'
