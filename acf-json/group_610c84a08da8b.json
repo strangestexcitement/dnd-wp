@@ -3,13 +3,40 @@
     "title": "Attribution",
     "fields": [
         {
+            "key": "field_61351a46892f8",
+            "label": "Has Attribution",
+            "name": "has_attribution",
+            "type": "true_false",
+            "instructions": "Does this image have an attribution or credit?",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_610c84b2d9e5d",
             "label": "Attribution Type",
             "name": "attribution_type",
             "type": "select",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_61351a46892f8",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -40,6 +67,11 @@
                         "field": "field_610c84b2d9e5d",
                         "operator": "==",
                         "value": "Text"
+                    },
+                    {
+                        "field": "field_61351a46892f8",
+                        "operator": "==",
+                        "value": "1"
                     }
                 ]
             ],
@@ -67,6 +99,11 @@
                         "field": "field_610c84b2d9e5d",
                         "operator": "==",
                         "value": "Link"
+                    },
+                    {
+                        "field": "field_61351a46892f8",
+                        "operator": "==",
+                        "value": "1"
                     }
                 ]
             ],
@@ -95,5 +132,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1628210522
+    "modified": 1630870186
 }

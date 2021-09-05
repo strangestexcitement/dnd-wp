@@ -22,6 +22,7 @@
   const attributionsClose = document.querySelector('.attributions__close');
   attributionsClose.addEventListener('click', event => {
     document.querySelector('.attributions').classList.remove('attributions--show');
+    attributionsClose.blur();
   });
 
 }() );

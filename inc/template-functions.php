@@ -204,21 +204,26 @@ function getCharCard($character_id) {
  */
 
  function getImageAttribution($image_id) {
-	$image_attribution_type = get_field('attribution_type', $image_id);
-		
-	if($image_attribution_type == 'Text') {
-		$image_attribution = get_field("attribution_text", $image_id);
-		$image_attribution = "<p class='attributions__attribution__text'>$image_attribution</p>";
-	}
-	else if($image_attribution_type == 'Link') {
-		$image_attribution = get_field("attribution_link", $image_id);
-		$url = $image_attribution['url'];
-		$title = $image_attribution['title'];
-		$target = $image_attribution['target'];
-		$image_attribution = "<p class='attributions__attribution__link'><a href='$url' target='$target'>$title</a></p>";
-	}
+	$has_attribution = get_field('has_attribution', $image_id);
 
-	return $image_attribution;
+	if($has_attribution) {
+		$image_attribution_type = get_field('attribution_type', $image_id);
+			
+		if($image_attribution_type == 'Text') {
+			$image_attribution = get_field("attribution_text", $image_id);
+			$image_attribution = "<p class='attributions__attribution__text'>$image_attribution</p>";
+		}
+		else if($image_attribution_type == 'Link') {
+			$image_attribution = get_field("attribution_link", $image_id);
+			$url = $image_attribution['url'];
+			$title = $image_attribution['title'];
+			$target = $image_attribution['target'];
+			$image_attribution = "<p class='attributions__attribution__link'><a href='$url' target='$target'>$title</a></p>";
+		}
+		return $image_attribution;
+	}
+	
+	return null;
  }
 
  /**
