@@ -229,7 +229,9 @@ function getCharCard($character_id) {
  function getImageAttachment($image_id, $size) {
 	$image = wp_get_attachment_image($image_id, $size);
 	$image_attribution = getImageAttribution($image_id);
-	$GLOBALS['attributions'][$image_id] = $image_attribution;
+	if($image_attribution) {
+		$GLOBALS['attributions'][$image_id] = $image_attribution;
+	}
 	return $image;
  }
 

@@ -41,7 +41,7 @@
 							}
 							else {
 								foreach($GLOBALS['attributions'] as $id => $attribution) {
-									if($attribution) {
+									if($attribution != null) {
 										?>
 											<div class="attributions__attribution">
 												<?php
