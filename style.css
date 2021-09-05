@@ -529,16 +529,16 @@ textarea {
 	text-align: center;
 }
 
-.attributions--show {
+.attributions--show, .attributions:focus-within {
 	transition: z-index 0.3s step-start;
 	z-index: 11;
 }
 
-.attributions--show .attributions__overlay {
+.attributions--show .attributions__overlay, .attributions:focus-within .attributions__overlay {
 	opacity: 1;
 }
 
-.attributions--show .attributions__container {
+.attributions--show .attributions__container, .attributions:focus-within .attributions__container {
 	transform: translate(-50%, -50%) scale(1);
 	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
@@ -809,8 +809,14 @@ textarea {
 	}
 }
 
-.main-navigation > div ul.nav-menu > .menu-item:hover > a, .main-navigation > div ul.nav-menu > .menu-item.current-menu-ancestor > a, .main-navigation > div ul.nav-menu > .menu-item.current-menu-item > a, .main-navigation > div ul.menu > .menu-item:hover > a, .main-navigation > div ul.menu > .menu-item.current-menu-ancestor > a, .main-navigation > div ul.menu > .menu-item.current-menu-item > a, .footer-navigation > div ul.nav-menu > .menu-item:hover > a, .footer-navigation > div ul.nav-menu > .menu-item.current-menu-ancestor > a, .footer-navigation > div ul.nav-menu > .menu-item.current-menu-item > a, .footer-navigation > div ul.menu > .menu-item:hover > a, .footer-navigation > div ul.menu > .menu-item.current-menu-ancestor > a, .footer-navigation > div ul.menu > .menu-item.current-menu-item > a {
+.main-navigation > div ul.nav-menu > .menu-item.current-menu-ancestor > a, .main-navigation > div ul.nav-menu > .menu-item.current-menu-item > a, .main-navigation > div ul.menu > .menu-item.current-menu-ancestor > a, .main-navigation > div ul.menu > .menu-item.current-menu-item > a, .footer-navigation > div ul.nav-menu > .menu-item.current-menu-ancestor > a, .footer-navigation > div ul.nav-menu > .menu-item.current-menu-item > a, .footer-navigation > div ul.menu > .menu-item.current-menu-ancestor > a, .footer-navigation > div ul.menu > .menu-item.current-menu-item > a {
 	text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+	.main-navigation > div ul.nav-menu > .menu-item:hover > a, .main-navigation > div ul.menu > .menu-item:hover > a, .footer-navigation > div ul.nav-menu > .menu-item:hover > a, .footer-navigation > div ul.menu > .menu-item:hover > a {
+		text-decoration: underline;
+	}
 }
 
 .main-navigation > div ul.nav-menu .menu-item, .main-navigation > div ul.menu .menu-item, .footer-navigation > div ul.nav-menu .menu-item, .footer-navigation > div ul.menu .menu-item {
@@ -867,6 +873,12 @@ textarea {
 	transform: rotate(540deg);
 }
 
+.main-navigation > div ul.nav-menu .menu-item.menu-item-has-children:focus-within > .sub-menu, .main-navigation > div ul.nav-menu .menu-item.menu-item-has-children:focus > .sub-menu, .main-navigation > div ul.menu .menu-item.menu-item-has-children:focus-within > .sub-menu, .main-navigation > div ul.menu .menu-item.menu-item-has-children:focus > .sub-menu, .footer-navigation > div ul.nav-menu .menu-item.menu-item-has-children:focus-within > .sub-menu, .footer-navigation > div ul.nav-menu .menu-item.menu-item-has-children:focus > .sub-menu, .footer-navigation > div ul.menu .menu-item.menu-item-has-children:focus-within > .sub-menu, .footer-navigation > div ul.menu .menu-item.menu-item-has-children:focus > .sub-menu {
+	height: auto !important;
+	width: auto !important;
+	overflow: visible;
+}
+
 .main-navigation > div ul.nav-menu .sub-menu, .main-navigation > div ul.menu .sub-menu, .footer-navigation > div ul.nav-menu .sub-menu, .footer-navigation > div ul.menu .sub-menu {
 	list-style-type: none;
 	margin-left: 0;
@@ -898,7 +910,7 @@ textarea {
 	}
 }
 
-.main-navigation > div ul.nav-menu .sub-menu .menu-item:hover > a, .main-navigation > div ul.nav-menu .sub-menu .menu-item.current-menu-ancestor > a, .main-navigation > div ul.nav-menu .sub-menu .menu-item.current-menu-item > a, .main-navigation > div ul.menu .sub-menu .menu-item:hover > a, .main-navigation > div ul.menu .sub-menu .menu-item.current-menu-ancestor > a, .main-navigation > div ul.menu .sub-menu .menu-item.current-menu-item > a, .footer-navigation > div ul.nav-menu .sub-menu .menu-item:hover > a, .footer-navigation > div ul.nav-menu .sub-menu .menu-item.current-menu-ancestor > a, .footer-navigation > div ul.nav-menu .sub-menu .menu-item.current-menu-item > a, .footer-navigation > div ul.menu .sub-menu .menu-item:hover > a, .footer-navigation > div ul.menu .sub-menu .menu-item.current-menu-ancestor > a, .footer-navigation > div ul.menu .sub-menu .menu-item.current-menu-item > a {
+.main-navigation > div ul.nav-menu .sub-menu .menu-item.current-menu-ancestor > a, .main-navigation > div ul.nav-menu .sub-menu .menu-item.current-menu-item > a, .main-navigation > div ul.menu .sub-menu .menu-item.current-menu-ancestor > a, .main-navigation > div ul.menu .sub-menu .menu-item.current-menu-item > a, .footer-navigation > div ul.nav-menu .sub-menu .menu-item.current-menu-ancestor > a, .footer-navigation > div ul.nav-menu .sub-menu .menu-item.current-menu-item > a, .footer-navigation > div ul.menu .sub-menu .menu-item.current-menu-ancestor > a, .footer-navigation > div ul.menu .sub-menu .menu-item.current-menu-item > a {
 	text-decoration: underline;
 }
 

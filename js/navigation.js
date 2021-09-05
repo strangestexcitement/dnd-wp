@@ -78,7 +78,6 @@
 
 	// Add event listeners
 	for ( const li of lisWithChildren ) {
-		// li.addEventListener( 'touchstart', toggleFocus, false );
 		li.addEventListener( 'click', toggleFocus, false );
 	}
 

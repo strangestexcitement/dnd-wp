@@ -116,7 +116,7 @@
     text-align: center;
   }
 
-  &--show {
+  &--show, &:focus-within {
     transition: z-index 0.3s step-start;
     z-index: 11;
 
