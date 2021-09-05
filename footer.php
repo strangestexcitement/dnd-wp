@@ -28,7 +28,7 @@
 				);
 				?>
 			</nav><!-- #site-navigation -->
-			<p class="attributions__trigger">Attributions</p>
+			<button class="attributions__trigger"><p>Attributions</p></button>
 		</div><!-- .site-info -->
 		<div class="attributions">
 				<div class="attributions__overlay"></div>

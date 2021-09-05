@@ -55,6 +55,10 @@ a {
   color: #420D09;
 }
 
+button {
+  @include benne;
+}
+
 // social links
 .fas, .fab {
   transition: 0.3s ease-out;

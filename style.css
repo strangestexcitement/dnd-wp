@@ -168,6 +168,11 @@ a {
 	color: #420D09;
 }
 
+button {
+	font-family: 'Benne', serif;
+	font-weight: 400;
+}
+
 .fas, .fab {
 	transition: 0.3s ease-out;
 	font-size: 4rem;
@@ -499,7 +504,12 @@ textarea {
 }
 
 .attributions__trigger {
+	-webkit-appearance: none;
+	background: none;
+	border: none;
 	cursor: pointer;
+	padding: 0;
+	color: inherit;
 }
 
 .attributions__attribution {
@@ -536,6 +546,7 @@ textarea {
 .site-footer .site-info {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
 .site-footer .site-info .site-title a {
