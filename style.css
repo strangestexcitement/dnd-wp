@@ -619,7 +619,7 @@ textarea {
 	}
 }
 
-.character__hero__details .npc__field, .character__hero__details .pc__field, .player__hero__details .npc__field, .player__hero__details .pc__field {
+.character__hero__details .character__field, .player__hero__details .character__field {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -627,15 +627,15 @@ textarea {
 	flex-wrap: wrap;
 }
 
-.character__hero__details .npc__field__label, .character__hero__details .pc__field__label, .player__hero__details .npc__field__label, .player__hero__details .pc__field__label {
+.character__hero__details .character__field__label, .player__hero__details .character__field__label {
 	font-size: 1.6rem;
 }
 
-.character__hero__details .npc__field__occupation, .character__hero__details .pc__field__occupation, .player__hero__details .npc__field__occupation, .player__hero__details .pc__field__occupation {
+.character__hero__details .character__field__occupation, .player__hero__details .character__field__occupation {
 	flex-basis: 100%;
 }
 
-.character__hero__details .npc__field__players, .character__hero__details .pc__field__players, .player__hero__details .npc__field__players, .player__hero__details .pc__field__players {
+.character__hero__details .character__field__players, .player__hero__details .character__field__players {
 	flex-basis: 100%;
 }
 
@@ -763,6 +763,8 @@ textarea {
 		display: block;
 		position: relative;
 		width: auto;
+		height: auto;
+		overflow: visible;
 	}
 }
 
@@ -787,7 +789,7 @@ textarea {
 }
 
 .main-navigation > div ul.nav-menu .menu-item a, .main-navigation > div ul.menu .menu-item a, .footer-navigation > div ul.nav-menu .menu-item a, .footer-navigation > div ul.menu .menu-item a {
-	width: calc(100% - 32px);
+	width: calc((100% - 32px) - 4vw);
 	color: inherit;
 	text-decoration: none;
 	padding-top: 1.3rem;
@@ -823,6 +825,7 @@ textarea {
 	top: 13px;
 	line-height: 0;
 	transition: 0.3s ease-out;
+	cursor: pointer;
 }
 
 @media (min-width: 768px) {
@@ -1306,6 +1309,7 @@ textarea {
 }
 
 .character__field__label {
+	font-size: 2rem;
 	font-weight: 700;
 }
 

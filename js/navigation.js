@@ -61,12 +61,15 @@
 	function openMobileNav() {
     const headerHeight = document.querySelector('.site-header').clientHeight;
 		const navHeight = window.innerHeight - headerHeight;
-		gsap.to('.main-navigation > div', {height: navHeight, duration: 0.67, ease: "power3.out"});
+		if(window.innerWidth < 768) {
+			gsap.to('.main-navigation > div', {height: navHeight, duration: 0.67, ease: "power3.out"});
+		}
 	}
 
 	function closeMobileNav() {
-		gsap.to('.main-navigation > div', {height: "0", duration: 0.67, ease: "power3.out"});
-
+		if(window.innerWidth < 768) {
+			gsap.to('.main-navigation > div', {height: "0", duration: 0.67, ease: "power3.out"});
+		}
 	}
 
 
@@ -76,6 +79,7 @@
 	// Add event listeners
 	for ( const li of lisWithChildren ) {
 		li.addEventListener( 'touchstart', toggleFocus, false );
+		li.addEventListener( 'click', toggleFocus, false );
 	}
 
 	// Toggle focus
@@ -88,7 +92,34 @@
 			if(this.classList.contains('focus')) {
 				h = 'auto';
 			}
-			gsap.to(submenu, {height: h, duration: 0.67, ease: "power3.out"});
-
+			if(window.innerWidth < 768) {
+				gsap.to(submenu, {height: h, duration: 0.67, ease: "power3.out"});
+			}
+	
 	}
+
+	window.addEventListener('resize', resizeMenus);
+
+	function resizeMenus() {
+		if(window.innerWidth < 768) {
+			document.querySelector('.main-navigation > div').style.height = 0;
+			document.querySelectorAll('.main-navigation > div ul.nav-menu .sub-menu').forEach(item => {
+				item.style.width = 'auto';
+			});
+		}
+		else {
+			document.querySelector('.main-navigation > div').style.height = 'auto';
+			document.querySelectorAll('.main-navigation .menu-item').forEach(item => {
+				item.classList.remove('focus');
+				item.querySelectorAll('.sub-menu .sub-menu').forEach(subItem => {
+					subItem.style.width = 0;
+				});
+			});
+			document.querySelectorAll('.main-navigation #primary-menu > .menu-item > .sub-menu').forEach(el => {
+				el.style.height = 0;
+			});
+		}
+	}
+
 }() );
+

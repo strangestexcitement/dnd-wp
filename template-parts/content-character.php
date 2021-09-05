@@ -28,7 +28,6 @@
 
 			// pc player(s)
 			if(get_post_type() == 'pc') {
-
 				$players = get_posts(array(
 					'post_type' => 'player',
 					'meta_query' => array(
@@ -44,7 +43,7 @@
 					$id = $player->ID;
 					$character_players[] = get_field('player_name', $id);
 				}
-				if($players_label) {
+				if($character_players) {
 					$players_label = count($character_players) > 1 ? "PLAYERS" : "PLAYER";
 				}
 				if($character_players) {
@@ -245,11 +244,11 @@
 					<?= ($character_name) ? "<h1 class='entry-title character__hero__name'>$character_name</h1>" : "" ?>
 					<?php if($character_level || $character_race || $character_class || $character_occupation || $character_players) { ?>
 						<div class="character__hero__details">
-							<?= ($character_players) ? "<div class='character__field character__field__players'><p class='character__field__label'>$players_label:</p><p class='character__field__value'>$character_players</p></div>" : "" ?>
-							<?= ($character_level) ? "<div class='character__field character__field__level'><p class='character__field__label'>LEVEL:</p><p class='character__field__value'>$character_level</p></div>" : "" ?>
-							<?= ($character_race) ? "<div class='character__field character__field__race'><p class='character__field__label'>RACE:</p><p class='character__field__value'>$character_race</p></div>" : "" ?>
-							<?= ($character_class) ? "<div class='character__field character__field__class'><p class='character__field__label'>CLASS:</p><p class='character__field__value'>$character_class</p></div>" : "" ?>
-							<?= ($character_occupation) ? "<div class='character__field character__field__occupation'><p class='character__field__label'>OCCUPATION:</p><p class='character__field__value'>$character_occupation</p></div>" : "" ?>
+							<?= ($character_players) ? "<div class='character__field character__field__players'><h3 class='character__field__label'>$players_label:</h3><p class='character__field__value'>$character_players</p></div>" : "" ?>
+							<?= ($character_level) ? "<div class='character__field character__field__level'><h3 class='character__field__label'>LEVEL:</h3><p class='character__field__value'>$character_level</p></div>" : "" ?>
+							<?= ($character_race) ? "<div class='character__field character__field__race'><h3 class='character__field__label'>RACE:</h3><p class='character__field__value'>$character_race</p></div>" : "" ?>
+							<?= ($character_class) ? "<div class='character__field character__field__class'><h3 class='character__field__label'>CLASS:</h3><p class='character__field__value'>$character_class</p></div>" : "" ?>
+							<?= ($character_occupation) ? "<div class='character__field character__field__occupation'><h3 class='character__field__label'>OCCUPATION:</h3><p class='character__field__value'>$character_occupation</p></div>" : "" ?>
 						</div>
 					<?php } ?>
 				</div>
@@ -278,18 +277,18 @@
 			<div class="character__basics__inner accordion">
 				<h2 class="character__basics__heading accordion__heading">Basics</h2>
 				<div class="character__basics__content accordion__content">
-					<?= ($character_background) ? "<div class='character__field character__field__background'><p class='character__field__label'>BACKGROUND:</p><p class='character__field__value'>$character_background</p></div>" : "" ?>
-					<?= ($character_aliases) ? "<div class='character__field character__field__aliases'><p class='character__field__label'>ALIASES:</p><p class='character__field__value'>$character_aliases</p></div>" : "" ?>
-					<?= ($character_gender_pronouns) ? "<div class='character__field character__field__gender'><p class='character__field__label'>GENDER/PRONOUNS:</p><p class='character__field__value'>$character_gender_pronouns</p></div>" : "" ?>
-					<?= ($character_alignment) ? "<div class='character__field character__field__alignment'><p class='character__field__label'>ALIGNMENT:</p><p class='character__field__value'>$character_alignment</p></div>" : "" ?>
-					<?= ($character_age) ? "<div class='character__field character__field__age'><p class='character__field__label'>AGE:</p><p class='character__field__value'>$character_age</p></div>" : "" ?>
-					<?= ($character_birthday) ? "<div class='character__field character__field__birthday'><p class='character__field__label'>BIRTHDAY:</p><p class='character__field__value'>$character_birthday</p></div>" : "" ?>
-					<?= ($character_height) ? "<div class='character__field character__field__height'><p class='character__field__label'>HEIGHT:</p><p class='character__field__value'>$character_height</p></div>" : "" ?>
-					<?= ($character_weight) ? "<div class='character__field character__field__weight'><p class='character__field__label'>WEIGHT:</p><p class='character__field__value'>$character_weight</p></div>" : "" ?>
-					<?= ($character_body_type) ? "<div class='character__field character__field__body_type'><p class='character__field__label'>BODY TYPE:</p><p class='character__field__value'>$character_body_type</p></div>" : "" ?>
-					<?= ($character_eyes) ? "<div class='character__field character__field__eyes'><p class='character__field__label'>EYES:</p><p class='character__field__value'>$character_eyes</p></div>" : "" ?>
-					<?= ($character_skin) ? "<div class='character__field character__field__skin'><p class='character__field__label'>SKIN:</p><p class='character__field__value'>$character_skin</p></div>" : "" ?>
-					<?= ($character_hair) ? "<div class='character__field character__field__hair'><p class='character__field__label'>HAIR:</p><p class='character__field__value'>$character_hair</p></div>" : "" ?>
+					<?= ($character_background) ? "<div class='character__field character__field__background'><h3 class='character__field__label'>BACKGROUND:</h3><p class='character__field__value'>$character_background</p></div>" : "" ?>
+					<?= ($character_aliases) ? "<div class='character__field character__field__aliases'><h3 class='character__field__label'>ALIASES:</h3><p class='character__field__value'>$character_aliases</p></div>" : "" ?>
+					<?= ($character_gender_pronouns) ? "<div class='character__field character__field__gender'><h3 class='character__field__label'>GENDER/PRONOUNS:</h3><p class='character__field__value'>$character_gender_pronouns</p></div>" : "" ?>
+					<?= ($character_alignment) ? "<div class='character__field character__field__alignment'><h3 class='character__field__label'>ALIGNMENT:</h3><p class='character__field__value'>$character_alignment</p></div>" : "" ?>
+					<?= ($character_age) ? "<div class='character__field character__field__age'><h3 class='character__field__label'>AGE:</h3><p class='character__field__value'>$character_age</p></div>" : "" ?>
+					<?= ($character_birthday) ? "<div class='character__field character__field__birthday'><h3 class='character__field__label'>BIRTHDAY:</h3><p class='character__field__value'>$character_birthday</p></div>" : "" ?>
+					<?= ($character_height) ? "<div class='character__field character__field__height'><h3 class='character__field__label'>HEIGHT:</h3><p class='character__field__value'>$character_height</p></div>" : "" ?>
+					<?= ($character_weight) ? "<div class='character__field character__field__weight'><h3 class='character__field__label'>WEIGHT:</h3><p class='character__field__value'>$character_weight</p></div>" : "" ?>
+					<?= ($character_body_type) ? "<div class='character__field character__field__body_type'><h3 class='character__field__label'>BODY TYPE:</h3><p class='character__field__value'>$character_body_type</p></div>" : "" ?>
+					<?= ($character_eyes) ? "<div class='character__field character__field__eyes'><h3 class='character__field__label'>EYES:</h3><p class='character__field__value'>$character_eyes</p></div>" : "" ?>
+					<?= ($character_skin) ? "<div class='character__field character__field__skin'><h3 class='character__field__label'>SKIN:</h3><p class='character__field__value'>$character_skin</p></div>" : "" ?>
+					<?= ($character_hair) ? "<div class='character__field character__field__hair'><h3 class='character__field__label'>HAIR:</h3><p class='character__field__value'>$character_hair</p></div>" : "" ?>
 				</div>
 			</div>
 		</div>
@@ -315,10 +314,10 @@
 			<div class="character__personality__inner accordion">
 				<h2 class="character__personality__heading accordion__heading">Personality</h2>
 				<div class="character__personality__content accordion__content">
-					<?= ($character_personality_traits) ? "<div class='character__personality__card'><div class='character__field character__field__personality-traits'><p class='character__field__label'>PERSONALITY TRAITS:</p><div class='character__field__value'>$character_personality_traits</div></div></div>" : "" ?>
-					<?= ($character_ideals) ? "<div class='character__personality__card'><div class='character__field character__field__ideals'><p class='character__field__label'>IDEALS:</p><div class='character__field__value'>$character_ideals</div></div></div>" : "" ?>
-					<?= ($character_bonds) ? "<div class='character__personality__card'><div class='character__field character__field__bonds'><p class='character__field__label'>BONDS:</p><div class='character__field__value'>$character_bonds</div></div></div>" : "" ?>
-					<?= ($character_flaws) ? "<div class='character__personality__card'><div class='character__field character__field__flaws'><p class='character__field__label'>FLAWS:</p><div class='character__field__value'>$character_flaws</div></div></div>" : "" ?>
+					<?= ($character_personality_traits) ? "<div class='character__personality__card'><div class='character__field character__field__personality-traits'><h3 class='character__field__label'>PERSONALITY TRAITS:</h3><div class='character__field__value'>$character_personality_traits</div></div></div>" : "" ?>
+					<?= ($character_ideals) ? "<div class='character__personality__card'><div class='character__field character__field__ideals'><h3 class='character__field__label'>IDEALS:</h3><div class='character__field__value'>$character_ideals</div></div></div>" : "" ?>
+					<?= ($character_bonds) ? "<div class='character__personality__card'><div class='character__field character__field__bonds'><h3 class='character__field__label'>BONDS:</h3><div class='character__field__value'>$character_bonds</div></div></div>" : "" ?>
+					<?= ($character_flaws) ? "<div class='character__personality__card'><div class='character__field character__field__flaws'><h3 class='character__field__label'>FLAWS:</h3><div class='character__field__value'>$character_flaws</div></div></div>" : "" ?>
 				</div>
 			</div>
 		</div>
@@ -331,8 +330,8 @@
 			<div class="character__relationships__inner accordion">
 				<h2 class="character__relationships__heading accordion__heading">Relationships</h2>
 				<div class="character__relationships__content accordion__content">
-					<?= ($character_allies_other || $character_allies_links) ? "<div class='character__field character__field__allies'><h3 class='character__field__label character__relationships__subheading'>ALLIES:</h3><div class='character__field__value'>$allies_links</div><p class='character__field__label'>OTHER ALLIES:</p><div class='character__field__value'>$character_allies_other</div></div>" : "" ?>
-					<?= ($character_enemies_other || $character_enemies_links) ? "<div class='character__field character__field__enemies'><h3 class='character__field__label character__relationships__subheading'>ENEMIES:</h3><div class='character__field__value'>$enemies_links</div><p class='character__field__label'>OTHER ENEMIES:</p><div class='character__field__value'>$character_enemies_other</div></div>" : "" ?>
+					<?= ($character_allies_other || $character_allies_links) ? "<div class='character__field character__field__allies'><h3 class='character__field__label character__relationships__subheading'>ALLIES:</h3><div class='character__field__value'>$allies_links</div><h3 class='character__field__label'>OTHER ALLIES:</h3><div class='character__field__value'>$character_allies_other</div></div>" : "" ?>
+					<?= ($character_enemies_other || $character_enemies_links) ? "<div class='character__field character__field__enemies'><h3 class='character__field__label character__relationships__subheading'>ENEMIES:</h3><div class='character__field__value'>$enemies_links</div><h3 class='character__field__label'>OTHER ENEMIES:</h3><div class='character__field__value'>$character_enemies_other</div></div>" : "" ?>
 				</div>
 			</div>
 		</div>
@@ -372,9 +371,9 @@
 			<div class="character__capabilities__inner accordion">
 				<h2 class="character__capabilities__heading accordion__heading">Capabilities</h2>
 				<div class="character__capabilities__content accordion__content">
-					<?= ($character_hp) ? "<div class='character__field character__field__hp'><p class='character__field__label'>HP:</p><p class='character__field__value'>$character_hp</p></div>" : "" ?>
-					<?= ($character_ac) ? "<div class='character__field character__field__ac'><p class='character__field__label'>AC:</p><p class='character__field__value'>$character_ac</p></div>" : "" ?>
-					<?= ($character_speed) ? "<div class='character__field character__field__speed'><p class='character__field__label'>Speed:</p><p class='character__field__value'>$character_speed</p></div>" : "" ?>
+					<?= ($character_hp) ? "<div class='character__field character__field__hp'><h3 class='character__field__label'>HP:</h3><p class='character__field__value'>$character_hp</p></div>" : "" ?>
+					<?= ($character_ac) ? "<div class='character__field character__field__ac'><h3 class='character__field__label'>AC:</h3><p class='character__field__value'>$character_ac</p></div>" : "" ?>
+					<?= ($character_speed) ? "<div class='character__field character__field__speed'><h3 class='character__field__label'>Speed:</h3><p class='character__field__value'>$character_speed</p></div>" : "" ?>
 					<?php if($character_stats_exist) { ?>
 						<div class="character__capabilities__stats">
 							<? foreach($character_stats as $stat => $value) {
@@ -388,7 +387,7 @@
 										$modifier = ($modifier >= 0) ? "+$modifier" : $modifier;
 									}
 									echo "<div class='character__field character__field__$stat'>";
-									echo "<p class='character__field__label'>$statname:</p>";
+									echo "<h3 class='character__field__label'>$statname:</h3>";
 									echo "<p class='character__field__value'>$value</p>";
 									echo ($value != '???') ? "<p class='character__field__subvalue'>$modifier</p>" : "";
 									echo "</div>";
@@ -410,7 +409,7 @@
 									foreach($character_saving_throws as $throw => $save) {
 										$throw_lower = strtolower($throw);
 										echo "<div class='character__field character__field__$throw_lower'>";
-										echo "<p class='character__field__label'>$throw:</p>";
+										echo "<h3 class='character__field__label'>$throw:</h3>";
 										echo "<p class='character__field__value'>$save</p>";
 										echo "</div>";
 									}
@@ -425,7 +424,7 @@
 								$skill_name = str_replace('_', ' ', $skill);
 								$skill_name = ucwords($skill_name);
 								echo "<div class='character__field character__field__$skill'>";
-								echo "<p class='character__field__label'>$skill_name:</p>";
+								echo "<h3 class='character__field__label'>$skill_name:</h3>";
 								echo "<p class='character__field__value'>$mod</p>";
 								echo "</div>";
 							}
@@ -435,11 +434,11 @@
 					<?php if($character_languages || $character_tool_proficiencies || $character_game_proficiencies || $character_musical_instrument_proficiencies || $character_vehicle_proficiencies) { ?>
 						<div class="character__capabilities__misc">
 							<h3 class="character__capabilities__subheading">Other Proficiencies</h3>
-							<?= ($character_languages) ? "<div class='character__field character__field__languages'><p class='character__field__label'>Languages:</p><div class='character__field__value'>$character_languages</div></div>" : "" ?>
-							<?= ($character_tool_proficiencies) ? "<div class='character__field character__field__tools'><p class='character__field__label'>Tools:</p><div class='character__field__value'>$character_tool_proficiencies</div></div>" : "" ?>
-							<?= ($character_game_proficiencies) ? "<div class='character__field character__field__games'><p class='character__field__label'>Games:</p><div class='character__field__value'>$character_game_proficiencies</div></div>" : "" ?>
-							<?= ($character_musical_instrument_proficiencies) ? "<div class='character__field character__field__instruments'><p class='character__field__label'>Instruments:</p><div class='character__field__value'>$character_musical_instrument_proficiencies</div></div>" : "" ?>
-							<?= ($character_vehicle_proficiencies) ? "<div class='character__field character__field__vehicles'><p class='character__field__label'>Vehicles:</p><div class='character__field__value'>$character_vehicle_proficiencies</div></div>" : "" ?>
+							<?= ($character_languages) ? "<div class='character__field character__field__languages'><h3 class='character__field__label'>Languages:</h3><div class='character__field__value'>$character_languages</div></div>" : "" ?>
+							<?= ($character_tool_proficiencies) ? "<div class='character__field character__field__tools'><h3 class='character__field__label'>Tools:</h3><div class='character__field__value'>$character_tool_proficiencies</div></div>" : "" ?>
+							<?= ($character_game_proficiencies) ? "<div class='character__field character__field__games'><h3 class='character__field__label'>Games:</h3><div class='character__field__value'>$character_game_proficiencies</div></div>" : "" ?>
+							<?= ($character_musical_instrument_proficiencies) ? "<div class='character__field character__field__instruments'><h3 class='character__field__label'>Instruments:</h3><div class='character__field__value'>$character_musical_instrument_proficiencies</div></div>" : "" ?>
+							<?= ($character_vehicle_proficiencies) ? "<div class='character__field character__field__vehicles'><h3 class='character__field__label'>Vehicles:</h3><div class='character__field__value'>$character_vehicle_proficiencies</div></div>" : "" ?>
 						</div>
 					<?php } ?>
 				</div>
@@ -456,11 +455,11 @@
 				<div class="character__inventory__content accordion__content">
 					<?php if($character_copper_pieces || $character_silver_pieces || $character_electrum_pieces || $character_gold_pieces || $character_platinum_pieces) { ?>
 						<div class='character__field character__inventory__currency'>
-							<?= ($character_copper_pieces) ? "<div class='character__field character__field__copper'><p class='character__field__label'>Copper:</p><p class='character__field__value'>$character_copper_pieces</p></div>" : "" ?>
-							<?= ($character_silver_pieces) ? "<div class='character__field character__field__silver'><p class='character__field__label'>Silver:</p><p class='character__field__value'>$character_silver_pieces</p></div>" : "" ?>
-							<?= ($character_electrum_pieces) ? "<div class='character__field character__field__electrum'><p class='character__field__label'>Electrum:</p><p class='character__field__value'>$character_electrum_pieces</p></div>" : "" ?>
-							<?= ($character_gold_pieces) ? "<div class='character__field character__field__gold'><p class='character__field__label'>Gold:</p><p class='character__field__value'>$character_gold_pieces</p></div>" : "" ?>
-							<?= ($character_platinum_pieces) ? "<div class='character__field character__field__platinum'><p class='character__field__label'>Platinum:</p><p class='character__field__value'>$character_platinum_pieces</p></div>" : "" ?>
+							<?= ($character_copper_pieces) ? "<div class='character__field character__field__copper'><h3 class='character__field__label'>Copper:</h3><p class='character__field__value'>$character_copper_pieces</p></div>" : "" ?>
+							<?= ($character_silver_pieces) ? "<div class='character__field character__field__silver'><h3 class='character__field__label'>Silver:</h3><p class='character__field__value'>$character_silver_pieces</p></div>" : "" ?>
+							<?= ($character_electrum_pieces) ? "<div class='character__field character__field__electrum'><h3 class='character__field__label'>Electrum:</h3><p class='character__field__value'>$character_electrum_pieces</p></div>" : "" ?>
+							<?= ($character_gold_pieces) ? "<div class='character__field character__field__gold'><h3 class='character__field__label'>Gold:</h3><p class='character__field__value'>$character_gold_pieces</p></div>" : "" ?>
+							<?= ($character_platinum_pieces) ? "<div class='character__field character__field__platinum'><h3 class='character__field__label'>Platinum:</h3><p class='character__field__value'>$character_platinum_pieces</p></div>" : "" ?>
 						</div>
 					<?php } ?>
 					<?= ($character_inventory) ? "<div class='character__field character__inventory__items'><div class='character__field__value'>$character_inventory</div></div>" : "" ?>
@@ -490,7 +489,7 @@
 				<h2 class="character__additional-notes__heading accordion__heading">Additional Notes</h2>
 				<div class="character__additional-notes__content accordion__content">
 					<?= ($character_additional_notes) ? "<div class='character__field character__field__additional-notes'><p class='character__field__value'>$character_additional_notes</p></div>" : "" ?>
-					<?= ($character_links) ? "<div class='character__field character__field__links'><p class='character__field__label'>LINKS:</p><p class='character__field__value'>$character_links</p></div>" : "" ?>
+					<?= ($character_links) ? "<div class='character__field character__field__links'><h3 class='character__field__label'>LINKS:</h3><p class='character__field__value'>$character_links</p></div>" : "" ?>
 				</div>
 			</div>
 		</div>
