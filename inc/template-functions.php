@@ -260,7 +260,7 @@ function getCharCard($character_id) {
 					if(count($ids[$key]['group']) > 0) {
 						?>
 						<li class="menu-item menu-item-type-post_type_archive menu-item-object-<?= $key ?> menu-item-has-children">
-							<a href="<?= $site_url ?>/$key/"><?= $info['plural_key'] ?></a>
+							<a href="<?= $site_url . "/" . $key . "/"?>"><?= $info['plural_key'] ?></a>
 								<ul class="sub-menu">
 									<?php
 										foreach($info['group'] as $el) {

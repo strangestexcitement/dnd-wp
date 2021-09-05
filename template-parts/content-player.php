@@ -14,12 +14,13 @@
 
 		<?php
 			$player_name = get_field('player_name');
+			$player_name = $player_name ? $player_name : get_the_title();
 			$player_image_id = get_field('player_image');
 			$player_roles = get_field('player_roles');
 			$player_description = get_field('player_description');
 
 			$player_characters = get_field('player_characters');
-			$default_image = get_template_directory_uri() . "/images/defaults/default-npc-image.jpg";
+			$default_image = get_template_directory_uri() . "/images/defaults/default-player.jpg";
 			if($player_characters) {
 				$character_label = (count($player_characters) > 1) ? 'Characters' : 'Character';
 				$characters = listCharRelationships($player_characters);
