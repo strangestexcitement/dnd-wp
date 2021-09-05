@@ -261,7 +261,7 @@
 	<?php if($character_goals) { ?>
 		<div class="character__goals character__module">
 			<div class="character__goals__inner accordion">
-				<h2 class="character__goals__heading accordion__heading">Goals</h2>
+				<h2 tabindex="0" class="character__goals__heading accordion__heading">Goals</h2>
 				<div class="character__goals__content accordion__content">
 					<?= ($character_goals) ? "<div class='character__field character__field__goals'><div class='character__field__value'>$character_goals</div></div>" : "" ?>
 				</div>
@@ -275,7 +275,7 @@
 						$character_birthday || $character_height || $character_weight || $character_body_type || $character_eyes || $character_skin || $character_hair) { ?>
 		<div class="character__basics character__module">
 			<div class="character__basics__inner accordion">
-				<h2 class="character__basics__heading accordion__heading">Basics</h2>
+				<h2 tabindex="0" class="character__basics__heading accordion__heading">Basics</h2>
 				<div class="character__basics__content accordion__content">
 					<?= ($character_background) ? "<div class='character__field character__field__background'><h3 class='character__field__label'>BACKGROUND:</h3><p class='character__field__value'>$character_background</p></div>" : "" ?>
 					<?= ($character_aliases) ? "<div class='character__field character__field__aliases'><h3 class='character__field__label'>ALIASES:</h3><p class='character__field__value'>$character_aliases</p></div>" : "" ?>
@@ -299,7 +299,7 @@
 	<?php if($character_description) { ?>
 		<div class="character__desc character__module">
 			<div class="character__desc__inner accordion">
-				<h2 class="character__desc__heading accordion__heading">Description</h2>
+				<h2 tabindex="0" class="character__desc__heading accordion__heading">Description</h2>
 				<div class="character__desc__content accordion__content">
 					<?= ($character_description) ? "<div class='character__field character__field__desc'><div class='character__field__value'>$character_description</div></div>" : "" ?>
 				</div>
@@ -312,7 +312,7 @@
 	<?php if($character_personality_traits || $character_ideals || $character_bonds || $character_flaws) { ?>
 		<div class="character__personality character__module">
 			<div class="character__personality__inner accordion">
-				<h2 class="character__personality__heading accordion__heading">Personality</h2>
+				<h2 tabindex="0" class="character__personality__heading accordion__heading">Personality</h2>
 				<div class="character__personality__content accordion__content">
 					<?= ($character_personality_traits) ? "<div class='character__personality__card'><div class='character__field character__field__personality-traits'><h3 class='character__field__label'>PERSONALITY TRAITS:</h3><div class='character__field__value'>$character_personality_traits</div></div></div>" : "" ?>
 					<?= ($character_ideals) ? "<div class='character__personality__card'><div class='character__field character__field__ideals'><h3 class='character__field__label'>IDEALS:</h3><div class='character__field__value'>$character_ideals</div></div></div>" : "" ?>
@@ -328,7 +328,7 @@
 	<?php if($character_allies_links || $character_allies_other || $character_enemies_links || $character_enemies_other) { ?>
 		<div class="character__relationships character__module">
 			<div class="character__relationships__inner accordion">
-				<h2 class="character__relationships__heading accordion__heading">Relationships</h2>
+				<h2 tabindex="0" class="character__relationships__heading accordion__heading">Relationships</h2>
 				<div class="character__relationships__content accordion__content">
 					<?= ($character_allies_other || $character_allies_links) ? "<div class='character__field character__field__allies'><h3 class='character__field__label character__relationships__subheading'>ALLIES:</h3><div class='character__field__value'>$allies_links</div><h3 class='character__field__label'>OTHER ALLIES:</h3><div class='character__field__value'>$character_allies_other</div></div>" : "" ?>
 					<?= ($character_enemies_other || $character_enemies_links) ? "<div class='character__field character__field__enemies'><h3 class='character__field__label character__relationships__subheading'>ENEMIES:</h3><div class='character__field__value'>$enemies_links</div><h3 class='character__field__label'>OTHER ENEMIES:</h3><div class='character__field__value'>$character_enemies_other</div></div>" : "" ?>
@@ -342,7 +342,7 @@
 	<?php if($character_backstory) { ?>
 		<div class="character__backstory character__module">
 			<div class="character__backstory__inner accordion">
-				<h2 class="character__backstory__heading accordion__heading">Backstory</h2>
+				<h2 tabindex="0" class="character__backstory__heading accordion__heading">Backstory</h2>
 				<div class="character__backstory__content accordion__content">
 					<?= ($character_backstory) ? "<div class='character__field character__field__backstory'><div class='character__field__value'>$character_backstory</div></div>" : "" ?>
 				</div>
@@ -355,7 +355,7 @@
 	<?php if($character_symbol_id) { ?>
 		<div class="character__symbol character__module">
 			<div class="character__symbol__inner accordion">
-				<h2 class="character__symbol__heading accordion__heading">Symbol</h2>
+				<h2 tabindex="0" class="character__symbol__heading accordion__heading">Symbol</h2>
 				<div class="character__symbol__content accordion__content">
 					<?= ($character_symbol_image) ? $character_symbol_image : "" ?>
 					<?= ($character_symbol_desc) ? "<div class='character__field character__field__symbol__desc'><div class='character__field__value'>$character_symbol_desc</div></div>" : "" ?>
@@ -369,7 +369,7 @@
 	<?php if($character_hp || $character_ac || $character_speed || $character_stats_exist) { ?>
 		<div class="character__capabilities character__module">
 			<div class="character__capabilities__inner accordion">
-				<h2 class="character__capabilities__heading accordion__heading">Capabilities</h2>
+				<h2 tabindex="0" class="character__capabilities__heading accordion__heading">Capabilities</h2>
 				<div class="character__capabilities__content accordion__content">
 					<?= ($character_hp) ? "<div class='character__field character__field__hp'><h3 class='character__field__label'>HP:</h3><p class='character__field__value'>$character_hp</p></div>" : "" ?>
 					<?= ($character_ac) ? "<div class='character__field character__field__ac'><h3 class='character__field__label'>AC:</h3><p class='character__field__value'>$character_ac</p></div>" : "" ?>
@@ -451,7 +451,7 @@
 	<?php if($character_inventory || $character_copper_pieces || $character_silver_pieces || $character_electrum_pieces || $character_gold_pieces || $character_platinum_pieces) { ?>
 		<div class="character__inventory character__module">
 			<div class="character__inventory__inner accordion">
-				<h2 class="character__inventory__heading accordion__heading">Inventory</h2>
+				<h2 tabindex="0" class="character__inventory__heading accordion__heading">Inventory</h2>
 				<div class="character__inventory__content accordion__content">
 					<?php if($character_copper_pieces || $character_silver_pieces || $character_electrum_pieces || $character_gold_pieces || $character_platinum_pieces) { ?>
 						<div class='character__field character__inventory__currency'>
@@ -473,7 +473,7 @@
 	<?php if($character_spells) { ?>
 		<div class="character__magic character__module">
 			<div class="character__magic__inner accordion">
-				<h2 class="character__magic__heading accordion__heading">Magical Abilities</h2>
+				<h2 tabindex="0" class="character__magic__heading accordion__heading">Magical Abilities</h2>
 				<div class="character__magic__content accordion__content">
 					<?= ($character_spells) ? "<div class='character__field character__field__spells'><p class='character__field__value'>$character_spells</p></div>" : "" ?>
 				</div>
@@ -486,7 +486,7 @@
 		<?php if($character_additional_notes || $character_links) { ?>
 		<div class="character__additional-notes character__module">
 			<div class="character__additional-notes__inner accordion">
-				<h2 class="character__additional-notes__heading accordion__heading">Additional Notes</h2>
+				<h2 tabindex="0" class="character__additional-notes__heading accordion__heading">Additional Notes</h2>
 				<div class="character__additional-notes__content accordion__content">
 					<?= ($character_additional_notes) ? "<div class='character__field character__field__additional-notes'><p class='character__field__value'>$character_additional_notes</p></div>" : "" ?>
 					<?= ($character_links) ? "<div class='character__field character__field__links'><h3 class='character__field__label'>LINKS:</h3><p class='character__field__value'>$character_links</p></div>" : "" ?>

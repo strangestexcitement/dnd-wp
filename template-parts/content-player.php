@@ -74,7 +74,7 @@
 	<?php if($player_description) { ?>
 		<div class="player__description player__module">
 			<div class="player__description__inner accordion">
-				<h2 class="player__description__heading accordion__heading">About</h2>
+				<h2 tabindex="0" class="player__description__heading accordion__heading">About</h2>
 				<div class="player__description__content accordion__content">
 					<?= ($player_description) ? "<div class='player__field player__field__description'><div class='player__field__value'>$player_description</div></div>" : "" ?>
 				</div>
@@ -87,7 +87,7 @@
 	<?php if($player_characters) { ?>
 		<div class="player__characters player__module">
 			<div class="player__characters__inner accordion">
-				<h2 class="player__characters__heading accordion__heading"><?= $character_label ?></h2>
+				<h2 tabindex="0" class="player__characters__heading accordion__heading"><?= $character_label ?></h2>
 				<div class="player__characters__content accordion__content">
 					<?= ($player_characters) ? "<div class='player__field player__field__characters'><div class='player__field__value'>$characters</div></div>" : "" ?>
 				</div>
@@ -101,7 +101,7 @@
 							$player_social_links['twitter'] || $player_social_links['instagram'] || $player_social_links['tiktok']) { ?>
 		<div class="player__social player__module">
 			<div class="player__social__inner accordion">
-				<h2 class="player__social__heading accordion__heading">Social Links</h2>
+				<h2 tabindex="0" class="player__social__heading accordion__heading">Social Links</h2>
 				<div class="player__social__content accordion__content">
 						<?php
 							foreach($player_social_links as $site => $link) {

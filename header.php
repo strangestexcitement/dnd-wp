@@ -55,6 +55,7 @@
 				array(
 					'theme_location' => 'menu-1',
 					'menu_id'        => 'primary-menu',
+					'fallback_cb'		 => 'nav_menu_fallback',
 				)
 			);
 			?>

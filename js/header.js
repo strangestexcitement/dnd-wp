@@ -18,7 +18,7 @@
   window.addEventListener('resize', padTop);
 
   // add hover states to submenus
-  const headerMenuItems = document.querySelectorAll('.site-header #primary-menu > .menu-item');
+  const headerMenuItems = document.querySelectorAll('.site-header > .main-navigation > div > ul > .menu-item');
 
   headerMenuItems.forEach(element => {
     let subMenu = element.querySelector('.sub-menu');

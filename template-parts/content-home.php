@@ -35,7 +35,7 @@
 		<?php if($game_description) { ?>
 			<div class="home__description home__module">
 				<div class="home__description__inner accordion">
-					<h2 class="home__description__heading accordion__heading">About the Game</h2>
+					<h2 tabindex="0" class="home__description__heading accordion__heading">About the Game</h2>
 					<div class="home__description__content accordion__content">
 						<?= $game_description ?>
 					</div>
@@ -49,7 +49,7 @@
 		<?php if($player_ids) { ?>
 			<div class="home__players home__module">
 				<div class="home__players__inner accordion">
-					<h2 class="home__players__heading accordion__heading">Players</h2>
+					<h2 tabindex="0" class="home__players__heading accordion__heading">Players</h2>
 					<div class="home__players__content accordion__content">
 					<?php
 						foreach($player_ids as $player) {
@@ -70,7 +70,7 @@
 		<?php if($pc_ids) { ?>
 			<div class="home__pcs home__module">
 				<div class="home__pcs__inner accordion">
-					<h2 class="home__pcs__heading accordion__heading">PCs</h2>
+					<h2 tabindex="0" class="home__pcs__heading accordion__heading">PCs</h2>
 					<div class="home__pcs__content accordion__content">
 					<?php
 						foreach($pc_ids as $pc) {
@@ -91,7 +91,7 @@
 		<?php if($featured_npcs) { ?>
 			<div class="home__featured-npcs home__module">
 				<div class="home__featured-npcs__inner accordion">
-					<h2 class="home__featured-npcs__heading accordion__heading">Featured NPCs</h2>
+					<h2 tabindex="0" class="home__featured-npcs__heading accordion__heading">Featured NPCs</h2>
 					<div class="home__featured-npcs__content accordion__content">
 					<?php
 						foreach($featured_npcs as $npc) {
@@ -113,7 +113,7 @@
 		<?php if($game_links['d&dbeyond'] || $game_links['roll20'] || $game_links['others']) { ?>
 		<div class="home__links home__module">
 			<div class="home__links__inner accordion">
-				<h2 class="home__links__heading accordion__heading">Links</h2>
+				<h2 tabindex="0" class="home__links__heading accordion__heading">Links</h2>
 				<div class="home__links__content accordion__content">
 						<?php
 							foreach($game_links as $site => $link) {
