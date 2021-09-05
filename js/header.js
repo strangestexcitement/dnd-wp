@@ -24,11 +24,15 @@
     let subMenu = element.querySelector('.sub-menu');
     if(subMenu) {
       element.addEventListener('mouseenter', event => {
-        gsap.to(subMenu, {height: "auto", duration: 0.67, ease: "power3.out"});
+        if(window.innerWidth >= 768) {
+          gsap.to(subMenu, {height: "auto", duration: 0.67, ease: "power3.out"});
+        }
       }); 
 
       element.addEventListener('mouseleave', event => {
-        gsap.to(subMenu, {height: 0, duration: 0.67, ease: "power3.out"});
+        if(window.innerWidth >= 768) {
+          gsap.to(subMenu, {height: "0", duration: 0.67, ease: "power3.out"});
+        }
       });
 
       let subMenuItems = element.querySelectorAll('.sub-menu > .menu-item');
@@ -36,11 +40,15 @@
         let subSubMenu = item.querySelector('.sub-menu');
         if(subSubMenu) {
           item.addEventListener('mouseenter', event => {
-            gsap.to(subSubMenu, {width: "auto", duration: 0.67, ease: "power3.out"});
+            if(window.innerWidth >= 768) {
+              gsap.to(subSubMenu, {width: "auto", duration: 0.67, ease: "power3.out"});
+            }
           }); 
     
           item.addEventListener('mouseleave', event => {
-            gsap.to(subSubMenu, {width: 0, duration: 0.67, ease: "power3.out"});
+            if(window.innerWidth >= 768) {
+              gsap.to(subSubMenu, {width: 0, duration: 0.67, ease: "power3.out"});
+            }
           });
         }
       });

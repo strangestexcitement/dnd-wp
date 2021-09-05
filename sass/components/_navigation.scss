@@ -1,28 +1,94 @@
 .main-navigation, .footer-navigation {
   .menu-toggle {
-    display: none;
+    -webkit-appearance: none;
+    background: none;
+    border: none;
+
+    @include bp(tablet) {
+      display: none;
+    }
   }
+
   > div {
+    display: none;
+    background-color: $primary-dark;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    position: absolute;
+    left: 0;
+    width: 100%;
+
+    @include bp(tablet) {
+      display: block;
+      padding-left: 0;
+      padding-right: 0;
+      position: relative;
+      width: auto;
+    }
+
     ul.nav-menu, ul.menu {
       list-style-type: none;
       margin: 0;
       padding: 0;
-      display: flex;
       background-color: $primary-dark;
 
+      @include bp(tablet) {
+        display: flex;
+      }
+
       .menu-item {
-        
         position: relative;
         
         a {
+          width: calc(100% - 32px);
           color: inherit;
           text-decoration: none;
-          margin-right: 2rem;
+          padding-top: 1.3rem;
+          padding-bottom: 1rem;
+          display: block;
+          font-size: 2.4rem;
+          
+          @include bp(tablet) {
+            margin-right: 2rem;
+            width: auto;
+          }
         }
   
         &:last-child {
           a {
             margin-right: 0;
+          }
+        }
+
+        &.menu-item-has-children {
+          position: relative;
+          
+          &::after {
+            background: url('./images/icons/chevron-down-white.svg');
+            background-size: contain;
+            content: "";
+            width: 32px;
+            height: 32px;
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 13px;
+            line-height: 0;
+            transition: 0.3s ease-out;
+
+            @include bp(tablet) {
+              display: none;
+            }
+          }
+        }
+
+        &.focus {
+          &::after {
+            transform: rotate(540deg);
+          }
+
+          > .sub-menu {
+            height: auto;
           }
         }
       }
@@ -31,10 +97,13 @@
         list-style-type: none;
         margin-left: 0;
         height: 0;
-        position: absolute;
         background-color: $primary-dark;
         overflow: hidden;
         left: -1.5rem;
+
+        @include bp(tablet) {
+          position: absolute;
+        }
 
         .menu-item {
           a {
@@ -42,33 +111,55 @@
             border: 2px solid $primary-dark;
             padding-left: 1.3rem;
             padding-right: 1.3rem;
-            padding-top: 0.5rem;
             padding-bottom: 0.2rem;
             display: block;
-            width: 100%;
+            
+            @include bp(tablet) {
+              width: 100%;
+              padding-top: 0.5rem;
+            }
          
             &:hover {
-              background-color: $off-white;
-              color: $primary-dark;
-              border: 2px solid $primary-dark;
+              @include bp(tablet) {
+                background-color: $off-white;
+                color: $primary-dark;
+                border: 2px solid $primary-dark;
+              }
             }
           }
         }
 
         .sub-menu {
-          height: auto;
-          left: 0;
-          top: 0;
-          width: 0;
-          transform: translateX(-100%);
-          left: 0;
-          background-color: $primary-dark;
+          
+          @include bp(tablet) {
+            background-color: $primary-dark;
+            height: auto;
+            left: 0;
+            top: 0;
+            width: 0;
+            transform: translateX(-100%);
+            left: 0;
+          }
+
+          a {
+            padding-left: 3rem;
+            
+            @include bp(tablet) {
+              padding-left: 1.2rem;
+            }
+          }
         }
 
         &:hover {
           overflow: visible;
         }
       }
+    }
+  }
+
+  &.toggled {
+    > div {
+      display: block;
     }
   }
 }

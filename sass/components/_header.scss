@@ -1,5 +1,8 @@
 
 .site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: $primary-dark;
   color: $off-white;
   padding-left: 4vw;
@@ -14,8 +17,6 @@
   z-index: 10;
 
   @include bp(tablet) {
-    display: flex;
-    justify-content: space-between;
     align-items: flex-end;
   }
 
