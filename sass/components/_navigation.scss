@@ -37,6 +37,14 @@
         display: flex;
         padding: 0;
       }
+
+      > .menu-item {
+        &:hover, &.current-menu-ancestor, &.current-menu-item {
+          > a {
+            text-decoration: underline;
+          }
+        }
+      }
       
       .menu-item {
         position: relative;
@@ -117,9 +125,13 @@
               width: 100%;
               padding-top: 0.5rem;
             }
-         
-            &:hover {
+          }
+          &:hover, &.current-menu-ancestor, &.current-menu-item {
+            > a {
+              text-decoration: underline;
+
               @include bp(tablet) {
+                text-decoration: none;
                 background-color: $off-white;
                 color: $primary-dark;
                 border: 2px solid $primary-dark;

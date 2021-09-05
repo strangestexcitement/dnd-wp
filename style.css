@@ -390,6 +390,10 @@ textarea {
 	}
 }
 
+.site-header .site-branding {
+	align-self: center;
+}
+
 .site-header .site-branding .site-title {
 	font-size: 3rem;
 }
@@ -784,6 +788,10 @@ textarea {
 	}
 }
 
+.main-navigation > div ul.nav-menu > .menu-item:hover > a, .main-navigation > div ul.nav-menu > .menu-item.current-menu-ancestor > a, .main-navigation > div ul.nav-menu > .menu-item.current-menu-item > a, .main-navigation > div ul.menu > .menu-item:hover > a, .main-navigation > div ul.menu > .menu-item.current-menu-ancestor > a, .main-navigation > div ul.menu > .menu-item.current-menu-item > a, .footer-navigation > div ul.nav-menu > .menu-item:hover > a, .footer-navigation > div ul.nav-menu > .menu-item.current-menu-ancestor > a, .footer-navigation > div ul.nav-menu > .menu-item.current-menu-item > a, .footer-navigation > div ul.menu > .menu-item:hover > a, .footer-navigation > div ul.menu > .menu-item.current-menu-ancestor > a, .footer-navigation > div ul.menu > .menu-item.current-menu-item > a {
+	text-decoration: underline;
+}
+
 .main-navigation > div ul.nav-menu .menu-item, .main-navigation > div ul.menu .menu-item, .footer-navigation > div ul.nav-menu .menu-item, .footer-navigation > div ul.menu .menu-item {
 	position: relative;
 }
@@ -869,8 +877,13 @@ textarea {
 	}
 }
 
+.main-navigation > div ul.nav-menu .sub-menu .menu-item:hover > a, .main-navigation > div ul.nav-menu .sub-menu .menu-item.current-menu-ancestor > a, .main-navigation > div ul.nav-menu .sub-menu .menu-item.current-menu-item > a, .main-navigation > div ul.menu .sub-menu .menu-item:hover > a, .main-navigation > div ul.menu .sub-menu .menu-item.current-menu-ancestor > a, .main-navigation > div ul.menu .sub-menu .menu-item.current-menu-item > a, .footer-navigation > div ul.nav-menu .sub-menu .menu-item:hover > a, .footer-navigation > div ul.nav-menu .sub-menu .menu-item.current-menu-ancestor > a, .footer-navigation > div ul.nav-menu .sub-menu .menu-item.current-menu-item > a, .footer-navigation > div ul.menu .sub-menu .menu-item:hover > a, .footer-navigation > div ul.menu .sub-menu .menu-item.current-menu-ancestor > a, .footer-navigation > div ul.menu .sub-menu .menu-item.current-menu-item > a {
+	text-decoration: underline;
+}
+
 @media (min-width: 768px) {
-	.main-navigation > div ul.nav-menu .sub-menu .menu-item a:hover, .main-navigation > div ul.menu .sub-menu .menu-item a:hover, .footer-navigation > div ul.nav-menu .sub-menu .menu-item a:hover, .footer-navigation > div ul.menu .sub-menu .menu-item a:hover {
+	.main-navigation > div ul.nav-menu .sub-menu .menu-item:hover > a, .main-navigation > div ul.nav-menu .sub-menu .menu-item.current-menu-ancestor > a, .main-navigation > div ul.nav-menu .sub-menu .menu-item.current-menu-item > a, .main-navigation > div ul.menu .sub-menu .menu-item:hover > a, .main-navigation > div ul.menu .sub-menu .menu-item.current-menu-ancestor > a, .main-navigation > div ul.menu .sub-menu .menu-item.current-menu-item > a, .footer-navigation > div ul.nav-menu .sub-menu .menu-item:hover > a, .footer-navigation > div ul.nav-menu .sub-menu .menu-item.current-menu-ancestor > a, .footer-navigation > div ul.nav-menu .sub-menu .menu-item.current-menu-item > a, .footer-navigation > div ul.menu .sub-menu .menu-item:hover > a, .footer-navigation > div ul.menu .sub-menu .menu-item.current-menu-ancestor > a, .footer-navigation > div ul.menu .sub-menu .menu-item.current-menu-item > a {
+		text-decoration: none;
 		background-color: #FCF5E5;
 		color: #033E3E;
 		border: 2px solid #033E3E;
