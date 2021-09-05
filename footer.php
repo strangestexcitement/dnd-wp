@@ -33,7 +33,7 @@
 		<div class="attributions">
 				<div class="attributions__overlay"></div>
 				<div class="attributions__container">
-					<h2 class="attributions__heading">Attributions<button class="attributions__close"></button></h2>
+					<h2 class="attributions__heading">Attributions<a tabindex="0" class="attributions__close"></a></h2>
 					<div class="attributions__content">
 						<?php
 							if(empty($GLOBALS['attributions'])) {
