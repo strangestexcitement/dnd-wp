@@ -10,18 +10,15 @@
   }
 
   > div {
-    display: none;
+    height: 0;
+    overflow: auto;
     background-color: $primary-dark;
-    padding-left: 4vw;
-    padding-right: 4vw;
     position: absolute;
     left: 0;
     width: 100%;
 
     @include bp(tablet) {
       display: block;
-      padding-left: 0;
-      padding-right: 0;
       position: relative;
       width: auto;
     }
@@ -31,9 +28,12 @@
       margin: 0;
       padding: 0;
       background-color: $primary-dark;
+      padding-left: 4vw;
+      padding-right: 4vw;
 
       @include bp(tablet) {
         display: flex;
+        padding: 0;
       }
 
       .menu-item {
@@ -85,10 +85,6 @@
         &.focus {
           &::after {
             transform: rotate(540deg);
-          }
-
-          > .sub-menu {
-            height: auto;
           }
         }
       }
@@ -159,7 +155,7 @@
 
   &.toggled {
     > div {
-      display: block;
+      // display: block;
     }
   }
 }

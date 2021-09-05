@@ -38,9 +38,11 @@
 		if ( button.getAttribute( 'aria-expanded' ) === 'true' ) {
 			button.setAttribute( 'aria-expanded', 'false' );
 			button.classList.remove( 'is-active' );
+			closeMobileNav();
 		} else {
 			button.setAttribute( 'aria-expanded', 'true' );
 			button.classList.add( 'is-active' );
+			openMobileNav();
 		}
 	} );
 
@@ -52,8 +54,20 @@
 			siteNavigation.classList.remove( 'toggled' );
 			button.setAttribute( 'aria-expanded', 'false' );
 			button.classList.remove( 'is-active' );
+			closeMobileNav();
 		}
 	} );
+
+	function openMobileNav() {
+    const headerHeight = document.querySelector('.site-header').clientHeight;
+		const navHeight = window.innerHeight - headerHeight;
+		gsap.to('.main-navigation > div', {height: navHeight, duration: 0.67, ease: "power3.out"});
+	}
+
+	function closeMobileNav() {
+		gsap.to('.main-navigation > div', {height: "0", duration: 0.67, ease: "power3.out"});
+
+	}
 
 
 	// Get all the li elements with children within the menu.
@@ -69,5 +83,12 @@
 		event.stopPropagation();
 		if(event.target.classList.contains('menu-item-has-children'))
 			this.classList.toggle('focus');
+			const submenu = this.querySelector('.sub-menu');
+			let h = 0;
+			if(this.classList.contains('focus')) {
+				h = 'auto';
+			}
+			gsap.to(submenu, {height: h, duration: 0.67, ease: "power3.out"});
+
 	}
 }() );

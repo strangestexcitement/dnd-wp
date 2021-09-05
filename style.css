@@ -750,10 +750,9 @@ textarea {
 }
 
 .main-navigation > div, .footer-navigation > div {
-	display: none;
+	height: 0;
+	overflow: auto;
 	background-color: #033E3E;
-	padding-left: 4vw;
-	padding-right: 4vw;
 	position: absolute;
 	left: 0;
 	width: 100%;
@@ -762,8 +761,6 @@ textarea {
 @media (min-width: 768px) {
 	.main-navigation > div, .footer-navigation > div {
 		display: block;
-		padding-left: 0;
-		padding-right: 0;
 		position: relative;
 		width: auto;
 	}
@@ -774,11 +771,14 @@ textarea {
 	margin: 0;
 	padding: 0;
 	background-color: #033E3E;
+	padding-left: 4vw;
+	padding-right: 4vw;
 }
 
 @media (min-width: 768px) {
 	.main-navigation > div ul.nav-menu, .main-navigation > div ul.menu, .footer-navigation > div ul.nav-menu, .footer-navigation > div ul.menu {
 		display: flex;
+		padding: 0;
 	}
 }
 
@@ -833,10 +833,6 @@ textarea {
 
 .main-navigation > div ul.nav-menu .menu-item.focus::after, .main-navigation > div ul.menu .menu-item.focus::after, .footer-navigation > div ul.nav-menu .menu-item.focus::after, .footer-navigation > div ul.menu .menu-item.focus::after {
 	transform: rotate(540deg);
-}
-
-.main-navigation > div ul.nav-menu .menu-item.focus > .sub-menu, .main-navigation > div ul.menu .menu-item.focus > .sub-menu, .footer-navigation > div ul.nav-menu .menu-item.focus > .sub-menu, .footer-navigation > div ul.menu .menu-item.focus > .sub-menu {
-	height: auto;
 }
 
 .main-navigation > div ul.nav-menu .sub-menu, .main-navigation > div ul.menu .sub-menu, .footer-navigation > div ul.nav-menu .sub-menu, .footer-navigation > div ul.menu .sub-menu {
@@ -904,12 +900,9 @@ textarea {
 	overflow: visible;
 }
 
-.main-navigation.toggled > div, .footer-navigation.toggled > div {
-	display: block;
-}
-
 .hamburger {
 	padding: 15px 15px;
+	padding-right: 0;
 	display: inline-block;
 	cursor: pointer;
 	transition-property: opacity, filter;
