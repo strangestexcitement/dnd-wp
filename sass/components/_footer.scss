@@ -11,6 +11,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+
+    @include bp(tablet) {
+      flex-wrap: nowrap;
+      align-items: flex-start;
+    }
 
     .site-title {
       a {

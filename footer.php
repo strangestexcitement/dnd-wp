@@ -23,12 +23,12 @@
 					array(
 						'theme_location' => 'menu-2',
 						'menu_id'        => 'footer-menu',
-						'fallback_cb'		 => false,
+						'fallback_cb'		 => 'footer_menu_fallback',
 					)
 				);
 				?>
 			</nav><!-- #site-navigation -->
-			<button class="attributions__trigger"><p>Attributions</p></button>
+			<a tabindex="0" class="attributions__trigger"><p>Attributions</p></a>
 		</div><!-- .site-info -->
 		<div class="attributions">
 				<div class="attributions__overlay"></div>

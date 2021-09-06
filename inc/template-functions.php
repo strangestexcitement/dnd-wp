@@ -289,6 +289,44 @@ function getCharCard($character_id) {
 		<?php
 	}
 
+	/**
+	* Nav menu fallback
+  */
+	function footer_menu_fallback() {
+		$site_url = get_site_url();
+		$ids = [
+			'player' 	=> [
+				'plural_key'	=> 'Players',
+				'group'				=> getPlayerIds(),
+			],
+			'npc' 	=> [
+				'plural_key'	=> 'NPCs',
+				'group'				=> getNpcIds(),
+			],
+			'pc' 	=> [
+				'plural_key'	=> 'PCs',
+				'group'				=> getPcIds(),
+			],
+		];
+		?>
+		<div>
+			<ul id="menu" class="menu">
+				<?php
+				foreach($ids as $key => $info) {
+					if(count($ids[$key]['group']) > 0) {
+						?>
+						<li class="menu-item menu-item-type-post_type_archive menu-item-object-<?= $key ?> menu-item-has-children">
+							<a href="<?= $site_url . "/" . $key . "/"?>"><?= $info['plural_key'] ?></a>
+						</li>
+						<?php
+					}
+				}
+				?>
+			</ul>
+		</div>
+		<?php
+	}
+
 /**
  * 
  */
