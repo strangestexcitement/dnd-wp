@@ -78,7 +78,7 @@ if ( ! function_exists( 'dndest_setup' ) ) :
 			apply_filters(
 				'dndest_custom_background_args',
 				array(
-					'default-color' => 'ffffff',
+					'default-color' => 'FCF5E5',
 					'default-image' => '',
 				)
 			)

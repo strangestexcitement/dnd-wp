@@ -1497,8 +1497,8 @@
                     "key": "field_61324a4f76ba4",
                     "label": "Value",
                     "name": "value",
-                    "type": "select",
-                    "instructions": "Select multiple by holding ctrl\/cmd or shift",
+                    "type": "checkbox",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -1514,13 +1514,12 @@
                         "Dexterity": "Dexterity",
                         "Constitution": "Constitution"
                     },
+                    "allow_custom": 0,
                     "default_value": [],
-                    "allow_null": 0,
-                    "multiple": 1,
-                    "ui": 0,
+                    "layout": "vertical",
+                    "toggle": 0,
                     "return_format": "value",
-                    "ajax": 0,
-                    "placeholder": ""
+                    "save_custom": 0
                 },
                 {
                     "key": "field_61324a4f7a769",
@@ -5315,5 +5314,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1630699213
+    "modified": 1630971731
 }

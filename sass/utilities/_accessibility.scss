@@ -12,11 +12,16 @@
 	word-wrap: normal !important; // Many screen reader and browser combinations announce broken words as they would appear visually.
 
 	&:focus {
+		padding: 0 1rem !important;
+		-webkit-appearance: none !important;
+		border: 0 !important;
+		background-color: $off-white !important;
 		border-radius: 3px;
-		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 		clip: auto !important;
 		clip-path: none;
+		color: $primary-dark;
 		display: block;
+		font-size: 2rem !important;
 		font-weight: 700;
 		height: auto;
 		left: 5px;

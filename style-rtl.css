@@ -176,7 +176,8 @@ button {
   -webkit-text-fill-color: transparent; }
 
 .fab.fa-tiktok:hover {
-  text-shadow: 2px -2px 0 #25F4EE, -2px 2px 0 #FE2C55;
+  text-shadow: 2px -2px 0 #25F4EE,
+ -2px 2px 0 #FE2C55;
   color: #000; }
 
 /* Box sizing
@@ -770,7 +771,8 @@ textarea {
   transition-duration: 0.22s;
   transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
   .hamburger--spin .hamburger-inner::before {
-    transition: top 0.1s 0.25s ease-in, opacity 0.1s ease-in; }
+    transition: top 0.1s 0.25s ease-in,
+ opacity 0.1s ease-in; }
   .hamburger--spin .hamburger-inner::after {
     transition: bottom 0.1s 0.25s ease-in, transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19); }
 
@@ -781,7 +783,8 @@ textarea {
   .hamburger--spin.is-active .hamburger-inner::before {
     top: 0;
     opacity: 0;
-    transition: top 0.1s ease-out, opacity 0.1s 0.12s ease-out; }
+    transition: top 0.1s ease-out,
+ opacity 0.1s 0.12s ease-out; }
   .hamburger--spin.is-active .hamburger-inner::after {
     bottom: 0;
     transform: rotate(90deg);
@@ -799,7 +802,7 @@ textarea {
 --------------------------------------------- */
 /* Text meant only for screen readers. */
 .screen-reader-text {
-  border: 0;
+  /* border: 0;
   clip: rect(1px, 1px, 1px, 1px);
   clip-path: inset(50%);
   height: 1px;
@@ -807,10 +810,10 @@ textarea {
   overflow: hidden;
   padding: 0;
   position: absolute !important;
-  width: 1px;
+  width: 1px; */
   word-wrap: normal !important; }
   .screen-reader-text:focus {
-    border-radius: 3px;
+    /* border-radius: 3px;
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
     clip: auto !important;
     clip-path: none;
@@ -822,7 +825,7 @@ textarea {
     padding: 15px 23px 14px;
     text-decoration: none;
     top: 5px;
-    width: auto;
+    width: auto; */
     z-index: 100000; }
 
 /* Do not show the outline on the skip link target. */

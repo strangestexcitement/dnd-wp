@@ -68,7 +68,9 @@ if ( ! function_exists( 'dndest_header_style' ) ) :
 		else :
 			?>
 			.site-title a,
-			.site-description {
+			.site-description,
+			.main-navigation,
+			.site-header {
 				color: #<?php echo esc_attr( $header_text_color ); ?>;
 			}
 		<?php endif; ?>
