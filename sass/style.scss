@@ -25,92 +25,46 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-# Generic
-	- Normalize
-	- Box sizing
 # Base
-	- Typography
-	- Elements
-	- Links
-	- Forms
-## Layouts
+	- Mixins
+	- Color Variables
+	- Fonts/related variables
+	- Normalize
+	- Global Styles
 # Components
-	- Navigation
-	- Posts and pages
-	- Comments
-	- Widgets
-	- Media
-	- Captions
-	- Galleries
-# plugins
-	- Jetpack infinite scroll
-# Utilities
-	- Accessibility
-	- Alignments
-
+	- Components
+	- Archive Templates
+	- Single Templates
 --------------------------------------------------------------*/
-
-// Import variables and mixins.
-@import "abstracts/abstracts";
 
 /*--------------------------------------------------------------
-# Generic
+# Base
 --------------------------------------------------------------*/
+
+/* Mixins and variables
+--------------------------------------------- */
+@import "base/mixins";
+@import "base/colors";
+@import "base/typography";
 
 /* Normalize
 --------------------------------------------- */
-@import "generic/normalize";
+@import "base/normalize";
 
 /* Global Styles
 --------------------------------------------- */
-@import "generic/global-styles";
-
-/* Box sizing
---------------------------------------------- */
-@import "generic/box-sizing";
-
-/*--------------------------------------------------------------
-# Base
---------------------------------------------------------------*/
-@import "base/base";
-
-/*--------------------------------------------------------------
-# Layouts
---------------------------------------------------------------*/
-// @import "layouts/content-sidebar"; // Uncomment this line for a sidebar on right side of your content.
-// @import "layouts/sidebar-content"; // Uncomment this line for a sidebar on left side of your content.
+@import "base/global-styles";
 
 /*--------------------------------------------------------------
 # Components
 --------------------------------------------------------------*/
 @import "components/components";
 
-/*--------------------------------------------------------------
-# Plugins
---------------------------------------------------------------*/
-
-/* Jetpack infinite scroll
+/* Archive Templates
 --------------------------------------------- */
-// @import "plugins/jetpack/infinite-scroll";
+@import "archive-templates/archives";
 
-/*--------------------------------------------------------------
-# Utilities
---------------------------------------------------------------*/
-
-/* Accessibility
+/* Single templates
 --------------------------------------------- */
-@import "utilities/accessibility";
-
-/* Utilities
---------------------------------------------- */
-@import "utilities/utils";
-
-
-/* Archives
---------------------------------------------- */
-@import "archives/archives";
-
-/* Templates
---------------------------------------------- */
-@import "templates/templates";
+@import "single-templates/templates";
 

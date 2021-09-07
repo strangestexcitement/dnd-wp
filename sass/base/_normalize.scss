@@ -52,3 +52,13 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
