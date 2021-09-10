@@ -33,7 +33,13 @@
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
-			the_custom_logo();
+			$custom_logo_id = get_theme_mod( 'custom_logo' );
+			if($custom_logo_id) {
+				$site_url = get_site_url();
+				echo "<a href='$site_url' class='custom-logo-link'>";
+				echo getImageAttachment($custom_logo_id, 'medium');
+				echo "</a>";
+			}
 			?>
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php

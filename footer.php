@@ -13,10 +13,18 @@
 
 	<footer id="colophon" class="site-footer">
 		<div class="site-info">
-			<?php
-				the_custom_logo();
-			?>
-			<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+			<div class="site-branding">
+				<?php
+					$custom_logo_id = get_theme_mod( 'custom_logo' );
+					if($custom_logo_id) {
+						$site_url = get_site_url();
+						echo "<a href='$site_url' class='custom-logo-link'>";
+						echo getImageAttachment($custom_logo_id, 'medium');
+						echo "</a>";
+					}
+				?>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+			</div>
 			<nav id="site-navigation" class="footer-navigation">
 				<?php
 				wp_nav_menu(
