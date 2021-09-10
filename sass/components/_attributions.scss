@@ -104,6 +104,7 @@
     cursor: pointer;
     padding: 0;
     color: inherit;
+    @include link-scale-hover;
   }
 
   &__attribution {

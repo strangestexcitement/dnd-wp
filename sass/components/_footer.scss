@@ -30,6 +30,7 @@
     display: flex;
     align-items: center;
     column-gap: 1rem;
+    @include link-scale-hover;
 
     .custom-logo-link {
       flex-shrink: 0;

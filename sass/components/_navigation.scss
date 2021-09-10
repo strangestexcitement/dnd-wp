@@ -238,6 +238,7 @@
           padding-top: 1rem;
           padding-bottom: 0.8rem;
           display: block;
+          @include link-scale-hover;
           
           @include bp(tablet) {
             margin-right: 2rem;

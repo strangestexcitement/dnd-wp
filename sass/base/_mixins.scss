@@ -167,3 +167,15 @@ $breakpoints: (
 
 
 }
+
+@mixin link-scale-hover() {
+  transition: text-shadow 0.3s ease-out, transform 0.3s ease-out;
+          
+  &:hover {
+    @include bp(tablet) {
+      text-shadow: 0 6px 10px rgba(0,0,0,0.4),
+                    0 2px 4px rgba(0,0,0,0.8);
+      transform: scale(1.2);
+    }
+  }
+}
