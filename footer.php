@@ -53,7 +53,7 @@
 										?>
 											<div class="attributions__attribution">
 												<?php
-													echo wp_get_attachment_image($id, 'thumbnail', '', array('class' => 'attributions__attribution__thumnbnail'));
+													echo wp_get_attachment_image($id, 'thumbnail', '', array('class' => 'attributions__attribution__thumbnail'));
 													echo $attribution;
 												?>
 											</div>

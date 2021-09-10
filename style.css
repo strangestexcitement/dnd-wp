@@ -520,6 +520,14 @@ figure {
 	text-align: center;
 }
 
+.attributions__attribution__thumbnail, .attributions__attribution__text {
+	margin-top: auto;
+}
+
+.attributions__attribution__thumbnail {
+	margin-bottom: 1.6rem;
+}
+
 .attributions--show, .attributions:focus-within {
 	transition: z-index 0.3s step-start;
 	z-index: 11;
