@@ -91,10 +91,11 @@
     padding-right: 2rem;
     padding-left: 2rem;
     padding-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-row-gap: 0.8rem;
-    grid-column-gap: 0.8rem;    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 0.8rem;
+    column-gap: 0.8rem;    
   }
 
   &__trigger {
@@ -112,20 +113,55 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    min-width: 100px;
+    max-width: 300px;
+    flex: 1;
 
-    &__thumbnail, &__text {
-      margin-top: auto;
+    &__image-container {
+      flex: 1;
+      max-height: 150px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.6rem;
     }
 
-    &__thumbnail {
-      margin-bottom: 1.6rem;
+    &__text {
+      margin-top: auto;
+    }
+  }
+
+  &__additional-attributions {
+    font-size: 2rem;
+    flex-basis: 100%;
+    margin-top: 2rem;
+    
+    &__inner {
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    &__heading {
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    &__content {
+      @include bp(tablet) {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      p, a {
+        font-size: inherit;
+      }
     }
   }
 
   &--show, &:focus-within {
     transition: z-index 0.3s step-start;
     z-index: 11;
-
 
     #{$root} {
       &__overlay {

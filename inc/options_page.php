@@ -13,40 +13,25 @@ function game_settings_init() {
  
     // Register a new section in the "game" page.
     add_settings_section(
-        'game_section_people',
-        __( 'Game Details', 'game' ), 'game_section_details_callback',
+        'game_section_site_info',
+        __( 'Site Info', 'game' ), 'game_section_site_info_callback',
         'game'
     );
  
-    // Register a new field in the "game_section_people" section, inside the "game" page.
+    // Register a new field in the "game_section_site_info" section, inside the "game" page.
     add_settings_field(
-        'game_field_name', // As of WP 4.6 this value is used only internally.
+        'game_field_attributions', // As of WP 4.6 this value is used only internally.
                                 // Use $args' label_for to populate the id inside the callback.
-            __( 'Name', 'game' ),
-        'game_field_name_cb',
+            __( 'Attributions', 'game' ),
+        'game_field_attributions_cb',
         'game',
-        'game_section_people',
+        'game_section_site_info',
         array(
-            'label_for'         => 'game_field_name',
+            'label_for'         => 'game_field_attributions',
             'class'             => 'game_row',
             'game_custom_data' => 'custom',
         )
     );
-
-    // Register a new field in the "game_section_people" section, inside the "game" page.
-    add_settings_field(
-      'game_field_players', // As of WP 4.6 this value is used only internally.
-                              // Use $args' label_for to populate the id inside the callback.
-          __( 'Players', 'game' ),
-      'game_field_players_cb',
-      'game',
-      'game_section_people',
-      array(
-          'label_for'         => 'game_field_players',
-          'class'             => 'game_row',
-          'game_custom_data' => 'custom',
-      )
-  );
 }
  
 /**
@@ -66,14 +51,14 @@ add_action( 'admin_init', 'game_settings_init' );
  *
  * @param array $args  The settings array, defining title, id, callback.
  */
-function game_section_details_callback( $args ) {
+function game_section_site_info_callback( $args ) {
     ?>
-    <p id="<?php echo esc_attr( $args['id'] ); ?>"><?php esc_html_e( 'Enter the details about the game.', 'game' ); ?></p>
+    <p id="<?php echo esc_attr( $args['id'] ); ?>"><?php esc_html_e( 'Enter information about the site.', 'game' ); ?></p>
     <?php
 }
  
 /**
- * Pill field callbakc function.
+ * Attributions field callback function.
  *
  * WordPress has magic interaction with the following keys: label_for, class.
  * - the "label_for" key value is used for the "for" attribute of the <label>.
@@ -82,36 +67,25 @@ function game_section_details_callback( $args ) {
  *
  * @param array $args
  */
-function game_field_name_cb( $args ) {
+function game_field_attributions_cb( $args ) {
     // Get the value of the setting we've registered with register_setting()
     $options = get_option( 'game_options' );
-    $label = (esc_attr( $options[$args['label_for']] )) ? esc_attr( $options[$args['label_for']] ) : get_bloginfo('name');
+    $label = esc_attr( $args['label_for'] );
+    $content = $options[$label];
+    $name = "game_options[$label]";
+    $editor = array(
+        'textarea_rows' => 15,
+        'tabindex' => 1,
+        'id' => $label,
+        'media_buttons' => false,
+        'textarea_name' => $name,
+    );
+    wp_editor($content, $label, $editor);
     ?>
-    <input type="text" 
-            id="<?php echo esc_attr( $args['label_for'] ); ?>"
-            data-custom="<?php echo esc_attr( $args['game_custom_data'] ); ?>"
-            name="game_options[<?php echo esc_attr( $args['label_for'] ); ?>]"
-            value="<?php echo esc_attr( $label ); ?>">
     <p class="description">
-        <?php esc_html_e( 'Enter the name of the game.', 'game' ); ?>
+        <?php esc_html_e( 'Add any additional attributions and/or credits.', 'game' ); ?>
     </p>
     <?php
-}
-
-function game_field_players_cb( $args ) {
-  // Get the value of the setting we've registered with register_setting()
-  $options = get_option( 'game_options' );
-  ?>
-  <textarea 
-          id="<?php echo esc_attr( $args['label_for'] ); ?>"
-          data-custom="<?php echo esc_attr( $args['game_custom_data'] ); ?>"
-          name="game_options[<?php echo esc_attr( $args['label_for'] ); ?>]">
-<?php echo esc_attr( $options[$args['label_for']] ); ?>
-</textarea>
-  <p class="description">
-      <?php esc_html_e( 'Enter the players.', 'game' ); ?>
-  </p>
-  <?php
 }
  
 /**
@@ -122,7 +96,7 @@ function game_options_page() {
         'Game Options',
         'Game Options',
         'manage_options',
-        'game_options',
+        'game',
         'game_options_page_html'
     );
 }
@@ -169,5 +143,5 @@ function game_options_page_html() {
             ?>
         </form>
     </div>
-  <?php
+    <?php
 }

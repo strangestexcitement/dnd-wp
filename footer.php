@@ -44,7 +44,9 @@
 					<h2 class="attributions__heading">Attributions<a tabindex="0" class="attributions__close"></a></h2>
 					<div class="attributions__content">
 						<?php
-							if(empty($GLOBALS['attributions'])) {
+							$options = get_option( 'game_options' ); 
+							$additional_attributions = trim($options['game_field_attributions']);
+							if(empty($GLOBALS['attributions']) && !$additional_attributions) {
 								echo "<h3>No content on this page has attributions or credits.</h3>";
 							}
 							else {
@@ -52,13 +54,28 @@
 									if($attribution != null && trim($attribution) != "") {
 										?>
 											<div class="attributions__attribution">
-												<?php
-													echo wp_get_attachment_image($id, 'thumbnail', '', array('class' => 'attributions__attribution__thumbnail'));
-													echo $attribution;
-												?>
+												<div class="attributions__attribution__image-container">
+													<?= wp_get_attachment_image($id, 'thumbnail', '', array('class' => 'attributions__attribution__thumbnail')); ?>
+												</div>
+													<?= $attribution; ?>
 											</div>
 										<?php
 									}
+								}
+								if($additional_attributions && $additional_attributions != '&nbsp;') {
+									?>
+										<div class="attributions__additional-attributions">
+											<div class="attributions__additional-attributions__inner">
+												<h3 class="attributions__additional-attributions__heading">Additional Attributions and Credits</h3>
+												<div class="attributions__additional-attributions__content">
+													<?php
+														$additional_attributions = nl2br($additional_attributions);
+														echo( $additional_attributions );
+													?>
+												</div>
+											</div>
+										</div>
+									<?php
 								}
 							}
 						?>
