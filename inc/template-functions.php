@@ -142,6 +142,23 @@ function setField($field) {
 	}
 }
 
+function getDefaultCharImage() {
+	$options = get_option( 'game_options' ); 
+	$image_id = intval($options['game_field_default_character_image']);
+
+	if($image_id) {
+		$image = getImageAttachment($image_id, 'medium');
+		$character_image = $image;
+
+	}
+	else {
+		$imagepath = get_template_directory_uri() . "/images/defaults/default-character.jpg";
+		$character_image = "<img src='$imagepath' class='character__image--default'>";
+	}
+
+	return $character_image;
+}
+
 function listCharRelationships($relationshipArray) {
 	if($relationshipArray) {
 		$list = '<div class="relationships__list">';
@@ -180,8 +197,7 @@ function getCharCard($character_id) {
 		$character_image = "<div class='character__box__image'>$image</div>";
 	}
 	else {
-		$imagepath = get_template_directory_uri() . "/images/defaults/default-character.jpg";
-		$character_image = "<div class='character__box__image'><img src='$imagepath'></div>";
+		$character_image = "<div class='character__box__image'>" . getDefaultCharImage() . "</div>";
 	}
 
 	$card = "<a href='$character_link' class='character__box'>
