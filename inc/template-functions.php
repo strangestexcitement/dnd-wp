@@ -335,4 +335,5 @@ function getCharCard($character_id) {
 wp_enqueue_script( 'accordions', get_template_directory_uri().'/js/accordions.js', '', '', true );
 wp_enqueue_script( 'modals', get_template_directory_uri().'/js/modals.js', '', '', true );
 wp_enqueue_script( 'header', get_template_directory_uri().'/js/header.js', '', '', true );
-wp_enqueue_script( 'footer', get_template_directory_uri().'/js/footer.js', '', '', true );
+wp_enqueue_script( 'footer', get_template_directory_uri().'/js/footer.js', array('jquery'), '', true );
+wp_enqueue_script( 'options-page', get_template_directory_uri().'/js/options-page.js', '', '', true );

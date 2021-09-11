@@ -32,6 +32,21 @@ function game_settings_init() {
             'game_custom_data' => 'custom',
         )
     );
+
+    // Register a new field in the "game_section_site_info" section, inside the "game" page.
+    add_settings_field(
+        'game_field_default_character_image', // As of WP 4.6 this value is used only internally.
+                                // Use $args' label_for to populate the id inside the callback.
+            __( 'Default Character Image', 'game' ),
+        'game_field_default_character_image_cb',
+        'game',
+        'game_section_site_info',
+        array(
+            'label_for'         => 'game_field_default_character_image',
+            'class'             => 'game_row',
+            'game_custom_data' => 'custom',
+        )
+    );
 }
  
 /**
@@ -87,6 +102,49 @@ function game_field_attributions_cb( $args ) {
     </p>
     <?php
 }
+
+// default images
+
+
+
+function game_field_default_character_image_cb( $args ) {
+    $options = get_option( 'game_options' );
+    $label = esc_attr( $args['label_for'] );
+    $content = $options[$label];
+    $name = "game_options[$label]";
+
+	wp_enqueue_media();
+
+	?>
+    <form method='post'>
+		<div class='image-preview-wrapper'>
+			<img id='character-image-preview' src='<?php echo wp_get_attachment_url( intval($content)); ?>' height='100'>
+		</div>
+		<input id="upload_character_image_button" type="button" class="button upload_image_button" value="<?php _e( 'Select image' ); ?>" />
+		<input id="reset_character_image_button" type="button" class="button reset_image_to_default_button" value="<?php _e( 'Reset to default' ); ?>" />
+		<input type='hidden' name="<?= $name ?>" id='character_image_attachment_id' class='image_attachment_id' value='<?= $content ?>'>
+	</form>
+    <?php
+
+}
+
+add_action( 'admin_footer', 'media_selector_print_scripts' );
+
+function media_selector_print_scripts() {
+
+	$my_saved_attachment_post_id = get_option( 'media_selector_attachment_id', 0 );
+
+    
+
+}
+
+
+
+
+
+
+
+
  
 /**
  * Add the top level menu page.
