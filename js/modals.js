@@ -25,4 +25,13 @@
     attributionsClose.blur();
   });
 
+  const attributionLinks = document.querySelectorAll('.attributions__attribution a');
+  attributionLinks.forEach(link => {
+    link.target = "_blank";
+    link.addEventListener('click', event => {
+      document.querySelector('.attributions').classList.remove('attributions--show');
+      link.blur();
+    });
+  });
+
 }() );
