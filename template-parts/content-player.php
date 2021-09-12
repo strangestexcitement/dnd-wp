@@ -40,7 +40,7 @@
 				$image = getImageAttachment($player_image_id, "medium");
 			}
 			else {
-				$image = "<img src='$default_image' class='player__image--default'>";
+				$image = getDefaultPlayerImage();
 			}
 			$player_image = "<div class='player__image'>$image</div>";
 		

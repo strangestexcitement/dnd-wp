@@ -159,6 +159,23 @@ function getDefaultCharImage() {
 	return $character_image;
 }
 
+function getDefaultPlayerImage() {
+	$options = get_option( 'game_options' ); 
+	$image_id = intval($options['game_field_default_player_image']);
+
+	if($image_id) {
+		$image = getImageAttachment($image_id, 'medium');
+		$player_image = $image;
+
+	}
+	else {
+		$imagepath = get_template_directory_uri() . "/images/defaults/default-player.jpg";
+		$player_image = "<img src='$imagepath' class='player__image--default'>";
+	}
+
+	return $player_image;
+}
+
 function listCharRelationships($relationshipArray) {
 	if($relationshipArray) {
 		$list = '<div class="relationships__list">';

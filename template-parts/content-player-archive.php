@@ -20,14 +20,13 @@
 			$player_image_id = get_field('player_image');
 			$player_roles = get_field('player_roles');
 			$player_excerpt = get_field('player_excerpt');
-			$default_image = get_template_directory_uri() . "/images/defaults/default-player.jpg";
 			$link = get_permalink();
 
 			if($player_image_id) {
 				$image = getImageAttachment($player_image_id, "medium");
 			}
 			else {
-				$image = "<img src='$default_image' class='player__image--default'>";
+				$image = getDefaultPlayerImage();
 			}
 			$player_image = "<div class='player__image'>$image</div>";
 		
