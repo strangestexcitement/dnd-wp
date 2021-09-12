@@ -25,6 +25,10 @@
     if(subMenu) {
       element.addEventListener('mouseenter', event => {
         if(window.innerWidth >= 768) {
+          if(subMenu.getBoundingClientRect().right > window.innerWidth) {
+            subMenu.style.left = 'initial';
+            subMenu.style.right = '-1.5rem';
+          }
           gsap.to(subMenu, {height: "auto", duration: 0.67, ease: "power3.out"});
         }
       }); 
