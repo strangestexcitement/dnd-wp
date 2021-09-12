@@ -1516,12 +1516,34 @@ figure {
 
 .character__goals__inner {
 	max-width: 800px;
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.character__goals__inner .character__field {
+	text-align: left;
+}
+
+.character__goals__content {
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .character__desc__inner {
 	max-width: 800px;
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.character__desc__inner .character__field {
+	text-align: left;
+}
+
+.character__desc__content {
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .character__personality__content {
@@ -1618,7 +1640,18 @@ figure {
 
 .character__backstory__inner {
 	max-width: 800px;
-	margin: 0 auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.character__backstory__inner .character__field {
+	text-align: left;
+}
+
+.character__backstory__content {
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 @media (min-width: 768px) {
@@ -1805,8 +1838,34 @@ figure {
 	}
 }
 
+.character__features__inner {
+	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.character__features__inner .character__field {
+	text-align: left;
+}
+
+.character__features__content {
+	width: fit-content;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .character__magic__inner {
 	max-width: 800px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.character__magic__inner .character__field {
+	text-align: left;
+}
+
+.character__magic__content {
+	width: fit-content;
 	margin-left: auto;
 	margin-right: auto;
 }

@@ -55,15 +55,41 @@ $npc_bp: 400px;
   &__goals {
     &__inner {
       max-width: 800px;
-      margin: 0 auto;
+      margin-left: auto;
+      margin-right: auto;
+
+      .character {
+        &__field {
+          text-align: left;
+        }
+      }
+    }
+
+    &__content {
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
     // description section styling 
-    &__desc {
+  &__desc {
     &__inner {
       max-width: 800px;
-      margin: 0 auto;
+      margin-left: auto;
+      margin-right: auto;
+
+      .character {
+        &__field {
+          text-align: left;
+        }
+      }
+    }
+
+    &__content {
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
@@ -167,7 +193,20 @@ $npc_bp: 400px;
   &__backstory {
     &__inner {
       max-width: 800px;
-      margin: 0 auto;
+      margin-left: auto;
+      margin-right: auto;
+
+      .character {
+        &__field {
+          text-align: left;
+        }
+      }
+    }
+
+    &__content {
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
     }
   }
 
@@ -359,10 +398,43 @@ $npc_bp: 400px;
     }
   }
 
+  // features section styling
+  &__features {
+    &__inner {
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+
+      .character {
+        &__field {
+          text-align: left;
+        }
+      }
+    }
+
+    &__content {
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
   // magic section styling
   &__magic {
     &__inner {
       max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+
+      .character {
+        &__field {
+          text-align: left;
+        }
+      }
+    }
+
+    &__content {
+      width: fit-content;
       margin-left: auto;
       margin-right: auto;
     }

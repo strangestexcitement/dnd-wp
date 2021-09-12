@@ -192,6 +192,7 @@
 			$character_eyes = setField(get_field('character_eyes'));
 			$character_skin = setField(get_field('character_skin'));
 			$character_hair = setField(get_field('character_hair'));
+			$character_features_and_traits = setField(get_field('character_features_and_traits'));
 
 			// personality
 			$character_personality_traits = setField(get_field('character_personality_traits'));
@@ -446,6 +447,19 @@
 		</div>
 	<?php } ?>
 	<!-- End Capabilities -->
+
+	<!-- Features and Traits -->
+		<?php if($character_features_and_traits) { ?>
+		<div class="character__features character__module">
+			<div class="character__features__inner accordion">
+				<h2 tabindex="0" class="character__features__heading accordion__heading">Features and Traits</h2>
+				<div class="character__features__content accordion__content">
+					<?= ($character_features_and_traits) ? "<div class='character__field character__field__features'><p class='character__field__value'>$character_features_and_traits</p></div>" : "" ?>
+				</div>
+			</div>
+		</div>
+	<?php } ?>
+	<!-- End Features and Traits -->
 
 	<!-- Inventory -->
 	<?php if($character_inventory || $character_copper_pieces || $character_silver_pieces || $character_electrum_pieces || $character_gold_pieces || $character_platinum_pieces) { ?>

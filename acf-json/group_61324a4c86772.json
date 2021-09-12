@@ -3,6 +3,23 @@
     "title": "Character",
     "fields": [
         {
+            "key": "field_613e70806f05a",
+            "label": "Instructions",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Certain fields can have their visibility set to one of the following values:\r\n\r\nVisible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players\r\n\r\nIf the user is an admin and is logged in, they will see all fields as though they were set to visible",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
             "key": "field_61324a4c8f6d8",
             "label": "Basics",
             "name": "",
@@ -57,7 +74,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -143,7 +160,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -205,7 +222,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -267,7 +284,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -331,7 +348,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -393,7 +410,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -455,7 +472,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -517,7 +534,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -579,7 +596,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -641,7 +658,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -703,7 +720,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -765,7 +782,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -827,7 +844,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -907,7 +924,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -971,7 +988,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -1033,7 +1050,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -1526,7 +1543,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -1649,7 +1666,7 @@
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
-                            "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -1740,7 +1757,7 @@
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
-                            "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -1831,7 +1848,7 @@
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
-                            "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -1922,7 +1939,7 @@
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
-                            "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -2013,7 +2030,7 @@
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
-                            "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -2104,7 +2121,7 @@
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
-                            "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -2195,7 +2212,7 @@
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
-                            "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -2286,7 +2303,7 @@
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
-                            "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -2377,7 +2394,7 @@
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
-                            "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -2468,7 +2485,7 @@
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
-                            "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -2559,7 +2576,7 @@
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
-                            "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -2650,7 +2667,7 @@
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
-                            "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -2741,7 +2758,7 @@
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
-                            "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -2832,7 +2849,7 @@
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
-                            "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -2923,7 +2940,7 @@
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
-                            "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -3014,7 +3031,7 @@
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
-                            "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -3105,7 +3122,7 @@
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
-                            "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -3196,7 +3213,7 @@
                             "label": "Visibility",
                             "name": "visibility",
                             "type": "select",
-                            "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                            "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
@@ -3277,7 +3294,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -3339,7 +3356,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -3401,7 +3418,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -3463,7 +3480,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -3525,7 +3542,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -3603,7 +3620,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -3667,7 +3684,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -3731,7 +3748,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -3795,7 +3812,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -3859,7 +3876,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -3923,7 +3940,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -4001,7 +4018,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -4079,7 +4096,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -4141,7 +4158,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -4203,7 +4220,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -4265,7 +4282,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -4327,7 +4344,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -4389,7 +4406,69 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_613e72eb51f32",
+            "label": "Character Features and Traits",
+            "name": "character_features_and_traits",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_613e72eb51f33",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_613e72eb51f34",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -4456,7 +4535,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -4518,7 +4597,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -4596,7 +4675,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -4658,7 +4737,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -4720,7 +4799,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -4782,7 +4861,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -4853,7 +4932,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -4915,7 +4994,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -4986,7 +5065,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -5048,7 +5127,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -5126,7 +5205,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -5204,7 +5283,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -5266,7 +5345,7 @@
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
-                    "instructions": "Visible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players",
+                    "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
@@ -5314,5 +5393,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1630971731
+    "modified": 1631482660
 }
