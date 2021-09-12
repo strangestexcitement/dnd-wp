@@ -11,6 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+		<?php dndest_post_thumbnail(); ?>
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -29,35 +30,38 @@
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<?php dndest_post_thumbnail(); ?>
 
 	<div class="entry-content">
-		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'dndest' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
+		<div class="entry-content__inner">
+			<?php
+			the_content(
+				sprintf(
+					wp_kses(
+						/* translators: %s: Name of current post. Only visible to screen readers */
+						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'dndest' ),
+						array(
+							'span' => array(
+								'class' => array(),
+							),
+						)
+					),
+					wp_kses_post( get_the_title() )
+				)
+			);
 
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'dndest' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
+			wp_link_pages(
+				array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'dndest' ),
+					'after'  => '</div>',
+				)
+			);
+			?>
+		</div>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php dndest_entry_footer(); ?>
+		<div class="entry-footer__inner">
+			<?php dndest_entry_footer(); ?>
+		</div>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

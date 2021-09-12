@@ -10,9 +10,6 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php dndest_post_thumbnail(); ?>
-
-
 
 		<?php
 			$player_name = get_field('player_name');
