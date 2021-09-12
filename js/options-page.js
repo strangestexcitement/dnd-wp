@@ -7,26 +7,15 @@ jQuery( document ).ready( function( $ ) {
 
   imageSelectButtons.forEach(button => {
     button.addEventListener('click', event => {
-      const wrapper = button.parentNode;
+      const wrapper = event.target.parentNode;
       let id = wrapper.querySelector('.image_attachment_id');
       let set_to_post_id = id.value;
       let preview = wrapper.querySelector('.image-preview-wrapper img');
 
       event.preventDefault();
 
-      // If the media frame already exists, reopen it.
-      if ( file_frame ) {
-        // Set the post ID to what we want
-        file_frame.uploader.uploader.param( 'post_id', set_to_post_id );
-        // Open frame
-        file_frame.open();
-        return;
-      } else {
-        // Set the wp.media post id so the uploader grabs the ID we want when initialised
-        wp.media.model.settings.post.id = set_to_post_id;
-      }
-  
       // Create the media frame.
+      wp.media.model.settings.post.id = set_to_post_id;
       file_frame = wp.media.frames.file_frame = wp.media({
         title: 'Select a image to upload',
         button: {
@@ -34,15 +23,15 @@ jQuery( document ).ready( function( $ ) {
         },
         multiple: false	// Set to true to allow multiple files to be selected
       });
-  
+      
       // When an image is selected, run a callback.
       file_frame.on( 'select', function() {
         // We set multiple to false so only get one image from the uploader
         attachment = file_frame.state().get('selection').first().toJSON();
   
         // Do something with attachment.id and/or attachment.url here
-        $( preview ).attr( 'src', attachment.url ).css( 'width', 'auto' );
-        $( id ).val( attachment.id );
+        jQuery( preview ).attr( 'src', attachment.url ).css( 'width', 'auto' );
+        jQuery( id ).val( attachment.id );
   
         // Restore the main post ID
         wp.media.model.settings.post.id = wp_media_post_id;
@@ -59,8 +48,8 @@ jQuery( document ).ready( function( $ ) {
       const wrapper = button.parentNode;
       let id = wrapper.querySelector('.image_attachment_id');
       let preview = wrapper.querySelector('.image-preview-wrapper img');
-      $( id ).val("");
-      $( preview ).attr( 'src', "" ).css( 'width', 'auto' );
+      jQuery( id ).val("");
+      jQuery( preview ).attr( 'src', "" ).css( 'width', 'auto' );
     });
   });
 
