@@ -9,6 +9,8 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<?php 
 
+		// faith, religious_practices, armor_proficiencies, weapon_proficiencies
+
 			// general basics
 			$character_name = setField(get_field('character_name'));
 			$character_name = $character_name ? $character_name : get_the_title();
@@ -23,6 +25,7 @@
 			$character_level_text = $character_level ? "Level $character_level" : "";
 			$character_race = setField(get_field('character_race'));
 			$character_background = setField(get_field('character_background'));
+			$character_faith = setField(get_field('character_faith'));
 			$character_alignment = setField(get_field('character_alignment'));
 			$character_goals = setField(get_field('character_goals'));
 
@@ -88,6 +91,8 @@
 			$character_game_proficiencies = setField(get_field('character_game_proficiencies'));
 			$character_musical_instrument_proficiencies = setField(get_field('character_musical_instrument_proficiencies'));
 			$character_vehicle_proficiencies = setField(get_field('character_vehicle_proficiencies'));
+			$character_armor_proficiencies = setField(get_field('character_armor_proficiencies'));
+			$character_weapon_proficiencies = setField(get_field('character_weapon_proficiencies'));
 			$saving_throws = setField(get_field('character_saving_throws'));
 
 			if($saving_throws) {
@@ -192,6 +197,7 @@
 			$character_eyes = setField(get_field('character_eyes'));
 			$character_skin = setField(get_field('character_skin'));
 			$character_hair = setField(get_field('character_hair'));
+			$character_religious_practices = setField(get_field('character_religious_practices'));
 			$character_features_and_traits = setField(get_field('character_features_and_traits'));
 
 			// personality
@@ -273,7 +279,8 @@
 
 	<!-- Basics -->
 	<?php if($character_background || $character_aliases || $character_gender_pronouns || $character_alignment || $character_age ||
-						$character_birthday || $character_height || $character_weight || $character_body_type || $character_eyes || $character_skin || $character_hair) { ?>
+						$character_birthday || $character_height || $character_weight || $character_body_type || $character_eyes || $character_skin || $character_hair ||
+						$character_faith || $character_religious_practices) { ?>
 		<div class="character__basics character__module">
 			<div class="character__basics__inner accordion">
 				<h2 tabindex="0" class="character__basics__heading accordion__heading">Basics</h2>
@@ -290,6 +297,8 @@
 					<?= ($character_eyes) ? "<div class='character__field character__field__eyes'><h3 class='character__field__label'>EYES:</h3><p class='character__field__value'>$character_eyes</p></div>" : "" ?>
 					<?= ($character_skin) ? "<div class='character__field character__field__skin'><h3 class='character__field__label'>SKIN:</h3><p class='character__field__value'>$character_skin</p></div>" : "" ?>
 					<?= ($character_hair) ? "<div class='character__field character__field__hair'><h3 class='character__field__label'>HAIR:</h3><p class='character__field__value'>$character_hair</p></div>" : "" ?>
+					<?= ($character_faith) ? "<div class='character__field character__field__faith'><h3 class='character__field__label'>FAITH:</h3><p class='character__field__value'>$character_faith</p></div>" : "" ?>
+					<?= ($character_religious_practices) ? "<div class='character__field character__field__religious_practices'><h3 class='character__field__label'>RELIGIOUS PRACTICES:</h3><div class='character__field__value'>$character_religious_practices</div></div>" : "" ?>
 				</div>
 			</div>
 		</div>
@@ -432,11 +441,13 @@
 							?>
 						</div>
 					<?php } ?>
-					<?php if($character_languages || $character_tool_proficiencies || $character_game_proficiencies || $character_musical_instrument_proficiencies || $character_vehicle_proficiencies) { ?>
+					<?php if($character_languages || $character_tool_proficiencies || $character_game_proficiencies || $character_musical_instrument_proficiencies || $character_vehicle_proficiencies || $character_armor_proficiencies || $character_weapon_proficiencies) { ?>
 						<div class="character__capabilities__misc">
 							<h3 class="character__capabilities__subheading">Other Proficiencies</h3>
 							<?= ($character_languages) ? "<div class='character__field character__field__languages'><h3 class='character__field__label'>Languages:</h3><div class='character__field__value'>$character_languages</div></div>" : "" ?>
 							<?= ($character_tool_proficiencies) ? "<div class='character__field character__field__tools'><h3 class='character__field__label'>Tools:</h3><div class='character__field__value'>$character_tool_proficiencies</div></div>" : "" ?>
+							<?= ($character_weapon_proficiencies) ? "<div class='character__field character__field__weapons'><h3 class='character__field__label'>Weapons:</h3><div class='character__field__value'>$character_weapon_proficiencies</div></div>" : "" ?>
+							<?= ($character_armor_proficiencies) ? "<div class='character__field character__field__armors'><h3 class='character__field__label'>Armor:</h3><div class='character__field__value'>$character_armor_proficiencies</div></div>" : "" ?>
 							<?= ($character_game_proficiencies) ? "<div class='character__field character__field__games'><h3 class='character__field__label'>Games:</h3><div class='character__field__value'>$character_game_proficiencies</div></div>" : "" ?>
 							<?= ($character_musical_instrument_proficiencies) ? "<div class='character__field character__field__instruments'><h3 class='character__field__label'>Instruments:</h3><div class='character__field__value'>$character_musical_instrument_proficiencies</div></div>" : "" ?>
 							<?= ($character_vehicle_proficiencies) ? "<div class='character__field character__field__vehicles'><h3 class='character__field__label'>Vehicles:</h3><div class='character__field__value'>$character_vehicle_proficiencies</div></div>" : "" ?>

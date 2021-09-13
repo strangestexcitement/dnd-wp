@@ -372,6 +372,68 @@
             ]
         },
         {
+            "key": "field_61324a4cbbe14",
+            "label": "Character Occupation",
+            "name": "character_occupation",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_61324a4e589bb",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_61324a4e5c5cb",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
             "key": "field_61324a4ca967f",
             "label": "Character Gender\/Pronouns",
             "name": "character_gender_pronouns",
@@ -682,9 +744,9 @@
             ]
         },
         {
-            "key": "field_61324a4cbbe14",
-            "label": "Character Occupation",
-            "name": "character_occupation",
+            "key": "field_613fdd1a8d4cd",
+            "label": "Character Faith",
+            "name": "character_faith",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -697,7 +759,7 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_61324a4e589bb",
+                    "key": "field_613fdd1a8d4ce",
                     "label": "Value",
                     "name": "value",
                     "type": "text",
@@ -716,7 +778,7 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_61324a4e5c5cb",
+                    "key": "field_613fdd1a8d4cf",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -3318,6 +3380,130 @@
             ]
         },
         {
+            "key": "field_613fde1f8d4d3",
+            "label": "Character Armor Proficiencies",
+            "name": "character_armor_proficiencies",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_613fde1f8d4d4",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_613fde1f8d4d5",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_613fde328d4d6",
+            "label": "Character Weapon Proficiencies",
+            "name": "character_weapon_proficiencies",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_613fde328d4d7",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_613fde328d4d8",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
             "key": "field_61324a4cef97e",
             "label": "Character Tool Proficiencies",
             "name": "character_tool_proficiencies",
@@ -4430,6 +4616,68 @@
             ]
         },
         {
+            "key": "field_613fdd808d4d0",
+            "label": "Character Religious Practices",
+            "name": "character_religious_practices",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_613fdd808d4d1",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_613fdd808d4d2",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
             "key": "field_613e72eb51f32",
             "label": "Character Features and Traits",
             "name": "character_features_and_traits",
@@ -5393,5 +5641,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631482660
+    "modified": 1631576002
 }
