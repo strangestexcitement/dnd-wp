@@ -218,8 +218,6 @@ function getCharCard($character_id) {
 		$character_image = "<div class='character__box__image'>" . getDefaultCharImage() . "</div>";
 	}
 
-	var_dump($character_id);
-
 	$card = "<a href='$character_link' class='character__box'>
 						<div class='character__box__card'>";
 	$card .= ($character_name) ? "<h2 class='entry-title character__box__name'>$character_name</h2>" : "";
