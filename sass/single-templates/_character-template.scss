@@ -170,13 +170,26 @@ $npc_bp: 400px;
               left: 50%;
               transform: translateX(-50%);
 
-              @include bp(desktop) {
+              @include bp(tablet) {
                 width: 1px;
                 height: 80%;
                 top: 50%;
                 right: -1.2rem;
                 left: initial;
                 transform: translate(50%, -50%);
+              }
+            }
+          }
+
+          &__allies, &__enemies {
+            @include bp(tablet) {
+              display: flex;
+              flex-direction: column;
+            }
+
+            .character__relationships__subheading + .character__field__value {
+              @include bp(tablet) {
+                flex: 1;
               }
             }
           }

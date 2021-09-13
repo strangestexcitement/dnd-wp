@@ -199,6 +199,7 @@ function getCharCard($character_id) {
 	$character_link = get_permalink($character_id);
 
 	$character_name = setField(get_field('character_name', $character_id));
+	$character_name = $character_name ? $character_name : get_the_title($character_id);
 	$character_occupation = setField(get_field('character_occupation', $character_id));
 
 	$character_class = setField(get_field('character_class', $character_id));
@@ -216,6 +217,8 @@ function getCharCard($character_id) {
 	else {
 		$character_image = "<div class='character__box__image'>" . getDefaultCharImage() . "</div>";
 	}
+
+	var_dump($character_id);
 
 	$card = "<a href='$character_link' class='character__box'>
 						<div class='character__box__card'>";

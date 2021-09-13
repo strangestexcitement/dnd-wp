@@ -9,7 +9,8 @@
   @include bp(tablet) {
     column-gap: 1.6rem;
     row-gap: 1.6rem;
-    margin-bottom: 2.4rem;
+    height: 100%;
+    padding-bottom: 2.4rem;
   }
 
   .character {

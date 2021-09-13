@@ -767,7 +767,8 @@ figure {
 	.relationships__list {
 		column-gap: 1.6rem;
 		row-gap: 1.6rem;
-		margin-bottom: 2.4rem;
+		height: 100%;
+		padding-bottom: 2.4rem;
 	}
 }
 
@@ -1623,7 +1624,7 @@ figure {
 	transform: translateX(-50%);
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
 	.character__relationships__content .character__field:first-of-type::after {
 		width: 1px;
 		height: 80%;
@@ -1631,6 +1632,19 @@ figure {
 		right: -1.2rem;
 		left: initial;
 		transform: translate(50%, -50%);
+	}
+}
+
+@media (min-width: 768px) {
+	.character__relationships__content .character__field__allies, .character__relationships__content .character__field__enemies {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+@media (min-width: 768px) {
+	.character__relationships__content .character__field__allies .character__relationships__subheading + .character__field__value, .character__relationships__content .character__field__enemies .character__relationships__subheading + .character__field__value {
+		flex: 1;
 	}
 }
 
