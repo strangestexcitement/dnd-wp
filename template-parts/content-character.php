@@ -190,6 +190,16 @@
 				ksort($character_proficiencies);
 			}
 
+			function getProfDiv($array, $label) {
+					$str = ucwords($label);
+					$result = "<div class='character__field character__field__$label'><h3 class='character__field__label'>$str:</h3>";
+						foreach($array as $prof) {
+							$result .= "<p class='character__field__value'>$prof</p>";
+						}
+					$result .= "</div>";
+					return $result;
+			}
+
 			// details
 			$character_height = setField(get_field('character_height'));
 			$character_weight = setField(get_field('character_weight'));
@@ -445,12 +455,12 @@
 						<div class="character__capabilities__misc">
 							<h3 class="character__capabilities__subheading">Other Proficiencies</h3>
 							<?= ($character_languages) ? "<div class='character__field character__field__languages'><h3 class='character__field__label'>Languages:</h3><div class='character__field__value'>$character_languages</div></div>" : "" ?>
-							<?= ($character_tool_proficiencies) ? "<div class='character__field character__field__tools'><h3 class='character__field__label'>Tools:</h3><div class='character__field__value'>$character_tool_proficiencies</div></div>" : "" ?>
-							<?= ($character_weapon_proficiencies) ? "<div class='character__field character__field__weapons'><h3 class='character__field__label'>Weapons:</h3><div class='character__field__value'>$character_weapon_proficiencies</div></div>" : "" ?>
-							<?= ($character_armor_proficiencies) ? "<div class='character__field character__field__armors'><h3 class='character__field__label'>Armor:</h3><div class='character__field__value'>$character_armor_proficiencies</div></div>" : "" ?>
-							<?= ($character_game_proficiencies) ? "<div class='character__field character__field__games'><h3 class='character__field__label'>Games:</h3><div class='character__field__value'>$character_game_proficiencies</div></div>" : "" ?>
-							<?= ($character_musical_instrument_proficiencies) ? "<div class='character__field character__field__instruments'><h3 class='character__field__label'>Instruments:</h3><div class='character__field__value'>$character_musical_instrument_proficiencies</div></div>" : "" ?>
-							<?= ($character_vehicle_proficiencies) ? "<div class='character__field character__field__vehicles'><h3 class='character__field__label'>Vehicles:</h3><div class='character__field__value'>$character_vehicle_proficiencies</div></div>" : "" ?>
+							<?= ($character_tool_proficiencies) ? getProfDiv($character_tool_proficiencies, 'tools'): "" ?>
+							<?= ($character_weapon_proficiencies) ? getProfDiv($character_weapon_proficiencies, 'weapons'): "" ?>
+							<?= ($character_armor_proficiencies) ? getProfDiv($character_armor_proficiencies, 'armor'): "" ?>
+							<?= ($character_game_proficiencies) ? getProfDiv($character_game_proficiencies, 'games'): "" ?>
+							<?= ($character_musical_instrument_proficiencies) ? getProfDiv($character_musical_instrument_proficiencies, 'musical instruments'): "" ?>
+							<?= ($character_vehicle_proficiencies) ? getProfDiv($character_vehicle_proficiencies, 'vehicles'): "" ?>
 						</div>
 					<?php } ?>
 				</div>

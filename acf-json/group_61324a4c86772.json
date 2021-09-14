@@ -3380,68 +3380,6 @@
             ]
         },
         {
-            "key": "field_613fde1f8d4d3",
-            "label": "Character Armor Proficiencies",
-            "name": "character_armor_proficiencies",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_613fde1f8d4d4",
-                    "label": "Value",
-                    "name": "value",
-                    "type": "wysiwyg",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "80",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 1,
-                    "delay": 0
-                },
-                {
-                    "key": "field_613fde1f8d4d5",
-                    "label": "Visibility",
-                    "name": "visibility",
-                    "type": "select",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "20",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "Visible": "Visible",
-                        "Partially visible": "Partially visible",
-                        "Hidden": "Hidden"
-                    },
-                    "default_value": "Visible",
-                    "allow_null": 0,
-                    "multiple": 0,
-                    "ui": 1,
-                    "ajax": 0,
-                    "return_format": "value",
-                    "placeholder": ""
-                }
-            ]
-        },
-        {
             "key": "field_613fde328d4d6",
             "label": "Character Weapon Proficiencies",
             "name": "character_weapon_proficiencies",
@@ -3460,7 +3398,7 @@
                     "key": "field_613fde328d4d7",
                     "label": "Value",
                     "name": "value",
-                    "type": "wysiwyg",
+                    "type": "checkbox",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -3469,11 +3407,16 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 1,
-                    "delay": 0
+                    "choices": {
+                        "Simple Weapons": "Simple Weapons",
+                        "Martial Weapons": "Martial Weapons"
+                    },
+                    "allow_custom": 1,
+                    "save_custom": 1,
+                    "default_value": [],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value"
                 },
                 {
                     "key": "field_613fde328d4d8",
@@ -3504,7 +3447,76 @@
             ]
         },
         {
-            "key": "field_61324a4cef97e",
+            "key": "field_613fe62f645e2",
+            "label": "Character Armor Proficiencies",
+            "name": "character_armor_proficiencies",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_613fe62f645e3",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Light Armor": "Light Armor",
+                        "Medium Armor": "Medium Armor",
+                        "Heavy Armor": "Heavy Armor",
+                        "Shields": "Shields"
+                    },
+                    "allow_custom": 1,
+                    "save_custom": 1,
+                    "default_value": [],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_613fe62f645e4",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_613fe6f62826e",
             "label": "Character Tool Proficiencies",
             "name": "character_tool_proficiencies",
             "type": "group",
@@ -3519,10 +3531,10 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_61324a51d94f4",
+                    "key": "field_613fe6f62826f",
                     "label": "Value",
                     "name": "value",
-                    "type": "wysiwyg",
+                    "type": "checkbox",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -3531,14 +3543,36 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 1,
-                    "delay": 0
+                    "choices": {
+                        "Alchemist’s Supplies": "Alchemist’s Supplies",
+                        "Brewer’s Supplies": "Brewer’s Supplies",
+                        "Calligrapher's Supplies": "Calligrapher's Supplies",
+                        "Carpenter’s Tools": "Carpenter’s Tools",
+                        "Cartographer’s Tools": "Cartographer’s Tools",
+                        "Cobbler’s Tools": "Cobbler’s Tools",
+                        "Cook’s Utensils": "Cook’s Utensils",
+                        "Glassblower’s Tools": "Glassblower’s Tools",
+                        "Jeweler’s Tools": "Jeweler’s Tools",
+                        "Leatherworker’s Tools": "Leatherworker’s Tools",
+                        "Mason’s Tools": "Mason’s Tools",
+                        "Navigator's Tools": "Navigator's Tools",
+                        "Painter’s Supplies": "Painter’s Supplies",
+                        "Potter’s Tools": "Potter’s Tools",
+                        "Smith’s Tools": "Smith’s Tools",
+                        "Thieves' Tools": "Thieves' Tools",
+                        "Tinker’s Tools": "Tinker’s Tools",
+                        "Weaver’s Tools": "Weaver’s Tools",
+                        "Woodcarver’s Tools": "Woodcarver’s Tools"
+                    },
+                    "allow_custom": 1,
+                    "save_custom": 1,
+                    "default_value": [],
+                    "layout": "",
+                    "toggle": 0,
+                    "return_format": ""
                 },
                 {
-                    "key": "field_61324a51dd0f0",
+                    "key": "field_613fe6f628270",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -3566,7 +3600,7 @@
             ]
         },
         {
-            "key": "field_61324a4cf3339",
+            "key": "field_613fe9a5bbf80",
             "label": "Character Game Proficiencies",
             "name": "character_game_proficiencies",
             "type": "group",
@@ -3581,10 +3615,10 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_61324a51ebf0d",
+                    "key": "field_613fe9a5bbf81",
                     "label": "Value",
                     "name": "value",
-                    "type": "wysiwyg",
+                    "type": "checkbox",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -3593,14 +3627,21 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 1,
-                    "delay": 0
+                    "choices": {
+                        "Dice": "Dice",
+                        "Dragonchess": "Dragonchess",
+                        "Playing Cards": "Playing Cards",
+                        "Three-Dragon Ante": "Three-Dragon Ante"
+                    },
+                    "allow_custom": 1,
+                    "save_custom": 1,
+                    "default_value": [],
+                    "layout": "",
+                    "toggle": 0,
+                    "return_format": ""
                 },
                 {
-                    "key": "field_61324a51ef981",
+                    "key": "field_613fe9a5bbf82",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -3628,7 +3669,7 @@
             ]
         },
         {
-            "key": "field_61324a4d02d1a",
+            "key": "field_613fea48bbf83",
             "label": "Character Musical Instrument Proficiencies",
             "name": "character_musical_instrument_proficiencies",
             "type": "group",
@@ -3643,10 +3684,10 @@
             "layout": "block",
             "sub_fields": [
                 {
-                    "key": "field_61324a520ab4f",
+                    "key": "field_613fea48bbf84",
                     "label": "Value",
                     "name": "value",
-                    "type": "wysiwyg",
+                    "type": "checkbox",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -3655,14 +3696,27 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 1,
-                    "delay": 0
+                    "choices": {
+                        "Bagpipes": "Bagpipes",
+                        "Drum": "Drum",
+                        "Dulcimer": "Dulcimer",
+                        "Flute": "Flute",
+                        "Lute": "Lute",
+                        "Lyre": "Lyre",
+                        "Horn": "Horn",
+                        "Pan flute": "Pan flute",
+                        "Shawm": "Shawm",
+                        "Viol": "Viol"
+                    },
+                    "allow_custom": 1,
+                    "save_custom": 1,
+                    "default_value": [],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value"
                 },
                 {
-                    "key": "field_61324a520e520",
+                    "key": "field_613fea48bbf85",
                     "label": "Visibility",
                     "name": "visibility",
                     "type": "select",
@@ -3708,7 +3762,7 @@
                     "key": "field_61324a521ce11",
                     "label": "Value",
                     "name": "value",
-                    "type": "wysiwyg",
+                    "type": "checkbox",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -3717,11 +3771,16 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 1,
-                    "delay": 0
+                    "choices": {
+                        "Land": "Land",
+                        "Water": "Water"
+                    },
+                    "allow_custom": 1,
+                    "save_custom": 1,
+                    "default_value": [],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value"
                 },
                 {
                     "key": "field_61324a5220a0c",
@@ -5641,5 +5700,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1631576002
+    "modified": 1631578893
 }
