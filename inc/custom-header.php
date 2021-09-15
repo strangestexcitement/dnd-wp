@@ -8,39 +8,39 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package dndest
+ * @package dndwp
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses dndest_header_style()
+ * @uses dndwp_header_style()
  */
-function dndest_custom_header_setup() {
+function dndwp_custom_header_setup() {
 	add_theme_support(
 		'custom-header',
 		apply_filters(
-			'dndest_custom_header_args',
+			'dndwp_custom_header_args',
 			array(
 				'default-image'      => '',
 				'default-text-color' => '000000',
 				'width'              => 1000,
 				'height'             => 250,
 				'flex-height'        => true,
-				'wp-head-callback'   => 'dndest_header_style',
+				'wp-head-callback'   => 'dndwp_header_style',
 			)
 		)
 	);
 }
-add_action( 'after_setup_theme', 'dndest_custom_header_setup' );
+add_action( 'after_setup_theme', 'dndwp_custom_header_setup' );
 
-if ( ! function_exists( 'dndest_header_style' ) ) :
+if ( ! function_exists( 'dndwp_header_style' ) ) :
 	/**
 	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @see dndest_custom_header_setup().
+	 * @see dndwp_custom_header_setup().
 	 */
-	function dndest_header_style() {
+	function dndwp_header_style() {
 		$header_text_color = get_header_textcolor();
 
 		/*

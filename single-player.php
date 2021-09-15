@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single Player posts
  *
- * @package dndest
+ * @package dndwp
  */
 
 get_header();

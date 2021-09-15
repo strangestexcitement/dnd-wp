@@ -4,14 +4,14 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package dndest
+ * @package dndwp
  */
 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php dndest_post_thumbnail(); ?>
+		<?php dndwp_post_thumbnail(); ?>
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -23,8 +23,8 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				dndest_posted_on();
-				dndest_posted_by();
+				dndwp_posted_on();
+				dndwp_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
@@ -38,7 +38,7 @@
 				sprintf(
 					wp_kses(
 						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'dndest' ),
+						__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'dndwp' ),
 						array(
 							'span' => array(
 								'class' => array(),
@@ -51,7 +51,7 @@
 
 			wp_link_pages(
 				array(
-					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'dndest' ),
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'dndwp' ),
 					'after'  => '</div>',
 				)
 			);
@@ -61,7 +61,7 @@
 
 	<footer class="entry-footer">
 		<div class="entry-footer__inner">
-			<?php dndest_entry_footer(); ?>
+			<?php dndwp_entry_footer(); ?>
 		</div>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

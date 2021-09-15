@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package dndest
+ * @package dndwp
  */
 
  //reset attributions array on each page load
@@ -28,7 +28,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'dndest' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'dndwp' ); ?></a>
 
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
@@ -43,10 +43,10 @@
 			?>
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php
-			$dndest_description = get_bloginfo( 'description', 'display' );
-			if ( $dndest_description || is_customize_preview() ) :
+			$dndwp_description = get_bloginfo( 'description', 'display' );
+			if ( $dndwp_description || is_customize_preview() ) :
 				?>
-				<p class="site-description"><?php echo $dndest_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+				<p class="site-description"><?php echo $dndwp_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 

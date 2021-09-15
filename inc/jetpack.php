@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package dndest
+ * @package dndwp
  */
 
 /**
@@ -14,13 +14,13 @@
  * See: https://jetpack.com/support/responsive-videos/
  * See: https://jetpack.com/support/content-options/
  */
-function dndest_jetpack_setup() {
+function dndwp_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support(
 		'infinite-scroll',
 		array(
 			'container' => 'main',
-			'render'    => 'dndest_infinite_scroll_render',
+			'render'    => 'dndwp_infinite_scroll_render',
 			'footer'    => 'page',
 		)
 	);
@@ -33,7 +33,7 @@ function dndest_jetpack_setup() {
 		'jetpack-content-options',
 		array(
 			'post-details' => array(
-				'stylesheet' => 'dndest-style',
+				'stylesheet' => 'dndwp-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
 				'tags'       => '.tags-links',
@@ -48,12 +48,12 @@ function dndest_jetpack_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'dndest_jetpack_setup' );
+add_action( 'after_setup_theme', 'dndwp_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function dndest_infinite_scroll_render() {
+function dndwp_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :
