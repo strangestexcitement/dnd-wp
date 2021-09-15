@@ -2,7 +2,7 @@
 /**
  * Functions which enhance the theme by hooking into WordPress
  *
- * @package dndest
+ * @package dndwp
  */
 
   @require_once(get_theme_file_path('/inc/options_page.php'));
@@ -16,7 +16,7 @@
  * @param array $classes Classes for the body element.
  * @return array
  */
-function dndest_body_classes( $classes ) {
+function dndwp_body_classes( $classes ) {
 	// Adds a class of hfeed to non-singular pages.
 	if ( ! is_singular() ) {
 		$classes[] = 'hfeed';
@@ -29,17 +29,17 @@ function dndest_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'dndest_body_classes' );
+add_filter( 'body_class', 'dndwp_body_classes' );
 
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
  */
-function dndest_pingback_header() {
+function dndwp_pingback_header() {
 	if ( is_singular() && pings_open() ) {
 		printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
 	}
 }
-add_action( 'wp_head', 'dndest_pingback_header' );
+add_action( 'wp_head', 'dndwp_pingback_header' );
 
 // NPC custom post type function
 function create_npc_posttype() {

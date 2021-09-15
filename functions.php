@@ -1,10 +1,10 @@
 <?php
 /**
- * dndest functions and definitions
+ * dndwp functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package dndest
+ * @package dndwp
  */
 
 if ( ! defined( '_S_VERSION' ) ) {
@@ -12,7 +12,7 @@ if ( ! defined( '_S_VERSION' ) ) {
 	define( '_S_VERSION', '1.0.0' );
 }
 
-if ( ! function_exists( 'dndest_setup' ) ) :
+if ( ! function_exists( 'dndwp_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -20,14 +20,14 @@ if ( ! function_exists( 'dndest_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function dndest_setup() {
+	function dndwp_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on dndest, use a find and replace
-		 * to change 'dndest' to the name of your theme in all the template files.
+		 * If you're building a theme based on dndwp, use a find and replace
+		 * to change 'dndwp' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'dndest', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'dndwp', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -50,8 +50,8 @@ if ( ! function_exists( 'dndest_setup' ) ) :
 		// This theme uses wp_nav_menu() in two locations.
 		register_nav_menus(
 			array(
-				'menu-1' => esc_html__( 'Primary', 'dndest' ),
-				'menu-2' => esc_html__( 'Secondary', 'dndest' )
+				'menu-1' => esc_html__( 'Primary', 'dndwp' ),
+				'menu-2' => esc_html__( 'Secondary', 'dndwp' )
 			)
 		);
 
@@ -76,7 +76,7 @@ if ( ! function_exists( 'dndest_setup' ) ) :
 		add_theme_support(
 			'custom-background',
 			apply_filters(
-				'dndest_custom_background_args',
+				'dndwp_custom_background_args',
 				array(
 					'default-color' => 'FCF5E5',
 					'default-image' => '',
@@ -103,7 +103,7 @@ if ( ! function_exists( 'dndest_setup' ) ) :
 		);
 	}
 endif;
-add_action( 'after_setup_theme', 'dndest_setup' );
+add_action( 'after_setup_theme', 'dndwp_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -112,22 +112,22 @@ add_action( 'after_setup_theme', 'dndest_setup' );
  *
  * @global int $content_width
  */
-function dndest_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'dndest_content_width', 640 );
+function dndwp_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'dndwp_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'dndest_content_width', 0 );
+add_action( 'after_setup_theme', 'dndwp_content_width', 0 );
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function dndest_widgets_init() {
+function dndwp_widgets_init() {
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'dndest' ),
+			'name'          => esc_html__( 'Sidebar', 'dndwp' ),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'dndest' ),
+			'description'   => esc_html__( 'Add widgets here.', 'dndwp' ),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -135,22 +135,22 @@ function dndest_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'dndest_widgets_init' );
+add_action( 'widgets_init', 'dndwp_widgets_init' );
 
 /**
  * Enqueue scripts and styles.
  */
-function dndest_scripts() {
-	wp_enqueue_style( 'dndest-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'dndest-style', 'rtl', 'replace' );
+function dndwp_scripts() {
+	wp_enqueue_style( 'dndwp-style', get_stylesheet_uri(), array(), _S_VERSION );
+	wp_style_add_data( 'dndwp-style', 'rtl', 'replace' );
 
-	wp_enqueue_script( 'dndest-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
+	wp_enqueue_script( 'dndwp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'dndest_scripts' );
+add_action( 'wp_enqueue_scripts', 'dndwp_scripts' );
 
 /**
  * Implement the Custom Header feature.

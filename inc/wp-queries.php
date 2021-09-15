@@ -2,7 +2,7 @@
 /**
  * WP Queries
  *
- * @package dndest
+ * @package dndwp
  */
 
 /**

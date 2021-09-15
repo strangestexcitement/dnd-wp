@@ -2,7 +2,7 @@
 /**
  * The template for displaying PC archive pages
  *
- * @package dndest
+ * @package dndwp
  */
 
 get_header();
