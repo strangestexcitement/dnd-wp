@@ -229,6 +229,7 @@
 
 			// extra notes
 			$character_additional_notes = setField(get_field('character_additional_notes'));
+			$character_dnd_beyond = setField(get_field('character_dnd_beyond'));
 			$character_links = setField(get_field('character_links'));
 			$character_symbol_desc = setField(get_field('character_symbol_description'));
 
@@ -518,13 +519,18 @@
 	<!-- End Magic -->
 
 		<!-- Additional Notes -->
-		<?php if($character_additional_notes || $character_links) { ?>
+		<?php if($character_additional_notes || $character_links || $character_dnd_beyond) { ?>
 		<div class="character__additional-notes character__module">
 			<div class="character__additional-notes__inner accordion">
 				<h2 tabindex="0" class="character__additional-notes__heading accordion__heading">Additional Notes</h2>
 				<div class="character__additional-notes__content accordion__content">
 					<?= ($character_additional_notes) ? "<div class='character__field character__field__additional-notes'><p class='character__field__value'>$character_additional_notes</p></div>" : "" ?>
-					<?= ($character_links) ? "<div class='character__field character__field__links'><h3 class='character__field__label'>LINKS:</h3><p class='character__field__value'>$character_links</p></div>" : "" ?>
+					<?php if($character_dnd_beyond || $character_links) { ?>
+						<div class='character__field character__field__links'><h3 class='character__field__label'>LINKS:</h3>
+						<?= ($character_dnd_beyond) ? "<p class='character__field__value'><a href='$character_dnd_beyond' target='_blank'><span class='fab fa-d-and-d'></span></a></p>" : "" ?>
+						<?= ($character_links) ? "<div class='character__field__value'>$character_links</div>" : "" ?>
+						</div>
+					<?php } ?>
 				</div>
 			</div>
 		</div>
