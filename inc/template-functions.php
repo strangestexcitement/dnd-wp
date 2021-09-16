@@ -300,7 +300,7 @@ function getCharCard($character_id) {
 			<ul id="menu" class="menu">
 				<?php
 				foreach($ids as $key => $info) {
-					if(count($ids[$key]['group']) > 0) {
+					if($ids[$key]['group'] && count($ids[$key]['group']) > 0) {
 						?>
 						<li class="menu-item menu-item-type-post_type_archive menu-item-object-<?= $key ?> menu-item-has-children">
 							<a href="<?= $site_url . "/" . $key . "/"?>"><?= $info['plural_key'] ?></a>
@@ -349,7 +349,7 @@ function getCharCard($character_id) {
 			<ul id="menu" class="menu">
 				<?php
 				foreach($ids as $key => $info) {
-					if(count($ids[$key]['group']) > 0) {
+					if($ids[$key]['group'] && count($ids[$key]['group']) > 0) {
 						?>
 						<li class="menu-item menu-item-type-post_type_archive menu-item-object-<?= $key ?> menu-item-has-children">
 							<a href="<?= $site_url . "/" . $key . "/"?>"><?= $info['plural_key'] ?></a>
