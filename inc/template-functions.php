@@ -381,3 +381,9 @@ add_action( 'admin_enqueue_scripts', 'admin_enqueue_scripts' );
 
 
 
+add_action( 'admin_notices', 'theme_dependencies' );
+
+function theme_dependencies() {
+  if( ! function_exists('get_field') )
+    echo '<div class="error"><p>' . __( 'Warning: Your current theme (dndwp) requires the <a href="' . get_site_url(null, 'wp-admin/plugin-install.php?tab=plugin-information&plugin=advanced-custom-fields&TB_iframe=true&width=600&height=550') . '">ACF plugin</a> to function', 'dndwp' ) . '</p></div>';
+}
