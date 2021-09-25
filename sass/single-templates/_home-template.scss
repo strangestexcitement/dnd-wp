@@ -36,21 +36,26 @@
       }
     }
 
-    &__featured-npcs, &__pcs {
-      &__content {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        row-gap: 2.4rem;
-        column-gap: 2.4rem;
-        row-gap: 1rem;
-        column-gap: 1rem;
-      
-        @include bp(tablet) {
-          padding: 0 3rem;
-          column-gap: 1.6rem;
-          row-gap: 1.6rem;
-        }
+    &__featured-npcs__container, &__pcs__content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: 2.4rem;
+      column-gap: 2.4rem;
+      row-gap: 1rem;
+      column-gap: 1rem;
+    
+      @include bp(tablet) {
+        padding: 0 3rem;
+        column-gap: 1.6rem;
+        row-gap: 1.6rem;
+      }
+    }
+
+    &__featured-npcs {
+      &__cta {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
       }
     }
 

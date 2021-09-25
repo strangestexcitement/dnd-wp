@@ -93,15 +93,18 @@
 				<div class="home__featured-npcs__inner accordion">
 					<h2 tabindex="0" class="home__featured-npcs__heading accordion__heading">Featured NPCs</h2>
 					<div class="home__featured-npcs__content accordion__content">
-					<?php
-						foreach($featured_npcs as $npc) {
-							global $post;
-							$post = get_post($npc);
-							setup_postdata($npc);
-							get_template_part( 'template-parts/content', "character-archive" );
-							wp_reset_postdata();
-						}
-						?>
+						<div class="home__featured-npcs__container">
+							<?php
+								foreach($featured_npcs as $npc) {
+									global $post;
+									$post = get_post($npc);
+									setup_postdata($npc);
+									get_template_part( 'template-parts/content', "character-archive" );
+									wp_reset_postdata();
+								}
+								?>
+						</div>
+						<a href="/npc/" class="button home__featured-npcs__cta">View all NPCs</a>
 					</div>
 				</div>
 			</div>

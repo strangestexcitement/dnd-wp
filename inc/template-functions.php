@@ -149,11 +149,10 @@ function getDefaultCharImage() {
 	if($image_id) {
 		$image = getImageAttachment($image_id, 'medium');
 		$character_image = $image;
-
 	}
 	else {
 		$imagepath = get_template_directory_uri() . "/images/defaults/default-character.jpg";
-		$character_image = "<img src='$imagepath' class='character__image--default'>";
+		$character_image = "<img src='$imagepath' alt='Default character image of person looking at lake and mountains' class='character__image--default'>";
 	}
 
 	return $character_image;
@@ -170,7 +169,7 @@ function getDefaultPlayerImage() {
 	}
 	else {
 		$imagepath = get_template_directory_uri() . "/images/defaults/default-player.jpg";
-		$player_image = "<img src='$imagepath' class='player__image--default'>";
+		$player_image = "<img src='$imagepath' alt='Default player image of hand throwing dice in the air' class='player__image--default'>";
 	}
 
 	return $player_image;
