@@ -28,6 +28,7 @@ function create_npc_posttype() {
 			)
 	);
 }
+
 // Hooking up NPC function to theme setup
 add_action( 'init', 'create_npc_posttype' );
 
@@ -53,6 +54,7 @@ function create_pc_posttype() {
 			)
 	);
 }
+
 // Hooking up PC function to theme setup
 add_action( 'init', 'create_pc_posttype' );
 
@@ -81,3 +83,29 @@ function create_player_posttype() {
 }
 // Hooking up NPC function to theme setup
 add_action( 'init', 'create_player_posttype' );
+
+// Item custom post type function
+function create_item_posttype() {
+ 
+	register_post_type( 'Item',
+	// CPT Options
+			array(
+					'labels' => array(
+							'name' => __( 'Items' ),
+							'singular_name' => __( 'Item' )
+					),
+					'public' => true,
+					'has_archive' => true,
+					'rewrite' => array('slug' => 'item'),
+					'show_in_rest' => true,
+					'public' => true,
+					'description' => "In game items",
+					'supports' => array(
+						'title', 'revisions', 'custom-fields'
+						// 'title', 'comments', 'revisions', 'author', 'page-attributes', 'custom-fields'
+					),
+			)
+	);
+}
+// Hooking up Item function to theme setup
+add_action( 'init', 'create_item_posttype' );

@@ -1,0 +1,1290 @@
+{
+    "key": "group_614f7c817c3f3",
+    "title": "Item",
+    "fields": [
+        {
+            "key": "field_614f7da5cf8ac",
+            "label": "Instructions",
+            "name": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Certain fields can have their visibility set to one of the following values:\r\n\r\nVisible: the value will be visible to players\r\nPartially visible: the players will see ??? instead of the value\r\nHidden: the field will be hidden from the players\r\n\r\nIf the user is an admin and is logged in, they will see all fields as though they were set to visible",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_614f82bb5f338",
+            "label": "Basics",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_614f7ce0cf8a9",
+            "label": "Item Name",
+            "name": "item_name",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_614f7d75cf8aa",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_614f7d81cf8ab",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_614f85011593e",
+            "label": "Item Image",
+            "name": "item_image",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_614f85011593f",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "preview_size": "medium",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ""
+                },
+                {
+                    "key": "field_614f850115940",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_614f845d38e35",
+            "label": "Item Value",
+            "name": "item_value",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_614f845d38e36",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_614f845d38e37",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_614f848638e38",
+            "label": "Item Weight",
+            "name": "item_weight",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_614f848738e39",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_614f848738e3a",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_614f84b738e3c",
+            "label": "Item Damage",
+            "name": "item_damage",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_614f84b738e3d",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "number",
+                    "instructions": "Examples: +1, +2, +3",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_614f84b738e3e",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_614f84e438e3f",
+            "label": "Item Defense",
+            "name": "item_defense",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_614f84e438e40",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "number",
+                    "instructions": "Examples: +1, +2, +3",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_614f84e438e41",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_614f7ee4dc54d",
+            "label": "Item Rarity",
+            "name": "item_rarity",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_614f7ee4dc54e",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Common": "Common",
+                        "Uncommon": "Uncommon",
+                        "Rare": "Rare",
+                        "Very Rare": "Very Rare",
+                        "Legendary": "Legendary",
+                        "Artifact": "Artifact",
+                        "Sentient": "Sentient"
+                    },
+                    "allow_null": 0,
+                    "other_choice": 1,
+                    "save_other_choice": 1,
+                    "default_value": "",
+                    "layout": "vertical",
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_614f7ee4dc54f",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_614f81b140865",
+            "label": "Item Magic Bonus",
+            "name": "item_magic_bonus",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_614f81b140866",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "number",
+                    "instructions": "Examples: +1, +2, +3",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_614f81b140867",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_614f7eabdc549",
+            "label": "Item Effects",
+            "name": "item_effects",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_614f7eabdc54a",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_614f7eabdc54b",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_614f7f80ec575",
+            "label": "Item Attunement",
+            "name": "item_attunement",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_614f7f80ec576",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "true_false",
+                    "instructions": "Is attunement required?",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "Required",
+                    "ui_off_text": "Not required"
+                },
+                {
+                    "key": "field_614f7f80ec577",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_614f836d5f33e",
+            "label": "Item Has Charges",
+            "name": "item_has_charges",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_614f82465f32f",
+            "label": "Item Charges",
+            "name": "item_charges",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_614f836d5f33e",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_614f82465f330",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "min": "",
+                    "max": "",
+                    "step": ""
+                },
+                {
+                    "key": "field_614f82465f331",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_614f854c1e3b4",
+            "label": "Item Type",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_614f7e68dc545",
+            "label": "Item Type",
+            "name": "item_type",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_614f7e68dc546",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Armor": "Armor",
+                        "Weapon": "Weapon",
+                        "Potion": "Potion",
+                        "Ring": "Ring",
+                        "Rod": "Rod",
+                        "Scroll": "Scroll",
+                        "Staff": "Staff",
+                        "Wand": "Wand",
+                        "Wondrous Item": "Wondrous Item"
+                    },
+                    "allow_custom": 1,
+                    "save_custom": 1,
+                    "default_value": [],
+                    "layout": "",
+                    "toggle": 0,
+                    "return_format": ""
+                },
+                {
+                    "key": "field_614f7e68dc547",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_614f802a17587",
+            "label": "Item Weapon Type",
+            "name": "item_weapon_type",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_614f7e68dc546",
+                        "operator": "==",
+                        "value": "Weapon"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_614f802a17588",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Antimatter Rifle": "Antimatter Rifle",
+                        "Battleaxe": "Battleaxe",
+                        "Blowgun": "Blowgun",
+                        "Boomerang": "Boomerang",
+                        "Club": "Club",
+                        "Crossbow, Hand": "Crossbow, Hand",
+                        "Crossbow, Heavy": "Crossbow, Heavy",
+                        "Crossbow, Light": "Crossbow, Light",
+                        "Dagger": "Dagger",
+                        "Dart": "Dart",
+                        "Double-Bladed Scimitar": "Double-Bladed Scimitar",
+                        "Flail": "Flail",
+                        "Glaive": "Glaive",
+                        "Greataxe": "Greataxe",
+                        "Greatclub": "Greatclub",
+                        "Greatsword": "Greatsword",
+                        "Halberd": "Halberd",
+                        "Handaxe": "Handaxe",
+                        "Javelin": "Javelin",
+                        "Lance": "Lance",
+                        "Laser Pistol": "Laser Pistol",
+                        "Laser Rifle": "Laser Rifle",
+                        "Light Hammer": "Light Hammer",
+                        "Longbow": "Longbow",
+                        "Mace": "Mace",
+                        "Maul": "Maul",
+                        "Morningstar": "Morningstar",
+                        "Musket": "Musket",
+                        "Net": "Net",
+                        "Pike": "Pike",
+                        "Pistol": "Pistol",
+                        "Pistol, Automatic": "Pistol, Automatic",
+                        "Quarterstaff": "Quarterstaff",
+                        "Rapier": "Rapier",
+                        "Revolver": "Revolver",
+                        "Rifle, Automatic": "Rifle, Automatic",
+                        "Rifle, Hunting": "Rifle, Hunting",
+                        "Scimitar": "Scimitar",
+                        "Shortbow": "Shortbow",
+                        "Shortsword": "Shortsword",
+                        "Shotgun": "Shotgun",
+                        "Sickle": "Sickle",
+                        "Sling": "Sling",
+                        "Spear": "Spear",
+                        "Trident": "Trident",
+                        "War Pick": "War Pick",
+                        "Warhammer": "Warhammer",
+                        "Whip": "Whip",
+                        "Yklwa": "Yklwa"
+                    },
+                    "allow_custom": 1,
+                    "save_custom": 1,
+                    "default_value": [],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_614f802a17589",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_614f81363d2da",
+            "label": "Item Armor Type",
+            "name": "item_armor_type",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_614f7e68dc546",
+                        "operator": "==",
+                        "value": "Armor"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_614f81363d2db",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "checkbox",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Breastplate": "Breastplate",
+                        "Chain Mail": "Chain Mail",
+                        "Chain Shirt": "Chain Shirt",
+                        "Half Plate": "Half Plate",
+                        "Hide": "Hide",
+                        "Leather": "Leather",
+                        "Padded": "Padded",
+                        "Plate": "Plate",
+                        "Pride Silk Outfit": "Pride Silk Outfit",
+                        "Ring Mail": "Ring Mail",
+                        "Shield": "Shield",
+                        "Spiked Armor": "Spiked Armor",
+                        "Splint": "Splint",
+                        "Studded Leather": "Studded Leather"
+                    },
+                    "allow_custom": 1,
+                    "save_custom": 1,
+                    "default_value": [],
+                    "layout": "vertical",
+                    "toggle": 0,
+                    "return_format": "value"
+                },
+                {
+                    "key": "field_614f81363d2dc",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_614f82dc5f339",
+            "label": "Additional Info",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_614f82ff5f33b",
+            "label": "Item Creator",
+            "name": "item_creator",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_614f82ff5f33c",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_614f82ff5f33d",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_614f827c5f332",
+            "label": "Item Origin",
+            "name": "item_origin",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_614f827c5f333",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_614f827c5f334",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_614f82a05f335",
+            "label": "Item History",
+            "name": "item_history",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_614f82a05f336",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_614f82a05f337",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "item"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1632601480
+}

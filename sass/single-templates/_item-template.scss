@@ -1,0 +1,6 @@
+.single-item {
+  .item {
+    @include linear-gradient(to bottom, npc);
+
+  }
+}

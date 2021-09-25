@@ -9,8 +9,6 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<?php 
 
-		// faith, religious_practices, armor_proficiencies, weapon_proficiencies
-
 			// general basics
 			$character_name = setField(get_field('character_name'));
 			$character_name = $character_name ? $character_name : get_the_title();
