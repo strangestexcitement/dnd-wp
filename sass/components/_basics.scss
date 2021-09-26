@@ -1,0 +1,35 @@
+// basics section styling
+
+.character, .item {
+  &__basics {        
+    &__content {
+      display: flex;
+      flex-direction: column;
+      row-gap: 2.4rem;
+
+      @include bp(tablet) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 1.6rem;
+        row-gap: 3.2rem;          
+      }
+    }
+
+    .character, .item {
+      &__field {
+        @include bp(tablet) {
+          flex-basis: 200px;
+        }
+      }
+    }
+
+    .item {
+      &__field {
+        &__value, &__label {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

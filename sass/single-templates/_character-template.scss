@@ -26,31 +26,6 @@ $npc_bp: 400px;
     }
   }
 
-  // basics section styling
-  &__basics {        
-    &__content {
-      display: flex;
-      flex-direction: column;
-      row-gap: 2.4rem;
-
-      @include bp(tablet) {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        column-gap: 1.6rem;
-        row-gap: 3.2rem;          
-      }
-    }
-
-    .character {
-      &__field {
-        @include bp(tablet) {
-          flex-basis: 200px;
-        }
-      }
-    }
-  }
-
   // goals section styling 
   &__goals {
     &__inner {

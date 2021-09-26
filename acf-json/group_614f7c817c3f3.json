@@ -165,6 +165,68 @@
             ]
         },
         {
+            "key": "field_6150bb2053a87",
+            "label": "Item Description",
+            "name": "item_description",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6150bb2053a88",
+                    "label": "Value",
+                    "name": "value",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "80",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0
+                },
+                {
+                    "key": "field_6150bb2053a89",
+                    "label": "Visibility",
+                    "name": "visibility",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "20",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "Visible": "Visible",
+                        "Partially visible": "Partially visible",
+                        "Hidden": "Hidden"
+                    },
+                    "default_value": "Visible",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
             "key": "field_614f845d38e35",
             "label": "Item Value",
             "name": "item_value",
@@ -633,7 +695,7 @@
                     "key": "field_614f7f80ec576",
                     "label": "Value",
                     "name": "value",
-                    "type": "true_false",
+                    "type": "select",
                     "instructions": "Is attunement required?",
                     "required": 0,
                     "conditional_logic": 0,
@@ -642,11 +704,17 @@
                         "class": "",
                         "id": ""
                     },
-                    "message": "",
-                    "default_value": 0,
-                    "ui": 1,
-                    "ui_on_text": "Required",
-                    "ui_off_text": "Not required"
+                    "choices": {
+                        "Required": "Required",
+                        "Not required": "Not required"
+                    },
+                    "default_value": "Not required",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
                 },
                 {
                     "key": "field_614f7f80ec577",
@@ -722,7 +790,7 @@
                     "key": "field_614f82465f330",
                     "label": "Value",
                     "name": "value",
-                    "type": "number",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -735,9 +803,7 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "min": "",
-                    "max": "",
-                    "step": ""
+                    "maxlength": ""
                 },
                 {
                     "key": "field_614f82465f331",
@@ -1286,5 +1352,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1632601480
+    "modified": 1632684374
 }

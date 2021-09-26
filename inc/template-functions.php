@@ -207,15 +207,19 @@ function getCharCard($character_id) {
 		$ids = [
 			'player' 	=> [
 				'plural_key'	=> 'Players',
-				'group'				=> getPlayerIds(),
+				'group'				=> getIds('player'),
 			],
 			'npc' 	=> [
 				'plural_key'	=> 'NPCs',
-				'group'				=> getNpcIds(),
+				'group'				=> getIds('npc'),
 			],
 			'pc' 	=> [
 				'plural_key'	=> 'PCs',
-				'group'				=> getPcIds(),
+				'group'				=> getIds('pc'),
+			],
+			'item' 	=> [
+				'plural_key'	=> 'Items',
+				'group'				=> getIds('item'),
 			],
 		];
 		?>
@@ -256,15 +260,19 @@ function getCharCard($character_id) {
 		$ids = [
 			'player' 	=> [
 				'plural_key'	=> 'Players',
-				'group'				=> getPlayerIds(),
+				'group'				=> getIds('player'),
 			],
 			'npc' 	=> [
 				'plural_key'	=> 'NPCs',
-				'group'				=> getNpcIds(),
+				'group'				=> getIds('npc'),
 			],
 			'pc' 	=> [
 				'plural_key'	=> 'PCs',
-				'group'				=> getPcIds(),
+				'group'				=> getIds('pc'),
+			],
+			'item' 	=> [
+				'plural_key'	=> 'Items',
+				'group'				=> getIds('item'),
 			],
 		];
 		?>

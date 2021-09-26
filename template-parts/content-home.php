@@ -13,8 +13,8 @@
 		$page_heading = get_field('page_heading');
 		$game_description = get_field('game_description');
 		$game_links = get_field('game_links');
-		$player_ids = getPlayerIds();
-		$pc_ids = getPcIds();
+		$player_ids = getIds('player');
+		$pc_ids = getIds('pc');
 		$featured_npcs = get_field('featured_npcs');
 
 		$social_icons = [
