@@ -379,9 +379,26 @@ $npc_bp: 400px;
     &__items {
       margin-top: 1.2rem;
       text-align: left;
+      margin-bottom: 2.4rem;
 
       @include bp(tablet) {
         margin-top: 2.4rem;
+      }
+    }
+
+    .item {
+      height: 200px;
+      max-width: 200px;
+
+      &__card {
+        &__name {
+          &--back {
+            padding-left: 2rem;
+            padding-right: 2rem;
+            margin-left: -2.4rem;
+            margin-right: -2.4rem;
+          }
+        }
       }
     }
   }

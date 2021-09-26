@@ -54,6 +54,7 @@
 
 			// inventory
 			$character_inventory = setField(get_field('character_inventory'));
+			$character_inventory_created_items = setField(get_field('character_inventory_created_items'));
 			$character_copper_pieces = setField(get_field('character_copper_pieces'));
 			$character_silver_pieces = setField(get_field('character_silver_pieces'));
 			$character_electrum_pieces = setField(get_field('character_electrum_pieces'));
@@ -497,6 +498,19 @@
 						</div>
 					<?php } ?>
 					<?= ($character_inventory) ? "<div class='character__field character__inventory__items'><div class='character__field__value'>$character_inventory</div></div>" : "" ?>
+					<?php if($character_inventory_created_items) { ?>
+						<div class="character__inventory__custom-items">
+							<?php
+								foreach($character_inventory_created_items as $item) {
+									global $post;
+									$post = get_post($item);
+									setup_postdata($item);
+									get_template_part( 'template-parts/content', get_post_type() . "-archive" );
+									wp_reset_postdata();
+								}
+								?>
+						</div>
+					<?php } ?>
 				</div>
 			</div>
 		</div>

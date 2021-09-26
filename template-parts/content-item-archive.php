@@ -24,7 +24,7 @@
 			$item_type = $item_type ? implode(', ', $item_type) : "";
 			$item_weapon_type = setField(get_field('item_weapon_type'));
 			$item_armor_type = setField(get_field('item_armor_type'));
-			$item_description = setField(get_field('item_description'));
+			$item_excerpt = setField(get_field('item_excerpt'));
 			
 			if($item_weapon_type) {
 				$item_type = str_replace('Weapon', join(', ', $item_weapon_type), $item_type);
@@ -56,7 +56,7 @@
 				</div>
 				<div class="item__card__flip--back">
 					<?= ($item_name) ? "<h2 class='item__card__name--back'>$item_name</h2>" : "" ?>
-					<?= ($item_description) ? "<div class='item__card__excerpt'>$item_description</div>" : ""; ?>
+					<?= ($item_excerpt) ? "<div class='item__card__excerpt'>$item_excerpt</div>" : ""; ?>
 				</div>
 			</div>
 		</div>
