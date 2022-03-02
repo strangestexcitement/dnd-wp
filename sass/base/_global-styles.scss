@@ -111,6 +111,18 @@ button {
   }
 }
 
+.fab.fa-twitch {
+  &:hover {
+    color: $twitch;
+  }
+}
+
+.fas.fa-podcast {
+  &:hover {
+    color: $off-white;
+  }
+}
+
 
 
 // possibly move elsewhere later

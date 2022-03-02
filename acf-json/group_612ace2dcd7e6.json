@@ -121,6 +121,44 @@
                     "maxlength": ""
                 },
                 {
+                    "key": "field_621feeb976313",
+                    "label": "Twitch",
+                    "name": "twitch",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_621feef576314",
+                    "label": "Podcast",
+                    "name": "podcast",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
                     "key": "field_612aceb7ab235",
                     "label": "Others",
                     "name": "others",
@@ -159,5 +197,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1630197922
+    "modified": 1646259977
 }

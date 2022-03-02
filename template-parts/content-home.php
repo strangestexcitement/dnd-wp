@@ -23,7 +23,9 @@
 			'facebook' => 'fab fa-facebook-f',
 			'twitter' => 'fab fa-twitter',
 			'instagram' => 'fab fa-instagram',
-			'tiktok' => 'fab fa-tiktok'
+			'tiktok' => 'fab fa-tiktok',
+			'twitch' => 'fab fa-twitch',
+			'podcast' => 'fas fa-podcast'
 		];
 	// the_content();
 	?>
@@ -113,7 +115,7 @@
 
 		
 		<!-- Social Links -->
-		<?php if($game_links['d&dbeyond'] || $game_links['roll20'] || $game_links['others']) { ?>
+		<?php if($game_links['d&dbeyond'] || $game_links['roll20'] || $game_links['twitch'] || $game_links['podcast'] || $game_links['others']) { ?>
 		<div class="home__links home__module">
 			<div class="home__links__inner accordion">
 				<h2 tabindex="0" class="home__links__heading accordion__heading">Links</h2>

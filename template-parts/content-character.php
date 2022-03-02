@@ -248,6 +248,12 @@
 				$symbol_image = getImageAttachment($character_symbol_id, 'medium');
 				$character_symbol_image = "<div class='character__symbol__image'>$symbol_image</div>";
 			}
+
+			$character_token_id = setField(get_field('character_token'));
+			if($character_token_id) {
+				$token_image = getImageAttachment($character_token_id, 'thumbnail');
+				$character_token_image = "<div class='character__token__image'>$token_image</div>";
+			}
 		?>
 
 	<!-- Hero -->
@@ -327,6 +333,19 @@
 		</div>
 	<?php } ?>
 	<!-- End Description -->
+
+		<!-- Token -->
+		<?php if($character_token_image) { ?>
+		<div class="character__desc character__module">
+			<div class="character__desc__inner accordion">
+				<h2 tabindex="0" class="character__desc__heading accordion__heading">Token</h2>
+				<div class="character__desc__content accordion__content">
+					<?= ($character_token_image) ? "<div class='character__field character__field__desc'><div class='character__field__value'>$character_token_image</div></div>" : "" ?>
+				</div>
+			</div>
+		</div>
+	<?php } ?>
+	<!-- End Token -->
 
 	<!-- Personality -->
 	<?php if($character_personality_traits || $character_ideals || $character_bonds || $character_flaws) { ?>
